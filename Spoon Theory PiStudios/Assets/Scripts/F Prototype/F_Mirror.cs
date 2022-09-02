@@ -6,6 +6,10 @@ public class F_Mirror : MonoBehaviour, F_IInteractable
 {
     public bool Interacted => false;
 
+    [SerializeField] private string _prompt;
+
+    public string InteractionPrompt => _prompt;
+
     public bool Interact(F_CharacterInteractor interactor)
     {
         Debug.Log("Its a mirror");

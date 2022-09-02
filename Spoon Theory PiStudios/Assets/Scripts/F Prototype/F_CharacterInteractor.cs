@@ -6,6 +6,7 @@ public class F_CharacterInteractor : MonoBehaviour
 {
     Camera cam;
     [SerializeField] LayerMask interactableMask;
+    [SerializeField] PromptUI promptUI;
 
     [SerializeField] Transform interactionPoint;
     [SerializeField] float clickInteractionDistance = 5, FInteractionDistance = 3;
@@ -35,6 +36,7 @@ public class F_CharacterInteractor : MonoBehaviour
             if (interactable != null && Input.GetKeyDown(KeyCode.F))
             {
                 interactable.Interact(this);
+                promptUI.SetUpText(interactable.InteractionPrompt);
             }
         }
     }

@@ -5,7 +5,7 @@ using UnityEngine;
 public interface F_IInteractable
 {
 
-    //public string InteractionPrompt { get ; }
+    public string InteractionPrompt { get ; }
 
     public bool Interacted { get; }
 
