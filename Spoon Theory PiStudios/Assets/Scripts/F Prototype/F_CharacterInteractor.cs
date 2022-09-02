@@ -10,11 +10,13 @@ public class F_CharacterInteractor : MonoBehaviour
 
     [SerializeField] Transform interactionPoint;
     [SerializeField] float clickInteractionDistance = 5, FInteractionDistance = 3;
-    bool canInteract;
+
+    [SerializeField] int numberOfSpoons;
     // Start is called before the first frame update
     void Start()
     {
         cam = Camera.main;
+        numberOfSpoons = Random.Range(10, 31);
     }
 
     // Update is called once per frame
@@ -37,8 +39,11 @@ public class F_CharacterInteractor : MonoBehaviour
             {
                 interactable.Interact(this);
                 promptUI.SetUpText(interactable.InteractionPrompt);
+                numberOfSpoons -= interactable.SpoonsCost;
             }
         }
+
+        promptUI.DisplaySpoons(numberOfSpoons);
     }
 
 

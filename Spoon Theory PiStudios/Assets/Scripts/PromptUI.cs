@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PromptUI : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI promptText;
+    [SerializeField] private TextMeshProUGUI promptText, spoonsText;
     [SerializeField] private Image textPanel;
 
     bool isDisplayed;
@@ -33,11 +33,17 @@ public class PromptUI : MonoBehaviour
         promptText.text = text;
         textPanel.gameObject.SetActive(true);
         isDisplayed = true;
+        Invoke("Close", 3);
     }
 
     public void Close()
     {
         textPanel.gameObject.SetActive(false);
         isDisplayed = false;
+    }
+
+    public void DisplaySpoons(int spoonNumber)
+    {
+        spoonsText.text = spoonNumber.ToString();
     }
 }

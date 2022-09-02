@@ -10,9 +10,11 @@ public class F_Mirror : MonoBehaviour, F_IInteractable
 
     public string InteractionPrompt => _prompt;
 
-    public bool Interact(F_CharacterInteractor interactor)
+    public int SpoonsCost => 2;
+
+    public int Interact(F_CharacterInteractor interactor)
     {
         Debug.Log("Its a mirror");
-        return true;
+        return SpoonsCost;
     }
 }

@@ -8,6 +8,7 @@ public interface F_IInteractable
     public string InteractionPrompt { get ; }
 
     public bool Interacted { get; }
+    public int SpoonsCost { get; }
 
-    public bool Interact(F_CharacterInteractor interactor);
+    public int Interact(F_CharacterInteractor interactor);
 }
