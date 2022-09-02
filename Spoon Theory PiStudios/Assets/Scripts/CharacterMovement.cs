@@ -8,7 +8,9 @@ public class CharacterMovement : MonoBehaviour
     Camera cam;
 
     [SerializeField] float desiredRotationSpeed = 0.1f, allowPlayerRotation = 0.1f;
-    [SerializeField] float velocity = 5;
+    [SerializeField] float velocity = 5, verticalVel, gravityForce = 9.8f;
+
+    bool isGrounded;
 
     Vector3 desiredMoveDirection;
     // Start is called before the first frame update
@@ -48,6 +50,19 @@ public class CharacterMovement : MonoBehaviour
 
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(desiredMoveDirection), desiredRotationSpeed);
             controller.Move(desiredMoveDirection * Time.deltaTime * velocity);
-        }     
+        }
+
+        isGrounded = controller.isGrounded;
+        if (isGrounded)
+        {
+            verticalVel = 0;
+        }
+        else
+        {
+            verticalVel = -1;
+        }
+
+        Vector3 moveVector = new Vector3(0, verticalVel * gravityForce * Time.deltaTime, 0);
+        controller.Move(moveVector);
     }
 }
