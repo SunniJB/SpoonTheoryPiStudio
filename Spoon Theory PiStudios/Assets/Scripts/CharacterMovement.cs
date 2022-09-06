@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,12 +8,21 @@ public class CharacterMovement : MonoBehaviour
     CharacterController controller;
     Camera cam;
 
+    [SerializeField] CinemachineFreeLook freeLook;
+    private string xAxisName = "Mouse X";
+    private string yAxisName = "Mouse Y";
+
     [SerializeField] float desiredRotationSpeed = 0.1f, allowPlayerRotation = 0.1f;
     [SerializeField] float velocity = 5, verticalVel, gravityForce = 9.8f;
 
-    bool isGrounded;
+    bool isGrounded, canMove;
 
     Vector3 desiredMoveDirection;
+
+    private void Awake()
+    {
+        canMove = true;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +33,27 @@ public class CharacterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Movement();
+        if (canMove)
+        {
+            Movement();
+            //enables camera following cursor
+            freeLook.m_XAxis.m_InputAxisName = xAxisName;
+            freeLook.m_YAxis.m_InputAxisName = yAxisName;
+        }
+        else
+        {
+            //disables camera following cursor
+            freeLook.m_XAxis.m_InputAxisName = "";
+            freeLook.m_XAxis.m_InputAxisValue = 0;
+
+            freeLook.m_YAxis.m_InputAxisName = "";
+            freeLook.m_YAxis.m_InputAxisValue = 0;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            canMove = !canMove;
+        }
     }
 
     private void Movement()

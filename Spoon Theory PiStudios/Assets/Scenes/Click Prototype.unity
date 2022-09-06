@@ -608,6 +608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46dcacd75193ce549b044de8a3e26b18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  freeLook: {fileID: 854590542}
   desiredRotationSpeed: 0.25
   allowPlayerRotation: 0.1
   velocity: 5
