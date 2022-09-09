@@ -5,6 +5,7 @@ using UnityEngine;
 public class SortingGameSides : MonoBehaviour
 {
     public float sortedCuterly, maxCutlery;
+    public bool full = false;
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -17,7 +18,7 @@ public class SortingGameSides : MonoBehaviour
 
                 if (sortedCuterly == maxCutlery)
                 {
-                    Debug.Log(gameObject + " is full!");
+                    full = true;
                 }
             }
         }
