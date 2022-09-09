@@ -13,7 +13,7 @@ public class F_CharacterInteractor : MonoBehaviour
     [SerializeField] Transform interactionPoint;
     [SerializeField] float clickInteractionDistance = 5, FInteractionDistance = 3;
 
-    [SerializeField] int numberOfSpoons;
+    int numberOfSpoons;
     // Start is called before the first frame update
     void Start()
     {

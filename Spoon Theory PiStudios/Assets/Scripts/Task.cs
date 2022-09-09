@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Task : MonoBehaviour
 {
+    [SerializeField] string taskName = "Task name", description = "Task description";
+    bool pinned, completed;
     // Start is called before the first frame update
     void Start()
     {

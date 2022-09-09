@@ -2,6 +2,7 @@ using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterMovement : MonoBehaviour
 {
@@ -12,22 +13,33 @@ public class CharacterMovement : MonoBehaviour
     private string xAxisName = "Mouse X";
     private string yAxisName = "Mouse Y";
 
+    [SerializeField] Image taskCanvas;
+
+    [Header("PLAYER ATTRIBUTES")]
     [SerializeField] float desiredRotationSpeed = 0.1f, allowPlayerRotation = 0.1f;
-    [SerializeField] float velocity = 5, verticalVel, gravityForce = 9.8f;
+    [SerializeField] float velocity = 5, gravityForce = 9.8f;
+    float verticalVel;
 
     bool isGrounded, canMove;
+
+    bool taskCanvasEnabled;
 
     Vector3 desiredMoveDirection;
 
     private void Awake()
     {
         canMove = true;
+
+        taskCanvasEnabled = false;
+
+        controller = GetComponent<CharacterController>();
+        cam = Camera.main;
+
     }
     // Start is called before the first frame update
     void Start()
     {
-        controller = GetComponent<CharacterController>();
-        cam = Camera.main;
+        taskCanvas.gameObject.SetActive(taskCanvasEnabled);
     }
 
     // Update is called once per frame
@@ -51,9 +63,11 @@ public class CharacterMovement : MonoBehaviour
             freeLook.m_YAxis.m_InputAxisValue = 0;
         }
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.T))
         {
-            canMove = !canMove;
+            taskCanvasEnabled = !taskCanvasEnabled;
+            taskCanvas.gameObject.SetActive(taskCanvasEnabled);
+            canMove = !taskCanvasEnabled;
         }
     }
 
