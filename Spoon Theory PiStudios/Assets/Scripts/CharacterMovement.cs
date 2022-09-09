@@ -36,6 +36,7 @@ public class CharacterMovement : MonoBehaviour
         if (canMove)
         {
             Movement();
+
             //enables camera following cursor
             freeLook.m_XAxis.m_InputAxisName = xAxisName;
             freeLook.m_YAxis.m_InputAxisName = yAxisName;
