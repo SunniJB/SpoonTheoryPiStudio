@@ -7,6 +7,8 @@ public class CheckBox : MonoBehaviour
 {
     public TextMeshProUGUI text;
     public TaskManager taskManager;
+
+    public Task task;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,10 +23,16 @@ public class CheckBox : MonoBehaviour
 
     public void OnChange(bool value)
     {
-        if(value)
+        if (value)
+        {
             taskManager.currentNumberofTasksPinned++;
+        }
         else
+        {
             taskManager.currentNumberofTasksPinned--;
+        }
+
+        task.outlineObject.enabled = value;
 
         taskManager.CheckTasksPinned();
     }

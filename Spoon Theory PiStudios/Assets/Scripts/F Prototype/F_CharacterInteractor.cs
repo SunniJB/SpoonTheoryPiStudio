@@ -13,24 +13,39 @@ public class F_CharacterInteractor : MonoBehaviour
     [SerializeField] Transform interactionPoint;
     [SerializeField] float clickInteractionDistance = 5, FInteractionDistance = 3;
 
+    CharacterMovement1stPerson characterMovement;
+
+    [Header("Tasks")]
+    [SerializeField] Image taskCanvas;
+    [SerializeField] TaskManager taskManager;
+    bool taskCanvasEnabled;
+
     int numberOfSpoons;
+
+    private void Awake()
+    {
+        cam = Camera.main;
+        characterMovement = GetComponent<CharacterMovement1stPerson>();
+    }
     // Start is called before the first frame update
     void Start()
     {
-        cam = Camera.main;
         numberOfSpoons = Random.Range(10, 31);
         spoonSlider.maxValue = spoonSlider.value = numberOfSpoons;
+
+        taskCanvas.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Click interaction
-
-        //if (Input.GetKeyDown(KeyCode.Mouse0))
-        //{
-        //    ClickInteract();
-        //}
+        //if T pressed toggle task canvas and character movement
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            taskCanvasEnabled = !taskCanvasEnabled;
+            taskCanvas.gameObject.SetActive(taskCanvasEnabled);
+            characterMovement.canMove = !taskCanvasEnabled;
+        }
 
         FInteraction();
 
@@ -59,22 +74,9 @@ public class F_CharacterInteractor : MonoBehaviour
 
                 outline.enabled = false;
 
+                taskManager.TaskCompleted(interactable.Task);
+
                 interactionHit[0].gameObject.layer = defaultLayer;
-            }
-        }
-    }
-    private void ClickInteract()
-    {
-        //Vector3 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-
-        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out RaycastHit raycastHit, clickInteractionDistance, interactableLayer, QueryTriggerInteraction.Collide))
-        {
-            F_IInteractable interactable = raycastHit.transform.GetComponent<F_IInteractable>();
-
-            if (interactable != null)
-            {
-                interactable.Interact(this);
             }
         }
     }

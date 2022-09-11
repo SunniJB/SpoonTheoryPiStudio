@@ -14,6 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskName: Have breakfast
   description: You eat your breakfast
-  pinned: 0
-  completed: 0
+  spoonCost: 1
   difficulty: 0

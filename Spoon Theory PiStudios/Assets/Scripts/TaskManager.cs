@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class TaskManager : MonoBehaviour
 {
-    Task[] displayedTasks;
+    List<Task> displayedTasks;
+    List<Task> completedTasks = new List<Task>();
 
     [SerializeField] Task[] morningTasks, eveningTasks;
 
@@ -15,16 +16,17 @@ public class TaskManager : MonoBehaviour
 
     [SerializeField] int maxTasksPinned = 5;
     public int currentNumberofTasksPinned = 0;
+
     // Start is called before the first frame update
     void Start()
     {
         if (GameManager.Instance.dayTime == GameManager.DayTime.Morning)
         {
-            displayedTasks = morningTasks;
+            displayedTasks = new List<Task>(morningTasks);
         }
         else if (GameManager.Instance.dayTime == GameManager.DayTime.Evening)
         {
-            displayedTasks = eveningTasks;
+            displayedTasks = new List<Task>(eveningTasks);
         }
 
         int i = 0;
@@ -32,16 +34,11 @@ public class TaskManager : MonoBehaviour
         {
             GameObject clon = Instantiate(taskPrefab, this.transform);
             checkboxes.Add(clon.GetComponent<CheckBox>());
-            checkboxes[i].text.text = task.name;
+            checkboxes[i].task = task;
+            checkboxes[i].text.text = task.taskName;
             checkboxes[i].taskManager = this;
             i++;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void CheckTasksPinned()
@@ -64,6 +61,22 @@ public class TaskManager : MonoBehaviour
             {
                 Toggle toggle = cb.GetComponent<Toggle>();
                 toggle.interactable = true;
+            }
+        }
+    }
+
+    public void TaskCompleted(Task task)
+    {
+        completedTasks.Add(task);
+        displayedTasks.Remove(task);
+
+        foreach(CheckBox cb in checkboxes)
+        {
+            if (cb.task == task)
+            {
+                Destroy(cb.gameObject);
+                checkboxes.Remove(cb);
+                return;
             }
         }
     }

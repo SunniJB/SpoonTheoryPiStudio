@@ -8,13 +8,20 @@ public class F_Mirror : MonoBehaviour, F_IInteractable //In inheritance, the obj
 
     [SerializeField] private string _prompt; //In private variables, it is common practice to preface the name with an underscore
 
-    public string InteractionPrompt => _prompt;
+    [SerializeField] Task _task;
+    public Task Task => _task;  //When working with interfaces, you have to use a lambda operator to assign a value. So it has to be => instead of =.
 
-    public int SpoonsCost => 2; //When working with interfaces, you have to use a lambda operator to assign a value. So it has to be => instead of =.
+    public string InteractionPrompt => Task.description;
+
+    private void Awake()
+    {
+        Task.outlineObject = GetComponent<Outline>();
+        Task.outlineObject.enabled = false;
+    }
 
     public int Interact(F_CharacterInteractor interactor)
     {
         Debug.Log("Its a mirror");
-        return SpoonsCost;
+        return Task.spoonCost;
     }
 }

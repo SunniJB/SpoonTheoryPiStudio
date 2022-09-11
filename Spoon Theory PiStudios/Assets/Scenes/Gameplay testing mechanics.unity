@@ -647,7 +647,7 @@ MonoBehaviour:
     m_MaxSpeed: 1.5
     m_AccelTime: 0.15
     m_DecelTime: 0.1
-    m_InputAxisName: Mouse Y
+    m_InputAxisName: 
     m_InputAxisValue: 0
     m_InvertInput: 0
     m_MinValue: 0
@@ -671,7 +671,7 @@ MonoBehaviour:
     m_MaxSpeed: 150
     m_AccelTime: 0.1
     m_DecelTime: 0.1
-    m_InputAxisName: Mouse X
+    m_InputAxisName: 
     m_InputAxisValue: 0
     m_InvertInput: 0
     m_MinValue: -180
@@ -992,6 +992,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prompt: You look beautiful
+  _task: {fileID: 11400000, guid: 2b330bcb678e7604298ac3100320a6d7, type: 2}
 --- !u!1 &1246492638
 GameObject:
   m_ObjectHideFlags: 3
@@ -1324,6 +1325,7 @@ MonoBehaviour:
   taskPrefab: {fileID: 5369407198210701415, guid: 321d8e096a6bd764cb9f48d29ec58033, type: 3}
   maxTasksPinned: 2
   currentNumberofTasksPinned: 0
+  interactableObjects: []
 --- !u!1 &1407414485
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,6 +8,9 @@ public class Task : ScriptableObject
     public string taskName = "Task name", description = "Task description";
 
     public int spoonCost;
+
+    [HideInInspector]
+    public Outline outlineObject;
     //public bool pinned, completed;
     public enum Difficulty {Easy, Medium, Hard}
     public Difficulty difficulty;

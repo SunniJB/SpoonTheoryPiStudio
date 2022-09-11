@@ -25,6 +25,4 @@ public class GameManager : MonoBehaviour
     {
         dayTime = DayTime.Morning;
     }
-
-
 }

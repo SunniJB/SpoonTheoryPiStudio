@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterMovement1stPerson : MonoBehaviour
 {
@@ -11,7 +12,9 @@ public class CharacterMovement1stPerson : MonoBehaviour
 
     float verticalVelocity;
 
-    bool isGrounded, canMove;
+    bool isGrounded;
+    [HideInInspector]
+    public bool canMove;
 
 
     private void Awake()
