@@ -7,7 +7,7 @@ public class SortingGameManager : MonoBehaviour
     public SortingGameSides redSide, blueSide;
     [SerializeField] GameObject[] cutlery;
     public GameObject winPanel, pausePanel, timer;
-    public float time;
+    private float minutes, seconds;
 
     private void Start()
     {
@@ -26,12 +26,18 @@ public class SortingGameManager : MonoBehaviour
 
     private void Update()
     {
-        time += Time.timeScale;
-        timer.GetComponent<TMPro.TextMeshProUGUI>().text = "Time: " + time.ToString();
+        seconds += Time.deltaTime;
+        if (seconds > 60)
+        {
+            minutes += 1;
+            seconds = 0;
+        }
+
+        timer.GetComponent<TMPro.TextMeshProUGUI>().text = "Time: " + minutes.ToString() + ":" + seconds.ToString("f1");
         if (redSide.full && blueSide.full)
         {
             winPanel.SetActive(true);
-            GameObject.Find("Final time").GetComponent<TMPro.TextMeshProUGUI>().text = "Your final time was: " + time.ToString();
+            GameObject.Find("Final time").GetComponent<TMPro.TextMeshProUGUI>().text = "Your final time was: " + minutes.ToString() + ":" + seconds.ToString("f1");
             Time.timeScale = 0f;
         }
     }
@@ -45,7 +51,8 @@ public class SortingGameManager : MonoBehaviour
         }
         redSide.full = false;
         blueSide.full = false;
-        time = 0f;
+        seconds = 0f;
+        minutes = 0f;
         Time.timeScale = 1f;
     }
 }

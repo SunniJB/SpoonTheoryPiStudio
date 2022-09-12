@@ -13,8 +13,16 @@ public class SortingGame_Cutlery : MonoBehaviour
         startPosition = gameObject.GetComponent<Transform>().position;
     }
 
+    private void Update()
+    {
+        if (isSorted)
+        {
+            gameObject.transform.position = gameObject.transform.position;
+        }
+    }
     public void Restart()
     {
+        isSorted = false;
         gameObject.transform.position = startPosition;
     }
 }
