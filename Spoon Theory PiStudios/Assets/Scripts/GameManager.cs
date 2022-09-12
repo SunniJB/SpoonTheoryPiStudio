@@ -24,5 +24,6 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         dayTime = DayTime.Morning;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }
