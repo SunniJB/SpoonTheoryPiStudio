@@ -16,7 +16,7 @@ public class F_Mirror : MonoBehaviour, F_IInteractable //In inheritance, the obj
     private void Awake()
     {
         Task.outlineObject = GetComponent<Outline>();
-        Task.outlineObject.enabled = false;
+        //Task.outlineObject.enabled = false;
     }
 
     public int Interact(F_CharacterInteractor interactor)
