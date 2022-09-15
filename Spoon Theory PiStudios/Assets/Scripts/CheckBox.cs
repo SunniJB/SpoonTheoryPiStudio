@@ -25,11 +25,11 @@ public class CheckBox : MonoBehaviour
     {
         if (value)
         {
-            taskManager.currentNumberofTasksPinned++;
+            taskManager.PinTask(task);
         }
         else
         {
-            taskManager.currentNumberofTasksPinned--;
+            taskManager.UnpinTask(task);
         }
 
         task.outlineObject.enabled = value;

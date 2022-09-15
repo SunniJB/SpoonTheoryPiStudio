@@ -7,11 +7,11 @@ public class Task : ScriptableObject
 {
     public string taskName = "Task name", description = "Task description";
 
-    public int spoonCost;
+    public int spoonCost, hygieneCost, moneyCost, hungerCost, happinesCost, workPerformanceCost;
 
     [HideInInspector]
     public Outline outlineObject;
     //public bool pinned, completed;
-    public enum Difficulty {Easy, Medium, Hard}
-    public Difficulty difficulty;
+    //public enum Difficulty {Easy, Medium, Hard}
+    //public Difficulty difficulty;
 }
