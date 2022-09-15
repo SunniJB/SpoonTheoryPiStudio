@@ -24,7 +24,7 @@ public class TaskManager : MonoBehaviour
     [SerializeField] int maxTasksPinned = 5;
     public int currentNumberofTasksPinned = 0;
 
-    [SerializeField] Image pinnedTasksPanel;
+    public Image pinnedTasksPanel;
 
     [SerializeField] Color easy, medium, hard;
 
@@ -47,14 +47,21 @@ public class TaskManager : MonoBehaviour
         {
             GameObject clon = Instantiate(taskPrefab);
             checkboxes.Add(clon.GetComponent<CheckBox>());
+
             checkboxes[i].task = task;
+
             checkboxes[i].text.text = task.taskName;
+            if (task.spoonCost < 3) checkboxes[i].text.color = easy;
+            else if (task.spoonCost < 5) checkboxes[i].text.color = medium;
+            else checkboxes[i].text.color = hard;
+
             checkboxes[i].taskManager = this;
 
             Transform parent;
-            if (i<5) parent = columns[1];
-            else if(i < 10) parent = columns[2];
-            else parent = columns[3];
+
+            if (i < displayedTasks.Count / 3) parent = columns[0];
+            else if (i <= Mathf.RoundToInt(displayedTasks.Count / 3 * 2)) parent = columns[1];
+            else parent = columns[2];
 
             clon.transform.SetParent(parent);
 
@@ -86,7 +93,8 @@ public class TaskManager : MonoBehaviour
             foreach (CheckBox cb in checkboxes)
             {
                 Toggle toggle = cb.GetComponent<Toggle>();
-                toggle.interactable = true;
+                if(!completedTasks.Contains(cb.task))
+                    toggle.interactable = true;
             }
         }
     }
@@ -100,17 +108,24 @@ public class TaskManager : MonoBehaviour
     public void TaskCompleted(Task task)
     {
         completedTasks.Add(task);
-        displayedTasks.Remove(task);
+        //displayedTasks.Remove(task);
 
-        foreach(CheckBox cb in checkboxes)
+        foreach (CheckBox cb in checkboxes)
         {
             if (cb.task == task)
             {
-                Destroy(cb.gameObject);
-                checkboxes.Remove(cb);
-                return;
+                //Destroy(cb.gameObject);
+                //checkboxes.Remove(cb);
+                cb.pinImg.enabled = false;
+                cb.checkImg.enabled = true;
+
+                cb.GetComponent<Toggle>().interactable = false;
+                break;
             }
         }
+
+        UnpinTask(task);
+        CheckTasksPinned();
     }
 
     public void PinTask(Task task)
@@ -121,8 +136,7 @@ public class TaskManager : MonoBehaviour
         pinnedTaskGameObjects.Add(clon);
         clon.GetComponent<TextMeshProUGUI>().text = task.name;
 
-        AutoSizePinnedTasks();
-        
+        AutoSizePinnedTasks();    
     }
 
     public void UnpinTask(Task task)
@@ -134,8 +148,8 @@ public class TaskManager : MonoBehaviour
             TextMeshProUGUI text = go.GetComponent<TextMeshProUGUI>();
             if(text.text == task.name)
             {
-                pinnedTaskGameObjects.Remove(go);
                 Destroy(go);
+                pinnedTaskGameObjects.Remove(go);
                 return;
             }
         }

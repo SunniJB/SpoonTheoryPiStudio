@@ -14,6 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskName: Buy lunch
   description: Task description
-  spoonCost: 1
+  spoonCost: -5
+  hygieneCost: 0
+  moneyCost: 0
+  hungerCost: 0
+  happinesCost: 0
+  workPerformanceCost: 0
   outlineObject: {fileID: 0}
-  difficulty: 0

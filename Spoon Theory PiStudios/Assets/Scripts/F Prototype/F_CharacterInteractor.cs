@@ -44,6 +44,7 @@ public class F_CharacterInteractor : MonoBehaviour
         {
             taskCanvasEnabled = !taskCanvasEnabled;
             taskCanvas.gameObject.SetActive(taskCanvasEnabled);
+            taskManager.pinnedTasksPanel.gameObject.SetActive(!taskCanvasEnabled);
             characterMovement.canMove = !taskCanvasEnabled;
 
             if(taskCanvasEnabled) Cursor.lockState = CursorLockMode.None;
