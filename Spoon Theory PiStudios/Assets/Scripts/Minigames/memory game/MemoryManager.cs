@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MemoryManager : MonoBehaviour
 {
@@ -9,12 +9,12 @@ public class MemoryManager : MonoBehaviour
 
     public Sprite[] flippedLibrary = new Sprite[5];
     public GameObject[] flipPlates = new GameObject[10];
-    private GameObject tempFp;
-    public GameObject firstClickObj, repplayButton;
-    private int[] numbers = new int[10];
+    public GameObject firstClickObj, winPanel;
     public Sprite clickOne = null, clickTwo = null;
     public int wins;
-    public Text textObj;
+
+    private GameObject tempFp;
+    private int[] numbers = new int[10];
     private void Awake()
     {
         instance = this;
@@ -22,6 +22,7 @@ public class MemoryManager : MonoBehaviour
 
     void Start()
     {
+
         for (int i = 1; i <= 10; i++)
         {
             numbers[i - 1] = Mathf.CeilToInt((float)i / 2);
@@ -40,8 +41,7 @@ public class MemoryManager : MonoBehaviour
         if (wins == 5)
         {
             //What happens when you win goes here!!
-            textObj.text = "You Won!!!!";
-            repplayButton.SetActive(true);
+            winPanel.SetActive(true);
         }
     }
 
@@ -54,5 +54,11 @@ public class MemoryManager : MonoBehaviour
             flipPlates[rando] = flipPlates[i];
             flipPlates[i] = tempFp;
         }
+    }
+
+    public void RestartMemory()
+    {
+        Scene thisScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(thisScene.name);
     }
 }
