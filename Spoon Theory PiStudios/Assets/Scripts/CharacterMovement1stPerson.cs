@@ -13,20 +13,20 @@ public class CharacterMovement1stPerson : MonoBehaviour
     float verticalVelocity;
 
     bool isGrounded;
-    [HideInInspector]
+
     public bool canMove;
 
 
     private void Awake()
     {
-        canMove = true;
 
-        controller = GetComponent<CharacterController>();
     }
     // Start is called before the first frame update
     void Start()
     {
+        canMove = true;
 
+        controller = GetComponent<CharacterController>();
     }
 
     // Update is called once per frame

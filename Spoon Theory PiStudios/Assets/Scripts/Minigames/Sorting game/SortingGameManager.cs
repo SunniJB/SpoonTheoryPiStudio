@@ -55,4 +55,9 @@ public class SortingGameManager : MonoBehaviour
         minutes = 0f;
         Time.timeScale = 1f;
     }
+
+    public void ChangeScene()
+    {
+        GameManager.Instance.ApartmentScene();
+    }
 }

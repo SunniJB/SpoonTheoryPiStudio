@@ -10,7 +10,12 @@ public class GameManager : MonoBehaviour
     public enum DayTime {Morning, Noon, Afternoon, Evening, Night};
     public DayTime dayTime;
 
-    public float money, spoons;
+    [Header("Player stats")]
+    public float money;
+    public float spoons;
+    public float hygiene;
+    public float happiness;
+    public float workPerformance;
     private void Awake()
     {
         // If there is an instance, and it's not me, delete myself. 
@@ -21,20 +26,31 @@ public class GameManager : MonoBehaviour
         else
         {
             Instance = this;
+            DontDestroyOnLoad(this.gameObject);
         }
     }
 
     private void Start()
     {
         dayTime = DayTime.Morning;
-        if(SceneManager.GetActiveScene().name != "Menu")
-            Cursor.lockState = CursorLockMode.Locked;
+        //if(SceneManager.GetActiveScene().name != "Menu") Cursor.lockState = CursorLockMode.Locked;
+    }
+    public void MenuScene()
+    {
+        SceneManager.LoadScene(0);
+        Cursor.lockState = CursorLockMode.None;
     }
 
-    public void PlayScene()
+    public void ApartmentScene()
     {
         Debug.Log("Change Scene");
         SceneManager.LoadScene(1);
         Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public void WorkScene()
+    {
+        SceneManager.LoadScene(2);
+        Cursor.lockState = CursorLockMode.None;
     }
 }

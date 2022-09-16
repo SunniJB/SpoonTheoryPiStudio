@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/1st person prototype.unity
     guid: 4b47b5aad6388494eb7a9867b91f42f9
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Sorting Minigame.unity
     guid: c92e99be8ddc82942aa0e94274cdfd7f
   m_configObjects: {}

@@ -17,6 +17,7 @@ public class F_CharacterInteractor : MonoBehaviour
 
     [Header("Tasks")]
     [SerializeField] Image taskCanvas;
+    [SerializeField] GameObject UIPanel;
     [SerializeField] TaskManager taskManager;
     bool taskCanvasEnabled;
 
@@ -46,6 +47,7 @@ public class F_CharacterInteractor : MonoBehaviour
             taskCanvas.gameObject.SetActive(taskCanvasEnabled);
             taskManager.pinnedTasksPanel.gameObject.SetActive(!taskCanvasEnabled);
             characterMovement.canMove = !taskCanvasEnabled;
+            UIPanel.SetActive(!taskCanvasEnabled);
 
             if(taskCanvasEnabled) Cursor.lockState = CursorLockMode.None;
             else Cursor.lockState = CursorLockMode.Locked;
@@ -81,6 +83,14 @@ public class F_CharacterInteractor : MonoBehaviour
                 taskManager.TaskCompleted(interactable.Task);
 
                 interactionHit[0].gameObject.layer = defaultLayer;
+            }
+
+            opencloseDoor opencloseDoor = interactionHit[0].GetComponent<opencloseDoor>();
+
+            if(opencloseDoor != null && Input.GetKeyDown(KeyCode.F))
+            {
+                opencloseDoor.OpenCloseDoor();
+                //GameManager.Instance.WorkScene();
             }
         }
     }
