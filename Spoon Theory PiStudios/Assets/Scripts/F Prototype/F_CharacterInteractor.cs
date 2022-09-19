@@ -21,7 +21,8 @@ public class F_CharacterInteractor : MonoBehaviour
     [SerializeField] TaskManager taskManager;
     bool taskCanvasEnabled;
 
-    int numberOfSpoons;
+    [HideInInspector]
+    public int numberOfSpoons;
 
     private void Awake()
     {
@@ -68,21 +69,23 @@ public class F_CharacterInteractor : MonoBehaviour
         {
             F_IInteractable interactable = interactionHit[0].GetComponent<F_IInteractable>();
 
-            if (interactable != null && Input.GetKeyDown(KeyCode.F))
+            if (interactable != null)
             {
-                numberOfSpoons -= interactable.Interact(this);
-                promptUI.SetUpText(interactable.InteractionPrompt);
+                //started interaction (only 1st frame)
+                if (Input.GetKeyDown(KeyCode.F))
+                {
+                    Outline outline = interactionHit[0].GetComponent<Outline>();
 
-                Outline outline = interactionHit[0].GetComponent<Outline>();
+                    if (outline == null)
+                        return;
 
-                if (outline == null)
-                    return;
+                    outline.enabled = false;
+                }
 
-                outline.enabled = false;
+                if(Input.GetKey(KeyCode.F))
+                {
 
-                taskManager.TaskCompleted(interactable.Task);
-
-                interactionHit[0].gameObject.layer = defaultLayer;
+                }
             }
 
             opencloseDoor opencloseDoor = interactionHit[0].GetComponent<opencloseDoor>();
@@ -110,6 +113,13 @@ public class F_CharacterInteractor : MonoBehaviour
         }
         else
             spoonSlider.value = numberOfSpoons;
+    }
+
+    public void FinishTask(F_IInteractable interactable, GameObject _object)
+    {
+        taskManager.TaskCompleted(interactable.Task);
+
+        _object.layer = defaultLayer;
     }
 
     private void ZeroSpoons()

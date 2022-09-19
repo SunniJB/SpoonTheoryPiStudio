@@ -10,5 +10,9 @@ public interface F_IInteractable
     public bool Interacted { get; }
     public Task Task { get; }
 
-    public int Interact(F_CharacterInteractor interactor);
+    public void Interact();
+    public void InProgress(F_CharacterInteractor interactor);
+
+    public IEnumerator Progress(F_CharacterInteractor interactor);
+    public void Finished(F_CharacterInteractor interactor);
 }
