@@ -1311,6 +1311,8 @@ MonoBehaviour:
   taskCanvas: {fileID: 1013130853}
   UIPanel: {fileID: 1962334858}
   taskManager: {fileID: 1013130851}
+  taskCanvasEnabled: 0
+  numberOfSpoons: 0
 --- !u!114 &607471768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3431,6 +3433,7 @@ MonoBehaviour:
   avatarImg: {fileID: 1336520947}
   pausePanel: {fileID: 1221644781}
   pause: 0
+  characterInteractor: {fileID: 595028370}
 --- !u!1 &1138728617
 GameObject:
   m_ObjectHideFlags: 0
@@ -6769,6 +6772,8 @@ MonoBehaviour:
   taskCanvas: {fileID: 0}
   UIPanel: {fileID: 0}
   taskManager: {fileID: 0}
+  taskCanvasEnabled: 0
+  numberOfSpoons: 0
 --- !u!114 &3966708726354120612
 MonoBehaviour:
   m_ObjectHideFlags: 0

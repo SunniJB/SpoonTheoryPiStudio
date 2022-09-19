@@ -9,6 +9,8 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField] bool pause;
 
+    [SerializeField] F_CharacterInteractor characterInteractor;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +40,7 @@ public class LevelManager : MonoBehaviour
             }
         }
 
-        if (!pause && Input.GetMouseButton(0) && Cursor.lockState != CursorLockMode.Locked)
+        if (!pause && Input.GetMouseButton(0) && Cursor.lockState != CursorLockMode.Locked && !characterInteractor.taskCanvasEnabled)
         {
             Cursor.lockState = CursorLockMode.Locked;
         }

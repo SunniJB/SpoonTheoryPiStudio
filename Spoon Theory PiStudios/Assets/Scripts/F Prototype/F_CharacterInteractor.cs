@@ -19,7 +19,7 @@ public class F_CharacterInteractor : MonoBehaviour
     [SerializeField] Image taskCanvas;
     [SerializeField] GameObject UIPanel;
     [SerializeField] TaskManager taskManager;
-    bool taskCanvasEnabled;
+    public bool taskCanvasEnabled;
 
     [HideInInspector]
     public int numberOfSpoons;
