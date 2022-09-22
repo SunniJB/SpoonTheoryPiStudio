@@ -67,7 +67,7 @@ public class F_CharacterInteractor : MonoBehaviour
 
         ObjectTask interactableObject = interactionHit[0].GetComponent<ObjectTask>();
 
-        if (interactableObject != null && interactableObject.outline.enabled && Input.GetKeyDown(KeyCode.F))
+        if (interactableObject != null && interactableObject.outline.enabled && Input.GetKeyDown(KeyCode.F) && !interactableObject.task.inProgress)
         {
             promptUI.SetUpText(interactableObject.interactionPrompt);
 
