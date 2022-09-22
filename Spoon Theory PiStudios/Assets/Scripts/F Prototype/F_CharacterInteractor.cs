@@ -9,6 +9,9 @@ public class F_CharacterInteractor : MonoBehaviour
     [SerializeField] LayerMask interactableLayer, defaultLayer;
     public PromptUI promptUI;
     [SerializeField] Slider spoonSlider;
+    [SerializeField] Slider hygieneSlider;
+    [SerializeField] Slider hungerSlider;
+    [SerializeField] Slider happinessSlider;
 
     [SerializeField] Transform interactionPoint;
     public float clickInteractionDistance = 5, FInteractionDistance = 3;
@@ -62,6 +65,8 @@ public class F_CharacterInteractor : MonoBehaviour
         FInteraction();
 
         UpdateSpoonSlider();
+
+        UpdateStatSliders();
     }
 
     private void FInteraction()
@@ -121,5 +126,10 @@ public class F_CharacterInteractor : MonoBehaviour
         Debug.Log("You ran out of spoons");
     }
 
-
+    private void UpdateStatSliders()
+    {
+        hygieneSlider.value = (float)hygiene / 10;
+        hungerSlider.value = (float)hunger / 10;
+        happinessSlider.value = (((float)hygiene + (float)hunger) / 2 + (float)happiness) / 20;
+    }
 }
