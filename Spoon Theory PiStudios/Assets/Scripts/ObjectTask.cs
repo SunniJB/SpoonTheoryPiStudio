@@ -6,7 +6,7 @@ public class ObjectTask : MonoBehaviour
 {
     public string interactionPrompt;
 
-    public bool finished, inProgress;
+    public bool finished;
 
     public Task task;
 
@@ -60,7 +60,7 @@ public class ObjectTask : MonoBehaviour
         }
 
 
-        if (Input.GetKey(KeyCode.F) && Vector3.Distance(interactor.transform.position, transform.position) <= interactor.FInteractionDistance)
+        if (Input.GetKey(KeyCode.F) && Vector3.Distance(interactor.transform.position, transform.position) <= interactor.FInteractionDistance + 2)
         {
             Debug.Log(task.name + " in progress");
 
