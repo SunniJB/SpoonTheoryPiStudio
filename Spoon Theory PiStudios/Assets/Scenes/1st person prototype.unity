@@ -3378,7 +3378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   avatarImg: {fileID: 1336520947}
   pausePanel: {fileID: 1221644781}
-  characterUIPanel: {fileID: 0}
+  characterUIPanel: {fileID: 1962334858}
   pause: 0
   characterInteractor: {fileID: 595028370}
 --- !u!1 &1138728617
@@ -4329,7 +4329,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -30}
+  m_AnchoredPosition: {x: 0, y: -17}
   m_SizeDelta: {x: 7999.9995, y: 4500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1411476632
