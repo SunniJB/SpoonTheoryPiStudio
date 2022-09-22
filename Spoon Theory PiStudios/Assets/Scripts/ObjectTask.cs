@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ObjectTask : MonoBehaviour
 {
@@ -43,6 +44,8 @@ public class ObjectTask : MonoBehaviour
 
     void Progress()
     {
+        if (interactor.numberOfSpoons <= 0) return;
+
         if(spoonsTaken >= task.spoonCost)
         {
             //Finished task
