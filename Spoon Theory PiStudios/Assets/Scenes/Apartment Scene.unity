@@ -3537,24 +3537,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1223951058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6274300814277045710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 1, g: 1, b: 0, a: 1}
-  outlineWidth: 5
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!1 &1246492638
 GameObject:
   m_ObjectHideFlags: 3
@@ -27199,6 +27181,8 @@ MonoBehaviour:
   finished: 0
   task: {fileID: 11400000, guid: e157bbd169a22df40aef1ca9844e15ce, type: 2}
   outline: {fileID: 0}
+  outlineColor: {r: 0, g: 0, b: 0, a: 0}
+  outlinWidth: 5
   progressSliderPrefab: {fileID: 6762780843341623119, guid: 6c6eb5732501b8244a9f3d515f17cd62, type: 3}
   sliderPos: {fileID: 935325222}
 --- !u!114 &808951037013477745
@@ -78887,7 +78871,6 @@ GameObject:
   - component: {fileID: 5394116056129893822}
   - component: {fileID: 1208794389975536288}
   - component: {fileID: 8219696742344740289}
-  - component: {fileID: 1223951058}
   m_Layer: 3
   m_Name: Wall_Mirror_01
   m_TagString: Untagged
@@ -81736,6 +81719,8 @@ MonoBehaviour:
   finished: 0
   task: {fileID: 11400000, guid: 2b330bcb678e7604298ac3100320a6d7, type: 2}
   outline: {fileID: 0}
+  outlineColor: {r: 1, g: 1, b: 0, a: 0}
+  outlinWidth: 5
   progressSliderPrefab: {fileID: 6762780843341623119, guid: 6c6eb5732501b8244a9f3d515f17cd62, type: 3}
   sliderPos: {fileID: 1856050699}
 --- !u!224 &8219696742344740290
