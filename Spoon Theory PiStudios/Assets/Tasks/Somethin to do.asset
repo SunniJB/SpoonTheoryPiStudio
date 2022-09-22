@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 689f24bddc4b4da44b46d092a39f3e9d, type: 3}
   m_Name: Somethin to do
   m_EditorClassIdentifier: 
-  taskName: Task name
+  taskName: Somethin to do
   description: Task description
   spoonCost: 0
   hygieneCost: 0
@@ -21,3 +21,4 @@ MonoBehaviour:
   happinesCost: 0
   workPerformanceCost: 0
   outlineObject: {fileID: 0}
+  inProgress: 0
