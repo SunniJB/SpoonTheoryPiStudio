@@ -13,6 +13,8 @@ public class ObjectTask : MonoBehaviour
 
     [HideInInspector]
     public Outline outline;
+    [SerializeField] Color outlineColor;
+    [Range(1, 10)][SerializeField] float outlinWidth = 5;
 
     F_CharacterInteractor interactor;
     Slider progressSlider;
@@ -22,10 +24,18 @@ public class ObjectTask : MonoBehaviour
 
     [SerializeField] GameObject progressSliderPrefab;
     [SerializeField] Transform sliderPos;
+
+    private void Awake()
+    {
+        outline = gameObject.AddComponent<Outline>();
+    }
+
     private void Start()
     {
-        outline = GetComponent<Outline>();
         outline.enabled = false;
+        outline.OutlineMode = Outline.Mode.OutlineAll;
+        outline.OutlineColor = outlineColor;
+        outline.OutlineWidth = 5;
         task.outlineObject = outline;
         task.inProgress = false;
     }
