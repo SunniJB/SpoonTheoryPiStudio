@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskName: Task name
   description: Task description
-  spoonCost: 0
-  hygieneCost: 0
+  spoonCost: 5
+  hygieneCost: -3
   moneyCost: 0
   hungerCost: 0
-  happinesCost: 0
+  happinesCost: -2
   workPerformanceCost: 0
   outlineObject: {fileID: 0}
   inProgress: 0

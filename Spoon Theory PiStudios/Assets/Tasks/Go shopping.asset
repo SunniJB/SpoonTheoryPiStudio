@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskName: Task name
   description: Task description
-  spoonCost: 0
+  spoonCost: 5
   hygieneCost: 0
   moneyCost: 0
   hungerCost: 0
