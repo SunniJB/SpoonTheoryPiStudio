@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 689f24bddc4b4da44b46d092a39f3e9d, type: 3}
-  m_Name: Shower before work
+  m_Name: Take a shower
   m_EditorClassIdentifier: 
-  taskName: Shower before work
+  taskName: Take a shower
   description: Task description
   spoonCost: 2
   hygieneCost: -3
@@ -21,4 +21,4 @@ MonoBehaviour:
   happinesCost: 0
   workPerformanceCost: 0
   outlineObject: {fileID: 0}
-  inProgress: 0
+  inProgress: 1

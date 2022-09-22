@@ -3741,7 +3741,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   morningTasks:
   - {fileID: 11400000, guid: 6547ea276f358f34cab983ff1cedc1ae, type: 2}
-  - {fileID: 11400000, guid: e157bbd169a22df40aef1ca9844e15ce, type: 2}
+  - {fileID: 11400000, guid: 39435783b2c3b424b9de8200499da858, type: 2}
   - {fileID: 11400000, guid: 20537cb323c330145bc263b108a732ec, type: 2}
   - {fileID: 11400000, guid: 2b330bcb678e7604298ac3100320a6d7, type: 2}
   - {fileID: 11400000, guid: e157bbd169a22df40aef1ca9844e15ce, type: 2}
@@ -7438,6 +7438,37 @@ Transform:
   - {fileID: 1246492639}
   m_Father: {fileID: 854590543}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2026618251
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2026618252}
+  m_Layer: 0
+  m_Name: SliderPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2026618252
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026618251}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 1.551, z: -1.262}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8091779766764773945}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2027648978
 GameObject:
@@ -53115,7 +53146,9 @@ GameObject:
   - component: {fileID: 8042044972925437511}
   - component: {fileID: 8042044972925437510}
   - component: {fileID: 8042044972925437508}
-  m_Layer: 0
+  - component: {fileID: 8560085478206343275}
+  - component: {fileID: 8560085478206343274}
+  m_Layer: 3
   m_Name: GlassDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53184,6 +53217,7 @@ Transform:
   m_Children:
   - {fileID: 4048934500284034736}
   - {fileID: 5896808603890264701}
+  - {fileID: 2026618252}
   m_Father: {fileID: 1104761497392506919}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
@@ -53551,6 +53585,42 @@ Transform:
   m_Father: {fileID: 5896808603890264701}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8560085478206343274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8042044972925437505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 320f7227530da7f4390e0d5e34652f73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionPrompt: You-re getting so clean
+  finished: 0
+  task: {fileID: 11400000, guid: 39435783b2c3b424b9de8200499da858, type: 2}
+  outline: {fileID: 0}
+  progressSliderPrefab: {fileID: 6762780843341623119, guid: 6c6eb5732501b8244a9f3d515f17cd62, type: 3}
+  sliderPos: {fileID: 2026618252}
+--- !u!114 &8560085478206343275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8042044972925437505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.9733331, g: 1, b: 0, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!4 &8710994841926266834
 Transform:
   m_ObjectHideFlags: 0
