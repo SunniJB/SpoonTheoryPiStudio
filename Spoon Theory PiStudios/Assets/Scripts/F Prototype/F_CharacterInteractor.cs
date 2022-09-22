@@ -1,4 +1,4 @@
-using System.Collections;
+    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,7 +11,7 @@ public class F_CharacterInteractor : MonoBehaviour
     [SerializeField] Slider spoonSlider;
 
     [SerializeField] Transform interactionPoint;
-    [SerializeField] float clickInteractionDistance = 5, FInteractionDistance = 3;
+    public float clickInteractionDistance = 5, FInteractionDistance = 3;
 
     CharacterMovement1stPerson characterMovement;
 
@@ -21,7 +21,7 @@ public class F_CharacterInteractor : MonoBehaviour
     [SerializeField] TaskManager taskManager;
     bool taskCanvasEnabled;
 
-    int numberOfSpoons;
+    public int numberOfSpoons, hygiene, happiness, hunger, money, workPerformance;
 
     private void Awake()
     {
@@ -66,21 +66,13 @@ public class F_CharacterInteractor : MonoBehaviour
 
         if (interactionHit.Length > 0)
         {
-            F_IInteractable interactable = interactionHit[0].GetComponent<F_IInteractable>();
+            ObjectTask interactableObject = interactionHit[0].GetComponent<ObjectTask>();
 
-            if (interactable != null && Input.GetKeyDown(KeyCode.F))
+            if (interactableObject != null && Input.GetKeyDown(KeyCode.F))
             {
-                numberOfSpoons -= interactable.Interact(this);
-                promptUI.SetUpText(interactable.InteractionPrompt);
+                promptUI.SetUpText(interactableObject.interactionPrompt);
 
-                Outline outline = interactionHit[0].GetComponent<Outline>();
-
-                if (outline == null)
-                    return;
-
-                outline.enabled = false;
-
-                taskManager.TaskCompleted(interactable.Task);
+                taskManager.TaskCompleted(interactableObject.task);
 
                 interactionHit[0].gameObject.layer = defaultLayer;
             }
@@ -112,7 +104,7 @@ public class F_CharacterInteractor : MonoBehaviour
             spoonSlider.value = numberOfSpoons;
     }
 
-    private void ZeroSpoons()
+    public void ZeroSpoons()
     {
 
     }
