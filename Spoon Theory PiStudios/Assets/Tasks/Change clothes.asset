@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 689f24bddc4b4da44b46d092a39f3e9d, type: 3}
   m_Name: Change clothes
   m_EditorClassIdentifier: 
-  taskName: Task name
+  taskName: Change clothes
   description: Task description
-  spoonCost: 0
-  hygieneCost: 0
+  spoonCost: 1
+  hygieneCost: -1
   moneyCost: 0
   hungerCost: 0
   happinesCost: 0

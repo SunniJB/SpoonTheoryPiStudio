@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskName: Oder takeout
   description: Task description
-  spoonCost: 5
+  spoonCost: 1
   hygieneCost: 0
-  moneyCost: 0
-  hungerCost: 0
+  moneyCost: 5
+  hungerCost: -2
   happinesCost: 0
   workPerformanceCost: 0
   outlineObject: {fileID: 0}
+  inProgress: 0
