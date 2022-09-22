@@ -22,7 +22,12 @@ public class F_CharacterInteractor : MonoBehaviour
     public bool taskCanvasEnabled;
 
     [Header("Player stats")]
-    public int numberOfSpoons, hygiene, happiness, hunger, money, workPerformance;
+    public int numberOfSpoons;
+    public int hygiene;
+    public int happiness;
+    public int hunger;
+    public int money;
+    public int workPerformance;
 
     private void Awake()
     {

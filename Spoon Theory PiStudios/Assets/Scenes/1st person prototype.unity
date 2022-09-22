@@ -3378,6 +3378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   avatarImg: {fileID: 1336520947}
   pausePanel: {fileID: 1221644781}
+  characterUIPanel: {fileID: 0}
   pause: 0
   characterInteractor: {fileID: 595028370}
 --- !u!1 &1138728617
