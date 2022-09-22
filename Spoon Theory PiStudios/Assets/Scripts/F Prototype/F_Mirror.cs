@@ -27,44 +27,8 @@ public class F_Mirror : MonoBehaviour, F_IInteractable //In inheritance, the obj
         throw new System.NotImplementedException();
     }
 
-    public void InProgress(F_CharacterInteractor interactor)
+    public int Interact(F_CharacterInteractor interactor)
     {
-        StartCoroutine(Progress(interactor));
+        throw new System.NotImplementedException();
     }
-    public IEnumerator Progress(F_CharacterInteractor interactor)
-    {
-        bool finished = false;
-        float timer = Task.spoonCost;
-        float timerSec = 1;
-
-        while (!finished && Input.GetKey(KeyCode.F))
-        {
-            timer -= Time.deltaTime;
-            timerSec -= Time.deltaTime;
-
-            if(timerSec <= 0)
-            {
-                timerSec = 1;
-                interactor.numberOfSpoons--;
-            }
-
-            if(timer <= 0) finished = true;
-
-            //update ui to show progress
-
-            yield return 0;
-        }
-
-        if (finished)
-        {
-            Finished(interactor);
-        }
-    }
-
-    public void Finished(F_CharacterInteractor interactor)
-    {
-        interactor.FinishTask(this, gameObject);
-    }
-
-
 }

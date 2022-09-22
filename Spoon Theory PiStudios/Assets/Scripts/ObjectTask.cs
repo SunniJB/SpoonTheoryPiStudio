@@ -10,7 +10,13 @@ public class ObjectTask : MonoBehaviour
 
     public Task task;
 
-    [SerializeField] Outline outline;
+    Outline outline;
+
+    private void Start()
+    {
+        outline = GetComponent<Outline>();
+        outline.enabled = false;
+    }
 
     public void Interact(F_CharacterInteractor interactor)
     {

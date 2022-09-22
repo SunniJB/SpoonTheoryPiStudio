@@ -19,7 +19,7 @@ public class F_CharacterInteractor : MonoBehaviour
     [SerializeField] Image taskCanvas;
     [SerializeField] GameObject UIPanel;
     [SerializeField] TaskManager taskManager;
-    bool taskCanvasEnabled;
+    public bool taskCanvasEnabled;
 
     public int numberOfSpoons, hygiene, happiness, hunger, money, workPerformance;
 
@@ -102,6 +102,11 @@ public class F_CharacterInteractor : MonoBehaviour
         }
         else
             spoonSlider.value = numberOfSpoons;
+    }
+
+    public void FinishTask(Task task)
+    {
+        taskManager.TaskCompleted(task);
     }
 
     public void ZeroSpoons()

@@ -1349,6 +1349,12 @@ MonoBehaviour:
   taskCanvas: {fileID: 1013130853}
   UIPanel: {fileID: 1962334858}
   taskManager: {fileID: 1013130851}
+  numberOfSpoons: 0
+  hygiene: 0
+  happiness: 0
+  hunger: 0
+  money: 0
+  workPerformance: 0
 --- !u!114 &607471768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77209,6 +77215,12 @@ MonoBehaviour:
   taskCanvas: {fileID: 0}
   UIPanel: {fileID: 0}
   taskManager: {fileID: 0}
+  numberOfSpoons: 0
+  hygiene: 0
+  happiness: 0
+  hunger: 0
+  money: 0
+  workPerformance: 0
 --- !u!114 &3966708726354120612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81650,13 +81662,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 6274300814277045710}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c98969b45df05ee42bce2b9db05f1e4d, type: 3}
+  m_Script: {fileID: 11500000, guid: 320f7227530da7f4390e0d5e34652f73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   interactionPrompt: You look nice
   finished: 0
   inProgress: 0
   task: {fileID: 11400000, guid: 2b330bcb678e7604298ac3100320a6d7, type: 2}
+  outline: {fileID: 0}
 --- !u!23 &8259065307692788234
 MeshRenderer:
   m_ObjectHideFlags: 0
