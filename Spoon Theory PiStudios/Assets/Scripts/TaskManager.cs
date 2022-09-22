@@ -14,7 +14,7 @@ public class TaskManager : MonoBehaviour
     [SerializeField] Transform[] columns;
 
     List<Task> completedTasks = new List<Task>();
-    
+
     List<Task> pinnedTasks = new List<Task>();
     List<GameObject> pinnedTaskGameObjects = new List<GameObject>();
 
@@ -27,6 +27,8 @@ public class TaskManager : MonoBehaviour
     public Image pinnedTasksPanel;
 
     [SerializeField] Color easy, medium, hard;
+
+    [SerializeField] int mediumDif, hardDif;
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +43,9 @@ public class TaskManager : MonoBehaviour
             displayedTasks = new List<Task>(eveningTasks);
         }
 
+        int tasksPerColumn = displayedTasks.Count / columns.Length;
+        int rest = displayedTasks.Count % columns.Length;
+
         //create the checkboxes for the correct displayed tasks
         int i = 0;
         foreach (Task task in displayedTasks)
@@ -51,17 +56,24 @@ public class TaskManager : MonoBehaviour
             checkboxes[i].task = task;
 
             checkboxes[i].text.text = task.taskName;
-            if (task.spoonCost < 3) checkboxes[i].text.color = easy;
-            else if (task.spoonCost < 5) checkboxes[i].text.color = medium;
+            checkboxes[i].text.enableAutoSizing = true;
+
+            //assign colors based on difficulty
+            if (task.spoonCost < mediumDif) checkboxes[i].text.color = easy;
+            else if (task.spoonCost < hardDif) checkboxes[i].text.color = medium;
             else checkboxes[i].text.color = hard;
 
             checkboxes[i].taskManager = this;
 
             Transform parent;
 
-            if (i < displayedTasks.Count / 3) parent = columns[0];
-            else if (i <= Mathf.RoundToInt(displayedTasks.Count / 3 * 2)) parent = columns[1];
+            if (i < tasksPerColumn) parent = columns[0];
+            else if (i < (tasksPerColumn * 2 + rest / 2)) parent = columns[1];
             else parent = columns[2];
+
+            //if (i < displayedTasks.Count / 3) parent = columns[0];
+            //else if (i <= Mathf.CeilToInt(displayedTasks.Count / 3 * 2)) parent = columns[1];
+            //else parent = columns[2];
 
             clon.transform.SetParent(parent);
 
