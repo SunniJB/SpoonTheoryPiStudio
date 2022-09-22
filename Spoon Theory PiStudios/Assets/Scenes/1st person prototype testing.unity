@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1349,6 +1349,7 @@ MonoBehaviour:
   taskCanvas: {fileID: 1013130853}
   UIPanel: {fileID: 1962334858}
   taskManager: {fileID: 1013130851}
+  taskCanvasEnabled: 0
   numberOfSpoons: 0
   hygiene: 0
   happiness: 0
@@ -2823,17 +2824,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2b330bcb678e7604298ac3100320a6d7, type: 2}
   - {fileID: 11400000, guid: e157bbd169a22df40aef1ca9844e15ce, type: 2}
   - {fileID: 11400000, guid: 93b1e43dad7f7204c8da28b4df5ff417, type: 2}
-  - {fileID: 11400000, guid: 9e765605a218aa74596f786149374201, type: 2}
-  - {fileID: 11400000, guid: 9e765605a218aa74596f786149374201, type: 2}
-  - {fileID: 11400000, guid: 9e765605a218aa74596f786149374201, type: 2}
-  - {fileID: 11400000, guid: 9e765605a218aa74596f786149374201, type: 2}
-  - {fileID: 11400000, guid: 9e765605a218aa74596f786149374201, type: 2}
-  - {fileID: 11400000, guid: 9e765605a218aa74596f786149374201, type: 2}
-  - {fileID: 11400000, guid: 9e765605a218aa74596f786149374201, type: 2}
-  - {fileID: 11400000, guid: 9e765605a218aa74596f786149374201, type: 2}
-  - {fileID: 11400000, guid: 9e765605a218aa74596f786149374201, type: 2}
-  - {fileID: 11400000, guid: 9e765605a218aa74596f786149374201, type: 2}
-  - {fileID: 11400000, guid: 9e765605a218aa74596f786149374201, type: 2}
   eveningTasks:
   - {fileID: 11400000, guid: 2ba3b9f2b7ce1a441b9036e1adc86249, type: 2}
   - {fileID: 11400000, guid: 26ce8abc24613854381a598615a751a6, type: 2}
@@ -3547,6 +3537,7 @@ MonoBehaviour:
   avatarImg: {fileID: 1336520947}
   pausePanel: {fileID: 1221644781}
   pause: 0
+  characterInteractor: {fileID: 595028370}
 --- !u!1 &1138728617
 GameObject:
   m_ObjectHideFlags: 0
@@ -7765,7 +7756,7 @@ GameObject:
   - component: {fileID: 808951036462473742}
   - component: {fileID: 808951036462473728}
   - component: {fileID: 808951036462473729}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Knob.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10505,7 +10496,7 @@ GameObject:
   - component: {fileID: 808951036535111791}
   - component: {fileID: 808951036535111788}
   - component: {fileID: 808951036535111789}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Broiler_Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15645,7 +15636,7 @@ GameObject:
   - component: {fileID: 808951036676072987}
   - component: {fileID: 808951036676072984}
   - component: {fileID: 808951036676072985}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stove_Plate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15907,7 +15898,7 @@ GameObject:
   - component: {fileID: 808951036686605090}
   - component: {fileID: 808951036686605092}
   - component: {fileID: 808951036686605093}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stove_Grate_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20049,7 +20040,7 @@ GameObject:
   - component: {fileID: 808951036814546050}
   - component: {fileID: 808951036814546052}
   - component: {fileID: 808951036814546053}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stove_Grate_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21979,7 +21970,7 @@ GameObject:
   - component: {fileID: 808951036853231669}
   - component: {fileID: 808951036853231666}
   - component: {fileID: 808951036853231667}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stove_Feet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22968,7 +22959,7 @@ GameObject:
   - component: {fileID: 808951036889138187}
   - component: {fileID: 808951036889138189}
   - component: {fileID: 808951036889138186}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stove_Logo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23592,7 +23583,7 @@ GameObject:
   - component: {fileID: 808951036900075760}
   - component: {fileID: 808951036900075762}
   - component: {fileID: 808951036900075763}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Knob.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24218,7 +24209,7 @@ GameObject:
   - component: {fileID: 808951036926310564}
   - component: {fileID: 808951036926310566}
   - component: {fileID: 808951036926310567}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Burner_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27044,7 +27035,9 @@ GameObject:
   - component: {fileID: 808951037013477742}
   - component: {fileID: 808951037013477743}
   - component: {fileID: 808951037013477740}
-  m_Layer: 0
+  - component: {fileID: 808951037013477745}
+  - component: {fileID: 808951037013477744}
+  m_Layer: 3
   m_Name: Stove_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27137,6 +27130,41 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &808951037013477744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808951037013477738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 320f7227530da7f4390e0d5e34652f73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionPrompt: Wow, we are cooking
+  finished: 0
+  inProgress: 0
+  task: {fileID: 11400000, guid: e157bbd169a22df40aef1ca9844e15ce, type: 2}
+  outline: {fileID: 0}
+--- !u!114 &808951037013477745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808951037013477738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.91854584, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!4 &808951037017500274
 Transform:
   m_ObjectHideFlags: 0
@@ -32802,7 +32830,7 @@ GameObject:
   - component: {fileID: 808951037225923875}
   - component: {fileID: 808951037225923877}
   - component: {fileID: 808951037225923874}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Oven_Grate_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38302,7 +38330,7 @@ GameObject:
   - component: {fileID: 808951037428666868}
   - component: {fileID: 808951037428666870}
   - component: {fileID: 808951037428666871}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stove_Glass_Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41758,7 +41786,7 @@ GameObject:
   - component: {fileID: 808951037548402425}
   - component: {fileID: 808951037548402427}
   - component: {fileID: 808951037548402424}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Broiler_Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43509,7 +43537,7 @@ GameObject:
   - component: {fileID: 808951037595479043}
   - component: {fileID: 808951037595479045}
   - component: {fileID: 808951037595479042}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stove_Electronic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45018,7 +45046,7 @@ GameObject:
   - component: {fileID: 808951037647938178}
   - component: {fileID: 808951037647938180}
   - component: {fileID: 808951037647938181}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Burner_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47668,7 +47696,7 @@ GameObject:
   - component: {fileID: 808951037738131989}
   - component: {fileID: 808951037738131991}
   - component: {fileID: 808951037738131988}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Knob.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50011,7 +50039,7 @@ GameObject:
   - component: {fileID: 808951037825055366}
   - component: {fileID: 808951037825055367}
   - component: {fileID: 808951037825055364}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stove_Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50200,7 +50228,7 @@ GameObject:
   - component: {fileID: 808951037829642389}
   - component: {fileID: 808951037829642391}
   - component: {fileID: 808951037829642388}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Knob.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52355,7 +52383,7 @@ GameObject:
   - component: {fileID: 808951037896148826}
   - component: {fileID: 808951037896148828}
   - component: {fileID: 808951037896148829}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stove_Knob_Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52987,7 +53015,7 @@ GameObject:
   - component: {fileID: 808951037910394490}
   - component: {fileID: 808951037910394492}
   - component: {fileID: 808951037910394493}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Burner_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59230,7 +59258,7 @@ GameObject:
   - component: {fileID: 808951038108527771}
   - component: {fileID: 808951038108527773}
   - component: {fileID: 808951038108527770}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Knob.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60087,7 +60115,7 @@ GameObject:
   - component: {fileID: 808951038132175016}
   - component: {fileID: 808951038132175018}
   - component: {fileID: 808951038132175019}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Burner_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64229,7 +64257,7 @@ GameObject:
   - component: {fileID: 808951038261125172}
   - component: {fileID: 808951038261125174}
   - component: {fileID: 808951038261125175}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ControlPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65869,7 +65897,7 @@ GameObject:
   - component: {fileID: 808951038321551767}
   - component: {fileID: 808951038321551764}
   - component: {fileID: 808951038321551765}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Oven_Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67598,7 +67626,7 @@ GameObject:
   - component: {fileID: 808951038385034049}
   - component: {fileID: 808951038385034051}
   - component: {fileID: 808951038385034048}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stove_Handle.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73165,7 +73193,7 @@ GameObject:
   - component: {fileID: 808951038548972093}
   - component: {fileID: 808951038548972095}
   - component: {fileID: 808951038548972092}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Oven_Grate_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77215,6 +77243,7 @@ MonoBehaviour:
   taskCanvas: {fileID: 0}
   UIPanel: {fileID: 0}
   taskManager: {fileID: 0}
+  taskCanvasEnabled: 0
   numberOfSpoons: 0
   hygiene: 0
   happiness: 0
