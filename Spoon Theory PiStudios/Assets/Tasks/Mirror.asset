@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskName: Mirror
   description: You look how you look
-  spoonCost: 10
+  spoonCost: 5
   hygieneCost: 0
   moneyCost: 0
   hungerCost: 0
