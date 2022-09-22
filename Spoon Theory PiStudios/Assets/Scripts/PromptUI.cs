@@ -33,17 +33,11 @@ public class PromptUI : MonoBehaviour
         promptText.text = text;
         textPanel.gameObject.SetActive(true);
         isDisplayed = true;
-        Invoke("Close", 3);
     }
 
     public void Close()
     {
         textPanel.gameObject.SetActive(false);
         isDisplayed = false;
-    }
-
-    public void DisplaySpoons(int spoonNumber)
-    {
-        //spoonsText.text = spoonNumber.ToString();
     }
 }

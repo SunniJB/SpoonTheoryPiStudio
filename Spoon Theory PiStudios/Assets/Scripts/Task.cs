@@ -14,6 +14,10 @@ public class Task : ScriptableObject
 
     [HideInInspector]
     public Outline outlineObject;
+
+    [HideInInspector]
+    public bool inProgress;
+
     //public bool pinned, completed;
     //public enum Difficulty {Easy, Medium, Hard}
     //public Difficulty difficulty;

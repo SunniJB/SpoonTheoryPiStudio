@@ -14,6 +14,7 @@ public class CheckBox : MonoBehaviour
     [HideInInspector]
     public Task task;
     public Image pinImg, checkImg;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +38,7 @@ public class CheckBox : MonoBehaviour
         }
 
         //commented bc of error as we don't have enough tasks with outline working. Do no delete, it works
-        //task.outlineObject.enabled = value;
+        if(task.outlineObject != null) task.outlineObject.enabled = value;
 
         taskManager.CheckTasksPinned();
     }

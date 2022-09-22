@@ -93,7 +93,7 @@ public class TaskManager : MonoBehaviour
             foreach (CheckBox cb in checkboxes)
             {
                 Toggle toggle = cb.GetComponent<Toggle>();
-                if(!completedTasks.Contains(cb.task))
+                if(!completedTasks.Contains(cb.task) &&  cb.task.inProgress)
                     toggle.interactable = true;
             }
         }
@@ -104,7 +104,6 @@ public class TaskManager : MonoBehaviour
     /// remove it from displayed tasks
     /// and destroy its checkbox
     /// </summary>
-    /// <param name="task"></param>
     public void TaskCompleted(Task task)
     {
         completedTasks.Add(task);

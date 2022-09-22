@@ -1,4 +1,4 @@
-    using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,7 +7,7 @@ public class F_CharacterInteractor : MonoBehaviour
 {
     Camera cam;
     [SerializeField] LayerMask interactableLayer, defaultLayer;
-    [SerializeField] PromptUI promptUI;
+    public PromptUI promptUI;
     [SerializeField] Slider spoonSlider;
 
     [SerializeField] Transform interactionPoint;
@@ -21,6 +21,7 @@ public class F_CharacterInteractor : MonoBehaviour
     [SerializeField] TaskManager taskManager;
     public bool taskCanvasEnabled;
 
+    [Header("Player stats")]
     public int numberOfSpoons, hygiene, happiness, hunger, money, workPerformance;
 
     private void Awake()
@@ -55,8 +56,6 @@ public class F_CharacterInteractor : MonoBehaviour
 
         FInteraction();
 
-        promptUI.DisplaySpoons(numberOfSpoons);
-
         UpdateSpoonSlider();
     }
 
@@ -64,26 +63,23 @@ public class F_CharacterInteractor : MonoBehaviour
     {
         Collider[] interactionHit = Physics.OverlapSphere(interactionPoint.position, FInteractionDistance, interactableLayer, QueryTriggerInteraction.Collide);
 
-        if (interactionHit.Length > 0)
+        if (interactionHit.Length <= 0) return;
+
+        ObjectTask interactableObject = interactionHit[0].GetComponent<ObjectTask>();
+
+        if (interactableObject != null && interactableObject.outline.enabled && Input.GetKeyDown(KeyCode.F))
         {
-            ObjectTask interactableObject = interactionHit[0].GetComponent<ObjectTask>();
+            promptUI.SetUpText(interactableObject.interactionPrompt);
 
-            if (interactableObject != null && Input.GetKeyDown(KeyCode.F))
-            {
-                promptUI.SetUpText(interactableObject.interactionPrompt);
+            interactableObject.Interact(this);
+        }
 
-                taskManager.TaskCompleted(interactableObject.task);
+        opencloseDoor opencloseDoor = interactionHit[0].GetComponent<opencloseDoor>();
 
-                interactionHit[0].gameObject.layer = defaultLayer;
-            }
-
-            opencloseDoor opencloseDoor = interactionHit[0].GetComponent<opencloseDoor>();
-
-            if(opencloseDoor != null && Input.GetKeyDown(KeyCode.F))
-            {
-                opencloseDoor.OpenCloseDoor();
-                //GameManager.Instance.WorkScene();
-            }
+        if (opencloseDoor != null && Input.GetKeyDown(KeyCode.F))
+        {
+            opencloseDoor.OpenCloseDoor();
+            //GameManager.Instance.WorkScene();
         }
     }
 
@@ -97,21 +93,27 @@ public class F_CharacterInteractor : MonoBehaviour
     {
         if (numberOfSpoons < 0)
         {
-            spoonSlider.value = 0;
+            numberOfSpoons = 0;
             ZeroSpoons();
         }
-        else
-            spoonSlider.value = numberOfSpoons;
+        
+        spoonSlider.value = numberOfSpoons;
     }
 
-    public void FinishTask(Task task)
+    public void FinishTask(Task task, GameObject interactableObject)
     {
+        promptUI.Close();
+
         taskManager.TaskCompleted(task);
+
+        interactableObject.layer = defaultLayer;
+
+        Debug.Log(task.name + " finished");
     }
 
     public void ZeroSpoons()
     {
-
+        Debug.Log("You ran out of spoons");
     }
 
 
