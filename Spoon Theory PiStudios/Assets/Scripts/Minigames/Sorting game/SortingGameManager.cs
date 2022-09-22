@@ -11,6 +11,7 @@ public class SortingGameManager : MonoBehaviour
 
     private void Start()
     {
+        Cursor.lockState = CursorLockMode.Confined;
         redSide = GameObject.Find("RedSide").GetComponent<SortingGameSides>();
         blueSide = GameObject.Find("BlueSide").GetComponent<SortingGameSides>();
         pausePanel = GameObject.Find("PausePanel");
