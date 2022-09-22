@@ -15,5 +15,10 @@ MonoBehaviour:
   taskName: Skip breakfast
   description: Task description
   spoonCost: 0
+  hygieneCost: 0
+  moneyCost: 0
+  hungerCost: 2
+  happinesCost: 0
+  workPerformanceCost: 1
   outlineObject: {fileID: 0}
-  difficulty: 0
+  inProgress: 0

@@ -17,7 +17,8 @@ MonoBehaviour:
   spoonCost: 4
   hygieneCost: 0
   moneyCost: 0
-  hungerCost: 0
+  hungerCost: -2
   happinesCost: 0
   workPerformanceCost: 0
   outlineObject: {fileID: 0}
+  inProgress: 0
