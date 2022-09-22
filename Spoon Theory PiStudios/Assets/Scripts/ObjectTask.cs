@@ -19,6 +19,8 @@ public class ObjectTask : MonoBehaviour
     int spoonsTaken = 0;
     float timer = 1;
 
+    [SerializeField] Slider progressSlider;
+
     private void Start()
     {
         outline = GetComponent<Outline>();
