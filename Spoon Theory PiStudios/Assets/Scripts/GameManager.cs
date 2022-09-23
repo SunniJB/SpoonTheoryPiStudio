@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Player stats")]
     public float money;
+    public float hunger;
     public float spoons;
     public float hygiene;
     public float happiness;
@@ -57,5 +58,15 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(3);
         Cursor.lockState = CursorLockMode.None;
+    }
+
+    public void UpdateGameManagerStats(float _money, float _hunger, float _spoons, float _hygiene, float _happines, float _workPerformance)
+    {
+        money = _money;
+        hunger = _hunger;
+        spoons = _spoons;
+        hygiene = _hygiene;
+        happiness = _happines;
+        workPerformance = _workPerformance;
     }
 }
