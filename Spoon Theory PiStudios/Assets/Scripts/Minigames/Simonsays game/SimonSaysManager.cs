@@ -159,6 +159,7 @@ public class SimonSaysManager : MonoBehaviour
                     break;
             }
             i++;
+            if (i == currentSequence.Count) ActivateClick();
             yield return new WaitForSeconds(currentTimeBetweenColors);
         }
     }
