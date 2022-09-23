@@ -671,7 +671,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialLength: 2
-  repeatTimes: 6
+  repeatTimes: 8
   initialTimeBetweenColors: 1
   resetColorTime: 0.3
   beginSequenceDelay: 1
