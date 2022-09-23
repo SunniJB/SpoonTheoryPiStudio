@@ -692,6 +692,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 9045225190608435130, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
 --- !u!1 &193865621
@@ -1884,7 +1888,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 320f7227530da7f4390e0d5e34652f73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionPrompt: 
+  interactionPrompt: Taking a shower
   finished: 0
   task: {fileID: 11400000, guid: 39435783b2c3b424b9de8200499da858, type: 2}
   outline: {fileID: 0}
@@ -4030,7 +4034,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 514287c853dbf534da40769852274f43, type: 2}
   - {fileID: 11400000, guid: 2b330bcb678e7604298ac3100320a6d7, type: 2}
   - {fileID: 11400000, guid: e157bbd169a22df40aef1ca9844e15ce, type: 2}
-  - {fileID: 11400000, guid: 93b1e43dad7f7204c8da28b4df5ff417, type: 2}
+  - {fileID: 11400000, guid: b7fc476a111841b4cad5ae3428cf9b3e, type: 2}
   eveningTasks:
   - {fileID: 11400000, guid: 2ba3b9f2b7ce1a441b9036e1adc86249, type: 2}
   - {fileID: 11400000, guid: 26ce8abc24613854381a598615a751a6, type: 2}
@@ -6810,6 +6814,37 @@ Transform:
   m_Father: {fileID: 353983969}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1691097720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1691097721}
+  m_Layer: 3
+  m_Name: SliderPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1691097721
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1691097720}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.028, y: 1.42, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1962691725}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1716496201
 GameObject:
   m_ObjectHideFlags: 0
@@ -7623,6 +7658,52 @@ Transform:
   m_Father: {fileID: 609463240}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1962691724 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9045225190608435130, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+  m_PrefabInstance: {fileID: 156365269}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1962691725 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5901709102727822101, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+  m_PrefabInstance: {fileID: 156365269}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1962691729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962691724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 320f7227530da7f4390e0d5e34652f73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionPrompt: 
+  finished: 0
+  task: {fileID: 11400000, guid: b7fc476a111841b4cad5ae3428cf9b3e, type: 2}
+  outline: {fileID: 0}
+  progressSliderPrefab: {fileID: 6762780843341623119, guid: 6c6eb5732501b8244a9f3d515f17cd62, type: 3}
+  sliderPos: {fileID: 1691097721}
+--- !u!114 &1962691730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962691724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.9818833, g: 1, b: 0, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &1995377343
 GameObject:
   m_ObjectHideFlags: 0
@@ -8183,7 +8264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 320f7227530da7f4390e0d5e34652f73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionPrompt: 
+  interactionPrompt: You look at the reflection
   finished: 0
   task: {fileID: 11400000, guid: 2b330bcb678e7604298ac3100320a6d7, type: 2}
   outline: {fileID: 0}
