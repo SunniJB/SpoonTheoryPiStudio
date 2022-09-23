@@ -28,7 +28,7 @@ public class LevelManager : MonoBehaviour
             pause = !pause;
 
             pausePanel.gameObject.SetActive(pause);
-            characterUIPanel.SetActive(!pause);
+            characterUIPanel    .SetActive(!pause);
 
             if (pause)
             {
