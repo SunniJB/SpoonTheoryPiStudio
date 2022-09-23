@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
     }
 
-    public void MemoryGame()
+    public void MemoryGameScene()
     {
         SceneManager.LoadScene(3);
         Cursor.lockState = CursorLockMode.None;

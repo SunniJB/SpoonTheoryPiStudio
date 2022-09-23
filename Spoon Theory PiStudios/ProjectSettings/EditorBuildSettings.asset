@@ -5,22 +5,25 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/F Prototype.unity
-    guid: 3016dfaa93ab724448885dc2569ca694
-  - enabled: 0
-    path: Assets/Scenes/Click Prototype.unity
-    guid: da49a41e39f78e14a8d9171d5ba4305a
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 7a54af20073960d4e94dfcdc669e8113
   - enabled: 1
-    path: Assets/Scenes/1st person prototype.unity
-    guid: 4b47b5aad6388494eb7a9867b91f42f9
+    path: Assets/Scenes/Apartment Scene.unity
+    guid: b11f6cd331f27bf489c42ccc954bedd7
   - enabled: 1
     path: Assets/Scenes/Minigames/Sorting Minigame.unity
     guid: c92e99be8ddc82942aa0e94274cdfd7f
   - enabled: 1
     path: Assets/Scenes/Minigames/memory test.unity
     guid: f6c1e7d68323bde42a9fdcf83ef8e934
+  - enabled: 0
+    path: Assets/Scenes/F Prototype.unity
+    guid: 3016dfaa93ab724448885dc2569ca694
+  - enabled: 0
+    path: Assets/Scenes/Click Prototype.unity
+    guid: da49a41e39f78e14a8d9171d5ba4305a
+  - enabled: 0
+    path: Assets/Scenes/1st person prototype.unity
+    guid: 4b47b5aad6388494eb7a9867b91f42f9
   m_configObjects: {}

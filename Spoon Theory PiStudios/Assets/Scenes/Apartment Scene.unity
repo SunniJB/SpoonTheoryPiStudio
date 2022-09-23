@@ -680,6 +680,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6210442332081701025, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: m_Size.z
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6210442332081701025, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: m_Center.z
+      value: -0.14
+      objectReference: {fileID: 0}
     - target: {fileID: 6210442332660997342, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.969
@@ -687,6 +695,14 @@ PrefabInstance:
     - target: {fileID: 6210442332660997342, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.471
+      objectReference: {fileID: 0}
+    - target: {fileID: 6210442333212720653, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6210442333212720655, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: sceneToGo
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7696175434455903814, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
       propertyPath: m_Layer

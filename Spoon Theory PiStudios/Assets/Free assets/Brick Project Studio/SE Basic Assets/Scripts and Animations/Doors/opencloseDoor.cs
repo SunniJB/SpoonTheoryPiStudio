@@ -7,6 +7,9 @@ public class opencloseDoor : MonoBehaviour
 
 	public Animator openandclose;
 	public bool open;
+	
+	public enum SceneToGo { MemoryGame, SortingGame, Menu}
+	public SceneToGo sceneToGo;
 
 	void Start()
 	{
@@ -22,11 +25,10 @@ public class opencloseDoor : MonoBehaviour
 
 	IEnumerator opening()
 	{
-		print("you are opening the door");
 		openandclose.Play("Opening");
 		open = true;
 		yield return new WaitForSeconds(.5f);
-		GameManager.Instance.WorkScene();
+		GoToScene();
 	}
 
 	IEnumerator closing()
@@ -37,5 +39,22 @@ public class opencloseDoor : MonoBehaviour
 		yield return new WaitForSeconds(.5f);
 	}
 
+	void GoToScene()
+    {
+		switch(sceneToGo)
+        {
+			case SceneToGo.MemoryGame:
+				GameManager.Instance.MemoryGameScene();
+				break;
+
+			case SceneToGo.SortingGame:
+				GameManager.Instance.WorkScene();
+				break;
+
+			case SceneToGo.Menu:
+				GameManager.Instance.MenuScene();
+				break;
+        }
+    }
 
 }
