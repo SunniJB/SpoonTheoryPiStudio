@@ -49,7 +49,7 @@ public class ObjectTask : MonoBehaviour
         interactor = _interactor;
         GameObject clon = Instantiate(progressSliderPrefab, sliderPos);
         progressSlider = clon.GetComponent<Slider>();
-        progressSlider.maxValue = task.spoonCost;
+        progressSlider.maxValue = Mathf.Abs(task.spoonCost);
         progressSlider.value = 0;
     }
 
