@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: a401d00180fd27a4cb45b0d80451c4a2, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -616,6 +616,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 682019073798586123, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1410211522831007378, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5518
+      objectReference: {fileID: 0}
+    - target: {fileID: 1410211522831007378, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1410211522831007378, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.4572
+      objectReference: {fileID: 0}
+    - target: {fileID: 1410211522831007378, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 1410211523382193758, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -627,6 +647,14 @@ PrefabInstance:
     - target: {fileID: 1410211523589243681, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1410211523888007671, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4266
+      objectReference: {fileID: 0}
+    - target: {fileID: 1410211523888007671, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0436
       objectReference: {fileID: 0}
     - target: {fileID: 1410211524312580061, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
       propertyPath: m_RootOrder
@@ -676,9 +704,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: ApartmentLayout
       objectReference: {fileID: 0}
+    - target: {fileID: 1410211524382481965, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4362
+      objectReference: {fileID: 0}
+    - target: {fileID: 1410211524382481965, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0053
+      objectReference: {fileID: 0}
     - target: {fileID: 3854411578799310723, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4020524564425245394, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4020524565328745373, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4020524565328745373, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
       propertyPath: m_IsActive
@@ -2201,7 +2245,7 @@ MonoBehaviour:
   clickInteractionDistance: 5
   FInteractionDistance: 1.25
   taskCanvas: {fileID: 1013130853}
-  UIPanel: {fileID: 0}
+  UIPanel: {fileID: 1972671929}
   taskManager: {fileID: 1013130851}
   taskCanvasEnabled: 0
   numberOfSpoons: 0
@@ -4118,6 +4162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dayTime: 0
   money: 0
+  hunger: 0
   spoons: 0
   hygiene: 0
   happiness: 0
@@ -6338,7 +6383,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 63
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
@@ -6358,14 +6403,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1768568587}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalRotation: {x: 0.48081312, y: -0, z: -0, w: 0.8768232}
+  m_LocalPosition: {x: -1.83, y: 7.01, z: -14.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 57.477, y: 0, z: 0}
 --- !u!1 &1772251891
 GameObject:
   m_ObjectHideFlags: 0
