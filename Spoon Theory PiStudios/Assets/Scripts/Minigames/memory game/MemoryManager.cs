@@ -63,7 +63,7 @@ public class MemoryManager : MonoBehaviour
             timeIsOn = false;
             winPanel.SetActive(true);
             totalTime = timerMin * 60 + timerSec;
-            workPerform = 50 / (totalTime/10);
+            workPerform = (50 / (totalTime/10)) -5 + GameManager.Instance.happiness;
             if (workPerform > 50)
                 workPerform = 50;
             money = 10.9f * (workPerform / 10);
