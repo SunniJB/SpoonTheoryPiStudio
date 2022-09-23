@@ -101,7 +101,7 @@ public class F_CharacterInteractor : MonoBehaviour
             //GameManager.Instance.WorkScene();
         }
     }
-
+    
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;

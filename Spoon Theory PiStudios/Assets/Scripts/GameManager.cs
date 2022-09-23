@@ -43,7 +43,6 @@ public class GameManager : MonoBehaviour
 
     public void ApartmentScene()
     {
-        Debug.Log("Change Scene");
         SceneManager.LoadScene(1);
         Cursor.lockState = CursorLockMode.Locked;
     }
