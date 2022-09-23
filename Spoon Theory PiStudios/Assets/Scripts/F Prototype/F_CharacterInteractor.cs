@@ -7,6 +7,8 @@ public class F_CharacterInteractor : MonoBehaviour
 {
     Camera cam;
     [SerializeField] LayerMask interactableLayer, defaultLayer;
+
+    [Header("UI Stats")]
     public PromptUI promptUI;
     [SerializeField] Slider spoonSlider;
     [SerializeField] Slider hygieneSlider;
@@ -75,13 +77,20 @@ public class F_CharacterInteractor : MonoBehaviour
 
         if (interactionHit.Length <= 0) return;
 
-        ObjectTask interactableObject = interactionHit[0].GetComponent<ObjectTask>();
+        ObjectTask[] interactableObject = new ObjectTask[interactionHit.Length];
 
-        if (interactableObject != null && interactableObject.outline.enabled && Input.GetKeyDown(KeyCode.F) && !interactableObject.task.inProgress)
+        for (int i = 0; i < interactionHit.Length; i++)
         {
-            promptUI.SetUpText(interactableObject.interactionPrompt);
+            interactableObject[i] = interactionHit[i].GetComponent<ObjectTask>();
 
-            interactableObject.Interact(this);
+            if (interactableObject[i] != null && Input.GetKeyDown(KeyCode.F) && interactableObject[i].outline.enabled && !interactableObject[i].task.inProgress)
+            {
+                promptUI.SetUpText(interactableObject[i].interactionPrompt);
+
+                interactableObject[i].Interact(this);
+
+                break;
+            }
         }
 
         opencloseDoor opencloseDoor = interactionHit[0].GetComponent<opencloseDoor>();
