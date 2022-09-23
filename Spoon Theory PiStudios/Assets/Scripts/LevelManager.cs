@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
-    [SerializeField] Image avatarImg, pausePanel;
-    [SerializeField] GameObject characterUIPanel;
+    [SerializeField] Image avatarImg, pausePanel, characterUIPanel;
 
     [SerializeField] bool pause;
 
@@ -28,7 +27,7 @@ public class LevelManager : MonoBehaviour
             pause = !pause;
 
             pausePanel.gameObject.SetActive(pause);
-            characterUIPanel    .SetActive(!pause);
+            characterUIPanel.gameObject.SetActive(!pause);
 
             if (pause)
             {
