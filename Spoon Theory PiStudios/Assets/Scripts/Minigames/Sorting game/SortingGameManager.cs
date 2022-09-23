@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SortingGameManager : MonoBehaviour
 {
-    public SortingGameSides redSide, blueSide;
+    public SortingGameSides spoonGoal, forkGoal, knifeGoal;
     [SerializeField] GameObject[] cutlery;
     public GameObject winPanel, pausePanel, timer;
     private float minutes, seconds;
@@ -12,8 +12,6 @@ public class SortingGameManager : MonoBehaviour
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Confined;
-        redSide = GameObject.Find("RedSide").GetComponent<SortingGameSides>();
-        blueSide = GameObject.Find("BlueSide").GetComponent<SortingGameSides>();
         pausePanel = GameObject.Find("PausePanel");
         timer = GameObject.Find("Timer");
         Time.timeScale = 0f;
@@ -35,7 +33,7 @@ public class SortingGameManager : MonoBehaviour
         }
 
         timer.GetComponent<TMPro.TextMeshProUGUI>().text = "Time: " + minutes.ToString() + ":" + seconds.ToString("f1");
-        if (redSide.full && blueSide.full)
+        if (spoonGoal.full && knifeGoal.full && forkGoal.full)
         {
             winPanel.SetActive(true);
             GameObject.Find("Final time").GetComponent<TMPro.TextMeshProUGUI>().text = "Your final time was: " + minutes.ToString() + ":" + seconds.ToString("f1");
@@ -50,8 +48,9 @@ public class SortingGameManager : MonoBehaviour
         {
             item.GetComponent<SortingGame_Cutlery>().Restart();
         }
-        redSide.full = false;
-        blueSide.full = false;
+        spoonGoal.full = false;
+        forkGoal.full = false;
+        knifeGoal.full = false;
         seconds = 0f;
         minutes = 0f;
         Time.timeScale = 1f;
