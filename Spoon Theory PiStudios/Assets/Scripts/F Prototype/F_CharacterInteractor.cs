@@ -28,11 +28,11 @@ public class F_CharacterInteractor : MonoBehaviour
 
     [Header("Player stats")]
     public int numberOfSpoons;
-    public int hygiene;
-    public int happiness;
-    public int hunger;
-    public int money;
-    public int workPerformance;
+    public float hygiene;
+    public float happiness;
+    public float hunger;
+    public float money;
+    public float workPerformance;
 
     private void Awake()
     {
@@ -140,5 +140,16 @@ public class F_CharacterInteractor : MonoBehaviour
         hygieneSlider.value = (float)hygiene / 10;
         hungerSlider.value = (float)hunger / 10;
         happinessSlider.value = (((float)hygiene + (float)hunger) / 2 + (float)happiness) / 20;
+    }
+
+    void RefreshStatsFromManager()
+    {
+        money = GameManager.Instance.money;
+        numberOfSpoons = GameManager.Instance.spoons;
+        hygiene = GameManager.Instance.hygiene;
+        workPerformance = GameManager.Instance.workPerformance;
+        hunger = GameManager.Instance.hunger;
+        happiness = GameManager.Instance.happiness;
+
     }
 }
