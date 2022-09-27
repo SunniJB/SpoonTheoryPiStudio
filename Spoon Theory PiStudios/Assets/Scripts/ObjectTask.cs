@@ -8,18 +8,19 @@ public class ObjectTask : MonoBehaviour
 {
     public string interactionPrompt;
 
-    public bool finished;
-
     public Task task;
 
     [HideInInspector]
     public Outline outline;
 
-    F_CharacterInteractor interactor;
+    CharacterInteractor interactor;
     Slider progressSlider;
 
     int spoonsTaken = 0;
     float timer = 1;
+
+    [HideInInspector]
+    public bool finished = false;
 
     [SerializeField] GameObject progressSliderPrefab;
     [SerializeField] Transform sliderPos;
@@ -29,6 +30,7 @@ public class ObjectTask : MonoBehaviour
         outline = GetComponent<Outline>();
         outline.enabled = false;
 
+        task.objectTask = this;
         task.outlineObject = outline;
         task.inProgress = false;
     }
@@ -43,10 +45,10 @@ public class ObjectTask : MonoBehaviour
         }
     }
 
-    public void Interact(F_CharacterInteractor _interactor)
+    public void Interact(CharacterInteractor _interactor)
     {
-        if (task.spoonCost < 0)
-            task.spoonCost = task.spoonCost * -1;
+        if (task.spoonCost < 0) task.spoonCost = task.spoonCost * -1;
+
         task.inProgress = true;
         interactor = _interactor;
         GameObject clon = Instantiate(progressSliderPrefab, sliderPos);

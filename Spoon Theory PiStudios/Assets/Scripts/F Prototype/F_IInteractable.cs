@@ -12,9 +12,9 @@ public interface F_IInteractable
     public bool InProgress { get; set; }
     public Task Task { get; }
 
-    public int Interact(F_CharacterInteractor interactor);
+    public int Interact(CharacterInteractor interactor);
 
-    IEnumerator Progress(F_CharacterInteractor interactor, Transform yourself)
+    IEnumerator Progress(CharacterInteractor interactor, Transform yourself)
     {
         InProgress = true;
         int spoonsTaken = 0;

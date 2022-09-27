@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class F_CharacterInteractor : MonoBehaviour
+public class CharacterInteractor : MonoBehaviour
 {
     Camera cam;
     [SerializeField] LayerMask interactableLayer, defaultLayer;
@@ -83,7 +83,7 @@ public class F_CharacterInteractor : MonoBehaviour
         {
             interactableObject[i] = interactionHit[i].GetComponent<ObjectTask>();
 
-            if (interactableObject[i] != null && Input.GetKeyDown(KeyCode.F) && interactableObject[i].outline.enabled && !interactableObject[i].task.inProgress)
+            if (interactableObject[i] != null && Input.GetKeyDown(KeyCode.F) && interactableObject[i].outline.enabled && !interactableObject[i].task.inProgress && !interactableObject[i].finished)
             {
                 promptUI.SetUpText(interactableObject[i].interactionPrompt);
 
@@ -150,6 +150,5 @@ public class F_CharacterInteractor : MonoBehaviour
         workPerformance = GameManager.Instance.workPerformance;
         hunger = GameManager.Instance.hunger;
         happiness = GameManager.Instance.happiness;
-
     }
 }

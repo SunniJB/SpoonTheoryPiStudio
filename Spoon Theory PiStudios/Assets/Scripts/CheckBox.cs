@@ -24,6 +24,8 @@ public class CheckBox : MonoBehaviour
 
     public void OnChange(bool value)
     {
+        if (task.inProgress && task.objectTask.finished) return;
+
         if (value)
         {
             taskManager.PinTask(task);
@@ -39,7 +41,5 @@ public class CheckBox : MonoBehaviour
 
         //commented bc of error as we don't have enough tasks with outline working. Do no delete, it works
         if(task.outlineObject != null) task.outlineObject.enabled = value;
-
-        taskManager.CheckTasksPinned();
     }
 }

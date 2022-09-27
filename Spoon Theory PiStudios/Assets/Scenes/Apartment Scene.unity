@@ -316,9 +316,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionPrompt: Changing clothes
-  finished: 0
   task: {fileID: 11400000, guid: 514287c853dbf534da40769852274f43, type: 2}
   outline: {fileID: 0}
+  finished: 0
   progressSliderPrefab: {fileID: 6762780843341623119, guid: 6c6eb5732501b8244a9f3d515f17cd62, type: 3}
   sliderPos: {fileID: 1028125730}
 --- !u!114 &88329566
@@ -1722,9 +1722,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionPrompt: Taking a shower
-  finished: 0
   task: {fileID: 11400000, guid: 39435783b2c3b424b9de8200499da858, type: 2}
   outline: {fileID: 0}
+  finished: 0
   progressSliderPrefab: {fileID: 6762780843341623119, guid: 6c6eb5732501b8244a9f3d515f17cd62, type: 3}
   sliderPos: {fileID: 440485951}
 --- !u!114 &478164603
@@ -2712,9 +2712,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionPrompt: Watching tv
-  finished: 0
   task: {fileID: 11400000, guid: 6b7f707c5e29af145882a9a13ad1d6d7, type: 2}
   outline: {fileID: 0}
+  finished: 0
   progressSliderPrefab: {fileID: 6762780843341623119, guid: 6c6eb5732501b8244a9f3d515f17cd62, type: 3}
   sliderPos: {fileID: 1764400670}
 --- !u!114 &702341706
@@ -3022,7 +3022,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0234375, y: 0.000061035156}
+  m_AnchoredPosition: {x: -0.0234375, y: 0}
   m_SizeDelta: {x: -1005.1, y: -555.42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &872950960
@@ -3563,7 +3563,7 @@ MonoBehaviour:
   - {fileID: 1565922875}
   taskPrefab: {fileID: 5369407198210701415, guid: 321d8e096a6bd764cb9f48d29ec58033, type: 3}
   pinTaskPrefab: {fileID: 781026926456389029, guid: 29ad036c28b7b99408bd8ec0f44f5bb0, type: 3}
-  maxTasksPinned: 5
+  maxTasksPinned: 2
   currentNumberofTasksPinned: 0
   pinnedTasksPanel: {fileID: 912712014}
   easy: {r: 0.21674035, g: 0.8679245, b: 0.1760413, a: 1}
@@ -5364,9 +5364,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionPrompt: Making sustinance
-  finished: 0
   task: {fileID: 11400000, guid: e157bbd169a22df40aef1ca9844e15ce, type: 2}
   outline: {fileID: 0}
+  finished: 0
   progressSliderPrefab: {fileID: 6762780843341623119, guid: 6c6eb5732501b8244a9f3d515f17cd62, type: 3}
   sliderPos: {fileID: 1468201882}
 --- !u!114 &1508111362
@@ -6917,9 +6917,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionPrompt: 
-  finished: 0
   task: {fileID: 11400000, guid: b7fc476a111841b4cad5ae3428cf9b3e, type: 2}
   outline: {fileID: 0}
+  finished: 0
   progressSliderPrefab: {fileID: 6762780843341623119, guid: 6c6eb5732501b8244a9f3d515f17cd62, type: 3}
   sliderPos: {fileID: 1691097721}
 --- !u!114 &1962691730
@@ -7505,9 +7505,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionPrompt: You look at the reflection
-  finished: 0
   task: {fileID: 11400000, guid: 2b330bcb678e7604298ac3100320a6d7, type: 2}
   outline: {fileID: 0}
+  finished: 0
   progressSliderPrefab: {fileID: 6762780843341623119, guid: 6c6eb5732501b8244a9f3d515f17cd62, type: 3}
   sliderPos: {fileID: 917777279}
 --- !u!114 &2127743097

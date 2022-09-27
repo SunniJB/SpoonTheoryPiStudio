@@ -105,10 +105,12 @@ public class TaskManager : MonoBehaviour
             foreach (CheckBox cb in checkboxes)
             {
                 Toggle toggle = cb.GetComponent<Toggle>();
-                if(!completedTasks.Contains(cb.task) &&  cb.task.inProgress)
+                if(!completedTasks.Contains(cb.task) || !cb.task.inProgress)
                     toggle.interactable = true;
             }
         }
+
+        AutoSizePinnedTasks();
     }
 
     /// <summary>
@@ -121,6 +123,7 @@ public class TaskManager : MonoBehaviour
         completedTasks.Add(task);
         //displayedTasks.Remove(task);
 
+        UnpinTask(task);
         foreach (CheckBox cb in checkboxes)
         {
             if (cb.task == task)
@@ -134,9 +137,6 @@ public class TaskManager : MonoBehaviour
                 break;
             }
         }
-
-        UnpinTask(task);
-        CheckTasksPinned();
     }
 
     public void PinTask(Task task)
@@ -147,7 +147,7 @@ public class TaskManager : MonoBehaviour
         pinnedTaskGameObjects.Add(clon);
         clon.GetComponent<TextMeshProUGUI>().text = task.name;
 
-        AutoSizePinnedTasks();    
+        CheckTasksPinned(); 
     }
 
     public void UnpinTask(Task task)
@@ -161,11 +161,11 @@ public class TaskManager : MonoBehaviour
             {
                 Destroy(go);
                 pinnedTaskGameObjects.Remove(go);
-                return;
+                break;
             }
         }
 
-        AutoSizePinnedTasks();
+        CheckTasksPinned();
     }
 
     void AutoSizePinnedTasks()

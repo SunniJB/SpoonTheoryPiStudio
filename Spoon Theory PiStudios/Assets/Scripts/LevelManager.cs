@@ -9,7 +9,7 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField] bool pause;
 
-    [SerializeField] F_CharacterInteractor characterInteractor;
+    [SerializeField] CharacterInteractor characterInteractor;
 
     // Start is called before the first frame update
     void Start()

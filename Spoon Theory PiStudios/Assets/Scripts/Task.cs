@@ -16,6 +16,9 @@ public class Task : ScriptableObject
     public Outline outlineObject;
 
     [HideInInspector]
+    public ObjectTask objectTask;
+
+    [HideInInspector]
     public bool inProgress = false;
 
     //public bool pinned, completed;

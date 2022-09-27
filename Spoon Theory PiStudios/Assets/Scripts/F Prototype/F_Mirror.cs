@@ -27,7 +27,7 @@ public class F_Mirror : MonoBehaviour, F_IInteractable //In inheritance, the obj
         throw new System.NotImplementedException();
     }
 
-    public int Interact(F_CharacterInteractor interactor)
+    public int Interact(CharacterInteractor interactor)
     {
         throw new System.NotImplementedException();
     }
