@@ -29,6 +29,7 @@ public class ObjectTask : MonoBehaviour
     [SerializeField] Transform sliderPos;
 
     [SerializeField] AnimationClip actionAnim;
+    private Animator objectAnimator;
 
     private void Start()
     {
@@ -38,6 +39,11 @@ public class ObjectTask : MonoBehaviour
         task.objectTask = this;
         task.outlineObject = outline;
         task.inProgress = false;
+
+        if (gameObject.TryGetComponent<Animator>(out Animator animator))
+        {
+            objectAnimator = animator;
+        }
     }
 
     private void Update()
@@ -47,6 +53,10 @@ public class ObjectTask : MonoBehaviour
         if(task.inProgress && !finished)
         {
             Progress();
+        }
+        else if (objectAnimator != null)
+        {
+            objectAnimator.speed = 0f;
         }
     }
 
@@ -61,27 +71,29 @@ public class ObjectTask : MonoBehaviour
         progressSlider.maxValue = task.spoonCost;
         progressSlider.value = 0;
 
-        if (gameObject.TryGetComponent<Animator>(out Animator animator))
-        {
-            animator.SetTrigger("play");
-            AnimationClip[] clips;
-            clips = animator.runtimeAnimatorController.animationClips;
-
-            foreach (AnimationClip clip in clips)
-            {
-                if (clip.name == actionAnim.name)
-                {
-                    animator.speed = clip.length/task.spoonCost;
-                }
-            }
-        }
+        
     }
 
     void Progress()
     {
         if (interactor.numberOfSpoons <= 0) return;
 
-        if(spoonsTaken >= task.spoonCost)
+        if (objectAnimator != null)
+        {
+            objectAnimator.SetTrigger("play");
+            AnimationClip[] clips;
+            clips = objectAnimator.runtimeAnimatorController.animationClips;
+
+            foreach (AnimationClip clip in clips)
+            {
+                if (clip.name == actionAnim.name)
+                {
+                    objectAnimator.speed = clip.length / task.spoonCost;
+                }
+            }
+        }
+
+        if (spoonsTaken >= task.spoonCost)
         {
             //Finished task
             interactor.hygiene -= task.hygieneCost;
@@ -95,11 +107,6 @@ public class ObjectTask : MonoBehaviour
 
             finished = true;
             outline.enabled = false;
-
-            //if (gameObject.TryGetComponent<Animator>(out Animator animator))
-            //{
-            //    animator.SetBool("play", false);
-            //}
 
             return;
         }
