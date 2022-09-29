@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using static GameManager;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 [RequireComponent(typeof(Outline))]
 public class ObjectTask : MonoBehaviour
@@ -24,6 +27,8 @@ public class ObjectTask : MonoBehaviour
 
     [SerializeField] GameObject progressSliderPrefab;
     [SerializeField] Transform sliderPos;
+
+    [SerializeField] AnimationClip actionAnim;
 
     private void Start()
     {
@@ -58,8 +63,17 @@ public class ObjectTask : MonoBehaviour
 
         if (gameObject.TryGetComponent<Animator>(out Animator animator))
         {
-            animator.speed = task.spoonCost;
-            animator.SetBool("play", true);
+            animator.SetTrigger("play");
+            AnimationClip[] clips;
+            clips = animator.runtimeAnimatorController.animationClips;
+
+            foreach (AnimationClip clip in clips)
+            {
+                if (clip.name == actionAnim.name)
+                {
+                    animator.speed = clip.length/task.spoonCost;
+                }
+            }
         }
     }
 
@@ -82,10 +96,10 @@ public class ObjectTask : MonoBehaviour
             finished = true;
             outline.enabled = false;
 
-            if (gameObject.TryGetComponent<Animator>(out Animator animator))
-            {
-                animator.SetBool("play", false);
-            }
+            //if (gameObject.TryGetComponent<Animator>(out Animator animator))
+            //{
+            //    animator.SetBool("play", false);
+            //}
 
             return;
         }
