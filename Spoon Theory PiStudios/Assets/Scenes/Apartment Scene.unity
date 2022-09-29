@@ -574,6 +574,10 @@ PrefabInstance:
       propertyPath: actionAnim
       value: 
       objectReference: {fileID: 7400000, guid: c926951584ee0a34b92609f03d25b08c, type: 2}
+    - target: {fileID: 2127743096, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: actionAnim
+      value: 
+      objectReference: {fileID: 7400000, guid: 9b1a6ef64727f6c4ab095a316d3d37b6, type: 2}
     - target: {fileID: 1410211524312580061, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
       propertyPath: m_RootOrder
       value: 7

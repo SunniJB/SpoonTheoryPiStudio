@@ -31,6 +31,8 @@ public class ObjectTask : MonoBehaviour
     [SerializeField] AnimationClip actionAnim;
     private Animator objectAnimator;
 
+    float animationSpeed;
+
     private void Start()
     {
         outline = GetComponent<Outline>();
@@ -44,19 +46,32 @@ public class ObjectTask : MonoBehaviour
         {
             objectAnimator = animator;
         }
+
+        if (objectAnimator != null)
+        {
+            AnimationClip[] clips;
+            clips = objectAnimator.runtimeAnimatorController.animationClips;
+
+            foreach (AnimationClip clip in clips)
+            {
+                if (clip.name == actionAnim.name)
+                {
+                    animationSpeed = clip.length / task.spoonCost;
+                    break;
+                }
+            }
+        }
     }
 
     private void Update()
     {
         if (interactor == null) return;
 
-        if(task.inProgress && !finished)
+        if (objectAnimator != null) Debug.Log(objectAnimator.speed);
+
+        if (task.inProgress && !finished)
         {
             Progress();
-        }
-        else if (objectAnimator != null)
-        {
-            objectAnimator.speed = 0f;
         }
     }
 
@@ -71,27 +86,13 @@ public class ObjectTask : MonoBehaviour
         progressSlider.maxValue = task.spoonCost;
         progressSlider.value = 0;
 
-        
+
+        objectAnimator.SetTrigger("play");
     }
 
     void Progress()
     {
         if (interactor.numberOfSpoons <= 0) return;
-
-        if (objectAnimator != null)
-        {
-            objectAnimator.SetTrigger("play");
-            AnimationClip[] clips;
-            clips = objectAnimator.runtimeAnimatorController.animationClips;
-
-            foreach (AnimationClip clip in clips)
-            {
-                if (clip.name == actionAnim.name)
-                {
-                    objectAnimator.speed = clip.length / task.spoonCost;
-                }
-            }
-        }
 
         if (spoonsTaken >= task.spoonCost)
         {
@@ -110,11 +111,16 @@ public class ObjectTask : MonoBehaviour
 
             return;
         }
-
+        
+        if (objectAnimator != null)
+        {
+            objectAnimator.speed = 0f;
+        }
 
         if (Input.GetKey(KeyCode.F) && Vector3.Distance(interactor.transform.position, transform.position) <= interactor.FInteractionDistance + 2)
         {
             Debug.Log(task.name + " in progress");
+            if (objectAnimator != null) objectAnimator.speed = animationSpeed;
 
             timer -= Time.deltaTime;
 
