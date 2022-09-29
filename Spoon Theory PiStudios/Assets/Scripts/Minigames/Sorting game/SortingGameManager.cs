@@ -60,4 +60,9 @@ public class SortingGameManager : MonoBehaviour
     {
         GameManager.Instance.ApartmentScene();
     }
+
+    public void NextMinigame()
+    {
+        GameManager.Instance.MemoryGameScene();
+    }
 }
