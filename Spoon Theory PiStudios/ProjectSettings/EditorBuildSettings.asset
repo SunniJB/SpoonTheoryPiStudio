@@ -18,12 +18,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Minigames/memory test.unity
     guid: f6c1e7d68323bde42a9fdcf83ef8e934
   - enabled: 0
-    path: Assets/Scenes/F Prototype.unity
+    path: Assets/Scenes/NotUsedScenes/F Prototype.unity
     guid: 3016dfaa93ab724448885dc2569ca694
   - enabled: 0
-    path: Assets/Scenes/Click Prototype.unity
+    path: Assets/Scenes/NotUsedScenes/Click Prototype.unity
     guid: da49a41e39f78e14a8d9171d5ba4305a
   - enabled: 0
-    path: Assets/Scenes/1st person prototype.unity
+    path: Assets/Scenes/NotUsedScenes/1st person prototype.unity
     guid: 4b47b5aad6388494eb7a9867b91f42f9
   m_configObjects: {}
