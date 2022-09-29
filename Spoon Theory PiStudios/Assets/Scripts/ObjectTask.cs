@@ -55,6 +55,12 @@ public class ObjectTask : MonoBehaviour
         progressSlider = clon.GetComponent<Slider>();
         progressSlider.maxValue = task.spoonCost;
         progressSlider.value = 0;
+
+        if (gameObject.TryGetComponent<Animator>(out Animator animator))
+        {
+            animator.speed = task.spoonCost;
+            animator.SetBool("play", true);
+        }
     }
 
     void Progress()
@@ -75,6 +81,11 @@ public class ObjectTask : MonoBehaviour
 
             finished = true;
             outline.enabled = false;
+
+            if (gameObject.TryGetComponent<Animator>(out Animator animator))
+            {
+                animator.SetBool("play", false);
+            }
 
             return;
         }
