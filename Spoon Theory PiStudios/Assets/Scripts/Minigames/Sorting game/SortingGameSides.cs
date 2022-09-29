@@ -9,11 +9,13 @@ public class SortingGameSides : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<SortingGame_Cutlery>() != null)
+        SortingGame_Cutlery cutlery = collision.gameObject.GetComponent<SortingGame_Cutlery>();
+
+        if (cutlery != null)
         {
-            if (collision.gameObject.GetComponent<SortingGame_Cutlery>().goalSide == gameObject)
+            if (cutlery.goalSide == gameObject)
             {
-                collision.gameObject.GetComponent<SortingGame_Cutlery>().isSorted = true;
+                cutlery.isSorted = true;
                 sortedCuterly += 1;
 
                 if (sortedCuterly == maxCutlery)
