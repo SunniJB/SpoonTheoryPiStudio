@@ -23,7 +23,6 @@ public class AudioManager : MonoBehaviour
 
         foreach (Sound s in sounds)
         {
-            s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
 
             s.source.volume = s.volume;
@@ -35,7 +34,7 @@ public class AudioManager : MonoBehaviour
         AudioVolume(PlayerPrefs.GetFloat("SoundVolume", 5), false);
         AudioVolume(PlayerPrefs.GetFloat("MusicVolume", 5), true);
 
-        ChangeBackgroundMusic(SceneManager.GetActiveScene().name);
+        //ChangeBackgroundMusic(SceneManager.GetActiveScene().name);
     }
 
     public void ChangeBackgroundMusic(string sceneName) // Changes the backgorund music depending on the scene 
@@ -63,6 +62,38 @@ public class AudioManager : MonoBehaviour
         }
         s.source.pitch = pitch;
         s.source.Play();
+    }
+
+    public void Pause(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found!");
+            return;
+        }
+        s.source.Pause();
+    }
+
+    public void Resume(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found!");
+            return;
+        }
+        s.source.Play();
+    }
+
+    public bool CheckPlaying(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found!");
+        }
+        return s.source.isPlaying;
     }
 
     public void Stop(string name)
