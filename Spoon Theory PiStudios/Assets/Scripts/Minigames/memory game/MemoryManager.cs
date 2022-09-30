@@ -63,13 +63,13 @@ public class MemoryManager : MonoBehaviour
             timeIsOn = false;
             winPanel.SetActive(true);
             totalTime = timerMin * 60 + timerSec;
-            workPerform = (50 / (totalTime/10)) -5 + GameManager.Instance.happiness;
+            workPerform = (50 / (totalTime/10)) -5 + GameManager.GetInstance().happiness;
             if (workPerform > 50)
                 workPerform = 50;
             money = 10.9f * (workPerform / 10);
             workTxt.text = "Performance Review: " + workPerform.ToString("00") + "/50";
             moneTxt.text = "you earned: £" + money.ToString("000");
-            GameManager.Instance.money += money;
+            GameManager.GetInstance().money += money;
         }
     }
 

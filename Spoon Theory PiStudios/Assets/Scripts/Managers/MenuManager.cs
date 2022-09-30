@@ -6,7 +6,7 @@ public class MenuManager : MonoBehaviour
 {
     public void Begin()
     {
-        GameManager.Instance.ApartmentScene();
+        GameManager.GetInstance().ApartmentScene();
     }
 
     public void Levels()

@@ -30,6 +30,7 @@ public class ObjectTask : MonoBehaviour
 
     [SerializeField] AnimationClip actionAnim;
     private Animator objectAnimator;
+    AudioSource audioSource;
 
     float animationSpeed;
 
@@ -45,6 +46,11 @@ public class ObjectTask : MonoBehaviour
         if (gameObject.TryGetComponent<Animator>(out Animator animator))
         {
             objectAnimator = animator;
+        }
+
+        if (TryGetComponent<AudioSource>(out AudioSource _audioSource))
+        {
+            audioSource = _audioSource;
         }
 
         if (objectAnimator != null)
@@ -89,7 +95,7 @@ public class ObjectTask : MonoBehaviour
 
         objectAnimator.SetTrigger("play");
 
-        AudioManager.GetInstance().Play(audioName, 1f);
+        if (audioSource != null) AudioManager.GetInstance().Play(audioName, 1f);
     }
 
     void Progress()
@@ -104,7 +110,10 @@ public class ObjectTask : MonoBehaviour
 
         if (Input.GetKey(KeyCode.F) && Vector3.Distance(interactor.transform.position, transform.position) <= interactor.FInteractionDistance + 2)
         {
-            if(!AudioManager.GetInstance().CheckPlaying(audioName)) AudioManager.GetInstance().Resume(audioName);
+            if (audioSource != null)
+            {
+                if (!AudioManager.GetInstance().CheckPlaying(audioName)) AudioManager.GetInstance().Resume(audioName);
+            }
 
             Debug.Log(task.name + " in progress");
             if (objectAnimator != null) objectAnimator.speed = animationSpeed;
@@ -128,7 +137,7 @@ public class ObjectTask : MonoBehaviour
         {
             if (objectAnimator != null) objectAnimator.speed = 0f;
 
-            AudioManager.GetInstance().Pause(audioName);
+            if (audioSource != null) AudioManager.GetInstance().Pause(audioName);
         }
     }
 
@@ -147,6 +156,6 @@ public class ObjectTask : MonoBehaviour
         finished = true;
         outline.enabled = false;
 
-        AudioManager.GetInstance().Stop(audioName);
+        if (audioSource != null) AudioManager.GetInstance().Stop(audioName);
     }
 }

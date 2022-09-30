@@ -11,6 +11,8 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField] CharacterInteractor characterInteractor;
 
+    public static LevelManager instance;
+    public static LevelManager GetInstance() { return instance; }
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +50,12 @@ public class LevelManager : MonoBehaviour
     }
     public void GoToMenu()
     {
-        GameManager.Instance.MenuScene();
+        GameManager.GetInstance().MenuScene();
+    }
+
+    public void GoToWork()
+    {
+        GameManager.GetInstance().UpdateGameManagerStats(characterInteractor.money, characterInteractor.hunger, characterInteractor.numberOfSpoons, characterInteractor.hygiene, characterInteractor.happiness, characterInteractor.workPerformance);
+        GameManager.GetInstance().WorkScene();
     }
 }
