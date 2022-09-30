@@ -548,6 +548,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionPrompt: 
+  audioName: 
   task: {fileID: 11400000, guid: 67bde7f82de8e0d48862fc35b4ad7241, type: 2}
   outline: {fileID: 0}
   finished: 0
@@ -708,7 +709,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openandclose: {fileID: 8061902684095266122}
   open: 0
-  sceneToGo: 0
 --- !u!1 &1181286427438595591
 GameObject:
   m_ObjectHideFlags: 0
@@ -4389,7 +4389,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openandclose: {fileID: 1410211522925824411}
   open: 0
-  sceneToGo: 0
 --- !u!1 &1410211522943982412
 GameObject:
   m_ObjectHideFlags: 0
@@ -5398,7 +5397,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openandclose: {fileID: 1410211523002475522}
   open: 0
-  sceneToGo: 0
 --- !u!1 &1410211523005586108
 GameObject:
   m_ObjectHideFlags: 0
@@ -5617,7 +5615,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openandclose: {fileID: 1410211523007484199}
   open: 0
-  sceneToGo: 0
 --- !u!1 &1410211523014877483
 GameObject:
   m_ObjectHideFlags: 0
@@ -9505,6 +9502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionPrompt: Making sustinance
+  audioName: 
   task: {fileID: 11400000, guid: e157bbd169a22df40aef1ca9844e15ce, type: 2}
   outline: {fileID: 0}
   finished: 0
@@ -9945,7 +9943,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openandclose: {fileID: 1410211523415437228}
   open: 0
-  sceneToGo: 0
 --- !u!1 &1410211523415506553
 GameObject:
   m_ObjectHideFlags: 0
@@ -10161,6 +10158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionPrompt: Watching tv
+  audioName: 
   task: {fileID: 11400000, guid: 6b7f707c5e29af145882a9a13ad1d6d7, type: 2}
   outline: {fileID: 0}
   finished: 0
@@ -11486,7 +11484,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openandclose: {fileID: 1410211523584705428}
   open: 0
-  sceneToGo: 0
 --- !u!1 &1410211523589243681
 GameObject:
   m_ObjectHideFlags: 0
@@ -11660,6 +11657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionPrompt: Changing clothes
+  audioName: 
   task: {fileID: 11400000, guid: 514287c853dbf534da40769852274f43, type: 2}
   outline: {fileID: 0}
   finished: 0
@@ -16303,7 +16301,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openandclose: {fileID: 1410211523964710621}
   open: 0
-  sceneToGo: 0
 --- !u!1 &1410211523964719764
 GameObject:
   m_ObjectHideFlags: 0
@@ -19024,7 +19021,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openandclose: {fileID: 1410211524212882436}
   open: 0
-  sceneToGo: 0
 --- !u!1 &1410211524219693704
 GameObject:
   m_ObjectHideFlags: 0
@@ -20943,7 +20939,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openandclose: {fileID: 1410211524492816238}
   open: 0
-  sceneToGo: 0
 --- !u!1 &1410211524503890209
 GameObject:
   m_ObjectHideFlags: 0
@@ -21078,7 +21073,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openandclose: {fileID: 1410211524503890238}
   open: 0
-  sceneToGo: 0
 --- !u!1 &1410211524505689746
 GameObject:
   m_ObjectHideFlags: 0
@@ -21311,7 +21305,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openandclose: {fileID: 1410211524509947575}
   open: 0
-  sceneToGo: 0
 --- !u!1 &1410211524533093426
 GameObject:
   m_ObjectHideFlags: 0
@@ -22660,7 +22653,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openandclose: {fileID: 1410211524690378331}
   open: 0
-  sceneToGo: 0
 --- !u!1 &1410211524707523660
 GameObject:
   m_ObjectHideFlags: 0
@@ -24161,7 +24153,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openandclose: {fileID: 6210442332000135568}
   open: 0
-  sceneToGo: 0
 --- !u!1 &6210442332118384938
 GameObject:
   m_ObjectHideFlags: 0
@@ -26168,7 +26159,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openandclose: {fileID: 6210442333212720648}
   open: 0
-  sceneToGo: 1
 --- !u!1 &6210442333217962512
 GameObject:
   m_ObjectHideFlags: 0
@@ -27862,7 +27852,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openandclose: {fileID: 7708782864936393015}
   open: 0
-  sceneToGo: 0
 --- !u!1 &7920112863243293735
 GameObject:
   m_ObjectHideFlags: 0
@@ -28968,6 +28957,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionPrompt: Taking a shower
+  audioName: 
   task: {fileID: 11400000, guid: 39435783b2c3b424b9de8200499da858, type: 2}
   outline: {fileID: 0}
   finished: 0
@@ -29389,43 +29379,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &263402953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5756603584410485648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 320f7227530da7f4390e0d5e34652f73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionPrompt: You brush your teeth
-  task: {fileID: 11400000, guid: b7fc476a111841b4cad5ae3428cf9b3e, type: 2}
-  outline: {fileID: 0}
-  finished: 0
-  progressSliderPrefab: {fileID: 6762780843341623119, guid: 6c6eb5732501b8244a9f3d515f17cd62, type: 3}
-  sliderPos: {fileID: 844582854}
-  actionAnim: {fileID: 7400000, guid: a3272a6dad1a57442999dd3a8f77f251, type: 2}
---- !u!114 &263402954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5756603584410485648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 1, g: 0.95203847, b: 0, a: 1}
-  outlineWidth: 5
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!4 &5901709102727822101 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4788741208532185578, guid: a21b031050e1345409177a5cf15ec3b4, type: 3}
@@ -29725,6 +29678,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionPrompt: You look at the reflection
+  audioName: 
   task: {fileID: 11400000, guid: 2b330bcb678e7604298ac3100320a6d7, type: 2}
   outline: {fileID: 0}
   finished: 0
