@@ -9,7 +9,7 @@ using static UnityEditor.Experimental.GraphView.GraphView;
 [RequireComponent(typeof(Outline))]
 public class ObjectTask : MonoBehaviour
 {
-    public string interactionPrompt;
+    public string interactionPrompt, audioName;
 
     public Task task;
 
@@ -88,6 +88,8 @@ public class ObjectTask : MonoBehaviour
 
 
         objectAnimator.SetTrigger("play");
+
+        AudioManager.GetInstance().Play(audioName, 1f);
     }
 
     void Progress()
@@ -108,6 +110,8 @@ public class ObjectTask : MonoBehaviour
 
             finished = true;
             outline.enabled = false;
+
+            AudioManager.GetInstance().Stop(audioName);
 
             return;
         }
