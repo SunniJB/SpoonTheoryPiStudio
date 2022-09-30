@@ -630,6 +630,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6210442333212720655, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: lvlManager
+      value: 
+      objectReference: {fileID: 1136278446}
     - target: {fileID: 8835409691120485962, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -2211,6 +2215,7 @@ MonoBehaviour:
   hygieneSlider: {fileID: 116545772}
   hungerSlider: {fileID: 445311633}
   happinessSlider: {fileID: 216712500}
+  MoneyText: {fileID: 1909176742}
   interactionPoint: {fileID: 29915709}
   clickInteractionDistance: 5
   FInteractionDistance: 1.25
@@ -2936,7 +2941,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 263402952}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &872950958
 GameObject:
@@ -7645,6 +7650,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6475800430078241032, guid: 4f1787c81b9e7bc47a27e1d5407abe41, type: 3}
+      propertyPath: hunger
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6475800430078241032, guid: 4f1787c81b9e7bc47a27e1d5407abe41, type: 3}
+      propertyPath: spoons
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6475800430078241032, guid: 4f1787c81b9e7bc47a27e1d5407abe41, type: 3}
+      propertyPath: hygiene
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6475800430078241032, guid: 4f1787c81b9e7bc47a27e1d5407abe41, type: 3}
+      propertyPath: happiness
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6475800430078241033, guid: 4f1787c81b9e7bc47a27e1d5407abe41, type: 3}
       propertyPath: m_RootOrder
       value: 5

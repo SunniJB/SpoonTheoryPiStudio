@@ -19,6 +19,8 @@ public class LevelManager : MonoBehaviour
         pausePanel.gameObject.SetActive(false);
         pause = false;
         Time.timeScale = 1;
+
+        characterInteractor.RefreshStatsFromManager();
     }
 
     // Update is called once per frame

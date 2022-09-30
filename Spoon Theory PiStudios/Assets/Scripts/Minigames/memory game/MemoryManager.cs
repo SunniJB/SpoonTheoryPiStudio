@@ -8,6 +8,8 @@ public class MemoryManager : MonoBehaviour
 {
     public static MemoryManager instance;
 
+    public int spoonCost;
+
     public Sprite[] flippedLibrary = new Sprite[5];
     public GameObject[] flipPlates = new GameObject[10];
     public GameObject firstClickObj, winPanel;
@@ -17,7 +19,7 @@ public class MemoryManager : MonoBehaviour
 
     private float totalTime;
     private float workPerform, money;
-    private bool timeIsOn;
+    private bool timeIsOn, moneygiven;
     private float timerSec, timerMin;
     private GameObject tempFp;
     private int[] numbers = new int[10];
@@ -46,13 +48,18 @@ public class MemoryManager : MonoBehaviour
             timeIsOn = false;
             winPanel.SetActive(true);
             totalTime = timerMin * 60 + timerSec;
-            workPerform = (50 / (totalTime/10)) -5 + GameManager.GetInstance().happiness;
+            workPerform = (50 / (totalTime / 10)) - 5 + GameManager.GetInstance().happiness;
             if (workPerform > 50)
                 workPerform = 50;
             money = 10.9f * (workPerform / 10);
             workTxt.text = "Performance Review: " + workPerform.ToString("00") + "/50";
             moneTxt.text = "you earned: £" + money.ToString("000");
+            if (!moneygiven)
+            { 
             GameManager.GetInstance().money += money;
+                GameManager.GetInstance().spoons -= spoonCost;
+                moneygiven = true;
+            }
         }
     }
 
@@ -75,7 +82,9 @@ public class MemoryManager : MonoBehaviour
 
     public void OnClick()
     {
+        moneygiven = false;
         timeIsOn = true;
+        Time.timeScale = 1;
 
         for (int i = 1; i <= 10; i++)
         {
@@ -88,5 +97,10 @@ public class MemoryManager : MonoBehaviour
         {
             flipPlates[i].GetComponent<ClickMemory>().images[1] = flippedLibrary[numbers[i] - 1];
         }
+    }
+
+    public void GoHome()
+    {
+        GameManager.GetInstance().ApartmentScene();
     }
 }

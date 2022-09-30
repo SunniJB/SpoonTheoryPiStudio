@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class CharacterInteractor : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class CharacterInteractor : MonoBehaviour
     [SerializeField] Slider hygieneSlider;
     [SerializeField] Slider hungerSlider;
     [SerializeField] Slider happinessSlider;
+    [SerializeField] TMP_Text MoneyText;
 
     [SerializeField] Transform interactionPoint;
     public float clickInteractionDistance = 5, FInteractionDistance = 3;
@@ -140,6 +142,8 @@ public class CharacterInteractor : MonoBehaviour
         hygieneSlider.value = (float)hygiene / 10;
         hungerSlider.value = (float)hunger / 10;
         happinessSlider.value = (((float)hygiene + (float)hunger) / 2 + (float)happiness) / 20;
+
+        MoneyText.text = money.ToString("000");
     }
 
     public void RefreshStatsFromManager()

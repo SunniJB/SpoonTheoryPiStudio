@@ -31,6 +31,8 @@ public class ClickMemory : MonoBehaviour
                 {
                     MemoryManager.instance.clickOne = images[1];
                     MemoryManager.instance.firstClickObj = this.gameObject;
+                    canClick = false;
+                    Invoke("CanClick", 0.3f);
                 }
                 else
                 {
@@ -65,6 +67,11 @@ public class ClickMemory : MonoBehaviour
         MemoryManager.instance.firstClickObj.GetComponent<Image>().overrideSprite = images[0];
         arrayPos = 1;
         MemoryManager.instance.firstClickObj.GetComponent<ClickMemory>().arrayPos = 1;
+        CanClick();
+    }
+
+    private void CanClick()
+    {
         canClick = true;
     }
 }

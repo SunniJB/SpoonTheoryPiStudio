@@ -58,11 +58,25 @@ public class SortingGameManager : MonoBehaviour
 
     public void ChangeScene()
     {
+        Complete();
         GameManager.GetInstance().ApartmentScene();
     }
 
     public void NextMinigame()
     {
+        Complete();
         GameManager.GetInstance().MemoryGameScene();
+    }
+
+    private void Complete()
+    {
+        int spoonCost = 3;
+        float totalTime = minutes * 60 + seconds;
+         float workPerform = (100 / (totalTime / 10)) - 5 + GameManager.GetInstance().happiness;
+        if (workPerform > 50)
+            workPerform = 50;
+        float money = 10.9f * (workPerform / 10);
+        GameManager.GetInstance().money += money;
+        GameManager.GetInstance().spoons -= spoonCost;
     }
 }
