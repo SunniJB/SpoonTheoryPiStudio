@@ -50,12 +50,12 @@ public class LevelManager : MonoBehaviour
     }
     public void GoToMenu()
     {
-        GameManager.Instance.MenuScene();
+        GameManager.GetInstance().MenuScene();
     }
 
     public void GoToWork()
     {
-        GameManager.Instance.UpdateGameManagerStats(characterInteractor.money, characterInteractor.hunger, characterInteractor.numberOfSpoons, characterInteractor.hygiene, characterInteractor.happiness, characterInteractor.workPerformance);
-        GameManager.Instance.WorkScene();
+        GameManager.GetInstance().UpdateGameManagerStats(characterInteractor.money, characterInteractor.hunger, characterInteractor.numberOfSpoons, characterInteractor.hygiene, characterInteractor.happiness, characterInteractor.workPerformance);
+        GameManager.GetInstance().WorkScene();
     }
 }

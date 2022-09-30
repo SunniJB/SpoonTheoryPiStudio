@@ -144,11 +144,11 @@ public class CharacterInteractor : MonoBehaviour
 
     public void RefreshStatsFromManager()
     {
-        money = GameManager.Instance.money;
-        numberOfSpoons = GameManager.Instance.spoons;
-        hygiene = GameManager.Instance.hygiene;
-        workPerformance = GameManager.Instance.workPerformance;
-        hunger = GameManager.Instance.hunger;
-        happiness = GameManager.Instance.happiness;
+        money = GameManager.GetInstance().money;
+        numberOfSpoons = GameManager.GetInstance().spoons;
+        hygiene = GameManager.GetInstance().hygiene;
+        workPerformance = GameManager.GetInstance().workPerformance;
+        hunger = GameManager.GetInstance().hunger;
+        happiness = GameManager.GetInstance().happiness;
     }
 }
