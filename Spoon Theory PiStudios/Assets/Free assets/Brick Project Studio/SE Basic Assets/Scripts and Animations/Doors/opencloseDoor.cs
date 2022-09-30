@@ -26,6 +26,7 @@ public class opencloseDoor : MonoBehaviour
 	IEnumerator opening()
 	{
 		openandclose.Play("Opening");
+		AudioManager.GetInstance().Play("Door", 1);
 		open = true;
 		yield return new WaitForSeconds(.5f);
 		GoToScene();
