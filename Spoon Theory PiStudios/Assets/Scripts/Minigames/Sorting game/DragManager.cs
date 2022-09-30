@@ -27,9 +27,10 @@ public class DragManager : MonoBehaviour, IBeginDragHandler, IEndDragHandler
             out position);
 
         Vector3 clickedPos = canvas.transform.TransformPoint(position);
+
         float y;
         if (lastClickedPos.y == 0) y = transform.position.y;
-        else y = clickedPos.y - lastClickedPos.y;
+        else y = transform.position.y + clickedPos.y - lastClickedPos.y;
 
         transform.position = new Vector3(clickedPos.x, y, clickedPos.z);
 
