@@ -7,6 +7,7 @@ public class opencloseDoor : MonoBehaviour
 
 	public Animator openandclose;
 	public bool open;
+	public LevelManager lvlManager;
 
 	void Start()
 	{
@@ -38,7 +39,7 @@ public class opencloseDoor : MonoBehaviour
 
 	void GoToWork()
     {
-		LevelManager.GetInstance().GoToWork();
+		lvlManager.GoToWork();
     }
 
 }

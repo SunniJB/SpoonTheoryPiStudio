@@ -26,23 +26,6 @@ public class MemoryManager : MonoBehaviour
         instance = this;
     }
 
-    void Start()
-    {
-        timeIsOn = true;
-
-        for (int i = 1; i <= 10; i++)
-        {
-            numbers[i - 1] = Mathf.CeilToInt((float)i / 2);
-        }
-
-        Shuffle();
-
-        for (int i = 0; i < 10; i++)
-        {
-            flipPlates[i].GetComponent<ClickMemory>().images[1] = flippedLibrary[numbers[i]-1];
-        }
-    }
-
     private void Update()
     {
         if (timeIsOn)
@@ -88,5 +71,22 @@ public class MemoryManager : MonoBehaviour
     {
         Scene thisScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(thisScene.name);
+    }
+
+    public void OnClick()
+    {
+        timeIsOn = true;
+
+        for (int i = 1; i <= 10; i++)
+        {
+            numbers[i - 1] = Mathf.CeilToInt((float)i / 2);
+        }
+
+        Shuffle();
+
+        for (int i = 0; i < 10; i++)
+        {
+            flipPlates[i].GetComponent<ClickMemory>().images[1] = flippedLibrary[numbers[i] - 1];
+        }
     }
 }
