@@ -23,7 +23,6 @@ public class AudioManager : MonoBehaviour
 
         foreach (Sound s in sounds)
         {
-            s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
 
             s.source.volume = s.volume;
@@ -35,7 +34,7 @@ public class AudioManager : MonoBehaviour
         AudioVolume(PlayerPrefs.GetFloat("SoundVolume", 5), false);
         AudioVolume(PlayerPrefs.GetFloat("MusicVolume", 5), true);
 
-        ChangeBackgroundMusic(SceneManager.GetActiveScene().name);
+        //ChangeBackgroundMusic(SceneManager.GetActiveScene().name);
     }
 
     public void ChangeBackgroundMusic(string sceneName) // Changes the backgorund music depending on the scene 
