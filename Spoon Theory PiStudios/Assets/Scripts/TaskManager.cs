@@ -34,11 +34,11 @@ public class TaskManager : MonoBehaviour
     void Start()
     {
         //depending of the time of the day the displayed tasks are different
-        if (GameManager.Instance.dayTime == GameManager.DayTime.Morning)
+        if (GameManager.GetInstance().dayTime == GameManager.DayTime.Morning)
         {
             displayedTasks = new List<Task>(morningTasks);
         }
-        else if (GameManager.Instance.dayTime == GameManager.DayTime.Evening)
+        else if (GameManager.GetInstance().dayTime == GameManager.DayTime.Evening)
         {
             displayedTasks = new List<Task>(eveningTasks);
         }

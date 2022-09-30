@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance { get; private set; }
+    public static GameManager instance;
+    public static GameManager GetInstance() { return instance; }
 
     public enum DayTime {Morning, Noon, Afternoon, Evening, Night};
     public DayTime dayTime;
@@ -19,16 +20,15 @@ public class GameManager : MonoBehaviour
     public float workPerformance;
     private void Awake()
     {
-        // If there is an instance, and it's not me, delete myself. 
-        if (Instance != null && Instance != this)
-        {
-            Destroy(this);
-        }
+        // Singleton
+        if (instance == null)
+            instance = this;
         else
         {
-            Instance = this;
-            DontDestroyOnLoad(this.gameObject);
+            Destroy(gameObject);
+            return;
         }
+        DontDestroyOnLoad(gameObject);
     }
 
     private void Start()
