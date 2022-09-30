@@ -58,11 +58,11 @@ public class SortingGameManager : MonoBehaviour
 
     public void ChangeScene()
     {
-        GameManager.Instance.ApartmentScene();
+        GameManager.GetInstance().ApartmentScene();
     }
 
     public void NextMinigame()
     {
-        GameManager.Instance.MemoryGameScene();
+        GameManager.GetInstance().MemoryGameScene();
     }
 }

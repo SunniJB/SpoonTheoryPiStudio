@@ -20,7 +20,7 @@ public interface F_IInteractable
         int spoonsTaken = 0;
         while(Input.GetKey(KeyCode.F) && spoonsTaken < Task.spoonCost && Vector3.Distance(interactor.transform.position, yourself.position) <= interactor.FInteractionDistance)
         {
-            GameManager.Instance.spoons--;
+            GameManager.GetInstance().spoons--;
             spoonsTaken++;
             yield return new WaitForSeconds(1);
         }
