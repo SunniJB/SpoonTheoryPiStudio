@@ -98,31 +98,14 @@ public class ObjectTask : MonoBehaviour
 
         if (spoonsTaken >= task.spoonCost)
         {
-            //Finished task
-            interactor.hygiene -= task.hygieneCost;
-            interactor.hunger -= task.hungerCost;
-            interactor.happiness -= task.happinesCost;
-            interactor.workPerformance -= task.workPerformanceCost;
-
-            Destroy(progressSlider.gameObject);
-
-            interactor.FinishTask(task, gameObject);
-
-            finished = true;
-            outline.enabled = false;
-
-            AudioManager.GetInstance().Stop(audioName);
-
+            Finish();
             return;
-        }
-        
-        if (objectAnimator != null)
-        {
-            objectAnimator.speed = 0f;
         }
 
         if (Input.GetKey(KeyCode.F) && Vector3.Distance(interactor.transform.position, transform.position) <= interactor.FInteractionDistance + 2)
         {
+            if(!AudioManager.GetInstance().CheckPlaying(audioName)) AudioManager.GetInstance().Resume(audioName);
+
             Debug.Log(task.name + " in progress");
             if (objectAnimator != null) objectAnimator.speed = animationSpeed;
 
@@ -141,5 +124,29 @@ public class ObjectTask : MonoBehaviour
                 timer = 1;
             }
         }
+        else
+        {
+            if (objectAnimator != null) objectAnimator.speed = 0f;
+
+            AudioManager.GetInstance().Pause(audioName);
+        }
+    }
+
+    void Finish()
+    {
+        //Finished task
+        interactor.hygiene -= task.hygieneCost;
+        interactor.hunger -= task.hungerCost;
+        interactor.happiness -= task.happinesCost;
+        interactor.workPerformance -= task.workPerformanceCost;
+
+        Destroy(progressSlider.gameObject);
+
+        interactor.FinishTask(task, gameObject);
+
+        finished = true;
+        outline.enabled = false;
+
+        AudioManager.GetInstance().Stop(audioName);
     }
 }
