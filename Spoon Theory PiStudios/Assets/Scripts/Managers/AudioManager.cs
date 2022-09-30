@@ -31,14 +31,14 @@ public class AudioManager : MonoBehaviour
             s.source.loop = s.music;
         }
 
-        // Valores iniciales de los sliders de musica y sonido
+        // Initial values for the music and sound sliders
         AudioVolume(PlayerPrefs.GetFloat("SoundVolume", 5), false);
         AudioVolume(PlayerPrefs.GetFloat("MusicVolume", 5), true);
 
         ChangeBackgroundMusic(SceneManager.GetActiveScene().name);
     }
 
-    public void ChangeBackgroundMusic(string sceneName) // Cambia la muscia de fondo segun la escena, llamado desde 
+    public void ChangeBackgroundMusic(string sceneName) // Changes the backgorund music depending on the scene 
     {
         switch (sceneName)
         {
@@ -76,16 +76,16 @@ public class AudioManager : MonoBehaviour
         s.source.Stop();
     }
 
-    public void AudioVolume(float volume, bool isMusic) // Se llama cada vez que se modifica el sonido o la musica
+    public void AudioVolume(float volume, bool isMusic) // It is called everytime sound or music is modified
     {
-        // Almacenar valores en PlayerPref
+        // Store values in PlayerPref
         if (isMusic)  // Volumen Musica
             PlayerPrefs.SetFloat("MusicVolume", volume);
 
-        if (!isMusic) // Volumen Sonido
+        if (!isMusic) // Sound volume
             PlayerPrefs.SetFloat("SoundVolume", volume);
 
-        // Convertir a un valor sobre 1
+        // Convert value to 0-1
         volume = volume / 10;
 
         AudioSource[] AllaudioSources = GetComponents<AudioSource>();
@@ -93,7 +93,7 @@ public class AudioManager : MonoBehaviour
         for (int i = 0; i < AllaudioSources.Length; i++)
         {
             if (sounds[i].music == isMusic)
-                AllaudioSources[i].volume = volume * sounds[i].maxVolume; // Cambiar el volumen de todas las musicas/sonidos dependiendo de su "maxVolume"
+                AllaudioSources[i].volume = volume * sounds[i].maxVolume; // Change volume to all music/sound depending on "maxVolume"
         }
     }
 }
