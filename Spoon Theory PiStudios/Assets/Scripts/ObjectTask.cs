@@ -62,7 +62,14 @@ public class ObjectTask : MonoBehaviour
             {
                 if (clip.name == actionAnim.name)
                 {
-                    animationSpeed = clip.length / task.spoonCost;
+                    if (task.spoonCost < 0)
+                    {
+                        animationSpeed = clip.length / (task.spoonCost * -1);
+                    }
+                    else
+                    {
+                        animationSpeed = clip.length / task.spoonCost;
+                    }
                     break;
                 }
             }
