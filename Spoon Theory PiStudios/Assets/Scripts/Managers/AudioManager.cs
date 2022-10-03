@@ -20,15 +20,18 @@ public class AudioManager : MonoBehaviour
             return;
         }
         DontDestroyOnLoad(gameObject);
-
-        foreach (Sound s in sounds)
+        if (sounds.Length != 0)
         {
-            s.source.clip = s.clip;
+            foreach (Sound s in sounds)
+            {
+                s.source.clip = s.clip;
 
-            s.source.volume = s.volume;
-            s.source.pitch = s.pitch;
-            s.source.loop = s.music;
+                s.source.volume = s.volume;
+                s.source.pitch = s.pitch;
+                s.source.loop = s.music;
+            }
         }
+
 
         // Initial values for the music and sound sliders
         AudioVolume(PlayerPrefs.GetFloat("SoundVolume", 5), false);
