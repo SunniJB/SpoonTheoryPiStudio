@@ -14,11 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskName: Watch tv
   description: Task description
-  spoonCost: -1
+  spoonCost: 1
   hygieneCost: 0
   moneyCost: 0
   hungerCost: 0
   happinesCost: -1
   workPerformanceCost: 0
   outlineObject: {fileID: 0}
-  inProgress: 0
+  objectTask: {fileID: 0}
+  inProgress: 1
