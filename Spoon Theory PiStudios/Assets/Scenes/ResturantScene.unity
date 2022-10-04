@@ -331,7 +331,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypointList:
     circuit: {fileID: 435339285}
-    items: []
+    items:
+    - {fileID: 227522946}
+    - {fileID: 1902206057}
+    - {fileID: 1856596224}
+    - {fileID: 287701590}
+    - {fileID: 618338621}
+    - {fileID: 732339773}
+    - {fileID: 455908350}
+    - {fileID: 2141805663}
   smoothRoute: 1
   editorVisualisationSubsteps: 100
 --- !u!4 &435339286
@@ -505,8 +513,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 95509902755735526, guid: d6d06c887a1aae94f8c6e8cc2c0c557b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f0013b24263fb7546bfd9bb35ab7655c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6d06c887a1aae94f8c6e8cc2c0c557b, type: 3}
+--- !u!1 &1205795993 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1260597861999642, guid: d6d06c887a1aae94f8c6e8cc2c0c557b, type: 3}
+  m_PrefabInstance: {fileID: 1205795992}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1205795997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205795993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9278db2f685c6bd46acdf227dbe29059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  circuit: {fileID: 435339285}
+  speed: 2
+  maxRotation: 5
 --- !u!1 &1244966383
 GameObject:
   m_ObjectHideFlags: 0
