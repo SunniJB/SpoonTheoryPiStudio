@@ -58,18 +58,22 @@ public class AudioManager : MonoBehaviour
     public void Play(string name, float pitch, AudioSource source = null)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
-        s.source = source;
+
+        //gets object's audio source if it has one, else creates one
+        if(source != null) s.source = source;
+        else s.source = gameObject.AddComponent<AudioSource>();
+
         if (s == null)
         {
             Debug.LogWarning("Sound: " + name + " not found!");
             return;
         }
-        s.source.clip = s.clip;
 
+        s.source.clip = s.clip;
         s.source.volume = s.volume;
         s.source.pitch = s.pitch;
         s.source.loop = s.music;
-        s.source.pitch = pitch;
+
         s.source.Play();
     }
 

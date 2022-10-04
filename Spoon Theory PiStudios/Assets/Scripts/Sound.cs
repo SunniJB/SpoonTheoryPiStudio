@@ -6,7 +6,7 @@ public class Sound
 {
     public string name;
 
-    public AudioSource source;
+    [HideInInspector] public AudioSource source;
     public AudioClip clip;
 
     [Range(0f, 1f)]
