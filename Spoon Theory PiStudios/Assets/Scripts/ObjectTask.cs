@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
-using static GameManager;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 [RequireComponent(typeof(Outline))]
 public class ObjectTask : MonoBehaviour
@@ -33,6 +31,8 @@ public class ObjectTask : MonoBehaviour
     AudioSource audioSource;
 
     float animationSpeed;
+
+    int _spoonCostPositive;
 
     private void Start()
     {
@@ -90,10 +90,9 @@ public class ObjectTask : MonoBehaviour
 
     public void Interact(CharacterInteractor _interactor)
     {
-        if (task.spoonCost < 0) task.spoonCost = task.spoonCost * -1;
-
         task.inProgress = true;
         interactor = _interactor;
+        _spoonCostPositive = Mathf.Abs(task.spoonCost);
         GameObject clon = Instantiate(progressSliderPrefab, sliderPos);
         progressSlider = clon.GetComponent<Slider>();
         progressSlider.maxValue = task.spoonCost;
@@ -109,7 +108,7 @@ public class ObjectTask : MonoBehaviour
     {
         if (interactor.numberOfSpoons <= 0) return;
 
-        if (spoonsTaken >= task.spoonCost)
+        if (spoonsTaken >= _spoonCostPositive)
         {
             Finish();
             return;
@@ -131,7 +130,8 @@ public class ObjectTask : MonoBehaviour
 
             if(timer <= 0)
             {
-                interactor.numberOfSpoons--;
+                if (task.spoonCost < 0) interactor.numberOfSpoons++; else interactor.numberOfSpoons--;
+
                 spoonsTaken++;
 
                 //Check if you have run out of spoons in mid task
