@@ -24,11 +24,11 @@ public class AudioManager : MonoBehaviour
         {
             foreach (Sound s in sounds)
             {
-                s.source.clip = s.clip;
+                //s.source.clip = s.clip;
 
-                s.source.volume = s.volume;
-                s.source.pitch = s.pitch;
-                s.source.loop = s.music;
+                //s.source.volume = s.volume;
+                //s.source.pitch = s.pitch;
+                //s.source.loop = s.music;
             }
         }
 
@@ -55,14 +55,20 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void Play(string name, float pitch)
+    public void Play(string name, float pitch, AudioSource source = null)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
+        s.source = source;
         if (s == null)
         {
             Debug.LogWarning("Sound: " + name + " not found!");
             return;
         }
+        s.source.clip = s.clip;
+
+        s.source.volume = s.volume;
+        s.source.pitch = s.pitch;
+        s.source.loop = s.music;
         s.source.pitch = pitch;
         s.source.Play();
     }

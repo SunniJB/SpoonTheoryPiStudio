@@ -101,7 +101,7 @@ public class ObjectTask : MonoBehaviour
 
         objectAnimator.SetTrigger("play");
 
-        if (audioSource != null) AudioManager.GetInstance().Play(audioName, 1f);
+        if (audioSource != null) AudioManager.GetInstance().Play(audioName, 1f, GetComponent<AudioSource>());
     }
 
     void Progress()
