@@ -44,4 +44,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee3dddeeb3224fa4ea6cf69b9220dc7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - name: toothbrush
+    source: {fileID: 0}
+    clip: {fileID: 8300000, guid: 38c1d68592774764da2ca49e8af8ad33, type: 3}
+    volume: 1
+    maxVolume: 1
+    pitch: 0
+    music: 0
+  - name: light frying
+    source: {fileID: 0}
+    clip: {fileID: 8300000, guid: 3aa099c01ea3cc74da008a9b53189863, type: 3}
+    volume: 1
+    maxVolume: 1
+    pitch: 0
+    music: 0
+  - name: take a shower
+    source: {fileID: 0}
+    clip: {fileID: 8300000, guid: 88f8b16014ad1a64aaaf865d142a43a0, type: 3}
+    volume: 1
+    maxVolume: 1
+    pitch: 0
+    music: 0

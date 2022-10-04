@@ -46,8 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dayTime: 0
   money: 0
-  hunger: 0
-  spoons: 0
-  hygiene: 0
-  happiness: 0
+  hunger: 5
+  spoons: 10
+  hygiene: 5
+  happiness: 5
   workPerformance: 0
