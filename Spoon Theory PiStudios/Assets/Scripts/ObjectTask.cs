@@ -7,7 +7,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Outline))]
 public class ObjectTask : MonoBehaviour
 {
-    public string interactionPrompt, audioName;
+    public string interactionPromptLowSpoons, interactionPromptHighSpoons, audioName;
 
     public Task task;
 
