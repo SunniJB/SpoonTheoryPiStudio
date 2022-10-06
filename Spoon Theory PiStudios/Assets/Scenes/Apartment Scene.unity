@@ -571,6 +571,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 156365271, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1959194739, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
       propertyPath: interactionPrompt
       value: '"What to make today? Eggs and bacon? Maybe pancakes?"'
@@ -639,7 +643,8 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4580dd49916b3c542b97109c8ca425f3, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 156365271, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
 --- !u!1 &178192555
 GameObject:
@@ -3376,11 +3381,6 @@ Transform:
   m_Father: {fileID: 1305840194}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &938464575 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 156365271, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
-  m_PrefabInstance: {fileID: 156365269}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &953829549
 GameObject:
   m_ObjectHideFlags: 0
@@ -4526,11 +4526,11 @@ PrefabInstance:
     - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
       propertyPath: sounds.Array.data[2].source
       value: 
-      objectReference: {fileID: 938464575}
+      objectReference: {fileID: 0}
     - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
       propertyPath: sounds.Array.data[3].source
       value: 
-      objectReference: {fileID: 938464575}
+      objectReference: {fileID: 0}
     - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
       propertyPath: sounds.Array.data[3].volume
       value: 1

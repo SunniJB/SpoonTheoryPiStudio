@@ -28,7 +28,6 @@ public class ObjectTask : MonoBehaviour
 
     [SerializeField] AnimationClip actionAnim;
     private Animator objectAnimator;
-    AudioSource audioSource;
 
     float animationSpeed;
 
@@ -46,11 +45,6 @@ public class ObjectTask : MonoBehaviour
         if (gameObject.TryGetComponent<Animator>(out Animator animator))
         {
             objectAnimator = animator;
-        }
-
-        if (TryGetComponent<AudioSource>(out AudioSource _audioSource))
-        {
-            audioSource = _audioSource;
         }
 
         if (objectAnimator != null)
@@ -80,8 +74,6 @@ public class ObjectTask : MonoBehaviour
     {
         if (interactor == null) return;
 
-        if (objectAnimator != null) Debug.Log(objectAnimator.speed);
-
         if (task.inProgress && !finished)
         {
             Progress();
@@ -101,7 +93,7 @@ public class ObjectTask : MonoBehaviour
 
         objectAnimator.SetTrigger("play");
 
-        if (audioSource != null) AudioManager.GetInstance().Play(audioName, 1f, GetComponent<AudioSource>());
+        AudioManager.GetInstance().Play(audioName, 1f);
     }
 
     void Progress()
@@ -116,12 +108,8 @@ public class ObjectTask : MonoBehaviour
 
         if (Input.GetKey(KeyCode.F) && Vector3.Distance(interactor.transform.position, transform.position) <= interactor.FInteractionDistance + 2)
         {
-            if (audioSource != null)
-            {
-                if (!AudioManager.GetInstance().CheckPlaying(audioName)) AudioManager.GetInstance().Resume(audioName);
-            }
-
-            Debug.Log(task.name + " in progress");
+            if (!AudioManager.GetInstance().CheckPlaying(audioName)) AudioManager.GetInstance().Resume(audioName);
+         
             if (objectAnimator != null) objectAnimator.speed = animationSpeed;
 
             timer -= Time.deltaTime;
@@ -145,7 +133,7 @@ public class ObjectTask : MonoBehaviour
         {
             if (objectAnimator != null) objectAnimator.speed = 0f;
 
-            if (audioSource != null) AudioManager.GetInstance().Pause(audioName);
+            AudioManager.GetInstance().Pause(audioName);
         }
     }
 
@@ -164,6 +152,6 @@ public class ObjectTask : MonoBehaviour
         finished = true;
         outline.enabled = false;
 
-        if (audioSource != null) AudioManager.GetInstance().Stop(audioName);
+        AudioManager.GetInstance().Stop(audioName);
     }
 }

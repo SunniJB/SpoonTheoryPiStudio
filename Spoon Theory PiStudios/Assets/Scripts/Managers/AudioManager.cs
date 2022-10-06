@@ -20,62 +20,49 @@ public class AudioManager : MonoBehaviour
             return;
         }
         DontDestroyOnLoad(gameObject);
-        if (sounds.Length != 0)
-        {
-            foreach (Sound s in sounds)
-            {
-                //s.source.clip = s.clip;
 
-                //s.source.volume = s.volume;
-                //s.source.pitch = s.pitch;
-                //s.source.loop = s.music;
-            }
+        foreach (Sound s in sounds)
+        {
+            s.source = gameObject.AddComponent<AudioSource>();
+            s.source.playOnAwake = false;
+            s.source.clip = s.clip;
+
+            s.source.volume = s.volume;
+            s.source.pitch = s.pitch;
+            s.source.loop = s.music;
         }
 
+        // Valores iniciales de los sliders de musica y sonido
+        AudioVolume(PlayerPrefs.GetFloat("SoundVolume", 10), false);
+        AudioVolume(PlayerPrefs.GetFloat("MusicVolume", 10), true);
 
-        // Initial values for the music and sound sliders
-        AudioVolume(PlayerPrefs.GetFloat("SoundVolume", 5), false);
-        AudioVolume(PlayerPrefs.GetFloat("MusicVolume", 5), true);
-
-        //ChangeBackgroundMusic(SceneManager.GetActiveScene().name);
+        ChangeBackgroundMusic(SceneManager.GetActiveScene().name);
     }
 
-    public void ChangeBackgroundMusic(string sceneName) // Changes the backgorund music depending on the scene 
+    public void ChangeBackgroundMusic(string sceneName) // Cambia la muscia de fondo segun la escena, llamado desde 
     {
         switch (sceneName)
         {
-            case "MainMenu_Scene":
-                Stop("GameMusic");
-                Play("MainMenu_Music", 1);
-                break;
-            default:
-                Stop("MainMenu_Music");
-                Play("GameMusic", 1);
-                break;
+            //case "MainMenu_Scene":
+            //    Stop("GameMusic");
+            //    Play("MainMenu_Music", 1);
+            //    break;
+            //default:
+            //    Stop("MainMenu_Music");
+            //    Play("GameMusic", 1);
+            //    break;
         }
     }
 
-    public void Play(string name, float pitch, AudioSource source = null)
+    public void Play(string name, float pitch)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
-
         if (s == null)
         {
             Debug.LogWarning("Sound: " + name + " not found!");
             return;
         }
-
-        //gets object's audio source if it has one, else creates one
-        if (source != null) s.source = source;
-        else s.source = gameObject.AddComponent<AudioSource>();
-
-        
-
-        s.source.clip = s.clip;
-        s.source.volume = s.volume;
-        s.source.pitch = s.pitch;
-        s.source.loop = s.music;
-
+        s.source.pitch = pitch;
         s.source.Play();
     }
 
@@ -89,7 +76,6 @@ public class AudioManager : MonoBehaviour
         }
         s.source.Pause();
     }
-
     public void Resume(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
@@ -99,16 +85,6 @@ public class AudioManager : MonoBehaviour
             return;
         }
         s.source.Play();
-    }
-
-    public bool CheckPlaying(string name)
-    {
-        Sound s = Array.Find(sounds, sound => sound.name == name);
-        if (s == null)
-        {
-            Debug.LogWarning("Sound: " + name + " not found!");
-        }
-        return s.source.isPlaying;
     }
 
     public void Stop(string name)
@@ -121,17 +97,27 @@ public class AudioManager : MonoBehaviour
         }
         s.source.Stop();
     }
-
-    public void AudioVolume(float volume, bool isMusic) // It is called everytime sound or music is modified
+    public bool CheckPlaying(string name)
     {
-        // Store values in PlayerPref
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found!");
+            return false;
+        }
+        return s.source.isPlaying;
+    }
+
+    public void AudioVolume(float volume, bool isMusic) // Se llama cada vez que se modifica el sonido o la musica
+    {
+        // Almacenar valores en PlayerPref
         if (isMusic)  // Volumen Musica
             PlayerPrefs.SetFloat("MusicVolume", volume);
 
-        if (!isMusic) // Sound volume
+        if (!isMusic) // Volumen Sonido
             PlayerPrefs.SetFloat("SoundVolume", volume);
 
-        // Convert value to 0-1
+        // Convertir a un valor sobre 1
         volume = volume / 10;
 
         AudioSource[] AllaudioSources = GetComponents<AudioSource>();
@@ -139,7 +125,7 @@ public class AudioManager : MonoBehaviour
         for (int i = 0; i < AllaudioSources.Length; i++)
         {
             if (sounds[i].music == isMusic)
-                AllaudioSources[i].volume = volume * sounds[i].maxVolume; // Change volume to all music/sound depending on "maxVolume"
+                AllaudioSources[i].volume = volume * sounds[i].maxVolume; // Cambiar el volumen de todas las musicas/sonidos dependiendo de su "maxVolume"
         }
     }
 }
