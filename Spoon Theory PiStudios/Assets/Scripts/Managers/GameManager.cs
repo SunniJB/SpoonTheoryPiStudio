@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public static GameManager GetInstance() { return instance; }
 
+    public bool tutorialFinished;
+
     public enum DayTime {Morning, Noon, Afternoon, Evening, Night};
     public DayTime dayTime;
 
@@ -29,6 +31,8 @@ public class GameManager : MonoBehaviour
             return;
         }
         DontDestroyOnLoad(gameObject);
+
+        //tutorialFinished = false;
     }
 
     private void Start()
@@ -44,7 +48,8 @@ public class GameManager : MonoBehaviour
 
     public void ApartmentScene()
     {
-        SceneManager.LoadScene(1);
+        if (!tutorialFinished) SceneManager.LoadScene(1); //Go to tutorial
+        else SceneManager.LoadScene(1); // Go to apartment
         Cursor.lockState = CursorLockMode.Locked;
     }
 

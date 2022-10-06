@@ -7,7 +7,7 @@ using TMPro;
 public class TaskManager : MonoBehaviour
 {
     //list of tasks available for the player
-    [SerializeField] Task[] morningTasks, eveningTasks;
+    [SerializeField] Task[] morningTasks, eveningTasks, tutorialTask;
 
     List<Task> displayedTasks;
     List<CheckBox> checkboxes = new List<CheckBox>();
@@ -33,16 +33,23 @@ public class TaskManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //depending of the time of the day the displayed tasks are different
-        if (GameManager.GetInstance().dayTime == GameManager.DayTime.Morning)
+        if(!GameManager.GetInstance().tutorialFinished)
         {
-            displayedTasks = new List<Task>(morningTasks);
+            displayedTasks = new List<Task>(tutorialTask);
         }
-        else if (GameManager.GetInstance().dayTime == GameManager.DayTime.Evening)
+        else
         {
-            displayedTasks = new List<Task>(eveningTasks);
+            //depending of the time of the day the displayed tasks are different
+            if (GameManager.GetInstance().dayTime == GameManager.DayTime.Morning)
+            {
+                displayedTasks = new List<Task>(morningTasks);
+            }
+            else if (GameManager.GetInstance().dayTime == GameManager.DayTime.Evening)
+            {
+                displayedTasks = new List<Task>(eveningTasks);
+            }
         }
-
+       
         int tasksPerColumn = displayedTasks.Count / columns.Length;
         int rest = displayedTasks.Count % columns.Length;
 
