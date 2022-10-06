@@ -53,7 +53,7 @@ public class MemoryManager : MonoBehaviour
             if (!moneygiven)
             {
 
-                _mm.Complete(spoonCost, totalTime, 50);
+                _mm.Complete(spoonCost, totalTime, 60);
 
 
 
@@ -61,21 +61,6 @@ public class MemoryManager : MonoBehaviour
                 moneTxt.text = "you earned: £" + _mm.GetMoney().ToString("000");
                 moneygiven = true;
             }
-
-            /* totalTime = timerMin * 60 + timerSec;
-             workPerform = (50 / (totalTime / 10)) - 5 + GameManager.GetInstance().happiness;
-             if (workPerform > 50)
-                 workPerform = 50;
-             money = 10.9f * (workPerform / 10);
-             workTxt.text = "Performance Review: " + workPerform.ToString("00") + "/50";
-             moneTxt.text = "you earned: £" + money.ToString("000");
-             if (!moneygiven)
-             { 
-             GameManager.GetInstance().money += money;
-                 GameManager.GetInstance().spoons -= spoonCost;
-                 moneygiven = true;
-             }*/
-
         }
     }
 

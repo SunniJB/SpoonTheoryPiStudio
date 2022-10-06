@@ -8,7 +8,7 @@ public class ClickMemory : MonoBehaviour
 {
     public Sprite[] images = new Sprite[2];
     private int arrayPos = 1;
-    private bool canClick = true;
+    private static bool canClick = true;
 
     public void OnClick()
     {
@@ -18,15 +18,8 @@ public class ClickMemory : MonoBehaviour
             {
                 GetComponent<Image>().overrideSprite = images[arrayPos];
 
-                if (arrayPos == 1)
-                {
                     arrayPos = 0;
-                }
-                else
-                {
-                    arrayPos = 1;
-                }
-
+                
                 if (MemoryManager.instance.clickOne == null)
                 {
                     MemoryManager.instance.clickOne = images[1];
@@ -43,9 +36,13 @@ public class ClickMemory : MonoBehaviour
                         MemoryManager.instance.clickOne = null;
                         MemoryManager.instance.clickTwo = null;
                         MemoryManager.instance.wins++;
+                        canClick = false;
+                        Invoke("CanClick", 0.5f);
                     }
                     else
                     {
+                        MemoryManager.instance.clickOne = null;
+                        MemoryManager.instance.clickTwo = null;
                         Invoke("Fail", 0.5f);
                         canClick = false;
                     }
