@@ -9,6 +9,7 @@ public class MemoryManager : MonoBehaviour
     public static MemoryManager instance;
 
     public int spoonCost;
+    public MinigameManager _mm;
 
     public Sprite[] flippedLibrary = new Sprite[5];
     public GameObject[] flipPlates = new GameObject[10];
@@ -48,18 +49,33 @@ public class MemoryManager : MonoBehaviour
             timeIsOn = false;
             winPanel.SetActive(true);
             totalTime = timerMin * 60 + timerSec;
-            workPerform = (50 / (totalTime / 10)) - 5 + GameManager.GetInstance().happiness;
-            if (workPerform > 50)
-                workPerform = 50;
-            money = 10.9f * (workPerform / 10);
-            workTxt.text = "Performance Review: " + workPerform.ToString("00") + "/50";
-            moneTxt.text = "you earned: £" + money.ToString("000");
+
             if (!moneygiven)
-            { 
-            GameManager.GetInstance().money += money;
-                GameManager.GetInstance().spoons -= spoonCost;
+            {
+
+                _mm.Complete(spoonCost, totalTime, 50);
+
+
+
+                workTxt.text = "Performance Review: " + _mm.GetWorkPerform().ToString("00") + "/50";
+                moneTxt.text = "you earned: £" + _mm.GetMoney().ToString("000");
                 moneygiven = true;
             }
+
+            /* totalTime = timerMin * 60 + timerSec;
+             workPerform = (50 / (totalTime / 10)) - 5 + GameManager.GetInstance().happiness;
+             if (workPerform > 50)
+                 workPerform = 50;
+             money = 10.9f * (workPerform / 10);
+             workTxt.text = "Performance Review: " + workPerform.ToString("00") + "/50";
+             moneTxt.text = "you earned: £" + money.ToString("000");
+             if (!moneygiven)
+             { 
+             GameManager.GetInstance().money += money;
+                 GameManager.GetInstance().spoons -= spoonCost;
+                 moneygiven = true;
+             }*/
+
         }
     }
 
