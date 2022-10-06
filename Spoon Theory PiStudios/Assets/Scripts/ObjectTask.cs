@@ -95,7 +95,7 @@ public class ObjectTask : MonoBehaviour
         _spoonCostPositive = Mathf.Abs(task.spoonCost);
         GameObject clon = Instantiate(progressSliderPrefab, sliderPos);
         progressSlider = clon.GetComponent<Slider>();
-        progressSlider.maxValue = task.spoonCost;
+        progressSlider.maxValue = _spoonCostPositive;
         progressSlider.value = 0;
 
 
@@ -130,7 +130,8 @@ public class ObjectTask : MonoBehaviour
 
             if(timer <= 0)
             {
-                if (task.spoonCost < 0) interactor.numberOfSpoons++; else interactor.numberOfSpoons--;
+                if (task.spoonCost < 0) interactor.numberOfSpoons++; 
+                else interactor.numberOfSpoons--;
 
                 spoonsTaken++;
 
