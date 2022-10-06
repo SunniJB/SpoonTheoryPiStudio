@@ -9,12 +9,16 @@ public class SortingGameManager : MonoBehaviour
     public GameObject winPanel, pausePanel, timer;
     private float minutes, seconds;
 
+    MinigameManager minigameManager;
+
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Confined;
-        pausePanel = GameObject.Find("PausePanel");
-        timer = GameObject.Find("Timer");
+        //pausePanel = GameObject.Find("PausePanel");
+        //timer = GameObject.Find("Timer");
         Time.timeScale = 0f;
+
+        minigameManager = GetComponent<MinigameManager>();
     }
 
     public void Resume()
@@ -35,10 +39,17 @@ public class SortingGameManager : MonoBehaviour
         timer.GetComponent<TMPro.TextMeshProUGUI>().text = "Time: " + minutes.ToString() + ":" + seconds.ToString("f1");
         if (spoonGoal.full && knifeGoal.full && forkGoal.full)
         {
-            winPanel.SetActive(true);
-            GameObject.Find("Final time").GetComponent<TMPro.TextMeshProUGUI>().text = "Your final time was: " + minutes.ToString() + ":" + seconds.ToString("f1");
-            Time.timeScale = 0f;
+            Win();
         }
+    }
+
+    void Win()
+    {
+        winPanel.SetActive(true);
+        GameObject.Find("Final time").GetComponent<TMPro.TextMeshProUGUI>().text = "Your final time was: " + minutes.ToString() + ":" + seconds.ToString("f1");
+        Time.timeScale = 0f;
+
+        minigameManager.Complete(3, minutes * 60 + seconds);
     }
 
     public void Restart()
@@ -58,25 +69,27 @@ public class SortingGameManager : MonoBehaviour
 
     public void ChangeScene()
     {
-        Complete();
         GameManager.GetInstance().ApartmentScene();
     }
 
     public void NextMinigame()
     {
-        Complete();
         GameManager.GetInstance().MemoryGameScene();
     }
 
-    private void Complete()
+    //private void Complete()
+    //{
+    //    int spoonCost = 3;
+    //    float totalTime = minutes * 60 + seconds;
+    //    float workPerform = (100 / (totalTime / 10)) - 5 + GameManager.GetInstance().happiness;
+    //    if (workPerform > 50) workPerform = 50;
+    //    float money = 10.9f * (workPerform / 10);
+    //    GameManager.GetInstance().money += money;
+    //    GameManager.GetInstance().spoons -= spoonCost;
+    //}
+
+    public void Skip()
     {
-        int spoonCost = 3;
-        float totalTime = minutes * 60 + seconds;
-         float workPerform = (100 / (totalTime / 10)) - 5 + GameManager.GetInstance().happiness;
-        if (workPerform > 50)
-            workPerform = 50;
-        float money = 10.9f * (workPerform / 10);
-        GameManager.GetInstance().money += money;
-        GameManager.GetInstance().spoons -= spoonCost;
+        Win();
     }
 }
