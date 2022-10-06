@@ -87,7 +87,14 @@ public class CharacterInteractor : MonoBehaviour
 
             if (interactableObject[i] != null && Input.GetKeyDown(KeyCode.F) && interactableObject[i].outline.enabled && !interactableObject[i].task.inProgress && !interactableObject[i].finished)
             {
-                promptUI.SetUpText(interactableObject[i].interactionPrompt);
+                if (numberOfSpoons >= numberOfSpoons / 2)
+                {
+                    promptUI.SetUpText(interactableObject[i].interactionPromptLowSpoons);
+                } else
+                {
+                    promptUI.SetUpText(interactableObject[i].interactionPromptHighSpoons);
+                }
+                
 
                 interactableObject[i].Interact(this);
 
