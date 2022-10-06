@@ -7,7 +7,7 @@ public class SimonSaysManager : MonoBehaviour
 {
     int value, count, currentLength, maxStrikes, currentStrikes, timesSequencePlayed;
 
-    List<int> currentSequence = new List<int>();
+    [SerializeField] List<int> currentSequence = new List<int>();
 
     [SerializeField] int initialLength, repeatTimes;
 
@@ -16,6 +16,7 @@ public class SimonSaysManager : MonoBehaviour
 
     [SerializeField] Image red, green, blue, yellow, winPanel, losePanel;
     [SerializeField] Image[] strikes;
+    [SerializeField] Image[] popUps;
 
     [SerializeField] Color blueCol, greenCol, yellowCol, redCol, whiteCol;
     
@@ -32,6 +33,11 @@ public class SimonSaysManager : MonoBehaviour
         losePanel.gameObject.SetActive(false);
         winPanel.gameObject.SetActive(false);
 
+        for (int i = 0; i < popUps.Length; i++)
+        {
+            popUps[i].gameObject.SetActive(false);
+        }
+
         DeactivateClick();
 
         CreateSequence();
@@ -40,9 +46,11 @@ public class SimonSaysManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (currentStrikes >= maxStrikes) { DeactivateClick(); return; }
+
         if (count > 0 && count >= currentSequence.Count)
         {
-            if (timesSequencePlayed < repeatTimes) 
+            if (timesSequencePlayed < repeatTimes)
                 NextSequence();
             else Win();
         }
@@ -68,8 +76,8 @@ public class SimonSaysManager : MonoBehaviour
 
     public void RedClick()
     {
-        Debug.Log("red");
-        value = 0;
+        value = 1;
+        Debug.Log(value);
         ChangeColor(red, redCol);
         CheckIfCorrect(value);
         count++;
@@ -77,8 +85,8 @@ public class SimonSaysManager : MonoBehaviour
 
     public void YellowClick()
     {
-        Debug.Log("yellow");
-        value = 1;
+        value = 2;
+        Debug.Log(value);
         ChangeColor(yellow, yellowCol);
         CheckIfCorrect(value);
         count++;
@@ -86,16 +94,16 @@ public class SimonSaysManager : MonoBehaviour
 
     public void BlueClick()
     {
-        Debug.Log("blue");
-        value = 2;
+        value = 0;
+        Debug.Log(value);
         ChangeColor(blue, blueCol);
         CheckIfCorrect(value);
         count++;
     }
     public void GreenClick()
     {
-        Debug.Log("green");
         value = 3;
+        Debug.Log(value);
         ChangeColor(green, greenCol);
         CheckIfCorrect(value);
         count++;
@@ -110,10 +118,21 @@ public class SimonSaysManager : MonoBehaviour
     IEnumerator ResetColor(Image img)
     {
         yield return new WaitForSeconds(resetColorTime);
-        img.color = whiteCol;
+        img.color = new Color(Color.white.r, Color.white.g, Color.white.b, 0);
     }
 
     #endregion
+
+    void ShowPopUp(int num)
+    {
+        popUps[num].gameObject.SetActive(true);
+    }
+
+    IEnumerator QuitPopUp(int num)
+    {
+        yield return new WaitForSeconds(0.2f);
+        popUps[num].gameObject.SetActive(false);
+    }
 
     void CreateSequence()
     {
@@ -140,24 +159,26 @@ public class SimonSaysManager : MonoBehaviour
         int i = 0;
         while (i < currentSequence.Count)
         {
-            switch (currentSequence[i])
-            {
-                case 0:
-                    ChangeColor(red, redCol);
-                    break;
+            ShowPopUp(currentSequence[i]);
+            StartCoroutine(QuitPopUp(currentSequence[i]));
+            //switch (currentSequence[i])
+            //{
+            //    case 0:
+            //        ChangeColor(red, redCol);
+            //        break;
 
-                case 1:
-                    ChangeColor(yellow, yellowCol);
-                    break;
+            //    case 1:
+            //        ChangeColor(yellow, yellowCol);
+            //        break;
 
-                case 2:
-                    ChangeColor(blue, blueCol);
-                    break;
+            //    case 2:
+            //        ChangeColor(blue, blueCol);
+            //        break;
 
-                case 3:
-                    ChangeColor(green, greenCol);
-                    break;
-            }
+            //    case 3:
+            //        ChangeColor(green, greenCol);
+            //        break;
+            //}
             i++;
             if (i == currentSequence.Count) ActivateClick();
             yield return new WaitForSeconds(currentTimeBetweenColors);
