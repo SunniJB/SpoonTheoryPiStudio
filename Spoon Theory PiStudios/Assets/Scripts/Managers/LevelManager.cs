@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
-    [SerializeField] Image avatarImg, pausePanel, characterUIPanel;
+    [SerializeField] Image avatarImg, pausePanel, characterUIPanel, controlsPanel;
 
     [SerializeField] bool pause;
 
@@ -17,6 +17,7 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
         pausePanel.gameObject.SetActive(false);
+        controlsPanel.gameObject.SetActive(false);
         pause = false;
         Time.timeScale = 1;
 
@@ -50,6 +51,18 @@ public class LevelManager : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
         }
     }
+    public void ShowControls()
+    {
+        controlsPanel.gameObject.SetActive(true);
+        pausePanel.gameObject.SetActive(false);
+    }
+
+    public void BackToPauseMenu()
+    {
+        pausePanel.gameObject.SetActive(true);
+        controlsPanel.gameObject.SetActive(false);
+    }
+
     public void GoToMenu()
     {
         GameManager.GetInstance().MenuScene();
