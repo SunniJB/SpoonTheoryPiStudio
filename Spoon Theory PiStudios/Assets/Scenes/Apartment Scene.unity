@@ -762,6 +762,7 @@ PrefabInstance:
     - {fileID: 1962508825913668575, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
     - {fileID: 6211861998925199011, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
     - {fileID: 6211861998925199010, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+    - {fileID: 1959194741, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
 --- !u!1 &178192555
 GameObject:
@@ -3484,11 +3485,6 @@ Transform:
   m_Father: {fileID: 1646898117}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &996294020 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 1959194741, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
-  m_PrefabInstance: {fileID: 156365269}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1004751402
 GameObject:
   m_ObjectHideFlags: 0
@@ -4563,7 +4559,7 @@ PrefabInstance:
     - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
       propertyPath: sounds.Array.data[1].source
       value: 
-      objectReference: {fileID: 996294020}
+      objectReference: {fileID: 0}
     - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
       propertyPath: sounds.Array.data[2].source
       value: 

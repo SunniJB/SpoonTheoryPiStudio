@@ -53,6 +53,21 @@ public class GameManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
     }
 
+    public void LoadScene(int sceneNumber = -1)
+    {
+        if(sceneNumber != -1) SceneManager.LoadScene(sceneNumber);
+        else SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+
+    public void ResetScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
     public void WorkScene()
     {
         SceneManager.LoadScene(3);
