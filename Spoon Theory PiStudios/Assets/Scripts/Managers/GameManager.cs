@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance;
+    private static GameManager instance;
     public static GameManager GetInstance() { return instance; }
 
     public bool tutorialFinished;
@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
     public void ApartmentScene()
     {
         if (!tutorialFinished) SceneManager.LoadScene(1); //Go to tutorial
-        else SceneManager.LoadScene(1); // Go to apartment
+        else SceneManager.LoadScene(2); // Go to apartment
         Cursor.lockState = CursorLockMode.Locked;
     }
 

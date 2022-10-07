@@ -139,6 +139,8 @@ public class ObjectTask : MonoBehaviour
 
     void Finish()
     {
+        if (!GameManager.GetInstance().tutorialFinished && task.taskName == "Tutorial Task") TutorialManager.GetInstance().completeTaskFinished = true;
+
         //Finished task
         interactor.hygiene -= task.hygieneCost;
         interactor.hunger -= task.hungerCost;

@@ -29,7 +29,8 @@ public class CheckBox : MonoBehaviour
         if (value)
         {
             //not working tutorial right now
-            if (TutorialManager.GetInstance() != null && task.name == "Tutorial Task") TutorialManager.GetInstance().taskmenuFinished = true;
+            if (TutorialManager.GetInstance() != null)
+                if(task.taskName == "Tutorial Task") TutorialManager.GetInstance().taskmenuFinished = true;
             taskManager.PinTask(task);
             pinImg.enabled = true;
             checkImg.enabled = false;

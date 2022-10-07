@@ -26,7 +26,11 @@ public class opencloseDoor : MonoBehaviour
 		AudioManager.GetInstance().Play("Door", 1);
 		open = true;
 		yield return new WaitForSeconds(.5f);
-		GoToWork();
+		if (GameManager.GetInstance().tutorialFinished) GoToWork();
+		else
+		{
+			if (TutorialManager.GetInstance() != null) TutorialManager.GetInstance().finishFinished = true;
+		}
 	}
 
 	IEnumerator closing()

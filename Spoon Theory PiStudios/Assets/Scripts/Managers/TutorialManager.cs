@@ -7,18 +7,27 @@ public class TutorialManager : MonoBehaviour
 {
     public static TutorialManager instance;
     public static TutorialManager GetInstance() { return instance; }
-    enum TutorialStates { Start, Move, TaskMenu, CompleteTask, Finish };
+    enum TutorialStates { Start, TaskMenu, CompleteTask, Finish };
     TutorialStates tutorialStates;
 
-    public bool startFinished, moveFinished, taskmenuFinished, completeTaskFinished, finishFinished;
+    [SerializeField] Outline door;
 
-    [SerializeField] GameObject movePanel, taskPanel;
+    public bool startFinished, taskmenuFinished, completeTaskFinished, finishFinished;
+
+    [SerializeField] GameObject movePanel, taskPanel, completeTaskPanel, finishTutorial1, finishTutorial2;
 
     [SerializeField] Transform player;
 
     private void Awake()
     {
-        
+        // Singleton
+        if (instance == null)
+            instance = this;
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
     }
     // Start is called before the first frame update
     void Start()
@@ -26,10 +35,15 @@ public class TutorialManager : MonoBehaviour
         tutorialStates = TutorialStates.Start;
 
         startFinished = false;
-        moveFinished = false;
         taskmenuFinished = false;
         completeTaskFinished = false;
         finishFinished = false;
+
+        movePanel.SetActive(false);
+        taskPanel.SetActive(false);
+        completeTaskPanel.SetActive(false);
+        finishTutorial1.SetActive(false);
+        finishTutorial2.SetActive(false);
     }
 
     // Update is called once per frame
@@ -40,15 +54,15 @@ public class TutorialManager : MonoBehaviour
             case TutorialStates.Start:
                 TutorialStart();
                 break;
-            case TutorialStates.Move:
-                TutorialMove();
-                break;
+
             case TutorialStates.TaskMenu:
                 TutorialTaskMenu();
                 break;
+
             case TutorialStates.CompleteTask:
                 TutorialCompleteTask();
                 break;
+
             case TutorialStates.Finish:
                 TutorialFinish();
                 break;
@@ -62,40 +76,45 @@ public class TutorialManager : MonoBehaviour
 
         if (player.position.z < movePanel.transform.position.z) startFinished = true;
 
-        if (startFinished) tutorialStates = TutorialStates.Move;
-    }
-
-    void TutorialMove()
-    {
-        movePanel.SetActive(false);
-        taskPanel.SetActive(true);
-
-        if (moveFinished) tutorialStates = TutorialStates.TaskMenu;
+        if (startFinished) tutorialStates = TutorialStates.TaskMenu;
     }
 
     void TutorialTaskMenu()
     {
-        taskPanel.SetActive(false);
+        movePanel.SetActive(false);
+        taskPanel.SetActive(true);
 
         if (taskmenuFinished) tutorialStates = TutorialStates.CompleteTask;
     }
 
     void TutorialCompleteTask()
     {
-        movePanel.SetActive(false);
+        completeTaskPanel.SetActive(true);
+        taskPanel.SetActive(false);
 
-        if (completeTaskFinished) tutorialStates = TutorialStates.Finish;
+        if (completeTaskFinished) { tutorialStates = TutorialStates.Finish; Invoke("Tutorial2Text", 10); door.enabled = true; }
     }
 
     void TutorialFinish()
     {
-        movePanel.SetActive(false);
+        completeTaskPanel.SetActive(false);
+        finishTutorial1.SetActive(true);
+
+        if (player.position.z > finishTutorial1.transform.position.z) finishTutorial1.SetActive(false);
+        
+        if (player.position.z > finishTutorial2.transform.position.z && finishTutorial2.activeInHierarchy) Destroy(finishTutorial2);
 
         if (finishFinished) LeaveTutorial();
+    }
+
+    void Tutorial2Text()
+    {
+        finishTutorial2.SetActive(true);
     }
 
     void LeaveTutorial()
     {
         GameManager.GetInstance().tutorialFinished = true;
+        GameManager.GetInstance().ApartmentScene();
     }
 }
