@@ -19,8 +19,6 @@ public class SortingGameManager : MonoBehaviour
         //pausePanel = GameObject.Find("PausePanel");
         //timer = GameObject.Find("Timer");
         Time.timeScale = 0f;
-
-        minigameManager = GetComponent<MinigameManager>();
     }
 
     public void Resume()
@@ -47,15 +45,13 @@ public class SortingGameManager : MonoBehaviour
 
     void Win()
     {
-        if (minigameManager == null)
-            minigameManager = GameObject.Find("MinigameManager").GetComponent<MinigameManager>();
         winPanel.SetActive(true);
         GameObject.Find("Final time").GetComponent<TMPro.TextMeshProUGUI>().text = "Your final time was: " + minutes.ToString() + ":" + seconds.ToString("f1");
         Time.timeScale = 0f;
 
         minigameManager.Complete(3, minutes * 60 + seconds);
-        workPerfTxt.text = "Work Performance: " + minigameManager.GetWorkPerform().ToString("00") + "/50";
-        moneyTxt.text = "Money Earned: £" + minigameManager.GetMoney().ToString("00");
+        workPerfTxt.text = "Performance Review: " + minigameManager.GetWorkPerform().ToString("00") + "/50";
+        moneyTxt.text = "You Earned: £" + minigameManager.GetMoney().ToString("00");
     }
 
     public void Restart()
