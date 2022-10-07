@@ -13,6 +13,8 @@ public class SortingGameManager : MonoBehaviour
 
     public MinigameManager minigameManager;
 
+    private bool gotPaid;
+
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Confined;
@@ -49,7 +51,11 @@ public class SortingGameManager : MonoBehaviour
         GameObject.Find("Final time").GetComponent<TMPro.TextMeshProUGUI>().text = "Your final time was: " + minutes.ToString() + ":" + seconds.ToString("f1");
         Time.timeScale = 0f;
 
-        minigameManager.Complete(3, minutes * 60 + seconds);
+        if (gotPaid == false)
+        {
+            minigameManager.Complete(3, minutes * 60 + seconds);
+            gotPaid = true;
+        }
         workPerfTxt.text = "Performance Review: " + minigameManager.GetWorkPerform().ToString("00") + "/50";
         moneyTxt.text = "You Earned: £" + minigameManager.GetMoney().ToString("00");
     }
