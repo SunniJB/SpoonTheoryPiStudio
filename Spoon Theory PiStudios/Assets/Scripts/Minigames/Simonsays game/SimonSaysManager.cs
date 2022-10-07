@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class SimonSaysManager : MonoBehaviour
 {
@@ -19,9 +20,11 @@ public class SimonSaysManager : MonoBehaviour
     [SerializeField] Image[] popUps;
 
     [SerializeField] Color blueCol, greenCol, yellowCol, redCol, whiteCol;
+
+    public TMP_Text strikeText, PerformanceText, moneyText;
+    public MinigameManager minigameManager;
     
-    // Start is called before the first frame update
-    void Start()
+    public void OnStartClick()
     {
         count = 0;
         currentStrikes = 0;
@@ -43,7 +46,6 @@ public class SimonSaysManager : MonoBehaviour
         CreateSequence();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (currentStrikes >= maxStrikes) { DeactivateClick(); return; }
@@ -209,11 +211,26 @@ public class SimonSaysManager : MonoBehaviour
 
     void Lose()
     {
-        losePanel.gameObject.SetActive(true);
+        Win();
+        /*
+        minigameManager.Complete(3, currentStrikes * 10, 50);
+
+        strikeText.text = "You got " + currentStrikes + " orders wrong!";
+        PerformanceText.text = "Performance Review: " + minigameManager.GetWorkPerform().ToString("00") + "/50";
+        moneyText.text = "You earned: £" + minigameManager.GetMoney().ToString("00");
+        losePanel.gameObject.SetActive(true); */
     }
 
-    void Win()
+    public void Win()
     {
+        if (currentStrikes == 0)
+            minigameManager.Complete(3, 5, 50);
+        else
+            minigameManager.Complete(3, currentStrikes * 10, 50);
+
+        strikeText.text = "You got " + currentStrikes +" orders wrong!";
+        PerformanceText.text = "Performance Review: " + minigameManager.GetWorkPerform().ToString("00") + "/50";
+        moneyText.text = "You earned: £" + minigameManager.GetMoney().ToString("00");
         winPanel.gameObject.SetActive(true);
     }
 }

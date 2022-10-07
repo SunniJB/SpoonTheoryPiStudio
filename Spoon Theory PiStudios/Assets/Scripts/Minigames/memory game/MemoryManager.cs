@@ -16,11 +16,11 @@ public class MemoryManager : MonoBehaviour
     public GameObject firstClickObj, winPanel;
     public Sprite clickOne = null, clickTwo = null;
     public int wins;
-    public TMP_Text minTxt, workTxt, moneTxt;
+    public TMP_Text minTxt, workTxt, moneTxt, finalTimeTxt;
 
     private float totalTime;
     private float workPerform, money;
-    private bool timeIsOn, moneygiven;
+    private bool timeIsOn, moneygiven, clickedStart;
     private float timerSec, timerMin;
     private GameObject tempFp;
     private int[] numbers = new int[10];
@@ -41,26 +41,12 @@ public class MemoryManager : MonoBehaviour
         }
 
         //secTxt.text = timerSec.ToString();
-        minTxt.text = timerMin.ToString("00") + ":" + timerSec.ToString("00");
+        minTxt.text = timerMin.ToString("0") + ":" + timerSec.ToString("f1");
 
         if (wins == 5)
         {
             //What happens when you win goes here!!
-            timeIsOn = false;
-            winPanel.SetActive(true);
-            totalTime = timerMin * 60 + timerSec;
-
-            if (!moneygiven)
-            {
-
-                _mm.Complete(spoonCost, totalTime, 60);
-
-
-
-                workTxt.text = "Performance Review: " + _mm.GetWorkPerform().ToString("00") + "/50";
-                moneTxt.text = "you earned: £" + _mm.GetMoney().ToString("000");
-                moneygiven = true;
-            }
+            FinishMinigame();
         }
     }
 
@@ -83,6 +69,7 @@ public class MemoryManager : MonoBehaviour
 
     public void OnClick()
     {
+        clickedStart = true;
         moneygiven = false;
         timeIsOn = true;
         Time.timeScale = 1;
@@ -103,5 +90,24 @@ public class MemoryManager : MonoBehaviour
     public void GoHome()
     {
         GameManager.GetInstance().ApartmentScene();
+    }
+
+    public void FinishMinigame()
+    {
+        timeIsOn = false;
+        winPanel.SetActive(true);
+        totalTime = timerMin * 60 + timerSec;
+
+        if (!moneygiven)
+        {
+            if(clickedStart)
+            _mm.Complete(spoonCost, totalTime, 60);
+
+
+            finalTimeTxt.text = "Your final time was : " + timerMin.ToString("0") + ":" + timerSec.ToString("f1");
+            workTxt.text = "Performance Review: " + _mm.GetWorkPerform().ToString("00") + "/50";
+            moneTxt.text = "you earned: £" + _mm.GetMoney().ToString("000");
+            moneygiven = true;
+        }
     }
 }
