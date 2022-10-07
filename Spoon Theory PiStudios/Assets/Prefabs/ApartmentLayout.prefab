@@ -5089,7 +5089,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 320f7227530da7f4390e0d5e34652f73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionPrompt: You take a good nap
+  interactionPromptLowSpoons: 
+  interactionPromptHighSpoons: 
   audioName: 
   task: {fileID: 11400000, guid: 463c80b97dfb9c647833592ed0b855d1, type: 2}
   outline: {fileID: 0}
@@ -9206,7 +9207,8 @@ GameObject:
   - component: {fileID: 1410211523363765449}
   - component: {fileID: 1410211523363765450}
   - component: {fileID: 1410211523363765451}
-  m_Layer: 0
+  - component: {fileID: 8892427573364441805}
+  m_Layer: 3
   m_Name: Bed_Apt_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9307,6 +9309,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.19950223, y: 1.7988955, z: 3.1481352}
   m_Center: {x: -1.7885267, y: 0.8994476, z: 0.00000023841878}
+--- !u!114 &8892427573364441805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410211523363765453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e318713f396a90408056f565b083049, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1410211523364849380
 GameObject:
   m_ObjectHideFlags: 0
@@ -10398,7 +10412,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 320f7227530da7f4390e0d5e34652f73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionPrompt: Watching tv
+  interactionPromptLowSpoons: 
+  interactionPromptHighSpoons: 
   audioName: 
   task: {fileID: 11400000, guid: 6b7f707c5e29af145882a9a13ad1d6d7, type: 2}
   outline: {fileID: 0}
@@ -11898,7 +11913,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 320f7227530da7f4390e0d5e34652f73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionPrompt: Changing clothes
+  interactionPromptLowSpoons: 
+  interactionPromptHighSpoons: 
   audioName: 
   task: {fileID: 11400000, guid: 514287c853dbf534da40769852274f43, type: 2}
   outline: {fileID: 0}
@@ -15686,7 +15702,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 320f7227530da7f4390e0d5e34652f73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionPrompt: Making sustinance
+  interactionPromptLowSpoons: 
+  interactionPromptHighSpoons: 
   audioName: light frying
   task: {fileID: 11400000, guid: e157bbd169a22df40aef1ca9844e15ce, type: 2}
   outline: {fileID: 0}
@@ -29523,7 +29540,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 320f7227530da7f4390e0d5e34652f73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionPrompt: You brush your teeth
+  interactionPromptLowSpoons: 
+  interactionPromptHighSpoons: 
   audioName: toothbrush
   task: {fileID: 11400000, guid: b7fc476a111841b4cad5ae3428cf9b3e, type: 2}
   outline: {fileID: 0}
@@ -29847,7 +29865,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 320f7227530da7f4390e0d5e34652f73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionPrompt: Taking a shower
+  interactionPromptLowSpoons: 
+  interactionPromptHighSpoons: 
   audioName: take a shower
   task: {fileID: 11400000, guid: 39435783b2c3b424b9de8200499da858, type: 2}
   outline: {fileID: 0}
@@ -30371,7 +30390,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 320f7227530da7f4390e0d5e34652f73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionPrompt: You look at the reflection
+  interactionPromptLowSpoons: 
+  interactionPromptHighSpoons: 
   audioName: 
   task: {fileID: 11400000, guid: 2b330bcb678e7604298ac3100320a6d7, type: 2}
   outline: {fileID: 0}
@@ -31371,6 +31391,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100006, guid: 756b0c574f380324a85262e736c0418b, type: 3}
   m_PrefabInstance: {fileID: 8335040106439552027}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1778614462
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8335040106439584445}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 3.6301663, z: 3.494126}
+  m_Center: {x: 0.00000017075222, y: 1.3150831, z: -0.12171849}
 --- !u!114 &1083319126056196751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31383,7 +31416,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 320f7227530da7f4390e0d5e34652f73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionPrompt: You pet Jeffurson
+  interactionPromptLowSpoons: 
+  interactionPromptHighSpoons: 
   audioName: 
   task: {fileID: 11400000, guid: db3235ee413ca7f40a9e4aac2a3b98ca, type: 2}
   outline: {fileID: 0}
@@ -31409,19 +31443,6 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!65 &1778614462
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8335040106439584445}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 3.6301663, z: 3.494126}
-  m_Center: {x: 0.00000017075222, y: 1.3150831, z: -0.12171849}
 --- !u!1001 &8667265903587098708
 PrefabInstance:
   m_ObjectHideFlags: 0

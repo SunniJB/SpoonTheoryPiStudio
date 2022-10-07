@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
 
     public enum DayTime {Morning, Noon, Afternoon, Evening, Night};
     public DayTime dayTime;
+    public int dayCount;
 
     [Header("Player stats")]
     public float money;
@@ -37,7 +38,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        dayTime = DayTime.Morning;
+        SetTimeMorning();
         //if(SceneManager.GetActiveScene().name != "Menu") Cursor.lockState = CursorLockMode.Locked;
     }
     public void MenuScene()
@@ -88,5 +89,15 @@ public class GameManager : MonoBehaviour
         hygiene = _hygiene;
         happiness = _happines;
         workPerformance = _workPerformance;
+    }
+
+    public void SetTimeMorning()
+    {
+        dayTime = DayTime.Morning;
+    }
+
+    public void SetTimeAfternoon()
+    {
+        dayTime = DayTime.Evening;
     }
 }

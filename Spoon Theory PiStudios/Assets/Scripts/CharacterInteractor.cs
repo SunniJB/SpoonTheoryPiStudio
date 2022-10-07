@@ -112,6 +112,17 @@ public class CharacterInteractor : MonoBehaviour
             opencloseDoor.OpenCloseDoor();
             //GameManager.Instance.WorkScene();
         }
+
+        
+        SleepInBed sleepInBed = interactionHit[0].GetComponent<SleepInBed>();
+
+        if (sleepInBed != null && Input.GetKeyDown(KeyCode.F))
+        {
+            if (TutorialManager.GetInstance() != null && TutorialManager.GetInstance().tutorialStates != TutorialManager.TutorialStates.Finish) return;
+            sleepInBed.GoToSleep();
+            //GameManager.Instance.WorkScene();
+        }
+        
     }
     
     private void OnDrawGizmos()

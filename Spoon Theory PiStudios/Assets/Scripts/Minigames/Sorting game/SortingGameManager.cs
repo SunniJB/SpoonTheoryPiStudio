@@ -77,6 +77,7 @@ public class SortingGameManager : MonoBehaviour
 
     public void ChangeScene()
     {
+        GameManager.GetInstance().SetTimeAfternoon();
         GameManager.GetInstance().ApartmentScene();
     }
 
@@ -98,6 +99,7 @@ public class SortingGameManager : MonoBehaviour
 
     public void Skip()
     {
+        gotPaid = true;
         Win();
     }
 }

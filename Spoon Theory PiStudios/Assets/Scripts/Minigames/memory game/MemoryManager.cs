@@ -89,6 +89,7 @@ public class MemoryManager : MonoBehaviour
 
     public void GoHome()
     {
+        GameManager.GetInstance().SetTimeAfternoon();
         GameManager.GetInstance().ApartmentScene();
     }
 

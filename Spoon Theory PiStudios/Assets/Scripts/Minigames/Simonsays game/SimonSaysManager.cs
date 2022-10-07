@@ -233,4 +233,10 @@ public class SimonSaysManager : MonoBehaviour
         moneyText.text = "You earned: £" + minigameManager.GetMoney().ToString("00");
         winPanel.gameObject.SetActive(true);
     }
+
+    public void LeaveAndGoHome()
+    {
+        GameManager.GetInstance().SetTimeAfternoon();
+        GameManager.GetInstance().ApartmentScene();
+    }
 }
