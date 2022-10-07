@@ -56,6 +56,8 @@ public class CharacterInteractor : MonoBehaviour
         //if T pressed toggle task canvas and character movement
         if (Input.GetKeyDown(KeyCode.T))
         {
+            if (TutorialManager.GetInstance() != null && TutorialManager.GetInstance().tutorialStates == TutorialManager.TutorialStates.Start) return;
+
             taskCanvasEnabled = !taskCanvasEnabled;
             taskCanvas.gameObject.SetActive(taskCanvasEnabled);
             taskManager.pinnedTasksPanel.gameObject.SetActive(!taskCanvasEnabled);
@@ -106,6 +108,7 @@ public class CharacterInteractor : MonoBehaviour
 
         if (opencloseDoor != null && Input.GetKeyDown(KeyCode.F))
         {
+            if (TutorialManager.GetInstance() != null && TutorialManager.GetInstance().tutorialStates != TutorialManager.TutorialStates.Finish) return;
             opencloseDoor.OpenCloseDoor();
             //GameManager.Instance.WorkScene();
         }

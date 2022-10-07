@@ -55,13 +55,13 @@ public class GameManager : MonoBehaviour
 
     public void WorkScene()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
         Cursor.lockState = CursorLockMode.None;
     }
 
     public void MemoryGameScene()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(4);
         Cursor.lockState = CursorLockMode.None;
     }
 

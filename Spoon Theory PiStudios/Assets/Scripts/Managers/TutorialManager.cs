@@ -7,8 +7,8 @@ public class TutorialManager : MonoBehaviour
 {
     public static TutorialManager instance;
     public static TutorialManager GetInstance() { return instance; }
-    enum TutorialStates { Start, TaskMenu, CompleteTask, Finish };
-    TutorialStates tutorialStates;
+    public enum TutorialStates { Start, TaskMenu, CompleteTask, Finish };
+    public TutorialStates tutorialStates;
 
     [SerializeField] Outline door;
 
