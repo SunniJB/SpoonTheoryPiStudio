@@ -1,15 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class SortingGameManager : MonoBehaviour
 {
+    public TMP_Text workPerfTxt, moneyTxt;
     public SortingGameSides spoonGoal, forkGoal, knifeGoal;
     [SerializeField] GameObject[] cutlery;
     public GameObject winPanel, pausePanel, timer;
-    private float minutes, seconds;
+    private float minutes = 0, seconds;
 
-    MinigameManager minigameManager;
+    public MinigameManager minigameManager;
 
     private void Start()
     {
@@ -45,11 +47,15 @@ public class SortingGameManager : MonoBehaviour
 
     void Win()
     {
+        if (minigameManager == null)
+            minigameManager = GameObject.Find("MinigameManager").GetComponent<MinigameManager>();
         winPanel.SetActive(true);
         GameObject.Find("Final time").GetComponent<TMPro.TextMeshProUGUI>().text = "Your final time was: " + minutes.ToString() + ":" + seconds.ToString("f1");
         Time.timeScale = 0f;
 
         minigameManager.Complete(3, minutes * 60 + seconds);
+        workPerfTxt.text = "Work Performance: " + minigameManager.GetWorkPerform().ToString("00") + "/50";
+        moneyTxt.text = "Money Earned: £" + minigameManager.GetMoney().ToString("00");
     }
 
     public void Restart()
