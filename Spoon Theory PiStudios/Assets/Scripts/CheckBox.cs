@@ -14,6 +14,7 @@ public class CheckBox : MonoBehaviour
     [HideInInspector]
     public Task task;
     public Image pinImg, checkImg;
+    public string audioName;
 
     // Start is called before the first frame update
     void Start()
@@ -44,5 +45,10 @@ public class CheckBox : MonoBehaviour
 
         //commented bc of error as we don't have enough tasks with outline working. Do no delete, it works
         if(task.outlineObject != null) task.outlineObject.enabled = value;
+    }
+
+    public void PlayCheckSound()
+    {
+        AudioManager.GetInstance().Play(audioName, 1f);
     }
 }

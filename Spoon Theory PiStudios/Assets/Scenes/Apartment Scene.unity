@@ -460,6 +460,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelf_Apt_01
       objectReference: {fileID: 0}
+    - target: {fileID: 6175574215640251783, guid: 658e64758890bc24ba679c51e2cd2ab3, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7265477102981145203, guid: 658e64758890bc24ba679c51e2cd2ab3, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -789,6 +793,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 88329565, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: audioName
+      value: change clothes
+      objectReference: {fileID: 0}
+    - target: {fileID: 88329565, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
       propertyPath: interactionPromptLowSpoons
       value: '"Yeah, we''re doing comfort over aesthetic today."'
       objectReference: {fileID: 0}
@@ -807,6 +815,10 @@ PrefabInstance:
     - target: {fileID: 478164602, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
       propertyPath: interactionPromptHighSpoons
       value: (Humming)
+      objectReference: {fileID: 0}
+    - target: {fileID: 702341705, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: audioName
+      value: watch tv
       objectReference: {fileID: 0}
     - target: {fileID: 702341705, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
       propertyPath: interactionPromptLowSpoons
@@ -904,6 +916,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1410211524090536157, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1410211524137434977, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -980,6 +996,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f74e2675b41f293448855733f48be4a5, type: 2}
+    - target: {fileID: 1665350168063686332, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6210442332220548045, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1013,12 +1033,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 4580dd49916b3c542b97109c8ca425f3, type: 2}
     - target: {fileID: 8845716201077700870, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: audioName
+      value: take powernap
+      objectReference: {fileID: 0}
+    - target: {fileID: 8845716201077700870, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
       propertyPath: interactionPromptLowSpoons
       value: '"Let''s just pray I don''t pass out for five hours again."'
       objectReference: {fileID: 0}
     - target: {fileID: 8845716201077700870, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
       propertyPath: interactionPromptHighSpoons
       value: '"A quick nap and we''re good to go!"'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8892427573364441805, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: audioName
+      value: sleep in bed
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 156365271, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
@@ -1029,7 +1057,6 @@ PrefabInstance:
     - {fileID: 7177890966397754399, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
     - {fileID: 8452318477312181046, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
     - {fileID: 8061902684095266122, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
-    - {fileID: 6459176805234942351, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
     - {fileID: 1410211523870557617, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
     - {fileID: 1410211523330173612, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
     - {fileID: 1410211524083610907, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
@@ -1076,6 +1103,8 @@ PrefabInstance:
     - {fileID: 6211861998925199011, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
     - {fileID: 6211861998925199010, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
     - {fileID: 1959194741, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+    - {fileID: 5636289089652622495, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+    - {fileID: 8076537613163518550, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
 --- !u!4 &156365270 stripped
 Transform:
@@ -2142,6 +2171,8 @@ GameObject:
   - component: {fileID: 418403465}
   - component: {fileID: 418403464}
   - component: {fileID: 418403463}
+  - component: {fileID: 418403466}
+  - component: {fileID: 418403467}
   m_Layer: 5
   m_Name: Main Menu
   m_TagString: Untagged
@@ -2191,7 +2222,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.8207547, g: 0.80914026, b: 0.80914026, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -2263,6 +2294,64 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 418403461}
   m_CullTransparentMesh: 1
+--- !u!114 &418403466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418403461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af99ab8b3e93a3c4ca4a3a4402656685, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioName: hover over button
+--- !u!114 &418403467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418403461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 418403466}
+          m_TargetAssemblyTypeName: ButtonHover, Assembly-CSharp
+          m_MethodName: MenuButtonON
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 418403466}
+          m_TargetAssemblyTypeName: ButtonHover, Assembly-CSharp
+          m_MethodName: MenuButtonOFF
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &433387419
 GameObject:
   m_ObjectHideFlags: 0
@@ -2278,7 +2367,7 @@ GameObject:
   - component: {fileID: 433387422}
   - component: {fileID: 433387421}
   - component: {fileID: 433387426}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Video Game Console
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2655,7 +2744,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1287238883131001885, guid: 9dca3db7ef2697244afa1a2fa4b684c6, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1287238883131001885, guid: 9dca3db7ef2697244afa1a2fa4b684c6, type: 3}
       propertyPath: m_LocalScale.x
@@ -3306,7 +3395,7 @@ Transform:
   - {fileID: 29915709}
   - {fileID: 305228275}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &595028367
 CharacterController:
@@ -3439,6 +3528,8 @@ GameObject:
   - component: {fileID: 617025934}
   - component: {fileID: 617025933}
   - component: {fileID: 617025932}
+  - component: {fileID: 617025935}
+  - component: {fileID: 617025936}
   m_Layer: 5
   m_Name: Controls
   m_TagString: Untagged
@@ -3488,7 +3579,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.81960785, g: 0.80784315, b: 0.80784315, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -3560,6 +3651,64 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 617025930}
   m_CullTransparentMesh: 1
+--- !u!114 &617025935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617025930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af99ab8b3e93a3c4ca4a3a4402656685, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioName: hover over button
+--- !u!114 &617025936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617025930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 418403466}
+          m_TargetAssemblyTypeName: ButtonHover, Assembly-CSharp
+          m_MethodName: MenuButtonON
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 418403466}
+          m_TargetAssemblyTypeName: ButtonHover, Assembly-CSharp
+          m_MethodName: MenuButtonOFF
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &618165348
 GameObject:
   m_ObjectHideFlags: 0
@@ -4519,9 +4668,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: BookOpen_03
       objectReference: {fileID: 0}
+    - target: {fileID: 1236452791816066, guid: f3e273b40aec9094ba1905b2361ac36d, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4978405505863672, guid: f3e273b40aec9094ba1905b2361ac36d, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4978405505863672, guid: f3e273b40aec9094ba1905b2361ac36d, type: 3}
       propertyPath: m_LocalScale.x
@@ -4994,7 +5147,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.025, y: 0.32}
   m_AnchorMax: {x: 0.3, y: 0.68}
-  m_AnchoredPosition: {x: 0.00012207031, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -0.000061035156, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &912712013
@@ -5530,6 +5683,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VacuumCleaner
       objectReference: {fileID: 0}
+    - target: {fileID: 1709890035171790, guid: dd442d5015be21746bc53a26c94f74ec, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4886326368746518, guid: dd442d5015be21746bc53a26c94f74ec, type: 3}
       propertyPath: m_RootOrder
       value: 28
@@ -5974,7 +6131,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1136278446
 MonoBehaviour:
@@ -5994,6 +6151,7 @@ MonoBehaviour:
   controlsPanel: {fileID: 178192557}
   pause: 0
   characterInteractor: {fileID: 595028370}
+  audioName: open pause menu
 --- !u!1 &1138244141
 GameObject:
   m_ObjectHideFlags: 0
@@ -6006,6 +6164,8 @@ GameObject:
   - component: {fileID: 1138244145}
   - component: {fileID: 1138244144}
   - component: {fileID: 1138244143}
+  - component: {fileID: 1138244147}
+  - component: {fileID: 1138244146}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -6128,6 +6288,64 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1138244141}
   m_CullTransparentMesh: 1
+--- !u!114 &1138244146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138244141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 418403466}
+          m_TargetAssemblyTypeName: ButtonHover, Assembly-CSharp
+          m_MethodName: MenuButtonON
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 418403466}
+          m_TargetAssemblyTypeName: ButtonHover, Assembly-CSharp
+          m_MethodName: MenuButtonOFF
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1138244147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138244141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af99ab8b3e93a3c4ca4a3a4402656685, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioName: hover over button
 --- !u!1 &1138728617
 GameObject:
   m_ObjectHideFlags: 0
@@ -6528,14 +6746,86 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
       propertyPath: sounds.Array.size
-      value: 4
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: cdaa238842e0ffc4c822b73d05b48b78, type: 3}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[0].name
+      value: pin task
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: cde0712e2125fea4ab46190803748e2f, type: 3}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[1].name
+      value: open pause menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5af958f6600b1ce4694afcb6c3c1e656, type: 3}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[2].name
+      value: left click
       objectReference: {fileID: 0}
     - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
       propertyPath: sounds.Array.data[3].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 209483c1f05d7554c9b4375b9eb961b2, type: 3}
+      objectReference: {fileID: 8300000, guid: 80c1dcfdaff259445840d1f27d8ced3f, type: 3}
     - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
       propertyPath: sounds.Array.data[3].name
+      value: hover over button
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[4].name
+      value: START OF OBJECT SOUNDS
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[5].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: d618706e8ba762747b7d3c29050f15b3, type: 3}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[5].name
+      value: change clothes
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[6].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 38c1d68592774764da2ca49e8af8ad33, type: 3}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[6].name
+      value: toothbrush
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[7].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3aa099c01ea3cc74da008a9b53189863, type: 3}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[7].name
+      value: light frying
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[8].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 88f8b16014ad1a64aaaf865d142a43a0, type: 3}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[8].name
+      value: take a shower
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[9].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 209483c1f05d7554c9b4375b9eb961b2, type: 3}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[9].name
       value: pet cat
       objectReference: {fileID: 0}
     - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
@@ -6543,9 +6833,33 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[10].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: d68136c0b5fab194bb0d4405f7c9b9b8, type: 3}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[10].name
+      value: watch tv
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[11].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 136ac0eb3dc8ebc47b03fb46d191a1be, type: 3}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[11].name
+      value: take powernap
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[12].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9380302c5a2adca4b8e47b5621037b1c, type: 3}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[12].name
+      value: sleep in bed
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
       propertyPath: sounds.Array.data[0].source
       value: 
-      objectReference: {fileID: 1039473276}
+      objectReference: {fileID: 0}
     - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
       propertyPath: sounds.Array.data[1].source
       value: 
@@ -6563,7 +6877,91 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[4].source
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[4].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[5].source
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[5].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[6].source
+      value: 
+      objectReference: {fileID: 1039473276}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[6].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[7].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[8].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[9].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[10].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[11].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[12].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
       propertyPath: sounds.Array.data[3].maxVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[4].maxVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[5].maxVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[6].maxVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[7].maxVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[8].maxVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[9].maxVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[10].maxVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[11].maxVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[12].maxVolume
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5561417923616072048, guid: ea07da735420f13419d78a271882b852, type: 3}
@@ -7493,7 +7891,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4425874486783736, guid: e25671d0d7ace2c45b234d1ea8c51c8e, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4425874486783736, guid: e25671d0d7ace2c45b234d1ea8c51c8e, type: 3}
       propertyPath: m_LocalScale.x
@@ -7884,7 +8282,7 @@ RectTransform:
   - {fileID: 1972671930}
   - {fileID: 178192556}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -9418,7 +9816,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 57.477, y: 0, z: 0}
 --- !u!114 &1768568590
 MonoBehaviour:
@@ -10615,7 +11013,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1995501111
 PrefabInstance:
@@ -10630,7 +11028,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4677352006231396, guid: b55cadeb42ed9664191c697a2a810cd2, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4677352006231396, guid: b55cadeb42ed9664191c697a2a810cd2, type: 3}
       propertyPath: m_LocalScale.x
@@ -10731,7 +11129,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4673827669108694, guid: 3ce8bec3c91d6a44381032dff91f9f04, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4673827669108694, guid: 3ce8bec3c91d6a44381032dff91f9f04, type: 3}
       propertyPath: m_LocalScale.x
@@ -11125,7 +11523,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4759582563284444, guid: 9ae4e56d111938948b75f4dd9802a5c9, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4759582563284444, guid: 9ae4e56d111938948b75f4dd9802a5c9, type: 3}
       propertyPath: m_LocalScale.x
@@ -11487,6 +11885,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6475800430078241032, guid: 4f1787c81b9e7bc47a27e1d5407abe41, type: 3}
+      propertyPath: audioName
+      value: left click
+      objectReference: {fileID: 0}
+    - target: {fileID: 6475800430078241032, guid: 4f1787c81b9e7bc47a27e1d5407abe41, type: 3}
       propertyPath: happiness
       value: 5
       objectReference: {fileID: 0}
@@ -11496,7 +11898,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6475800430078241033, guid: 4f1787c81b9e7bc47a27e1d5407abe41, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6475800430078241033, guid: 4f1787c81b9e7bc47a27e1d5407abe41, type: 3}
       propertyPath: m_LocalPosition.x

@@ -11,6 +11,8 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField] CharacterInteractor characterInteractor;
 
+    [SerializeField] string audioName;
+
     public static LevelManager instance;
     public static LevelManager GetInstance() { return instance; }
     // Start is called before the first frame update
@@ -30,7 +32,7 @@ public class LevelManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             pause = !pause;
-
+            AudioManager.GetInstance().Play(audioName, 1f);
             pausePanel.gameObject.SetActive(pause);
             characterUIPanel.gameObject.SetActive(!pause);
 

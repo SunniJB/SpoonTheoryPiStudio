@@ -5,6 +5,7 @@ using UnityEngine;
 public class SleepInBed : MonoBehaviour
 {
     public CharacterInteractor characterInteractor;
+    public string audioName;
 
     private void Start()
     {
@@ -12,6 +13,8 @@ public class SleepInBed : MonoBehaviour
     }
     public void GoToSleep()
     {
+        Debug.Log("You slept");
+        AudioManager.GetInstance().Play(audioName, 1f);
         GameManager.GetInstance().SetTimeMorning();
         GameManager.GetInstance().spoons = Random.Range(10, 31);
         GameManager.GetInstance().hunger -= 7;

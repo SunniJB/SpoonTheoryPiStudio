@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
 
     public bool tutorialFinished;
 
+    public string audioName; //Clicking sound
+
     public enum DayTime {Morning, Noon, Afternoon, Evening, Night};
     public DayTime dayTime;
     public int dayCount;
@@ -40,6 +42,14 @@ public class GameManager : MonoBehaviour
     {
         SetTimeMorning();
         //if(SceneManager.GetActiveScene().name != "Menu") Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            AudioManager.GetInstance().Play(audioName, 1f);
+        }
     }
     public void MenuScene()
     {
