@@ -7,7 +7,7 @@ public class LevelManager : MonoBehaviour
 {
     [SerializeField] Image avatarImg, pausePanel, characterUIPanel, controlsPanel;
 
-    [SerializeField] bool pause;
+    public bool pause;
 
     [SerializeField] CharacterInteractor characterInteractor;
 
@@ -15,6 +15,8 @@ public class LevelManager : MonoBehaviour
 
     public static LevelManager instance;
     public static LevelManager GetInstance() { return instance; }
+
+    public GameObject wakeUpButton;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,7 +50,7 @@ public class LevelManager : MonoBehaviour
             }
         }
 
-        if (!pause && Input.GetMouseButton(0) && Cursor.lockState != CursorLockMode.Locked && !characterInteractor.taskCanvasEnabled)
+        if (!pause && Input.GetMouseButton(0) && Cursor.lockState != CursorLockMode.Locked && !characterInteractor.taskCanvasEnabled && !wakeUpButton.activeInHierarchy)
         {
             Cursor.lockState = CursorLockMode.Locked;
         }

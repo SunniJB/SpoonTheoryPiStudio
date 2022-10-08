@@ -16,6 +16,7 @@ public class CharacterInteractor : MonoBehaviour
     [SerializeField] Slider hungerSlider;
     [SerializeField] Slider happinessSlider;
     [SerializeField] TMP_Text MoneyText;
+    [SerializeField] TMP_Text day;
 
     [SerializeField] Transform interactionPoint;
     public float clickInteractionDistance = 5, FInteractionDistance = 3;
@@ -35,6 +36,7 @@ public class CharacterInteractor : MonoBehaviour
     public float hunger;
     public float money;
     public float workPerformance;
+    public int dayCount;
 
     private void Awake()
     {
@@ -165,6 +167,7 @@ public class CharacterInteractor : MonoBehaviour
         happinessSlider.value = (((float)hygiene + (float)hunger) / 2 + (float)happiness) / 20;
 
         MoneyText.text = money.ToString("000");
+        day.text = "Day: " + dayCount.ToString();
     }
 
     public void RefreshStatsFromManager()
@@ -175,5 +178,6 @@ public class CharacterInteractor : MonoBehaviour
         workPerformance = GameManager.GetInstance().workPerformance;
         hunger = GameManager.GetInstance().hunger;
         happiness = GameManager.GetInstance().happiness;
+        dayCount = GameManager.GetInstance().dayCount;
     }
 }

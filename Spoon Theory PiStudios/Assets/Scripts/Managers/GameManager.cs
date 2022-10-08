@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public enum DayTime {Morning, Noon, Afternoon, Evening, Night};
     public DayTime dayTime;
     public int dayCount;
+    public float moneyGoal;
 
     [Header("Player stats")]
     public float money;
