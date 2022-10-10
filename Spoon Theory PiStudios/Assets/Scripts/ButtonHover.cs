@@ -5,6 +5,12 @@ using UnityEngine;
 public class ButtonHover : MonoBehaviour
 {
     public string audioName = "hover over button";
+    [SerializeField] GameManager gameManager;
+
+    private void Start()
+    {
+        gameManager = GameManager.GetInstance();
+    }
     public void MenuButtonON()
     {
         AudioManager.GetInstance().Play(audioName, 1f);
@@ -13,5 +19,10 @@ public class ButtonHover : MonoBehaviour
     public void MenuButtonOFF()
     {
         AudioManager.GetInstance().Play(audioName, 1f);
+    }
+
+    public void ResetScene()
+    {
+        gameManager.ResetScene();
     }
 }

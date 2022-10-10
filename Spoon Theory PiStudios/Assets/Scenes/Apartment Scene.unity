@@ -1055,11 +1055,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: dd228672e1e19fc479efe2c3556f297f, type: 2}
     - target: {fileID: 8335040106439161501, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.995018
+      value: -5.9950194
       objectReference: {fileID: 0}
     - target: {fileID: 8335040106439161501, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.453031
+      value: -7.4530334
       objectReference: {fileID: 0}
     - target: {fileID: 8774305467344308339, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2373,6 +2373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioName: hover over button
+  gameManager: {fileID: 0}
 --- !u!114 &418403467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3733,6 +3734,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioName: hover over button
+  gameManager: {fileID: 0}
 --- !u!114 &617025936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6567,6 +6569,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioName: hover over button
+  gameManager: {fileID: 0}
 --- !u!1 &1138728617
 GameObject:
   m_ObjectHideFlags: 0
@@ -6599,17 +6602,6 @@ Transform:
   m_Father: {fileID: 59076541}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1145658492 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8892427573364441805, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
-  m_PrefabInstance: {fileID: 156365269}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 73967091}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e318713f396a90408056f565b083049, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1154614754
 GameObject:
   m_ObjectHideFlags: 0
@@ -9977,6 +9969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioName: hover over button
+  gameManager: {fileID: 0}
 --- !u!114 &1727824892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10021,9 +10014,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1145658492}
-        m_TargetAssemblyTypeName: SleepInBed, Assembly-CSharp
-        m_MethodName: WakeUp
+      - m_Target: {fileID: 1727824891}
+        m_TargetAssemblyTypeName: ButtonHover, Assembly-CSharp
+        m_MethodName: ResetScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

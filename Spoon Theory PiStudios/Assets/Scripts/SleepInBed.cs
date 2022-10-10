@@ -20,14 +20,14 @@ public class SleepInBed : MonoBehaviour
 
     public void GoToSleep()
     {
-        foreach (Task task in taskManager.pinnedTasks)
-        {
-            if (task.inProgress)
-            {
-                task.objectTask.Finish();
-                return;
-            }
-        }
+        //foreach (Task task in taskManager.pinnedTasks)
+        //{
+        //    if (task.inProgress)
+        //    {
+        //        task.objectTask.Finish();
+        //        return;
+        //    }
+        //}
 
         AudioManager.GetInstance().Play(audioName, 1f);
         GameManager.GetInstance().SetTimeMorning();
