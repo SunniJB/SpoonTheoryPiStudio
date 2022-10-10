@@ -44,7 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb87e22c9ee1154c8da379a232198c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tutorialFinished: 1
+  dayLight: {fileID: 0}
   dayTime: 0
+  dayCount: 0
+  moneyGoal: 0
   money: 0
   hunger: 5
   spoons: 10
