@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskName: Take powernap
   description: Task description
-  spoonCost: 3
+  spoonCost: -3
   hygieneCost: 0
   moneyCost: 0
   hungerCost: 0
