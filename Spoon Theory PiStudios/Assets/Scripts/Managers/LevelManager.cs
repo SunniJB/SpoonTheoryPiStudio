@@ -82,6 +82,7 @@ public class LevelManager : MonoBehaviour
     public void GoToWork()
     {
         GameManager.GetInstance().UpdateGameManagerStats(characterInteractor.money, characterInteractor.hunger, characterInteractor.numberOfSpoons, characterInteractor.hygiene, characterInteractor.happiness, characterInteractor.workPerformance);
+        characterInteractor.hasSleptToday = false;
         GameManager.GetInstance().WorkScene();
     }
 }

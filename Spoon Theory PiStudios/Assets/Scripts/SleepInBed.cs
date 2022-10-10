@@ -36,6 +36,7 @@ public class SleepInBed : MonoBehaviour
         GameManager.GetInstance().hygiene -= 5;
         GameManager.GetInstance().dayCount++;
         characterInteractor.RefreshStatsFromManager();
+        characterInteractor.hasSleptToday = true;
 
         UpdateSleepPanel();
     }

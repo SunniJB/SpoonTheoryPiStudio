@@ -39,6 +39,7 @@ public class CharacterInteractor : MonoBehaviour
     public float money;
     public float workPerformance;
     public int dayCount;
+    public bool hasSleptToday; //Is set to false by the level manager when you go to work, is set to false when you're low on spoons, is set to true by SleepInBed when you go to sleep.
 
     private void Awake()
     {
@@ -50,7 +51,7 @@ public class CharacterInteractor : MonoBehaviour
     {
         numberOfSpoons = Random.Range(10, 31);
         spoonSlider.maxValue = spoonSlider.value = numberOfSpoons;
-
+        hasSleptToday = true;
         taskCanvas.gameObject.SetActive(false);
     }
 
@@ -77,6 +78,12 @@ public class CharacterInteractor : MonoBehaviour
         UpdateSpoonSlider();
 
         UpdateStatSliders();
+
+        if (numberOfSpoons < 4)
+        {
+            hasSleptToday = false;
+            promptUI.SetUpText("I'm getting tired. I guess I could sleep.");
+        }
     }
 
     private void FInteraction()
@@ -121,13 +128,17 @@ public class CharacterInteractor : MonoBehaviour
         
         SleepInBed sleepInBed = interactionHit[0].GetComponent<SleepInBed>();
 
-        if (sleepInBed != null && Input.GetKeyDown(KeyCode.F))
+        if (sleepInBed != null && Input.GetKeyDown(KeyCode.F) && !hasSleptToday)
         {
             if (TutorialManager.GetInstance() != null && TutorialManager.GetInstance().tutorialStates != TutorialManager.TutorialStates.Finish) return;
             sleepInBed.GoToSleep();
             //GameManager.Instance.WorkScene();
+        } else if (sleepInBed != null && Input.GetKeyDown(KeyCode.F) && hasSleptToday)
+        {
+            promptUI.SetUpText("I can't go to sleep yet.");
         }
-        
+
+
     }
     
     private void OnDrawGizmos()
