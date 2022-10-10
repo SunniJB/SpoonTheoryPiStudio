@@ -170,7 +170,11 @@ public class CharacterInteractor : MonoBehaviour
         happinessSlider.value = (((float)hygiene + (float)hunger) / 2 + (float)happiness) / 20;
 
         MoneyText.text = "£" + money.ToString("000");
-        day.text = "Day: " + (1 + dayCount).ToString();
+        if (day != null)
+        {
+            day.text = "Day: " + (1 + dayCount).ToString();
+        }
+
         timeOfDay.text = GameManager.GetInstance().dayTime.ToString();
     }
 
