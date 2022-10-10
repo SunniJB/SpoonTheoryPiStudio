@@ -42,8 +42,8 @@ public class SleepInBed : MonoBehaviour
 
     public void UpdateSleepPanel()
     {
-        moneyEarned.text = "Current money: " + GameManager.GetInstance().money;
-        moneyToGoal.text = "Money to goal: " + (GameManager.GetInstance().moneyGoal - GameManager.GetInstance().money);
+        moneyEarned.text = "Current money: " + GameManager.GetInstance().money.ToString("0");
+        moneyToGoal.text = "Money to goal: " + ((GameManager.GetInstance().moneyGoal - GameManager.GetInstance().money).ToString("0"));
         newDay.text = "It is now day " + GameManager.GetInstance().dayCount + ". Hunger and hygiene have decreased.";
 
         sleepPanel.GetComponent<Animator>().SetTrigger("goingToSleep");
