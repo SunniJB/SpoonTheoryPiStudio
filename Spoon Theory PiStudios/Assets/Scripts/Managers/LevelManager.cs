@@ -50,10 +50,17 @@ public class LevelManager : MonoBehaviour
             }
         }
 
-        if (!pause && Input.GetMouseButton(0) && Cursor.lockState != CursorLockMode.Locked && !characterInteractor.taskCanvasEnabled && !wakeUpButton.activeInHierarchy)
+        if (wakeUpButton != null)
+        {
+            if (!pause && Input.GetMouseButton(0) && Cursor.lockState != CursorLockMode.Locked && !characterInteractor.taskCanvasEnabled && !wakeUpButton.activeInHierarchy)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+            }
+        } else if (!pause && Input.GetMouseButton(0) && Cursor.lockState != CursorLockMode.Locked && !characterInteractor.taskCanvasEnabled)
         {
             Cursor.lockState = CursorLockMode.Locked;
         }
+
     }
     public void ShowControls()
     {
