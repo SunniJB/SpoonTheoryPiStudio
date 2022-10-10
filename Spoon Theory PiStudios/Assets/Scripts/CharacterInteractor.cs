@@ -17,6 +17,7 @@ public class CharacterInteractor : MonoBehaviour
     [SerializeField] Slider happinessSlider;
     [SerializeField] TMP_Text MoneyText;
     [SerializeField] TMP_Text day;
+    [SerializeField] TMP_Text timeOfDay;
 
     [SerializeField] Transform interactionPoint;
     public float clickInteractionDistance = 5, FInteractionDistance = 3;
@@ -170,6 +171,7 @@ public class CharacterInteractor : MonoBehaviour
 
         MoneyText.text = money.ToString("000");
         day.text = "Day: " + dayCount.ToString();
+        timeOfDay.text = GameManager.GetInstance().dayTime.ToString();
     }
 
     public void RefreshStatsFromManager()
