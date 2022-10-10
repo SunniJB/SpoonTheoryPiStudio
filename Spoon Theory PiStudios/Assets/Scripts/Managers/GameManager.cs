@@ -10,7 +10,6 @@ public class GameManager : MonoBehaviour
 
     public bool tutorialFinished;
 
-    public string audioName; //Clicking sound
     public Light dayLight;
 
     public enum DayTime {Morning, Noon, Afternoon, Evening, Night};
@@ -46,13 +45,6 @@ public class GameManager : MonoBehaviour
         //if(SceneManager.GetActiveScene().name != "Menu") Cursor.lockState = CursorLockMode.Locked;
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            AudioManager.GetInstance().Play(audioName, 1f);
-        }
-    }
     public void MenuScene()
     {
         SceneManager.LoadScene(0);

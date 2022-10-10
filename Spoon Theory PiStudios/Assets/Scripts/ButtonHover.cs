@@ -25,4 +25,9 @@ public class ButtonHover : MonoBehaviour
     {
         gameManager.ResetScene();
     }
+
+    public void ClickingSound()
+    {
+        AudioManager.GetInstance().Play("left click", 1f);
+    }
 }
