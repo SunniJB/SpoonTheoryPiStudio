@@ -26,6 +26,7 @@ public class SimonSaysManager : MonoBehaviour
     
     public void OnStartClick()
     {
+        Time.timeScale = 1;
         count = 0;
         currentStrikes = 0;
         timesSequencePlayed = 0;
@@ -163,24 +164,6 @@ public class SimonSaysManager : MonoBehaviour
         {
             ShowPopUp(currentSequence[i]);
             StartCoroutine(QuitPopUp(currentSequence[i]));
-            //switch (currentSequence[i])
-            //{
-            //    case 0:
-            //        ChangeColor(red, redCol);
-            //        break;
-
-            //    case 1:
-            //        ChangeColor(yellow, yellowCol);
-            //        break;
-
-            //    case 2:
-            //        ChangeColor(blue, blueCol);
-            //        break;
-
-            //    case 3:
-            //        ChangeColor(green, greenCol);
-            //        break;
-            //}
             i++;
             if (i == currentSequence.Count) ActivateClick();
             yield return new WaitForSeconds(currentTimeBetweenColors);
