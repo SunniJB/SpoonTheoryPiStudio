@@ -23,6 +23,7 @@ public class SimonSaysManager : MonoBehaviour
 
     public TMP_Text strikeText, PerformanceText, moneyText;
     public MinigameManager minigameManager;
+    bool gotpaid;
     
     public void OnStartClick()
     {
@@ -206,10 +207,15 @@ public class SimonSaysManager : MonoBehaviour
 
     public void Win()
     {
-        if (currentStrikes == 0)
-            minigameManager.Complete(3, 5, 50);
-        else
-            minigameManager.Complete(3, currentStrikes * 10, 50);
+        if (!gotpaid)
+        {
+            if (currentStrikes == 0)
+                minigameManager.Complete(3, 5, 50);
+            else
+                minigameManager.Complete(3, currentStrikes * 10, 50);
+
+            gotpaid = true;
+        }
 
         strikeText.text = "You got " + currentStrikes +" orders wrong!";
         PerformanceText.text = "Performance Review: " + minigameManager.GetWorkPerform().ToString("00") + "/50";
