@@ -56,7 +56,7 @@ public class LevelManager : MonoBehaviour
             {
                 Cursor.lockState = CursorLockMode.Locked;
             }
-        } else if (!pause && Input.GetMouseButton(0) && Cursor.lockState != CursorLockMode.Locked && !characterInteractor.taskCanvasEnabled)
+        } else if (!pause && Input.GetMouseButton(0) && Cursor.lockState != CursorLockMode.Locked && !characterInteractor.taskCanvasEnabled && wakeUpButton == null)
         {
             Cursor.lockState = CursorLockMode.Locked;
         }
