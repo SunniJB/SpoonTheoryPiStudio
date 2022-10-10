@@ -81,9 +81,14 @@ public class SortingGameManager : MonoBehaviour
         GameManager.GetInstance().ApartmentScene();
     }
 
-    public void NextMinigame()
+    public void NextMatchMinigame()
     {
         GameManager.GetInstance().MemoryGameScene();
+    }
+
+    public void NextSimonMinigame()
+    {
+        GameManager.GetInstance().SimonGameScene();
     }
 
     //private void Complete()
