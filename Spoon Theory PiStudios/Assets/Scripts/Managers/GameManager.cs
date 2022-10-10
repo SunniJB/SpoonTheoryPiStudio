@@ -92,6 +92,12 @@ public class GameManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
     }
 
+    public void SimonGameScene()
+    {
+        SceneManager.LoadScene(5);
+        Cursor.lockState = CursorLockMode.None;
+    }
+
     public void UpdateGameManagerStats(float _money, float _hunger, int _spoons, float _hygiene, float _happines, float _workPerformance)
     {
         money = _money;
