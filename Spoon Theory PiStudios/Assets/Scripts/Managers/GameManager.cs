@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public bool tutorialFinished;
 
     public string audioName; //Clicking sound
+    public Light dayLight;
 
     public enum DayTime {Morning, Noon, Afternoon, Evening, Night};
     public DayTime dayTime;
@@ -111,10 +112,12 @@ public class GameManager : MonoBehaviour
     public void SetTimeMorning()
     {
         dayTime = DayTime.Morning;
+        //dayLight.color = new Color(1f, 0.9568627f, 0.8392157f);
     }
 
     public void SetTimeAfternoon()
     {
         dayTime = DayTime.Evening;
+        //dayLight.color = new Color(0.511f, 0.1527415f, 0.135947f);
     }
 }

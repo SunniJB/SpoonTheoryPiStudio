@@ -8,7 +8,10 @@ public class SleepInBed : MonoBehaviour
     public string audioName;
 
     public GameObject sleepPanel;
-    public TMPro.TextMeshProUGUI moneyEarned, moneyToGoal, newDay; 
+    public TMPro.TextMeshProUGUI moneyEarned, moneyToGoal, newDay;
+
+    public ObjectTask[] tasks;
+    public TaskManager taskManager;
 
     private void Start()
     {
@@ -17,6 +20,15 @@ public class SleepInBed : MonoBehaviour
 
     public void GoToSleep()
     {
+        foreach (Task task in taskManager.pinnedTasks)
+        {
+            if (task.inProgress)
+            {
+                task.objectTask.Finish();
+                return;
+            }
+        }
+
         AudioManager.GetInstance().Play(audioName, 1f);
         GameManager.GetInstance().SetTimeMorning();
         GameManager.GetInstance().spoons = Random.Range(10, 31);
@@ -38,6 +50,14 @@ public class SleepInBed : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 1;
+
+        //foreach (ObjectTask task in tasks) Trying very hard here
+        //{
+        //    if (task.task.inProgress)
+        //    {
+        //        task.Finish();
+        //    }
+        //}
     }
 
     public void WakeUp()

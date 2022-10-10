@@ -137,7 +137,7 @@ public class ObjectTask : MonoBehaviour
         }
     }
 
-    void Finish()
+    public void Finish()
     {
         if (!GameManager.GetInstance().tutorialFinished && task.taskName == "Tutorial Task") TutorialManager.GetInstance().completeTaskFinished = true;
 

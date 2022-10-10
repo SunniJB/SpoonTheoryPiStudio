@@ -293,6 +293,11 @@ Transform:
   m_Father: {fileID: 1814972752}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &73967091 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1410211523363765453, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+  m_PrefabInstance: {fileID: 156365269}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &100432379
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,8 +335,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.3, y: 0.12}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 79.51105, y: 0}
+  m_SizeDelta: {x: 159.022, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &100432381
 MonoBehaviour:
@@ -1093,9 +1098,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1154614756}
     - target: {fileID: 8892427573364441805, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: taskManager
+      value: 
+      objectReference: {fileID: 1013130851}
+    - target: {fileID: 8892427573364441805, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
       propertyPath: wakeUpButton
       value: 
       objectReference: {fileID: 1727824888}
+    - target: {fileID: 8892427573364441805, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: tasks.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8892427573364441805, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: characterInteractor
+      value: 
+      objectReference: {fileID: 595028370}
     m_RemovedComponents:
     - {fileID: 156365271, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
     - {fileID: 6210442332974779084, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
@@ -3521,6 +3538,7 @@ MonoBehaviour:
   interactionPoint: {fileID: 29915709}
   clickInteractionDistance: 5
   FInteractionDistance: 1.25
+  bed: {fileID: 73967091}
   taskCanvas: {fileID: 1013130853}
   UIPanel: {fileID: 1972671929}
   taskManager: {fileID: 1013130851}
@@ -5722,32 +5740,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   morningTasks:
-  - {fileID: 11400000, guid: 39435783b2c3b424b9de8200499da858, type: 2}
-  - {fileID: 11400000, guid: 514287c853dbf534da40769852274f43, type: 2}
   - {fileID: 11400000, guid: b7fc476a111841b4cad5ae3428cf9b3e, type: 2}
-  - {fileID: 11400000, guid: 2b330bcb678e7604298ac3100320a6d7, type: 2}
-  - {fileID: 11400000, guid: e157bbd169a22df40aef1ca9844e15ce, type: 2}
-  - {fileID: 11400000, guid: 6b7f707c5e29af145882a9a13ad1d6d7, type: 2}
-  - {fileID: 11400000, guid: db3235ee413ca7f40a9e4aac2a3b98ca, type: 2}
-  - {fileID: 11400000, guid: 72b743cef0367bb47aa8876870e1f085, type: 2}
   - {fileID: 11400000, guid: 6547ea276f358f34cab983ff1cedc1ae, type: 2}
+  - {fileID: 11400000, guid: 514287c853dbf534da40769852274f43, type: 2}
+  - {fileID: 11400000, guid: e157bbd169a22df40aef1ca9844e15ce, type: 2}
   - {fileID: 11400000, guid: 26ce8abc24613854381a598615a751a6, type: 2}
+  - {fileID: 11400000, guid: db3235ee413ca7f40a9e4aac2a3b98ca, type: 2}
+  - {fileID: 11400000, guid: ad85de13deb300d4b8fb0befb6b81cd2, type: 2}
+  - {fileID: 11400000, guid: 39435783b2c3b424b9de8200499da858, type: 2}
+  - {fileID: 11400000, guid: 6b7f707c5e29af145882a9a13ad1d6d7, type: 2}
+  - {fileID: 11400000, guid: 72b743cef0367bb47aa8876870e1f085, type: 2}
   eveningTasks:
-  - {fileID: 11400000, guid: ef66920c4532ce9499f5aa29bd8f6ed5, type: 2}
+  - {fileID: 11400000, guid: e466a848baa9ee64885c593f11c656c4, type: 2}
   - {fileID: 11400000, guid: 9b42e2f6858ea0f41944d069caf7c008, type: 2}
+  - {fileID: 11400000, guid: ef66920c4532ce9499f5aa29bd8f6ed5, type: 2}
   - {fileID: 11400000, guid: 20537cb323c330145bc263b108a732ec, type: 2}
   - {fileID: 11400000, guid: 2ba3b9f2b7ce1a441b9036e1adc86249, type: 2}
-  - {fileID: 11400000, guid: ad85de13deb300d4b8fb0befb6b81cd2, type: 2}
-  - {fileID: 11400000, guid: 5b6738cd991c0de46b7136c1257eea27, type: 2}
   - {fileID: 11400000, guid: db3235ee413ca7f40a9e4aac2a3b98ca, type: 2}
-  - {fileID: 11400000, guid: 463c80b97dfb9c647833592ed0b855d1, type: 2}
-  - {fileID: 11400000, guid: e466a848baa9ee64885c593f11c656c4, type: 2}
+  - {fileID: 11400000, guid: 5b6738cd991c0de46b7136c1257eea27, type: 2}
   - {fileID: 11400000, guid: 09cc80aff54130f41876ba428efcc10e, type: 2}
+  - {fileID: 11400000, guid: 463c80b97dfb9c647833592ed0b855d1, type: 2}
+  - {fileID: 11400000, guid: 6b7f707c5e29af145882a9a13ad1d6d7, type: 2}
+  - {fileID: 11400000, guid: 72b743cef0367bb47aa8876870e1f085, type: 2}
   tutorialTask: []
   columns:
   - {fileID: 1004751403}
   - {fileID: 207782458}
   - {fileID: 1565922875}
+  pinnedTasks: []
   taskPrefab: {fileID: 5369407198210701415, guid: 321d8e096a6bd764cb9f48d29ec58033, type: 3}
   pinTaskPrefab: {fileID: 781026926456389029, guid: 29ad036c28b7b99408bd8ec0f44f5bb0, type: 3}
   maxTasksPinned: 5
@@ -5991,6 +6011,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &1052042755
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052042747}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7126682, y: 1.2139555, z: 0.65819156}
+  m_Center: {x: -0.0058746473, y: 0.60761815, z: 0.0058301087}
 --- !u!1 &1065608067
 GameObject:
   m_ObjectHideFlags: 0
@@ -6571,7 +6604,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8892427573364441805, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
   m_PrefabInstance: {fileID: 156365269}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 73967091}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e318713f396a90408056f565b083049, type: 3}
@@ -7629,63 +7662,6 @@ Transform:
   m_Father: {fileID: 1814972752}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1306260258
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 156365278}
-    m_Modifications:
-    - target: {fileID: 1749126554309964, guid: 6eb85e11fa7e236498f71c3ed6de0cb9, type: 3}
-      propertyPath: m_Name
-      value: Cap1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4056181294732604, guid: 6eb85e11fa7e236498f71c3ed6de0cb9, type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4056181294732604, guid: 6eb85e11fa7e236498f71c3ed6de0cb9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4056181294732604, guid: 6eb85e11fa7e236498f71c3ed6de0cb9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4056181294732604, guid: 6eb85e11fa7e236498f71c3ed6de0cb9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4056181294732604, guid: 6eb85e11fa7e236498f71c3ed6de0cb9, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4056181294732604, guid: 6eb85e11fa7e236498f71c3ed6de0cb9, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4056181294732604, guid: 6eb85e11fa7e236498f71c3ed6de0cb9, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4056181294732604, guid: 6eb85e11fa7e236498f71c3ed6de0cb9, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4056181294732604, guid: 6eb85e11fa7e236498f71c3ed6de0cb9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4056181294732604, guid: 6eb85e11fa7e236498f71c3ed6de0cb9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4056181294732604, guid: 6eb85e11fa7e236498f71c3ed6de0cb9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6eb85e11fa7e236498f71c3ed6de0cb9, type: 3}
 --- !u!1 &1308913054
 GameObject:
   m_ObjectHideFlags: 0
@@ -8113,7 +8089,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000031590462, y: -0.000000059604645}
+  m_AnchoredPosition: {x: -0.000002861023, y: -0.000000059604645}
   m_SizeDelta: {x: 297.8996, y: 95.764}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1407414487
@@ -8170,7 +8146,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -8199,7 +8175,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -156.37892, y: 0, z: -155.94827, w: 0}
+  m_margin: {x: -80.66612, y: 0, z: -282.66708, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -10358,7 +10334,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 0.511, g: 0.1527415, b: 0.13594696, a: 1}
   m_Intensity: 0.4
   m_Range: 10
   m_SpotAngle: 30
@@ -13281,6 +13257,10 @@ PrefabInstance:
       propertyPath: hygiene
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6475800430078241032, guid: 4f1787c81b9e7bc47a27e1d5407abe41, type: 3}
+      propertyPath: dayLight
+      value: 
+      objectReference: {fileID: 1768568588}
     - target: {fileID: 6475800430078241032, guid: 4f1787c81b9e7bc47a27e1d5407abe41, type: 3}
       propertyPath: audioName
       value: left click

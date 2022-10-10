@@ -15,7 +15,7 @@ public class TaskManager : MonoBehaviour
 
     List<Task> completedTasks = new List<Task>();
 
-    List<Task> pinnedTasks = new List<Task>();
+    public List<Task> pinnedTasks = new List<Task>();
     List<GameObject> pinnedTaskGameObjects = new List<GameObject>();
 
     //prefabs a instanciar
@@ -33,7 +33,7 @@ public class TaskManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(!GameManager.GetInstance().tutorialFinished)
+        if (!GameManager.GetInstance().tutorialFinished)
         {
             displayedTasks = new List<Task>(tutorialTask);
         }
@@ -49,7 +49,6 @@ public class TaskManager : MonoBehaviour
                 displayedTasks = new List<Task>(eveningTasks);
             }
         }
-       
         int tasksPerColumn = displayedTasks.Count / columns.Length;
         int rest = displayedTasks.Count % columns.Length;
 
@@ -85,6 +84,26 @@ public class TaskManager : MonoBehaviour
             clon.transform.SetParent(parent);
 
             i++;
+        }
+    }
+
+    private void Update()
+    {
+        if (!GameManager.GetInstance().tutorialFinished)
+        {
+            displayedTasks = new List<Task>(tutorialTask);
+        }
+        else
+        {
+            //depending of the time of the day the displayed tasks are different
+            if (GameManager.GetInstance().dayTime == GameManager.DayTime.Morning)
+            {
+                displayedTasks = new List<Task>(morningTasks);
+            }
+            else if (GameManager.GetInstance().dayTime == GameManager.DayTime.Evening)
+            {
+                displayedTasks = new List<Task>(eveningTasks);
+            }
         }
     }
 

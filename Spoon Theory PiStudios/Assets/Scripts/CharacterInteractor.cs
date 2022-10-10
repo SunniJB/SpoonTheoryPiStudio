@@ -22,6 +22,7 @@ public class CharacterInteractor : MonoBehaviour
     public float clickInteractionDistance = 5, FInteractionDistance = 3;
 
     CharacterMovement1stPerson characterMovement;
+    public GameObject bed;
 
     [Header("Tasks")]
     [SerializeField] Image taskCanvas;
@@ -85,6 +86,8 @@ public class CharacterInteractor : MonoBehaviour
 
         ObjectTask[] interactableObject = new ObjectTask[interactionHit.Length];
 
+        //bed.GetComponent<SleepInBed>().tasks = interactableObject; Trying very hard here
+
         for (int i = 0; i < interactionHit.Length; i++)
         {
             interactableObject[i] = interactionHit[i].GetComponent<ObjectTask>();
@@ -98,7 +101,6 @@ public class CharacterInteractor : MonoBehaviour
                 {
                     promptUI.SetUpText(interactableObject[i].interactionPromptHighSpoons);
                 }
-                
 
                 interactableObject[i].Interact(this);
 
