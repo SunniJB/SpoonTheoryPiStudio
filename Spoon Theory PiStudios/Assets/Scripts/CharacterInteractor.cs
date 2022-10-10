@@ -165,9 +165,9 @@ public class CharacterInteractor : MonoBehaviour
 
     private void UpdateStatSliders()
     {
-        hygieneSlider.value = (float)hygiene / 10;
-        hungerSlider.value = (float)hunger / 10;
-        happinessSlider.value = (((float)hygiene + (float)hunger) / 2 + (float)happiness) / 20;
+        hygieneSlider.value = Mathf.Clamp((float)hygiene / 10, 0, 1);
+        hungerSlider.value = Mathf.Clamp((float)hunger / 10, 0, 1);
+        happinessSlider.value = Mathf.Clamp((((float)hygiene + (float)hunger) / 2 + (float)happiness) / 20, 0, 1);
 
         MoneyText.text = "£" + money.ToString("000");
         day.text = "Day: " + (1 + dayCount).ToString();
