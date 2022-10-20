@@ -91,7 +91,7 @@ public class ObjectTask : MonoBehaviour
         progressSlider.value = 0;
 
 
-        objectAnimator.SetTrigger("play");
+        if (objectAnimator != null) objectAnimator.SetTrigger("play");
 
         AudioManager.GetInstance().Play(audioName, 1f);
     }
@@ -144,7 +144,7 @@ public class ObjectTask : MonoBehaviour
         //Finished task
         interactor.hygiene -= task.hygieneCost;
         interactor.hunger -= task.hungerCost;
-        interactor.happiness -= task.happinesCost;
+        interactor.happiness -= task.happinessCost;
         interactor.workPerformance -= task.workPerformanceCost;
 
         Destroy(progressSlider.gameObject);

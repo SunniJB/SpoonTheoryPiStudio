@@ -150,21 +150,29 @@ public class TaskManager : MonoBehaviour
     /// </summary>
     public void TaskCompleted(Task task)
     {
-        completedTasks.Add(task);
-        //displayedTasks.Remove(task);
-
-        UnpinTask(task);
-        foreach (CheckBox cb in checkboxes)
+        if (task.followingTask != null)
         {
-            if (cb.task == task)
-            {
-                //Destroy(cb.gameObject);
-                //checkboxes.Remove(cb);
-                cb.pinImg.enabled = false;
-                cb.checkImg.enabled = true;
+            //task.FollowingTask(task, task.followingTask);
+            task.FollowingTask(task.followingTask);
+        }
+        else
+        {
+            Task _task = task.GetFirstParent();
 
-                cb.GetComponent<Toggle>().interactable = false;
-                break;
+            completedTasks.Add(_task);
+            //displayedTasks.Remove(task);
+
+            UnpinTask(_task);
+            foreach (CheckBox cb in checkboxes)
+            {
+                if (cb.task == _task)
+                {
+                    cb.pinImg.enabled = false;
+                    cb.checkImg.enabled = true;
+
+                    cb.GetComponent<Toggle>().interactable = false;
+                    break;
+                }
             }
         }
     }
