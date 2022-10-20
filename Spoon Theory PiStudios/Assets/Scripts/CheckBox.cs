@@ -29,9 +29,9 @@ public class CheckBox : MonoBehaviour
 
         if (value)
         {
-            //not working tutorial right now
             if (TutorialManager.GetInstance() != null)
                 if(task.taskName == "Tutorial Task") TutorialManager.GetInstance().taskmenuFinished = true;
+
             taskManager.PinTask(task);
             pinImg.enabled = true;
             checkImg.enabled = false;
@@ -43,7 +43,6 @@ public class CheckBox : MonoBehaviour
             checkImg.enabled = false;
         }
 
-        //commented bc of error as we don't have enough tasks with outline working. Do no delete, it works
         if(task.outlineObject != null) task.outlineObject.enabled = value;
     }
 

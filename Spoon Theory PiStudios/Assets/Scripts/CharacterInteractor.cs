@@ -45,7 +45,7 @@ public class CharacterInteractor : MonoBehaviour
     [SerializeField] AnimationCurve speedMultiplierCurve;
     [HideInInspector] public float speedMultiplier;
     [SerializeField] AnimationCurve headbobbingCurve;
-    [HideInInspector] public float headBobbing;
+    [HideInInspector] public float headBobbingMultiplier;
 
     private void Awake()
     {
@@ -56,7 +56,8 @@ public class CharacterInteractor : MonoBehaviour
     void Start()
     {
         numberOfSpoons = Random.Range(10, 31);
-        spoonSlider.maxValue = spoonSlider.value = numberOfSpoons;
+        spoonSlider.maxValue =  numberOfSpoons;
+        spoonSlider.value = numberOfSpoons;
         hasSleptToday = true;
         taskCanvas.gameObject.SetActive(false);
     }
@@ -200,7 +201,7 @@ public class CharacterInteractor : MonoBehaviour
     void UpdateStatsModifiers()
     {
         speedMultiplier = speedMultiplierCurve.Evaluate(spoonSlider.value / spoonSlider.maxValue);
-        headBobbing = headbobbingCurve.Evaluate(spoonSlider.value / spoonSlider.maxValue);
+        headBobbingMultiplier = headbobbingCurve.Evaluate(spoonSlider.value / spoonSlider.maxValue);
     }
 
     public void RefreshStatsFromManager()
