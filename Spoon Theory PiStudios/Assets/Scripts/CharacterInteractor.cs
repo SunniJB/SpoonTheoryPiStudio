@@ -41,6 +41,9 @@ public class CharacterInteractor : MonoBehaviour
     public int dayCount;
     public bool hasSleptToday; //Is set to false by the level manager when you go to work, is set to false when you're low on spoons, is set to true by SleepInBed when you go to sleep.
 
+    [Header("Stats modifiers")]
+    [SerializeField] AnimationCurve speedMultiplierCurve;
+    [HideInInspector] public float speedMultiplier;
     private void Awake()
     {
         cam = Camera.main;
@@ -78,6 +81,8 @@ public class CharacterInteractor : MonoBehaviour
         UpdateSpoonSlider();
 
         UpdateStatSliders();
+
+        UpdateStatsModifiers();
 
         if (numberOfSpoons < 4)
         {
@@ -187,6 +192,11 @@ public class CharacterInteractor : MonoBehaviour
         }
 
         timeOfDay.text = GameManager.GetInstance().dayTime.ToString();
+    }
+
+    void UpdateStatsModifiers()
+    {
+        speedMultiplier = speedMultiplierCurve.Evaluate(spoonSlider.value / spoonSlider.maxValue);
     }
 
     public void RefreshStatsFromManager()

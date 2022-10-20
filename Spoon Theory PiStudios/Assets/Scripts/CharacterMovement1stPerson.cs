@@ -10,8 +10,6 @@ public class CharacterMovement1stPerson : MonoBehaviour
     [Header("PLAYER ATTRIBUTES")]
     [SerializeField] float speed = 5, gravityForce = 9.8f;
 
-    [SerializeField] AnimationCurve speedMultiplier;
-
     CharacterInteractor characterInteractor;
 
     float verticalVelocity;
@@ -58,7 +56,7 @@ public class CharacterMovement1stPerson : MonoBehaviour
 
         Vector3 move = transform.right * x + transform.forward * z;
 
-        controller.Move(move * speed * speedMultiplier.Evaluate(characterInteractor.spoonSlider.value / characterInteractor.spoonSlider.maxValue) * Time.deltaTime );
+        controller.Move(move * speed * characterInteractor.speedMultiplier * Time.deltaTime );
         verticalVelocity -= gravityForce * Time.deltaTime;
         controller.Move(transform.up * verticalVelocity * Time.deltaTime );
     }

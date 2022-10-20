@@ -26,7 +26,7 @@ public class TaskManager : MonoBehaviour
 
     public Image pinnedTasksPanel;
 
-    [SerializeField] Color easy, medium, hard;
+    [SerializeField] Color easy, medium, hard, positive;
 
     [SerializeField] int mediumDif, hardDif;
 
@@ -65,9 +65,13 @@ public class TaskManager : MonoBehaviour
             checkboxes[i].text.enableAutoSizing = true;
 
             //assign colors based on difficulty
-            if (task.spoonCost < mediumDif) checkboxes[i].text.color = easy;
-            else if (task.spoonCost < hardDif) checkboxes[i].text.color = medium;
-            else checkboxes[i].text.color = hard;
+            if (task.spoonCost < 0) checkboxes[i].text.color = positive;
+            else
+            {
+                if (task.spoonCost < mediumDif) checkboxes[i].text.color = easy;
+                else if (task.spoonCost < hardDif) checkboxes[i].text.color = medium;
+                else checkboxes[i].text.color = hard;
+            }
 
             checkboxes[i].taskManager = this;
 
