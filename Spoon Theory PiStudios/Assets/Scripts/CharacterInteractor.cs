@@ -44,6 +44,9 @@ public class CharacterInteractor : MonoBehaviour
     [Header("Stats modifiers")]
     [SerializeField] AnimationCurve speedMultiplierCurve;
     [HideInInspector] public float speedMultiplier;
+    [SerializeField] AnimationCurve headbobbingCurve;
+    [HideInInspector] public float headBobbing;
+
     private void Awake()
     {
         cam = Camera.main;
@@ -197,6 +200,7 @@ public class CharacterInteractor : MonoBehaviour
     void UpdateStatsModifiers()
     {
         speedMultiplier = speedMultiplierCurve.Evaluate(spoonSlider.value / spoonSlider.maxValue);
+        headBobbing = headbobbingCurve.Evaluate(spoonSlider.value / spoonSlider.maxValue);
     }
 
     public void RefreshStatsFromManager()
