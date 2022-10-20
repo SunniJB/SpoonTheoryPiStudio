@@ -11,7 +11,7 @@ public class CharacterInteractor : MonoBehaviour
 
     [Header("UI Stats")]
     public PromptUI promptUI;
-    [SerializeField] Slider spoonSlider;
+    public Slider spoonSlider;
     [SerializeField] Slider hygieneSlider;
     [SerializeField] Slider hungerSlider;
     [SerializeField] Slider happinessSlider;
