@@ -11,10 +11,10 @@ public class CharacterMovement1stPerson : MonoBehaviour
     [SerializeField] float speed = 5, gravityForce = 9.8f;
 
     [Header("HEAD BOBBING")]
-    [SerializeField] float headBobbingSpeed;
+    [SerializeField] float headBobbingSpeed, headBobbingAmount;
+    [SerializeField] Transform camParent;
     bool headBobbingUp, moving;
     float initialCamY;
-    Camera cam;
 
     CharacterInteractor characterInteractor;
 
@@ -38,8 +38,7 @@ public class CharacterMovement1stPerson : MonoBehaviour
         moving = false;
 
         controller = GetComponent<CharacterController>();
-        cam = Camera.main;
-        initialCamY = cam.transform.position.y;
+        initialCamY = camParent.transform.position.y;
     }
 
     // Update is called once per frame
@@ -55,7 +54,7 @@ public class CharacterMovement1stPerson : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
-        if (x != 0 && z != 0) moving = true;
+        if (x != 0 || z != 0) moving = true;
         else moving = false;
 
         isGrounded = controller.isGrounded;
@@ -80,14 +79,14 @@ public class CharacterMovement1stPerson : MonoBehaviour
 
     void HeadBobbingUp()
     {
-        if (cam.transform.position.y < initialCamY + characterInteractor.headBobbing)
-            cam.transform.position = new Vector3(cam.transform.position.x, cam.transform.position.y + headBobbingSpeed * Time.deltaTime, cam.transform.position.z);
+        if (camParent.position.y < initialCamY + headBobbingAmount * characterInteractor.headBobbingMultiplier)
+            camParent.transform.position = new Vector3(camParent.position.x, camParent.position.y + headBobbingSpeed * characterInteractor.headBobbingMultiplier * Time.deltaTime, camParent.position.z);
         else headBobbingUp = false;
     }
     void HeadBobbingDown()
     {
-        if (cam.transform.position.y > initialCamY - characterInteractor.headBobbing)
-            cam.transform.position = new Vector3(cam.transform.position.x, cam.transform.position.y - headBobbingSpeed * Time.deltaTime, cam.transform.position.z);
+        if (camParent.position.y > initialCamY - headBobbingAmount * characterInteractor.headBobbingMultiplier)
+            camParent.transform.position = new Vector3(camParent.position.x, camParent.position.y - headBobbingSpeed * characterInteractor.headBobbingMultiplier * Time.deltaTime, camParent.position.z);
         else headBobbingUp = true;
     }
 }
