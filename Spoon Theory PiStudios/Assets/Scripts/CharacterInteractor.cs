@@ -56,7 +56,8 @@ public class CharacterInteractor : MonoBehaviour
     void Start()
     {
         numberOfSpoons = Random.Range(10, 31);
-        spoonSlider.maxValue = spoonSlider.value = numberOfSpoons;
+        spoonSlider.maxValue =  numberOfSpoons;
+        spoonSlider.value = numberOfSpoons;
         hasSleptToday = true;
         taskCanvas.gameObject.SetActive(false);
     }

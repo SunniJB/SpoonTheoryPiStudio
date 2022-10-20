@@ -791,8 +791,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   gravityForce: 9.8
-  headBobbingSpeed: 0.5
-  headBobbingAmount: 0.1
+  headBobbingSpeed: 0.25
+  headBobbingAmount: 0.05
   camParent: {fileID: 3409469884641321256}
   canMove: 0
 --- !u!114 &6606836980417476329
