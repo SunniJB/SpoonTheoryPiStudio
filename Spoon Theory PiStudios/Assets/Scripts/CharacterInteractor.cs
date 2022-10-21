@@ -55,7 +55,6 @@ public class CharacterInteractor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        numberOfSpoons = Random.Range(10, 31);
         spoonSlider.maxValue =  numberOfSpoons;
         spoonSlider.value = numberOfSpoons;
         hasSleptToday = true;
