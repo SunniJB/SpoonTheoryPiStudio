@@ -887,6 +887,63 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   headBobbingMultiplier: 0
+  vignetteCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.7
+      inSlope: 0.062402677
+      outSlope: 0.062402677
+      tangentMode: 0
+      weightedMode: 2
+      inWeight: 0
+      outWeight: 0.39935023
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0.025449438
+      outSlope: 0.025449438
+      tangentMode: 0
+      weightedMode: 1
+      inWeight: 0.51891285
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  caCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.0023422241
+      value: 1
+      inSlope: 0.0121271005
+      outSlope: 0.0121271005
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.38839427
+    - serializedVersion: 3
+      time: 0.48150963
+      value: 0.56101036
+      inSlope: -3.6040492
+      outSlope: -3.6040492
+      tangentMode: 0
+      weightedMode: 3
+      inWeight: 0.18894723
+      outWeight: 0.31901258
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -0.093096025
+      outSlope: -0.093096025
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.32261285
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &6606836980417476330
 MonoBehaviour:
   m_ObjectHideFlags: 0

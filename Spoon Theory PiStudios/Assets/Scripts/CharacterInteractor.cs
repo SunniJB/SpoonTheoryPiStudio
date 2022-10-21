@@ -6,7 +6,6 @@ using TMPro;
 
 public class CharacterInteractor : MonoBehaviour
 {
-    Camera cam;
     [SerializeField] LayerMask interactableLayer, defaultLayer;
 
     [Header("UI Stats")]
@@ -46,10 +45,11 @@ public class CharacterInteractor : MonoBehaviour
     [HideInInspector] public float speedMultiplier;
     [SerializeField] AnimationCurve headbobbingCurve;
     [HideInInspector] public float headBobbingMultiplier;
+    [SerializeField] AnimationCurve vignetteCurve;
+    [SerializeField] AnimationCurve caCurve;
 
     private void Awake()
     {
-        cam = Camera.main;
         characterMovement = GetComponent<CharacterMovement1stPerson>();
     }
     // Start is called before the first frame update
@@ -60,6 +60,9 @@ public class CharacterInteractor : MonoBehaviour
         spoonSlider.value = numberOfSpoons;
         hasSleptToday = true;
         taskCanvas.gameObject.SetActive(false);
+
+        StartCoroutine(HalfSpoons());
+        StartCoroutine(LowSpoons());
     }
 
     // Update is called once per frame
@@ -202,6 +205,9 @@ public class CharacterInteractor : MonoBehaviour
     {
         speedMultiplier = speedMultiplierCurve.Evaluate(spoonSlider.value / spoonSlider.maxValue);
         headBobbingMultiplier = headbobbingCurve.Evaluate(spoonSlider.value / spoonSlider.maxValue);
+
+        PostProcessingManager.GetInstance().VignetteValues(vignetteCurve.Evaluate(spoonSlider.value / spoonSlider.maxValue), Color.black);
+        PostProcessingManager.GetInstance().ChromaticAberrationValues(caCurve.Evaluate(spoonSlider.value / spoonSlider.maxValue));
     }
 
     public void RefreshStatsFromManager()
@@ -218,5 +224,16 @@ public class CharacterInteractor : MonoBehaviour
             hygiene = 0;
         if (hunger < 0)
             hunger = 0;
+    }
+
+    IEnumerator HalfSpoons()
+    {
+        yield return new WaitUntil(() => spoonSlider.value / spoonSlider.maxValue < 0.5f);
+
+    }
+    IEnumerator LowSpoons()
+    {
+        yield return new WaitUntil(() => spoonSlider.value / spoonSlider.maxValue < 0.25f);
+
     }
 }
