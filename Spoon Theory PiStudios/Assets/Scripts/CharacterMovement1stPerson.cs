@@ -11,7 +11,8 @@ public class CharacterMovement1stPerson : MonoBehaviour
     [SerializeField] float speed = 5, gravityForce = 9.8f;
 
     [Header("HEAD BOBBING")]
-    [SerializeField] float headBobbingSpeed, headBobbingAmount;
+    [SerializeField] float headBobbingSpeed;
+    [SerializeField] float headBobbingAmount;
     [SerializeField] Transform camParent;
     bool headBobbingUp, moving;
     float initialCamY;
