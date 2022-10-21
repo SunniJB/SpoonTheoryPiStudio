@@ -734,6 +734,10 @@ PrefabInstance:
       propertyPath: openandclosewindow
       value: 
       objectReference: {fileID: 7724967758014340260, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+    - target: {fileID: 8144394005256127820, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8617459811570476996, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
       propertyPath: openandclose
       value: 
@@ -2339,6 +2343,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 704231713}
   m_CullTransparentMesh: 1
+--- !u!1 &704256839 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8144394005256127820, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+  m_PrefabInstance: {fileID: 156365269}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &704256843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704256839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 320f7227530da7f4390e0d5e34652f73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionPromptLowSpoons: No way
+  interactionPromptHighSpoons: No way
+  audioName: 
+  task: {fileID: 11400000, guid: a803f6b43bf05e04d803a2087bf50795, type: 2}
+  outline: {fileID: 0}
+  finished: 0
+  progressSliderPrefab: {fileID: 0}
+  sliderPos: {fileID: 0}
+  actionAnim: {fileID: 0}
+--- !u!114 &704256844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704256839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.95675665, b: 0, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!65 &704256845
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704256839}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 13.416993, y: 18.974264, z: 13.017665}
+  m_Center: {x: 2.1023662, y: -6.800297, z: -5.4206448}
 --- !u!1 &762977456
 GameObject:
   m_ObjectHideFlags: 0
@@ -3037,6 +3098,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 39435783b2c3b424b9de8200499da858, type: 2}
   - {fileID: 11400000, guid: 6b7f707c5e29af145882a9a13ad1d6d7, type: 2}
   - {fileID: 11400000, guid: 72b743cef0367bb47aa8876870e1f085, type: 2}
+  - {fileID: 11400000, guid: a803f6b43bf05e04d803a2087bf50795, type: 2}
   eveningTasks:
   - {fileID: 11400000, guid: e466a848baa9ee64885c593f11c656c4, type: 2}
   - {fileID: 11400000, guid: 9b42e2f6858ea0f41944d069caf7c008, type: 2}
