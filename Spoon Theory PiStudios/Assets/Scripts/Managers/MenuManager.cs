@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MenuManager : MonoBehaviour
 {
+    public GameObject canvas, cutsceneBackground;
+
     public void Begin()
     {
         GameManager.GetInstance().dayCount = 0;
@@ -25,5 +27,11 @@ public class MenuManager : MonoBehaviour
     public void Exit()
     {
         Application.Quit();
+    }
+
+    public void RunCutscene()
+    {
+        cutsceneBackground.SetActive(true);
+        canvas.GetComponent<Animator>().SetTrigger("cutscene");
     }
 }
