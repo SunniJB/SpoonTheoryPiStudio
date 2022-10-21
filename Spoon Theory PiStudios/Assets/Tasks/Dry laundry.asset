@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 689f24bddc4b4da44b46d092a39f3e9d, type: 3}
-  m_Name: Task1
+  m_Name: Dry laundry
   m_EditorClassIdentifier: 
-  taskName: following task
-  description: Task description
-  spoonCost: -1
-  hygieneCost: -1
-  moneyCost: -1
-  hungerCost: -1
-  happinessCost: -1
-  workPerformanceCost: -1
+  taskName: dry laundry
+  description: drying laundry
+  spoonCost: 3
+  hygieneCost: 0
+  moneyCost: 0
+  hungerCost: 0
+  happinessCost: 0
+  workPerformanceCost: 0
   followingTask: {fileID: 11400000, guid: d81e94924d455214dbed2ec34b55736e, type: 2}
   outlineObject: {fileID: 0}
   objectTask: {fileID: 0}
   parent: {fileID: 11400000, guid: a803f6b43bf05e04d803a2087bf50795, type: 2}
-  inProgress: 1
+  inProgress: 0
