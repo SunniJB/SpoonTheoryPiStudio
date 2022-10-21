@@ -78,7 +78,6 @@ public class TutorialManager : MonoBehaviour
 
         if (startFinished) tutorialStates = TutorialStates.TaskMenu;
     }
-
     void TutorialTaskMenu()
     {
         movePanel.SetActive(false);

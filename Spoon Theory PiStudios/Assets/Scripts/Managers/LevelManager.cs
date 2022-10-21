@@ -49,18 +49,25 @@ public class LevelManager : MonoBehaviour
                 Time.timeScale = 1;
             }
         }
+        if (!GameManager.GetInstance().tutorialFinished) //Do not lock cursor in tutorial
+        {
+            LockCursor();
+        }
+    }
 
+    public void LockCursor()
+    {
         if (wakeUpButton != null)
         {
             if (!pause && Input.GetMouseButton(0) && Cursor.lockState != CursorLockMode.Locked && !characterInteractor.taskCanvasEnabled && !wakeUpButton.activeInHierarchy)
             {
                 Cursor.lockState = CursorLockMode.Locked;
             }
-        } else if (!pause && Input.GetMouseButton(0) && Cursor.lockState != CursorLockMode.Locked && !characterInteractor.taskCanvasEnabled && wakeUpButton == null)
+        }
+        else if (!pause && Input.GetMouseButton(0) && Cursor.lockState != CursorLockMode.Locked && !characterInteractor.taskCanvasEnabled && wakeUpButton == null)
         {
             Cursor.lockState = CursorLockMode.Locked;
         }
-
     }
     public void ShowControls()
     {

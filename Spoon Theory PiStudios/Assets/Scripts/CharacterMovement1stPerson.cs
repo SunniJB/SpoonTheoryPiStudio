@@ -13,7 +13,7 @@ public class CharacterMovement1stPerson : MonoBehaviour
     [Header("HEAD BOBBING")]
     [SerializeField] float headBobbingSpeed, headBobbingAmount;
     [SerializeField] Transform camParent;
-    bool headBobbingUp, moving;
+    public bool headBobbingUp, moving;
     float initialCamY;
 
     CharacterInteractor characterInteractor;
