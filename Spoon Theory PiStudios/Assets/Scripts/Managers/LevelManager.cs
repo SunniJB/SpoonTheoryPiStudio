@@ -7,7 +7,7 @@ public class LevelManager : MonoBehaviour
 {
     [SerializeField] Image avatarImg, pausePanel, characterUIPanel, controlsPanel;
 
-    public bool pause;
+    public bool pause, shouldLockCursor;
 
     [SerializeField] CharacterInteractor characterInteractor;
 
@@ -45,29 +45,36 @@ public class LevelManager : MonoBehaviour
             }
             else
             {
-                Cursor.lockState = CursorLockMode.Locked;
                 Time.timeScale = 1;
+                if (shouldLockCursor)
+                {
+                    Cursor.lockState = CursorLockMode.Locked;
+                }
             }
         }
-        if (!GameManager.GetInstance().tutorialFinished) //Do not lock cursor in tutorial
+
+        if (wakeUpButton != null)
         {
-            LockCursor();
+            if (wakeUpButton.activeInHierarchy)
+            {
+                shouldLockCursor = false;
+            }
         }
+        if (GameManager.GetInstance().tutorialFinished == false)
+        {
+            shouldLockCursor = false;
+        }
+
+        LockCursor();
     }
 
     public void LockCursor()
     {
-        if (wakeUpButton != null)
-        {
-            if (!pause && Input.GetMouseButton(0) && Cursor.lockState != CursorLockMode.Locked && !characterInteractor.taskCanvasEnabled && !wakeUpButton.activeInHierarchy)
-            {
-                Cursor.lockState = CursorLockMode.Locked;
-            }
-        }
-        else if (!pause && Input.GetMouseButton(0) && Cursor.lockState != CursorLockMode.Locked && !characterInteractor.taskCanvasEnabled && wakeUpButton == null)
-        {
+         if (!pause && Input.GetMouseButton(0) && Cursor.lockState != CursorLockMode.Locked && !characterInteractor.taskCanvasEnabled && shouldLockCursor)
+         {
+            Debug.Log("Cursor got locked");
             Cursor.lockState = CursorLockMode.Locked;
-        }
+         }
     }
     public void ShowControls()
     {

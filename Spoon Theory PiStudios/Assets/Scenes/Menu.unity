@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -372,6 +372,7 @@ RectTransform:
   - {fileID: 1923304562}
   - {fileID: 346699022}
   - {fileID: 1075986726}
+  - {fileID: 2019315397}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2177,26 +2178,230 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
       propertyPath: sounds.Array.size
-      value: 24
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 13434eedab3b846428d7f1ab4000f40c, type: 3}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[0].name
+      value: Menu Music
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: cdaa238842e0ffc4c822b73d05b48b78, type: 3}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[1].name
+      value: pin task
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: cde0712e2125fea4ab46190803748e2f, type: 3}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[2].name
+      value: open pause menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5af958f6600b1ce4694afcb6c3c1e656, type: 3}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[3].name
+      value: left click
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 80c1dcfdaff259445840d1f27d8ced3f, type: 3}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[4].name
+      value: hover over button
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[5].clip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[5].name
+      value: START OF OBJECT SOUNDS
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[6].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: d618706e8ba762747b7d3c29050f15b3, type: 3}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[6].name
+      value: change clothes
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[7].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 38c1d68592774764da2ca49e8af8ad33, type: 3}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[7].name
+      value: toothbrush
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[8].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3aa099c01ea3cc74da008a9b53189863, type: 3}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[8].name
+      value: light frying
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[9].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 88f8b16014ad1a64aaaf865d142a43a0, type: 3}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[9].name
+      value: take a shower
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[0].music
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[10].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 209483c1f05d7554c9b4375b9eb961b2, type: 3}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[10].name
+      value: pet cat
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[11].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: d68136c0b5fab194bb0d4405f7c9b9b8, type: 3}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[11].name
+      value: watch tv
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[12].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 136ac0eb3dc8ebc47b03fb46d191a1be, type: 3}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[12].name
+      value: take powernap
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[13].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9380302c5a2adca4b8e47b5621037b1c, type: 3}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[13].name
+      value: sleep in bed
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[14].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7f7fecb29115ab1489ba870ee225a845, type: 3}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[14].name
+      value: draining sink
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[15].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 827290e2cfa26c4449f6040b04d0f750, type: 3}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[15].name
+      value: person removing jacket
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[16].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: c6beeec1e9a7cce47a4c612dfd4d91da, type: 3}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[16].name
+      value: page turning
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[17].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 005e454c0f54b19419d7af76d6ea7e22, type: 3}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[17].name
+      value: writing
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[18].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 15c0af204628c3f4da4fecce26e84d7d, type: 3}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[18].name
+      value: vacuum
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[19].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 082dbeed96fd4e947ac50b6b54aa89bb, type: 3}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[19].name
+      value: watering can
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[20].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: c25418270dcc7b24a9c61cc074b3a644, type: 3}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[20].name
+      value: cutting vegetables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[21].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 48942e386baf3a74d90b02f9cab8679c, type: 3}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[21].name
+      value: stirring food
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[22].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: ad87479ca66c61f49bba52babd593c83, type: 3}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[22].name
+      value: video game
       objectReference: {fileID: 0}
     - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
       propertyPath: sounds.Array.data[23].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 13434eedab3b846428d7f1ab4000f40c, type: 3}
+      objectReference: {fileID: 8300000, guid: cac739d1f00750545a571226ee3bbbfe, type: 3}
     - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
       propertyPath: sounds.Array.data[23].name
-      value: Menu Music
+      value: clicking mouse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[24].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6b95f4841eff7924da6927a583a45596, type: 3}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[24].name
+      value: Door
       objectReference: {fileID: 0}
     - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
       propertyPath: sounds.Array.data[23].music
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
       propertyPath: sounds.Array.data[23].volume
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[24].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
       propertyPath: sounds.Array.data[23].maxVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[24].maxVolume
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5561417923616072048, guid: ea07da735420f13419d78a271882b852, type: 3}
@@ -2588,6 +2793,140 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1959584273}
   m_CullTransparentMesh: 1
+--- !u!1 &2019315396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2019315397}
+  - component: {fileID: 2019315400}
+  - component: {fileID: 2019315399}
+  - component: {fileID: 2019315398}
+  m_Layer: 5
+  m_Name: SkipButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &2019315397
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019315396}
+  m_LocalRotation: {x: 0.008726228, y: 0.008726225, z: -0.00007615282, w: 0.9999238}
+  m_LocalPosition: {x: 0, y: 0, z: 1.5081882}
+  m_LocalScale: {x: 2.252099, y: 2.2521007, z: 2.252101}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2081046624}
+  m_Father: {fileID: 148812642}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 510.66742, y: 249.16428}
+  m_SizeDelta: {x: 102.91689, y: 26.40842}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2019315398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019315396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 2019315399}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 148812644}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: Begin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2019315399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019315396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 8d8bfbe852152cb42b335a89f92af172, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2019315400
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019315396}
+  m_CullTransparentMesh: 1
 --- !u!1 &2026536792
 GameObject:
   m_ObjectHideFlags: 0
@@ -2664,6 +3003,141 @@ RectTransform:
   m_AnchoredPosition: {x: 47.11342, y: -287.41727}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2081046623
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2081046624}
+  - component: {fileID: 2081046626}
+  - component: {fileID: 2081046625}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2081046624
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081046623}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2019315397}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2081046625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081046623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Skip
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: fd2b7b411a907a44883243100f2c24cf, type: 2}
+  m_sharedMaterial: {fileID: -5549834820176784761, guid: fd2b7b411a907a44883243100f2c24cf, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &2081046626
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081046623}
+  m_CullTransparentMesh: 1
 --- !u!1 &2126573889
 GameObject:
   m_ObjectHideFlags: 0

@@ -645,6 +645,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 156365271, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
     - {fileID: 1959194741, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+    - {fileID: 8617459811570476996, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
 --- !u!1 &178192555
 GameObject:
@@ -3905,8 +3906,9 @@ MonoBehaviour:
   characterUIPanel: {fileID: 1972671931}
   controlsPanel: {fileID: 178192557}
   pause: 0
+  shouldLockCursor: 0
   characterInteractor: {fileID: 616103596}
-  audioName: 
+  audioName: open pause menu
   wakeUpButton: {fileID: 0}
 --- !u!1 &1138244141
 GameObject:
@@ -4424,7 +4426,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
       propertyPath: sounds.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
       propertyPath: sounds.Array.data[3].clip
@@ -4433,6 +4435,14 @@ PrefabInstance:
     - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
       propertyPath: sounds.Array.data[3].name
       value: pet cat
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6b95f4841eff7924da6927a583a45596, type: 3}
+    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
+      propertyPath: sounds.Array.data[4].name
+      value: Door
       objectReference: {fileID: 0}
     - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
       propertyPath: sounds.Array.data[0].pitch

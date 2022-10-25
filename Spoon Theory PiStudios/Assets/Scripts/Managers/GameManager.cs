@@ -53,9 +53,15 @@ public class GameManager : MonoBehaviour
 
     public void ApartmentScene()
     {
-        if (!tutorialFinished) SceneManager.LoadScene(1); //Go to tutorial
-        else SceneManager.LoadScene(2); // Go to apartment
-        Cursor.lockState = CursorLockMode.Locked;
+        if (!tutorialFinished)
+        {
+            SceneManager.LoadScene(1); //Go to tutorial
+        }
+        else 
+        {
+            SceneManager.LoadScene(2); // Go to apartment
+            Cursor.lockState = CursorLockMode.Locked;
+        }
     }
 
     public void LoadScene(int sceneNumber = -1)

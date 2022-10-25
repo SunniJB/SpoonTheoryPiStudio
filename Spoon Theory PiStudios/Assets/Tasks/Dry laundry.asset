@@ -20,7 +20,7 @@ MonoBehaviour:
   hungerCost: 0
   happinessCost: 0
   workPerformanceCost: 0
-  followingTask: {fileID: 11400000, guid: d81e94924d455214dbed2ec34b55736e, type: 2}
+  followingTask: {fileID: 0}
   outlineObject: {fileID: 0}
   objectTask: {fileID: 0}
   parent: {fileID: 11400000, guid: a803f6b43bf05e04d803a2087bf50795, type: 2}
