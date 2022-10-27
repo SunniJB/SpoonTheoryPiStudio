@@ -108,6 +108,14 @@ public class AudioManager : MonoBehaviour
         return s.source.isPlaying;
     }
 
+    public void StopAllSounds()
+    {
+        for (int i = 0; i < sounds.Length; i++)
+        {
+            sounds[i].source.Stop();
+        }
+    }
+
     public void AudioVolume(float volume, bool isMusic) // Se llama cada vez que se modifica el sonido o la musica
     {
         // Almacenar valores en PlayerPref

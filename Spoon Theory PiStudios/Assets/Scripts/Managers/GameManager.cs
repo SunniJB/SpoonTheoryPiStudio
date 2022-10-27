@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
 
     public void MenuScene()
     {
-        SceneManager.LoadScene(0);
+        LoadScene(0);
         Cursor.lockState = CursorLockMode.None;
     }
 
@@ -55,45 +55,48 @@ public class GameManager : MonoBehaviour
     {
         if (!tutorialFinished)
         {
-            SceneManager.LoadScene(1); //Go to tutorial
+            LoadScene(1); //Go to tutorial
         }
         else 
         {
-            SceneManager.LoadScene(2); // Go to apartment
+            LoadScene(2); // Go to apartment
             Cursor.lockState = CursorLockMode.Locked;
         }
     }
 
     public void LoadScene(int sceneNumber = -1)
     {
+        AudioManager.GetInstance().StopAllSounds();
         if (sceneNumber != -1) SceneManager.LoadScene(sceneNumber);
         else SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void LoadScene(string sceneName)
     {
+        AudioManager.GetInstance().StopAllSounds();
         SceneManager.LoadScene(sceneName);
     }
 
     public void ResetScene()
     {
+        AudioManager.GetInstance().StopAllSounds();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void WorkScene()
     {
-        SceneManager.LoadScene(3);
+        LoadScene(3);
         Cursor.lockState = CursorLockMode.None;
     }
 
     public void MemoryGameScene()
     {
-        SceneManager.LoadScene(4);
+        LoadScene(4);
         Cursor.lockState = CursorLockMode.None;
     }
 
     public void SimonGameScene()
     {
-        SceneManager.LoadScene(5);
+        LoadScene(5);
         Cursor.lockState = CursorLockMode.None;
     }
 
@@ -117,14 +120,5 @@ public class GameManager : MonoBehaviour
     {
         dayTime = DayTime.Evening;
         //dayLight.color = new Color(0.511f, 0.1527415f, 0.135947f);
-    }
-
-    void StopAllSounds()
-    {
-        foreach (var item in AudioManager.GetInstance().sounds)
-        {
-            AudioManager.GetInstance().Stop(item.name);
-        }
-
     }
 }
