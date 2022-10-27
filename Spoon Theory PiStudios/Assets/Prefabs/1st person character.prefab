@@ -794,6 +794,8 @@ MonoBehaviour:
   headBobbingSpeed: 0.25
   headBobbingAmount: 0.05
   camParent: {fileID: 3409469884641321256}
+  headBobbingUp: 0
+  moving: 0
   canMove: 0
 --- !u!114 &6606836980417476329
 MonoBehaviour:
@@ -837,6 +839,8 @@ MonoBehaviour:
   workPerformance: 0
   dayCount: 0
   hasSleptToday: 0
+  halfSpoons: 0
+  lowSpoons: 0
   speedMultiplierCurve:
     serializedVersion: 2
     m_Curve:
@@ -944,6 +948,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  femaleBreathingSound: female heavy breathing
 --- !u!114 &6606836980417476330
 MonoBehaviour:
   m_ObjectHideFlags: 0

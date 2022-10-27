@@ -13,9 +13,6 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField] string audioName;
 
-    public static LevelManager instance;
-    public static LevelManager GetInstance() { return instance; }
-
     public GameObject wakeUpButton;
     // Start is called before the first frame update
     void Start()
