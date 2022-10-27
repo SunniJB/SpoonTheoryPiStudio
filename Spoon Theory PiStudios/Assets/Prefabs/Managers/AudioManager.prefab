@@ -45,12 +45,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
+  - name: Menu Music
+    clip: {fileID: 8300000, guid: 13434eedab3b846428d7f1ab4000f40c, type: 3}
+    volume: 1
+    maxVolume: 1
+    pitch: 0
+    music: 1
+    loopable: 1
+    source: {fileID: 0}
   - name: pin task
     clip: {fileID: 8300000, guid: cdaa238842e0ffc4c822b73d05b48b78, type: 3}
     volume: 1
     maxVolume: 1
     pitch: 0
     music: 0
+    loopable: 0
     source: {fileID: 0}
   - name: open pause menu
     clip: {fileID: 8300000, guid: cde0712e2125fea4ab46190803748e2f, type: 3}
@@ -58,6 +67,7 @@ MonoBehaviour:
     maxVolume: 1
     pitch: 0
     music: 0
+    loopable: 0
     source: {fileID: 0}
   - name: left click
     clip: {fileID: 8300000, guid: 5af958f6600b1ce4694afcb6c3c1e656, type: 3}
@@ -65,6 +75,7 @@ MonoBehaviour:
     maxVolume: 1
     pitch: 0
     music: 0
+    loopable: 0
     source: {fileID: 0}
   - name: hover over button
     clip: {fileID: 8300000, guid: 80c1dcfdaff259445840d1f27d8ced3f, type: 3}
@@ -72,6 +83,7 @@ MonoBehaviour:
     maxVolume: 1
     pitch: 0
     music: 0
+    loopable: 0
     source: {fileID: 0}
   - name: START OF OBJECT SOUNDS
     clip: {fileID: 0}
@@ -79,6 +91,7 @@ MonoBehaviour:
     maxVolume: 1
     pitch: 0
     music: 0
+    loopable: 0
     source: {fileID: 0}
   - name: change clothes
     clip: {fileID: 8300000, guid: d618706e8ba762747b7d3c29050f15b3, type: 3}
@@ -86,6 +99,7 @@ MonoBehaviour:
     maxVolume: 1
     pitch: 0
     music: 0
+    loopable: 0
     source: {fileID: 0}
   - name: toothbrush
     clip: {fileID: 8300000, guid: 38c1d68592774764da2ca49e8af8ad33, type: 3}
@@ -93,6 +107,7 @@ MonoBehaviour:
     maxVolume: 1
     pitch: 0
     music: 0
+    loopable: 0
     source: {fileID: 0}
   - name: light frying
     clip: {fileID: 8300000, guid: 3aa099c01ea3cc74da008a9b53189863, type: 3}
@@ -100,6 +115,7 @@ MonoBehaviour:
     maxVolume: 1
     pitch: 0
     music: 0
+    loopable: 0
     source: {fileID: 0}
   - name: take a shower
     clip: {fileID: 8300000, guid: 88f8b16014ad1a64aaaf865d142a43a0, type: 3}
@@ -107,6 +123,7 @@ MonoBehaviour:
     maxVolume: 1
     pitch: 0
     music: 0
+    loopable: 0
     source: {fileID: 0}
   - name: pet cat
     clip: {fileID: 8300000, guid: 209483c1f05d7554c9b4375b9eb961b2, type: 3}
@@ -114,6 +131,7 @@ MonoBehaviour:
     maxVolume: 1
     pitch: 0
     music: 0
+    loopable: 0
     source: {fileID: 0}
   - name: watch tv
     clip: {fileID: 8300000, guid: d68136c0b5fab194bb0d4405f7c9b9b8, type: 3}
@@ -121,6 +139,7 @@ MonoBehaviour:
     maxVolume: 1
     pitch: 0
     music: 0
+    loopable: 0
     source: {fileID: 0}
   - name: take powernap
     clip: {fileID: 8300000, guid: 136ac0eb3dc8ebc47b03fb46d191a1be, type: 3}
@@ -128,6 +147,7 @@ MonoBehaviour:
     maxVolume: 1
     pitch: 0
     music: 0
+    loopable: 0
     source: {fileID: 0}
   - name: sleep in bed
     clip: {fileID: 8300000, guid: 9380302c5a2adca4b8e47b5621037b1c, type: 3}
@@ -135,6 +155,7 @@ MonoBehaviour:
     maxVolume: 1
     pitch: 0
     music: 0
+    loopable: 0
     source: {fileID: 0}
   - name: draining sink
     clip: {fileID: 8300000, guid: 7f7fecb29115ab1489ba870ee225a845, type: 3}
@@ -142,6 +163,7 @@ MonoBehaviour:
     maxVolume: 1
     pitch: 0
     music: 0
+    loopable: 0
     source: {fileID: 0}
   - name: person removing jacket
     clip: {fileID: 8300000, guid: 827290e2cfa26c4449f6040b04d0f750, type: 3}
@@ -149,6 +171,7 @@ MonoBehaviour:
     maxVolume: 1
     pitch: 0
     music: 0
+    loopable: 0
     source: {fileID: 0}
   - name: page turning
     clip: {fileID: 8300000, guid: c6beeec1e9a7cce47a4c612dfd4d91da, type: 3}
@@ -156,6 +179,7 @@ MonoBehaviour:
     maxVolume: 1
     pitch: 0
     music: 0
+    loopable: 0
     source: {fileID: 0}
   - name: writing
     clip: {fileID: 8300000, guid: 005e454c0f54b19419d7af76d6ea7e22, type: 3}
@@ -163,6 +187,7 @@ MonoBehaviour:
     maxVolume: 1
     pitch: 0
     music: 0
+    loopable: 0
     source: {fileID: 0}
   - name: vacuum
     clip: {fileID: 8300000, guid: 15c0af204628c3f4da4fecce26e84d7d, type: 3}
@@ -170,6 +195,7 @@ MonoBehaviour:
     maxVolume: 1
     pitch: 0
     music: 0
+    loopable: 0
     source: {fileID: 0}
   - name: watering can
     clip: {fileID: 8300000, guid: 082dbeed96fd4e947ac50b6b54aa89bb, type: 3}
@@ -177,6 +203,7 @@ MonoBehaviour:
     maxVolume: 1
     pitch: 0
     music: 0
+    loopable: 0
     source: {fileID: 0}
   - name: cutting vegetables
     clip: {fileID: 8300000, guid: c25418270dcc7b24a9c61cc074b3a644, type: 3}
@@ -184,6 +211,7 @@ MonoBehaviour:
     maxVolume: 1
     pitch: 0
     music: 0
+    loopable: 0
     source: {fileID: 0}
   - name: stirring food
     clip: {fileID: 8300000, guid: 48942e386baf3a74d90b02f9cab8679c, type: 3}
@@ -191,6 +219,7 @@ MonoBehaviour:
     maxVolume: 1
     pitch: 0
     music: 0
+    loopable: 0
     source: {fileID: 0}
   - name: video game
     clip: {fileID: 8300000, guid: ad87479ca66c61f49bba52babd593c83, type: 3}
@@ -198,6 +227,7 @@ MonoBehaviour:
     maxVolume: 1
     pitch: 0
     music: 0
+    loopable: 0
     source: {fileID: 0}
   - name: clicking mouse
     clip: {fileID: 8300000, guid: cac739d1f00750545a571226ee3bbbfe, type: 3}
@@ -205,4 +235,21 @@ MonoBehaviour:
     maxVolume: 1
     pitch: 0
     music: 0
+    loopable: 1
+    source: {fileID: 0}
+  - name: Door
+    clip: {fileID: 8300000, guid: 6b95f4841eff7924da6927a583a45596, type: 3}
+    volume: 1
+    maxVolume: 1
+    pitch: 0
+    music: 0
+    loopable: 0
+    source: {fileID: 0}
+  - name: female heavy breathing
+    clip: {fileID: 8300000, guid: 67e23f13c6a39984f9d0e0264227b797, type: 3}
+    volume: 0.5
+    maxVolume: 1
+    pitch: 0
+    music: 0
+    loopable: 1
     source: {fileID: 0}

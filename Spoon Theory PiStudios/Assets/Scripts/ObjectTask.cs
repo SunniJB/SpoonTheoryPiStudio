@@ -118,7 +118,12 @@ public class ObjectTask : MonoBehaviour
 
             if(timer <= 0)
             {
-                if (task.spoonCost < 0) interactor.numberOfSpoons++; 
+                if (task.spoonCost < 0)
+                {
+                    interactor.numberOfSpoons++;
+                    if(interactor.lowSpoons) interactor.CheckIfStillLowSpoons();
+                    if(interactor.halfSpoons) interactor.CheckIfStillHalfSpoons();
+                }
                 else interactor.numberOfSpoons--;
 
                 spoonsTaken++;
