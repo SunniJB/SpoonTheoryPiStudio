@@ -25,7 +25,9 @@ public class CheckBox : MonoBehaviour
 
     public void OnChange(bool value)
     {
-        if (task.inProgress && task.objectTask.finished) return;
+        if (task.inProgress || task.objectTask.finished) return;
+
+        PlayCheckSound();
 
         if (value)
         {
@@ -46,7 +48,7 @@ public class CheckBox : MonoBehaviour
         if(task.outlineObject != null) task.outlineObject.enabled = value;
     }
 
-    public void PlayCheckSound()
+    void PlayCheckSound()
     {
         AudioManager.GetInstance().Play(audioName, 1f);
     }
