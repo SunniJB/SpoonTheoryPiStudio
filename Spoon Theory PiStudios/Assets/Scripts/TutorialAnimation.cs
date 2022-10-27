@@ -18,7 +18,7 @@ public class TutorialAnimation : MonoBehaviour
         player.canMove = false;
         player.moving = false;
 
-        gameObject.GetComponent<Collider>().enabled = false;
+        GetComponent<Collider>().enabled = false;
     }
     public void NextAnimation()
     {
