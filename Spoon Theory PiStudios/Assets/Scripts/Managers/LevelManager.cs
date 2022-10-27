@@ -33,6 +33,8 @@ public class LevelManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            if (controlsPanel.gameObject.activeInHierarchy) return;
+
             pause = !pause;
             AudioManager.GetInstance().Play(audioName, 1f);
             pausePanel.gameObject.SetActive(pause);
