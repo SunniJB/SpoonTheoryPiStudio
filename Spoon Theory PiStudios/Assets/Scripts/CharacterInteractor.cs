@@ -141,7 +141,7 @@ public class CharacterInteractor : MonoBehaviour
         {
             if (TutorialManager.GetInstance() != null && TutorialManager.GetInstance().tutorialStates != TutorialManager.TutorialStates.Finish) return;
 
-            if (TutorialManager.GetInstance() != null || numberOfSpoons < 5) return;
+            if (TutorialManager.GetInstance() == null && numberOfSpoons < 5) return;
             
             opencloseDoor.OpenCloseDoor();
             //GameManager.Instance.WorkScene();

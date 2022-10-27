@@ -37,7 +37,7 @@ public class LevelManager : MonoBehaviour
 
             if (characterInteractor.taskCanvasEnabled) return;
 
-            if (TutorialManager.GetInstance() == null) return;
+            if (TutorialManager.GetInstance() != null) return;
 
             pause = !pause;
             AudioManager.GetInstance().Play(audioName, 1f);
