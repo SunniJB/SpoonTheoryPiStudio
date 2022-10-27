@@ -90,6 +90,7 @@ public class LevelManager : MonoBehaviour
 
     public void GoToMenu()
     {
+        Time.timeScale = 1;
         GameManager.GetInstance().MenuScene();
     }
 
