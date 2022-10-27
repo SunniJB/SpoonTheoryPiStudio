@@ -8225,6 +8225,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 445311633}
     - target: {fileID: 6606836980417476329, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
+      propertyPath: levelManager
+      value: 
+      objectReference: {fileID: 1136278446}
+    - target: {fileID: 6606836980417476329, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
       propertyPath: hygieneSlider
       value: 
       objectReference: {fileID: 116545772}
@@ -8232,18 +8236,6 @@ PrefabInstance:
       propertyPath: happinessSlider
       value: 
       objectReference: {fileID: 216712500}
-    - target: {fileID: 6606836980417476329, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
-      propertyPath: femaleBreathingSound
-      value: female heavy breathing
-      objectReference: {fileID: 0}
-    - target: {fileID: 6606836980417476329, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
-      propertyPath: soundName.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6606836980417476329, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
-      propertyPath: soundName.Array.data[0]
-      value: female heavy breathing
-      objectReference: {fileID: 0}
     - target: {fileID: 6606836980417476330, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
       propertyPath: textPanel
       value: 

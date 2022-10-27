@@ -7,6 +7,7 @@ using TMPro;
 public class CharacterInteractor : MonoBehaviour
 {
     [SerializeField] LayerMask interactableLayer, defaultLayer;
+    [SerializeField] LevelManager levelManager;
 
     [Header("UI STATS")]
     public PromptUI promptUI;
@@ -73,7 +74,7 @@ public class CharacterInteractor : MonoBehaviour
         {
             if (TutorialManager.GetInstance() != null && TutorialManager.GetInstance().tutorialStates == TutorialManager.TutorialStates.Start) return;
 
-            if (TutorialManager.GetInstance() == null && LevelManager.GetInstance().pause) return;
+            if (TutorialManager.GetInstance() == null && levelManager.pause) return;
 
             taskCanvasEnabled = !taskCanvasEnabled;
             taskCanvas.gameObject.SetActive(taskCanvasEnabled);
@@ -259,5 +260,6 @@ public class CharacterInteractor : MonoBehaviour
     public void CheckIfStillLowSpoons()
     {
         if (spoonSlider.value / spoonSlider.maxValue > 0.25f) lowSpoons = false;
+        AudioManager.GetInstance().Stop(femaleBreathingSound);
     }
 }
