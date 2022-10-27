@@ -14,12 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskName: Buy lunch
   description: Task description
-  spoonCost: 2
+  spoonCost: 0
   hygieneCost: 0
   moneyCost: 5
   hungerCost: -2
-  happinesCost: 0
+  happinessCost: 0
   workPerformanceCost: 0
+  followingTask: {fileID: 0}
   outlineObject: {fileID: 0}
   objectTask: {fileID: 0}
+  parent: {fileID: 0}
   inProgress: 0
