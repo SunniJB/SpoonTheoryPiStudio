@@ -35,6 +35,10 @@ public class LevelManager : MonoBehaviour
         {
             if (controlsPanel.gameObject.activeInHierarchy) return;
 
+            if (characterInteractor.taskCanvasEnabled) return;
+
+            if (TutorialManager.GetInstance() != null) return;
+
             pause = !pause;
             AudioManager.GetInstance().Play(audioName, 1f);
             pausePanel.gameObject.SetActive(pause);
@@ -92,6 +96,7 @@ public class LevelManager : MonoBehaviour
 
     public void GoToMenu()
     {
+        Time.timeScale = 1;
         GameManager.GetInstance().MenuScene();
     }
 

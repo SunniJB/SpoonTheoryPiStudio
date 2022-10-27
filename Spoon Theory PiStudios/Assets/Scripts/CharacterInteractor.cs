@@ -73,6 +73,8 @@ public class CharacterInteractor : MonoBehaviour
         {
             if (TutorialManager.GetInstance() != null && TutorialManager.GetInstance().tutorialStates == TutorialManager.TutorialStates.Start) return;
 
+            if (TutorialManager.GetInstance() == null && LevelManager.GetInstance().pause) return;
+
             taskCanvasEnabled = !taskCanvasEnabled;
             taskCanvas.gameObject.SetActive(taskCanvasEnabled);
             taskManager.pinnedTasksPanel.gameObject.SetActive(!taskCanvasEnabled);
@@ -135,9 +137,12 @@ public class CharacterInteractor : MonoBehaviour
 
         opencloseDoor opencloseDoor = interactionHit[0].GetComponent<opencloseDoor>();
 
-        if (opencloseDoor != null && Input.GetKeyDown(KeyCode.F))
+        if (opencloseDoor != null && Input.GetKeyDown(KeyCode.F) && GameManager.GetInstance().dayTime == GameManager.DayTime.Morning)
         {
             if (TutorialManager.GetInstance() != null && TutorialManager.GetInstance().tutorialStates != TutorialManager.TutorialStates.Finish) return;
+
+            if (TutorialManager.GetInstance() == null && numberOfSpoons < 5) return;
+            
             opencloseDoor.OpenCloseDoor();
             //GameManager.Instance.WorkScene();
         }
