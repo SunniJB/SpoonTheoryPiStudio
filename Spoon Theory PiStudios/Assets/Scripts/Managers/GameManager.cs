@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
 
-        //tutorialFinished = false;
+        tutorialFinished = false;
     }
 
     private void Start()
