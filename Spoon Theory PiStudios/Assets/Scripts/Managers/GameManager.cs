@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadScene(int sceneNumber = -1)
     {
-        if(sceneNumber != -1) SceneManager.LoadScene(sceneNumber);
+        if (sceneNumber != -1) SceneManager.LoadScene(sceneNumber);
         else SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
@@ -117,5 +117,14 @@ public class GameManager : MonoBehaviour
     {
         dayTime = DayTime.Evening;
         //dayLight.color = new Color(0.511f, 0.1527415f, 0.135947f);
+    }
+
+    void StopAllSounds()
+    {
+        foreach (var item in AudioManager.GetInstance().sounds)
+        {
+            AudioManager.GetInstance().Stop(item.name);
+        }
+
     }
 }
