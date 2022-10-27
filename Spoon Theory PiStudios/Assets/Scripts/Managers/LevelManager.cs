@@ -5,9 +5,11 @@ using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
-    [SerializeField] Image avatarImg, pausePanel, characterUIPanel, controlsPanel;
+    [SerializeField] Image avatarImg, pausePanel, characterUIPanel, controlsPanel, shopPanel;
 
     public bool pause, shouldLockCursor;
+
+    public bool shopPanelEnabled;
 
     [SerializeField] CharacterInteractor characterInteractor;
 
@@ -19,6 +21,9 @@ public class LevelManager : MonoBehaviour
     {
         pausePanel.gameObject.SetActive(false);
         controlsPanel.gameObject.SetActive(false);
+        shopPanel.gameObject.SetActive(false);
+        shopPanelEnabled = false;
+
         pause = false;
         Time.timeScale = 1;
 
@@ -28,14 +33,37 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        PauseMenu();
+
+        ShopMenu();
+
+        if (wakeUpButton != null)
         {
-            if (controlsPanel.gameObject.activeInHierarchy) return;
+            if (wakeUpButton.activeInHierarchy)
+            {
+                shouldLockCursor = false;
+            }
+        }
+        if (GameManager.GetInstance().tutorialFinished == false)
+        {
+            shouldLockCursor = false;
+        }
 
-            if (characterInteractor.taskCanvasEnabled) return;
+        LockCursor();
+    }
 
-            if (TutorialManager.GetInstance() != null) return;
+    void PauseMenu()
+    {
+        if (controlsPanel.gameObject.activeInHierarchy) return;
 
+        if (characterInteractor.taskCanvasEnabled) return;
+
+        if (TutorialManager.GetInstance() != null) return;
+
+        if (shopPanelEnabled) return;
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {           
             pause = !pause;
             AudioManager.GetInstance().Play(audioName, 1f);
             pausePanel.gameObject.SetActive(pause);
@@ -55,20 +83,22 @@ public class LevelManager : MonoBehaviour
                 }
             }
         }
+    }
 
-        if (wakeUpButton != null)
-        {
-            if (wakeUpButton.activeInHierarchy)
-            {
-                shouldLockCursor = false;
-            }
-        }
-        if (GameManager.GetInstance().tutorialFinished == false)
-        {
-            shouldLockCursor = false;
-        }
+    void ShopMenu()
+    {
+        if (pause) return;
 
-        LockCursor();
+        if (characterInteractor.taskCanvasEnabled) return;
+
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            shopPanelEnabled = !shopPanelEnabled;
+
+            shopPanel.gameObject.SetActive(shopPanelEnabled);
+            characterInteractor.characterMovement.canMove = !shopPanelEnabled;
+            characterInteractor.characterMovement.moving = !shopPanelEnabled;
+        }
     }
 
     public void LockCursor()

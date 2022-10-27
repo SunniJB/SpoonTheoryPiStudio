@@ -2598,8 +2598,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd04f750dbea53b41b8cf6937054b43c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationsPlayed: 0
   characterUIAnimator: {fileID: 1972671933}
+  nextButton: {fileID: 1323576486}
 --- !u!1001 &813417046
 PrefabInstance:
   m_ObjectHideFlags: 0

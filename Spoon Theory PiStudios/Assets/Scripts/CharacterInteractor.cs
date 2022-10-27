@@ -22,7 +22,7 @@ public class CharacterInteractor : MonoBehaviour
     [SerializeField] Transform interactionPoint;
     public float clickInteractionDistance = 5, FInteractionDistance = 3;
 
-    CharacterMovement1stPerson characterMovement;
+    [HideInInspector] public CharacterMovement1stPerson characterMovement;
     public GameObject bed;
 
     [Header("TASKS")]
@@ -74,7 +74,7 @@ public class CharacterInteractor : MonoBehaviour
         {
             if (TutorialManager.GetInstance() != null && TutorialManager.GetInstance().tutorialStates == TutorialManager.TutorialStates.Start) return;
 
-            if (TutorialManager.GetInstance() == null && levelManager.pause) return;
+            if (TutorialManager.GetInstance() == null && (levelManager.pause || levelManager.shopPanelEnabled)) return;
 
             taskCanvasEnabled = !taskCanvasEnabled;
             taskCanvas.gameObject.SetActive(taskCanvasEnabled);

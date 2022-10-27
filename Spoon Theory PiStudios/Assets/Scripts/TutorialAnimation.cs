@@ -1,15 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TutorialAnimation : MonoBehaviour
 {
-    public int animationsPlayed;
+    int animationsPlayed;
 
     [SerializeField] Animator characterUIAnimator;
+    [SerializeField] Button nextButton;
     CharacterMovement1stPerson player;
+    private void Start()
+    {
+        nextButton.enabled = false;
+        animationsPlayed = 0;
+    }
     private void OnTriggerEnter(Collider other)
     {
+        nextButton.enabled = true;
         NextAnimation();
         player = other.GetComponent<CharacterMovement1stPerson>();
 
@@ -22,9 +30,13 @@ public class TutorialAnimation : MonoBehaviour
     }
     public void NextAnimation()
     {
-        animationsPlayed += 1;
-        characterUIAnimator.SetTrigger("nextAnimation");
-        if (animationsPlayed > 3)
+        animationsPlayed++;
+
+        if (animationsPlayed <= 5)
+        {
+            characterUIAnimator.SetTrigger("nextAnimation");
+        }
+        else
         {
             player.canMove = true;
         }
