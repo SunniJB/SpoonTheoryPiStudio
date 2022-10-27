@@ -16,6 +16,7 @@ public class Sound
     public float pitch;
 
     public bool music;
+    public bool loopable;
 
     [HideInInspector]
     public AudioSource source;

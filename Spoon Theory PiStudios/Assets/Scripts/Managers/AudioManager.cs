@@ -29,7 +29,7 @@ public class AudioManager : MonoBehaviour
 
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
-            s.source.loop = s.music;
+            s.source.loop = s.loopable;
         }
 
         // Valores iniciales de los sliders de musica y sonido
@@ -54,7 +54,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void Play(string name, float pitch)
+    public void Play(string name, float pitch = 1f)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)

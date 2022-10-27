@@ -8,7 +8,7 @@ public class CharacterInteractor : MonoBehaviour
 {
     [SerializeField] LayerMask interactableLayer, defaultLayer;
 
-    [Header("UI Stats")]
+    [Header("UI STATS")]
     public PromptUI promptUI;
     public Slider spoonSlider;
     [SerializeField] Slider hygieneSlider;
@@ -24,13 +24,13 @@ public class CharacterInteractor : MonoBehaviour
     CharacterMovement1stPerson characterMovement;
     public GameObject bed;
 
-    [Header("Tasks")]
+    [Header("TASKS")]
     [SerializeField] Image taskCanvas;
     [SerializeField] GameObject UIPanel;
     [SerializeField] TaskManager taskManager;
     public bool taskCanvasEnabled;
 
-    [Header("Player stats")]
+    [Header("PLAYER STATS")]
     public int numberOfSpoons;
     public float hygiene;
     public float happiness;
@@ -39,14 +39,18 @@ public class CharacterInteractor : MonoBehaviour
     public float workPerformance;
     public int dayCount;
     public bool hasSleptToday; //Is set to false by the level manager when you go to work, is set to false when you're low on spoons, is set to true by SleepInBed when you go to sleep.
+    [HideInInspector] public bool halfSpoons, lowSpoons;
 
-    [Header("Stats modifiers")]
+    [Header("STATS MODIFIERS")]
     [SerializeField] AnimationCurve speedMultiplierCurve;
     [HideInInspector] public float speedMultiplier;
     [SerializeField] AnimationCurve headbobbingCurve;
     [HideInInspector] public float headBobbingMultiplier;
     [SerializeField] AnimationCurve vignetteCurve;
     [SerializeField] AnimationCurve caCurve;
+
+    [Header("PLAYER SOUNDS")]
+    [SerializeField] string femaleBreathingSound;
 
     private void Awake()
     {
@@ -59,9 +63,6 @@ public class CharacterInteractor : MonoBehaviour
         spoonSlider.value = numberOfSpoons;
         hasSleptToday = true;
         taskCanvas.gameObject.SetActive(false);
-
-        StartCoroutine(HalfSpoons());
-        StartCoroutine(LowSpoons());
     }
 
     // Update is called once per frame
@@ -91,10 +92,14 @@ public class CharacterInteractor : MonoBehaviour
 
         UpdateStatsModifiers();
 
-        if (numberOfSpoons < 4)
+        if(!halfSpoons && spoonSlider.value / spoonSlider.maxValue <= 0.5f)
         {
-            hasSleptToday = false;
-            promptUI.SetUpText("I'm getting tired. I guess I could sleep.");
+            HalfSpoons();
+        }
+
+        if(!lowSpoons && spoonSlider.value / spoonSlider.maxValue <= 0.25f)
+        {
+            LowSpoons();
         }
     }
 
@@ -226,14 +231,28 @@ public class CharacterInteractor : MonoBehaviour
             hunger = 0;
     }
 
-    IEnumerator HalfSpoons()
+    void HalfSpoons()
     {
-        yield return new WaitUntil(() => spoonSlider.value / spoonSlider.maxValue < 0.5f);
-
+        halfSpoons = true;
+        Debug.Log("half spoons");
     }
-    IEnumerator LowSpoons()
+    public void CheckIfStillHalfSpoons()
     {
-        yield return new WaitUntil(() => spoonSlider.value / spoonSlider.maxValue < 0.25f);
+        if (spoonSlider.value / spoonSlider.maxValue > 0.5f) halfSpoons = false;
+    }
+    void LowSpoons()
+    {
+        Debug.Log("low spoons");
 
+        lowSpoons = true;
+
+        AudioManager.GetInstance().Play(femaleBreathingSound);
+
+        hasSleptToday = false;
+        promptUI.SetUpText("I'm getting tired. I guess I could sleep.");
+    }
+    public void CheckIfStillLowSpoons()
+    {
+        if (spoonSlider.value / spoonSlider.maxValue > 0.25f) lowSpoons = false;
     }
 }
