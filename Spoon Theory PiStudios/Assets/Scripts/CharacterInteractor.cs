@@ -76,6 +76,7 @@ public class CharacterInteractor : MonoBehaviour
             taskCanvas.gameObject.SetActive(taskCanvasEnabled);
             taskManager.pinnedTasksPanel.gameObject.SetActive(!taskCanvasEnabled);
             characterMovement.canMove = !taskCanvasEnabled;
+            characterMovement.moving = !taskCanvasEnabled;
             UIPanel.SetActive(!taskCanvasEnabled);
 
             if(taskCanvasEnabled) Cursor.lockState = CursorLockMode.None;

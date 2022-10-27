@@ -101,7 +101,7 @@ public class TutorialManager : MonoBehaviour
 
         if (player.position.z > finishTutorial1.transform.position.z) finishTutorial1.SetActive(false);
         
-        if (player.position.z > finishTutorial2.transform.position.z && finishTutorial2.activeInHierarchy) Destroy(finishTutorial2);
+        if (player.position.z > finishTutorial2.transform.position.z && finishTutorial2.activeInHierarchy) finishTutorial2.SetActive(false);
 
         if (finishFinished) LeaveTutorial();
     }

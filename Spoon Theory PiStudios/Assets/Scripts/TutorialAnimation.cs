@@ -5,22 +5,28 @@ using UnityEngine;
 public class TutorialAnimation : MonoBehaviour
 {
     public int animationsPlayed;
-    Collider playerCollider;
+
+    [SerializeField] Animator characterUIAnimator;
+    CharacterMovement1stPerson player;
     private void OnTriggerEnter(Collider other)
     {
         NextAnimation();
-        playerCollider = other;
-        other.gameObject.GetComponent<CharacterMovement1stPerson>().canMove = false;
-        other.gameObject.GetComponent<CharacterMovement1stPerson>().moving = false;
-        gameObject.GetComponent<Collider>().enabled = false;
+        player = other.GetComponent<CharacterMovement1stPerson>();
+
+        if (other == null) return;
+
+        player.canMove = false;
+        player.moving = false;
+
+        GetComponent<Collider>().enabled = false;
     }
     public void NextAnimation()
     {
         animationsPlayed += 1;
-        GameObject.Find("Character UI").GetComponent<Animator>().SetTrigger("nextAnimation");
+        characterUIAnimator.SetTrigger("nextAnimation");
         if (animationsPlayed > 3)
         {
-            playerCollider.gameObject.GetComponent<CharacterMovement1stPerson>().canMove = true;
+            player.canMove = true;
         }
     }
 
