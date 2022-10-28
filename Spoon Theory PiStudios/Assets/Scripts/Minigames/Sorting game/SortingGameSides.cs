@@ -27,7 +27,7 @@ public class SortingGameSides : MonoBehaviour
         {
             if (cutlery.goalSide == gameObject)
             {
-                AudioManager.GetInstance().Play(dropAudio, Random.Range(0.8f, 1.3f));
+                AudioManager.GetInstance().Play(dropAudio, Random.Range(0.8f, 2.5f));
                 cutlery.isSorted = true;
                 sortedCutlery++;
                 StartCoroutine(MoveToRightPlace(cutlery.GetComponent<RectTransform>()));
