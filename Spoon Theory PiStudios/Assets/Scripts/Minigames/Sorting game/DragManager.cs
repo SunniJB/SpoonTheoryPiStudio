@@ -5,6 +5,8 @@ using UnityEngine.EventSystems;
 
 public class DragManager : MonoBehaviour, IBeginDragHandler, IEndDragHandler
 {
+    string pickUpAudio = "Pick up cutlery";
+
     [SerializeField] 
     private Canvas canvas;
 
@@ -49,6 +51,7 @@ public class DragManager : MonoBehaviour, IBeginDragHandler, IEndDragHandler
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        AudioManager.GetInstance().Play(pickUpAudio, Random.Range(0.8f, 2.5f));
         DeactivateCollider();
     }
 

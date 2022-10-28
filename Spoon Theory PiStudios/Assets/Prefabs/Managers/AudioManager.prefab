@@ -285,3 +285,19 @@ MonoBehaviour:
     music: 0
     loopable: 1
     source: {fileID: 0}
+  - name: Pick up cutlery
+    clip: {fileID: 8300000, guid: 25bd8b413e7a84a4a8c8261a3134c63a, type: 3}
+    volume: 0.5
+    maxVolume: 1
+    pitch: 0
+    music: 0
+    loopable: 0
+    source: {fileID: 0}
+  - name: Drop cutlery
+    clip: {fileID: 8300000, guid: bfa8b84da3fcfe042a5dba432dcb6855, type: 3}
+    volume: 0.5
+    maxVolume: 1
+    pitch: 0
+    music: 0
+    loopable: 0
+    source: {fileID: 0}

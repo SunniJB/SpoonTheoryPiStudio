@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class SortingGameSides : MonoBehaviour
 {
+    string dropAudio = "Drop cutlery";
+
     [SerializeField] Transform iniPos;
     [SerializeField] float xSpacing = 11, sortingSpeed;
     Transform lastParent;
@@ -25,6 +27,7 @@ public class SortingGameSides : MonoBehaviour
         {
             if (cutlery.goalSide == gameObject)
             {
+                AudioManager.GetInstance().Play(dropAudio, Random.Range(0.8f, 1.3f));
                 cutlery.isSorted = true;
                 sortedCutlery++;
                 StartCoroutine(MoveToRightPlace(cutlery.GetComponent<RectTransform>()));
