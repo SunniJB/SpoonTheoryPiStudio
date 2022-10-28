@@ -61,6 +61,30 @@ MonoBehaviour:
     music: 1
     loopable: 1
     source: {fileID: 0}
+  - name: City ambience
+    clip: {fileID: 8300000, guid: f8feeb876cac5aa4ba8275a0647655ff, type: 3}
+    volume: 0.5
+    maxVolume: 1
+    pitch: 0
+    music: 0
+    loopable: 1
+    source: {fileID: 0}
+  - name: Sorting Music
+    clip: {fileID: 8300000, guid: c54b4c6605564a743980d392a07a8cd5, type: 3}
+    volume: 0.5
+    maxVolume: 1
+    pitch: 0
+    music: 0
+    loopable: 1
+    source: {fileID: 0}
+  - name: Sorting ambience
+    clip: {fileID: 8300000, guid: 67e23f13c6a39984f9d0e0264227b797, type: 3}
+    volume: 0.5
+    maxVolume: 1
+    pitch: 0
+    music: 0
+    loopable: 1
+    source: {fileID: 0}
   - name: pin task
     clip: {fileID: 8300000, guid: cdaa238842e0ffc4c822b73d05b48b78, type: 3}
     volume: 1

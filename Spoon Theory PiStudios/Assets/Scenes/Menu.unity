@@ -2535,7 +2535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4388c81c7d3f356419ad440b0fd482cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioName: Menu Music
+  audioName: []
 --- !u!1 &1959584273
 GameObject:
   m_ObjectHideFlags: 0
@@ -3016,7 +3016,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4388c81c7d3f356419ad440b0fd482cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioName: Menu Music
+  audioName:
+  - Menu Music
 --- !u!1001 &6848551064939630651
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -3882,7 +3882,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4388c81c7d3f356419ad440b0fd482cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioName: Apartment Music
+  audioName:
+  - Apartment Music
+  - City ambience
 --- !u!1 &1138244141
 GameObject:
   m_ObjectHideFlags: 0

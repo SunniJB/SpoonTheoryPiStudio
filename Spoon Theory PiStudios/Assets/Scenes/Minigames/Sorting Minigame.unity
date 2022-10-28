@@ -1898,6 +1898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioName: hover over button
+  gameManager: {fileID: 0}
 --- !u!1 &344007593
 GameObject:
   m_ObjectHideFlags: 0
@@ -2029,6 +2030,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioName: hover over button
+  gameManager: {fileID: 0}
 --- !u!114 &345955865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3594,6 +3596,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioName: hover over button
+  gameManager: {fileID: 0}
 --- !u!1 &657783683
 GameObject:
   m_ObjectHideFlags: 0
@@ -4893,6 +4896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioName: hover over button
+  gameManager: {fileID: 0}
 --- !u!114 &814229217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7401,7 +7405,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2901905505294013752, guid: 09b762f93a58aed45bd328bfef58440b, type: 3}
   m_PrefabInstance: {fileID: 5561509261852251090}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 5561509261852251091}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72c7840bca31c0848ae1a913cae504a3, type: 3}
@@ -7812,6 +7816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioName: hover over button
+  gameManager: {fileID: 0}
 --- !u!1 &1766598132
 GameObject:
   m_ObjectHideFlags: 0
@@ -10173,6 +10178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioName: hover over button
+  gameManager: {fileID: 0}
 --- !u!114 &2142150604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10275,6 +10281,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09b762f93a58aed45bd328bfef58440b, type: 3}
+--- !u!1 &5561509261852251091 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1515349945847412268, guid: 09b762f93a58aed45bd328bfef58440b, type: 3}
+  m_PrefabInstance: {fileID: 5561509261852251090}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5561509261852251092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5561509261852251091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4388c81c7d3f356419ad440b0fd482cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioName:
+  - Sorting Music
+  - Sorting ambience
 --- !u!1001 &6106296227367679505
 PrefabInstance:
   m_ObjectHideFlags: 0
