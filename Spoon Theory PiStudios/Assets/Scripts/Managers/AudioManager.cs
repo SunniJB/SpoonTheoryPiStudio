@@ -7,6 +7,7 @@ public class AudioManager : MonoBehaviour
     public Sound[] sounds;
 
     public static AudioManager instance;
+    public float startVolume = 5;
     public static AudioManager GetInstance() { return instance; }
 
     void Awake()
@@ -33,8 +34,8 @@ public class AudioManager : MonoBehaviour
         }
 
         // Valores iniciales de los sliders de musica y sonido
-        AudioVolume(PlayerPrefs.GetFloat("SoundVolume", 10), false);
-        AudioVolume(PlayerPrefs.GetFloat("MusicVolume", 10), true);
+        AudioVolume(PlayerPrefs.GetFloat("SoundVolume", startVolume), false);
+        AudioVolume(PlayerPrefs.GetFloat("MusicVolume", startVolume), true);
 
         ChangeBackgroundMusic(SceneManager.GetActiveScene().name);
     }
