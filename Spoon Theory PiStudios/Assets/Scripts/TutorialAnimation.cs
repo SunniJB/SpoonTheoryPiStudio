@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TutorialAnimation : MonoBehaviour
 {
-    int animationsPlayed;
+    public int animationsPlayed;
 
     [SerializeField] Animator characterUIAnimator;
     [SerializeField] Button nextButton;
@@ -32,14 +32,20 @@ public class TutorialAnimation : MonoBehaviour
     {
         animationsPlayed++;
 
-        if (animationsPlayed <= 5)
+        if (animationsPlayed < 5)
         {
             characterUIAnimator.SetTrigger("nextAnimation");
         }
         else
         {
+            characterUIAnimator.SetTrigger("nextAnimation");
             player.canMove = true;
         }
+
+        // animationsPlayed += 1;
+        // characterUIAnimator.SetTrigger("nextAnimation");
+        // if (animationsPlayed > 3)
+        // Finish
     }
 
 }
