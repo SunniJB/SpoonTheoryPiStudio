@@ -161,7 +161,12 @@ public class CharacterInteractor : MonoBehaviour
             promptUI.SetUpText("I can't go to sleep yet.");
         }
 
+        MinigameEnvironment minigameEnvironment = interactionHit[0].GetComponent<MinigameEnvironment>();
 
+        if (minigameEnvironment != null && Input.GetKeyDown(KeyCode.F))
+        {
+            minigameEnvironment.GoToScene();
+        }
     }
     
     private void OnDrawGizmos()
