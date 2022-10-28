@@ -52,7 +52,7 @@ public class CharacterInteractor : MonoBehaviour
 
     [Header("PLAYER SOUNDS")]
     [SerializeField] string femaleBreathingSound;
-
+    [SerializeField] AnimationCurve breathingVolume;
     private void Awake()
     {
         characterMovement = GetComponent<CharacterMovement1stPerson>();
@@ -104,6 +104,8 @@ public class CharacterInteractor : MonoBehaviour
         {
             LowSpoons();
         }
+
+        /*if (AudioManager.GetInstance().CheckPlaying(femaleBreathingSound)) */AudioManager.GetInstance().SoundVolume(femaleBreathingSound, breathingVolume.Evaluate(spoonSlider.value / spoonSlider.maxValue));
     }
 
     private void FInteraction()
@@ -161,7 +163,21 @@ public class CharacterInteractor : MonoBehaviour
             promptUI.SetUpText("I can't go to sleep yet.");
         }
 
+        CheckCalendar checkCalendar = interactionHit[0].GetComponent<CheckCalendar>();
 
+        if (checkCalendar != null && Input.GetKeyDown(KeyCode.F))
+        {
+            if (TutorialManager.GetInstance() != null && TutorialManager.GetInstance().tutorialStates != TutorialManager.TutorialStates.Finish) return;
+
+            checkCalendar.CheckGoal();
+        }
+
+        MinigameEnvironment minigameEnvironment = interactionHit[0].GetComponent<MinigameEnvironment>();
+
+        if (minigameEnvironment != null && Input.GetKeyDown(KeyCode.F))
+        {
+            minigameEnvironment.GoToScene();
+        }
     }
     
     private void OnDrawGizmos()

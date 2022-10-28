@@ -9,7 +9,7 @@ public class MenuManager : MonoBehaviour
     public void Begin()
     {
         GameManager.GetInstance().dayCount = 0;
-        GameManager.GetInstance().UpdateGameManagerStats(0, 5, 5, 5, 10, 0);
+        GameManager.GetInstance().UpdateGameManagerStats(0, 5, Random.Range(10, 31), 5, 10, 0);
         GameManager.GetInstance().SetTimeMorning();
         GameManager.GetInstance().ApartmentScene();
     }
