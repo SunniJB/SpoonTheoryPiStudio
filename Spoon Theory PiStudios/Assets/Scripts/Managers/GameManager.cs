@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public DayTime dayTime;
     public int dayCount;
     public float moneyGoal;
+    public int totalDaysBeforeLoss = 60;
 
     [Header("Player stats")]
     public float money;

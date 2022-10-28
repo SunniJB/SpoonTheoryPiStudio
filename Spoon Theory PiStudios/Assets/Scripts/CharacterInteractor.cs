@@ -161,6 +161,15 @@ public class CharacterInteractor : MonoBehaviour
             promptUI.SetUpText("I can't go to sleep yet.");
         }
 
+        CheckCalendar checkCalendar = interactionHit[0].GetComponent<CheckCalendar>();
+
+        if (checkCalendar != null && Input.GetKeyDown(KeyCode.F))
+        {
+            if (TutorialManager.GetInstance() != null && TutorialManager.GetInstance().tutorialStates != TutorialManager.TutorialStates.Finish) return;
+
+            checkCalendar.CheckGoal();
+        }
+
         MinigameEnvironment minigameEnvironment = interactionHit[0].GetComponent<MinigameEnvironment>();
 
         if (minigameEnvironment != null && Input.GetKeyDown(KeyCode.F))
