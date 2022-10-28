@@ -38,7 +38,7 @@ public class TutorialAnimation : MonoBehaviour
         }
         else
         {
-            characterUIAnimator.SetTrigger("nextAnimation");
+            characterUIAnimator.SetTrigger("finalAnim");
             player.canMove = true;
         }
 
