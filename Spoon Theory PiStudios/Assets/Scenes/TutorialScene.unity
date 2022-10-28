@@ -3905,13 +3905,13 @@ MonoBehaviour:
   pausePanel: {fileID: 872950961}
   characterUIPanel: {fileID: 1972671931}
   controlsPanel: {fileID: 178192557}
-  shopPanel: {fileID: 0}
+  shopPanel: {fileID: 250185958}
   pause: 0
   shouldLockCursor: 0
   shopPanelEnabled: 0
   characterInteractor: {fileID: 616103596}
   audioName: open pause menu
-  wakeUpButton: {fileID: 250185956}
+  wakeUpButton: {fileID: 0}
 --- !u!1 &1138244141
 GameObject:
   m_ObjectHideFlags: 0
