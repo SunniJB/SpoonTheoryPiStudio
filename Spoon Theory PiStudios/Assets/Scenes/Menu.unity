@@ -2098,6 +2098,7 @@ GameObject:
   - component: {fileID: 1548378566}
   - component: {fileID: 1548378565}
   - component: {fileID: 1548378564}
+  - component: {fileID: 1548378567}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2171,6 +2172,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1548378567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548378563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!114 &1580412494 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
@@ -2189,258 +2223,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.size
-      value: 27
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[1].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: e3e993146d5b6ad4bbd63c042d4321e3, type: 3}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[1].name
-      value: Apartment Music
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[2].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: cdaa238842e0ffc4c822b73d05b48b78, type: 3}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[2].name
-      value: pin task
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[3].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: cde0712e2125fea4ab46190803748e2f, type: 3}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[3].name
-      value: open pause menu
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[4].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 5af958f6600b1ce4694afcb6c3c1e656, type: 3}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[4].name
-      value: left click
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[5].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 80c1dcfdaff259445840d1f27d8ced3f, type: 3}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[5].name
-      value: hover over button
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[6].clip
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[6].name
-      value: START OF OBJECT SOUNDS
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[7].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: d618706e8ba762747b7d3c29050f15b3, type: 3}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[7].name
-      value: change clothes
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[8].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 38c1d68592774764da2ca49e8af8ad33, type: 3}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[8].name
-      value: toothbrush
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[9].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 3aa099c01ea3cc74da008a9b53189863, type: 3}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[9].name
-      value: light frying
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[10].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 88f8b16014ad1a64aaaf865d142a43a0, type: 3}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[10].name
-      value: take a shower
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[11].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 209483c1f05d7554c9b4375b9eb961b2, type: 3}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[11].name
-      value: pet cat
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[12].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: d68136c0b5fab194bb0d4405f7c9b9b8, type: 3}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[12].name
-      value: watch tv
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[13].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 136ac0eb3dc8ebc47b03fb46d191a1be, type: 3}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[13].name
-      value: take powernap
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[14].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 9380302c5a2adca4b8e47b5621037b1c, type: 3}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[14].name
-      value: sleep in bed
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[15].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 7f7fecb29115ab1489ba870ee225a845, type: 3}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[15].name
-      value: draining sink
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[16].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 827290e2cfa26c4449f6040b04d0f750, type: 3}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[16].name
-      value: person removing jacket
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[17].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: c6beeec1e9a7cce47a4c612dfd4d91da, type: 3}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[17].name
-      value: page turning
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[18].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 005e454c0f54b19419d7af76d6ea7e22, type: 3}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[18].name
-      value: writing
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[19].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 15c0af204628c3f4da4fecce26e84d7d, type: 3}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[19].name
-      value: vacuum
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[1].music
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[20].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 082dbeed96fd4e947ac50b6b54aa89bb, type: 3}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[20].name
-      value: watering can
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[21].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: c25418270dcc7b24a9c61cc074b3a644, type: 3}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[21].name
-      value: cutting vegetables
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[22].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 48942e386baf3a74d90b02f9cab8679c, type: 3}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[22].name
-      value: stirring food
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[23].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: ad87479ca66c61f49bba52babd593c83, type: 3}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[23].name
-      value: video game
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[24].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: cac739d1f00750545a571226ee3bbbfe, type: 3}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[24].name
-      value: clicking mouse
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[25].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 6b95f4841eff7924da6927a583a45596, type: 3}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[25].name
-      value: Door
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[26].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 67e23f13c6a39984f9d0e0264227b797, type: 3}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[26].name
-      value: female heavy breathing
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[1].volume
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[25].volume
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[26].volume
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[1].loopable
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[23].loopable
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[24].loopable
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[25].loopable
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[26].loopable
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[26].maxVolume
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5561417923616072048, guid: ea07da735420f13419d78a271882b852, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -2753,7 +2535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4388c81c7d3f356419ad440b0fd482cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioName: Menu Music
+  audioName: []
 --- !u!1 &1959584273
 GameObject:
   m_ObjectHideFlags: 0
@@ -3185,6 +2967,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2126573890}
   - component: {fileID: 2126573891}
+  - component: {fileID: 2126573892}
   m_Layer: 0
   m_Name: MenuManager
   m_TagString: Untagged
@@ -3221,6 +3004,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 148812638}
   cutsceneBackground: {fileID: 2026536792}
+--- !u!114 &2126573892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126573889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4388c81c7d3f356419ad440b0fd482cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioName:
+  - Menu Music
 --- !u!1001 &6848551064939630651
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3228,6 +3025,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6475800430078241032, guid: 4f1787c81b9e7bc47a27e1d5407abe41, type: 3}
+      propertyPath: apartmentMusic
+      value: Apartment Music
+      objectReference: {fileID: 0}
     - target: {fileID: 6475800430078241032, guid: 4f1787c81b9e7bc47a27e1d5407abe41, type: 3}
       propertyPath: tutorialFinished
       value: 0

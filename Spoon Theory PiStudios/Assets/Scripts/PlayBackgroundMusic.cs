@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class PlayBackgroundMusic : MonoBehaviour
 {
-    public string audioName;
+    public string[] audioName;
 
     void Start()
     {
-        AudioManager.GetInstance().Play(audioName, 1f);
+        for (int i = 0; i < audioName.Length; i++)
+        {
+            AudioManager.GetInstance().Play(audioName[i], 1f);
+        }
     }
 
 }
