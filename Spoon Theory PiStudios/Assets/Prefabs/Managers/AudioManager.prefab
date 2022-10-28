@@ -53,6 +53,14 @@ MonoBehaviour:
     music: 1
     loopable: 1
     source: {fileID: 0}
+  - name: Apartment Music
+    clip: {fileID: 8300000, guid: e3e993146d5b6ad4bbd63c042d4321e3, type: 3}
+    volume: 1
+    maxVolume: 1
+    pitch: 0
+    music: 1
+    loopable: 1
+    source: {fileID: 0}
   - name: pin task
     clip: {fileID: 8300000, guid: cdaa238842e0ffc4c822b73d05b48b78, type: 3}
     volume: 1
