@@ -172,7 +172,7 @@ public class CharacterInteractor : MonoBehaviour
         if (minigameEnvironment != null && Input.GetKeyDown(KeyCode.F))
         {
             minigameEnvironment.GoToScene();
-        }
+        } 
     }
     
     private void OnDrawGizmos()
