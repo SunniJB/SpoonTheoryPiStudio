@@ -29,6 +29,7 @@ public class GoalManager : MonoBehaviour
     {
         //what happens when you achieve the goal
         winPanel.SetActive(true);
+        AudioManager.GetInstance().StopAllSounds();
         Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.None;
     }
@@ -38,6 +39,7 @@ public class GoalManager : MonoBehaviour
         //what happens when the player has run out of time
         losePanel.SetActive(true);
         Time.timeScale = 0;
+        AudioManager.GetInstance().StopAllSounds();
         Cursor.lockState = CursorLockMode.None;
     }
 

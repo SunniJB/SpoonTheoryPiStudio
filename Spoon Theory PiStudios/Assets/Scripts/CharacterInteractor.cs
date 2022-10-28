@@ -52,7 +52,7 @@ public class CharacterInteractor : MonoBehaviour
 
     [Header("PLAYER SOUNDS")]
     [SerializeField] string femaleBreathingSound;
-
+    [SerializeField] AnimationCurve breathingVolume;
     private void Awake()
     {
         characterMovement = GetComponent<CharacterMovement1stPerson>();
@@ -104,6 +104,8 @@ public class CharacterInteractor : MonoBehaviour
         {
             LowSpoons();
         }
+
+        /*if (AudioManager.GetInstance().CheckPlaying(femaleBreathingSound)) */AudioManager.GetInstance().SoundVolume(femaleBreathingSound, breathingVolume.Evaluate(spoonSlider.value / spoonSlider.maxValue));
     }
 
     private void FInteraction()
