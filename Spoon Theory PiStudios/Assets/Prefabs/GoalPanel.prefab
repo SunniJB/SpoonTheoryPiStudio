@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1780431332132181843}
   - component: {fileID: 1780431332132181840}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: CurrentMoneyText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,12 +31,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1780431332299399980}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -905, y: 404}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0.02, y: 0.74}
+  m_AnchorMax: {x: 0.45, y: 0.89}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1780431332132181843
 CanvasRenderer:
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -697.1824, w: -136.92384}
+  m_margin: {x: 1.872757, y: 0, z: -1.2029419, w: 1.7535858}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 1780431332154683477}
   - component: {fileID: 1780431332154683482}
   m_Layer: 5
-  m_Name: Text (TMP) (3)
+  m_Name: Filler3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -166,12 +166,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1780431332299399980}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 61, y: 13}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0.45, y: 0.37}
+  m_AnchorMax: {x: 0.86, y: 0.53}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1780431332154683477
 CanvasRenderer:
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ...................................................
+  m_text: ....................................
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fd2b7b411a907a44883243100f2c24cf, type: 2}
   m_sharedMaterial: {fileID: -5549834820176784761, guid: fd2b7b411a907a44883243100f2c24cf, type: 2}
@@ -264,7 +264,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -51.278275, y: 0, z: -888.83905, w: -136.92384}
+  m_margin: {x: 0.35343936, y: 0, z: -1.3112184, w: -3.3143616}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -287,7 +287,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1780431332299399980
 RectTransform:
   m_ObjectHideFlags: 0
@@ -301,13 +301,13 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1780431333912704605}
-  - {fileID: 1780431333886988770}
   - {fileID: 1780431332132181841}
+  - {fileID: 1780431333886988770}
   - {fileID: 1780431332879882290}
   - {fileID: 1780431333772559507}
-  - {fileID: 1780431332154683483}
   - {fileID: 1780431333478197459}
   - {fileID: 1780431332644242216}
+  - {fileID: 1780431332154683483}
   - {fileID: 1780431332461427714}
   - {fileID: 1780431332429822027}
   - {fileID: 1780431332996055717}
@@ -390,10 +390,10 @@ RectTransform:
   m_Father: {fileID: 1780431332299399980}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 61, y: 207.99997}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0.86, y: 0.56}
+  m_AnchorMax: {x: 0.97, y: 0.71}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0.000061035156, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1780431332429822021
 CanvasRenderer:
@@ -486,7 +486,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 905.673, y: 0, z: -939.37134, w: -136.92384}
+  m_margin: {x: -0.99040204, y: 0, z: 2.2893062, w: 1.2857056}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -525,10 +525,10 @@ RectTransform:
   m_Father: {fileID: 1780431332299399980}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 61, y: 407}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0.86, y: 0.74}
+  m_AnchorMax: {x: 0.97, y: 0.89}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1780431332461427964
 CanvasRenderer:
@@ -621,7 +621,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 905.673, y: 0, z: -939.37134, w: -136.92384}
+  m_margin: {x: 0.734768, y: 0, z: 1.1733474, w: -1.5433655}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -639,7 +639,7 @@ GameObject:
   - component: {fileID: 1780431332644242218}
   - component: {fileID: 1780431332644242219}
   m_Layer: 5
-  m_Name: Text (TMP) (7)
+  m_Name: Filler2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -658,12 +658,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1780431332299399980}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 61, y: 208}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0.45, y: 0.56}
+  m_AnchorMax: {x: 0.86, y: 0.71}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1780431332644242218
 CanvasRenderer:
@@ -693,7 +693,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ".............................................\xA3"
+  m_text: "...................................\xA3"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fd2b7b411a907a44883243100f2c24cf, type: 2}
   m_sharedMaterial: {fileID: -5549834820176784761, guid: fd2b7b411a907a44883243100f2c24cf, type: 2}
@@ -756,7 +756,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -51.278275, y: 0, z: -888.83905, w: -136.92384}
+  m_margin: {x: -2.167221, y: 0, z: -0.68353283, w: 0.80792236}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -774,7 +774,7 @@ GameObject:
   - component: {fileID: 1780431332879882284}
   - component: {fileID: 1780431332879882285}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: DaysLeftText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -795,10 +795,10 @@ RectTransform:
   m_Father: {fileID: 1780431332299399980}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -898, y: 13}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0.02, y: 0.37}
+  m_AnchorMax: {x: 0.45, y: 0.53}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1780431332879882284
 CanvasRenderer:
@@ -891,7 +891,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -570.8582, w: -136.92384}
+  m_margin: {x: -0.25255594, y: 0, z: -0.77435297, w: -1.1666336}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -930,10 +930,10 @@ RectTransform:
   m_Father: {fileID: 1780431332299399980}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 147, y: 14}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0.86, y: 0.37}
+  m_AnchorMax: {x: 0.97, y: 0.53}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1780431332996055719
 CanvasRenderer:
@@ -1026,7 +1026,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 905.673, y: 0, z: -939.37134, w: -136.92384}
+  m_margin: {x: -0.953125, y: 0, z: -0.22874448, w: 0.8411332}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1125,7 +1125,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26.55
+  m_fontSize: 72
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1179,7 +1179,7 @@ GameObject:
   - component: {fileID: 1780431333478197453}
   - component: {fileID: 1780431333478197458}
   m_Layer: 5
-  m_Name: Text (TMP) (5)
+  m_Name: Filler1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1198,12 +1198,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1780431332299399980}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 61, y: 407}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0.45, y: 0.74}
+  m_AnchorMax: {x: 0.86, y: 0.89}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1780431333478197453
 CanvasRenderer:
@@ -1233,7 +1233,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ".............................................\xA3"
+  m_text: "...................................\xA3"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fd2b7b411a907a44883243100f2c24cf, type: 2}
   m_sharedMaterial: {fileID: -5549834820176784761, guid: fd2b7b411a907a44883243100f2c24cf, type: 2}
@@ -1296,7 +1296,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -51.278275, y: 0, z: -888.83905, w: -136.92384}
+  m_margin: {x: -1.3875275, y: 0, z: 1.8111869, w: 1.8182755}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1330,17 +1330,17 @@ RectTransform:
   m_GameObject: {fileID: 1780431333772559504}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.9802, y: 2.9802, z: 2.9802}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1780431333267730139}
   m_Father: {fileID: 1780431332299399980}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 43, y: -366}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.4, y: 0.12}
+  m_AnchorMax: {x: 0.65, y: 0.21}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1780431333772559500
 CanvasRenderer:
@@ -1448,7 +1448,7 @@ GameObject:
   - component: {fileID: 1780431333886988764}
   - component: {fileID: 1780431333886988765}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: MoneyNeededText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1467,12 +1467,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1780431332299399980}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -906, y: 213}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0.02, y: 0.56}
+  m_AnchorMax: {x: 0.45, y: 0.71}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1780431333886988764
 CanvasRenderer:
@@ -1565,7 +1565,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -670.2277, w: -136.92384}
+  m_margin: {x: -1.6523285, y: 0, z: -3.3310242, w: -2.865425}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

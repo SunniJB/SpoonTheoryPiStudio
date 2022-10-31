@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MinigameManager : MonoBehaviour
 {
-    float workPerform;
+    public float workPerform;
     float money;
 
     public void Complete(int _spoonCost, float _totalTime, float _dividend = 100)

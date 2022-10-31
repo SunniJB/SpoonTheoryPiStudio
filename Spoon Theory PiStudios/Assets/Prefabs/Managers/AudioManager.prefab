@@ -55,8 +55,8 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Apartment Music
     clip: {fileID: 8300000, guid: e3e993146d5b6ad4bbd63c042d4321e3, type: 3}
-    volume: 1
-    maxVolume: 1
+    volume: 0.5
+    maxVolume: 0.5
     pitch: 0
     music: 1
     loopable: 1
@@ -301,3 +301,4 @@ MonoBehaviour:
     music: 0
     loopable: 0
     source: {fileID: 0}
+  startVolume: 5

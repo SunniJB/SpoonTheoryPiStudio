@@ -107,6 +107,18 @@ public class MemoryManager : MonoBehaviour
 
             finalTimeTxt.text = "Your final time was : " + timerMin.ToString("0") + ":" + timerSec.ToString("f1");
             workTxt.text = "Performance Review: " + _mm.GetWorkPerform().ToString("00") + "/50";
+            if (_mm.workPerform < 12.5)
+            {
+                workTxt.text = "You didn't do great. There is always tomorrow.";
+            }
+            if (_mm.workPerform > 12.5f && _mm.workPerform < 37.5f)
+            {
+                workTxt.text = "You did some good work today.";
+            }
+            if (_mm.workPerform > 37.5f)
+            {
+                workTxt.text = "Wow, you did great!";
+            }
             moneTxt.text = "you earned: £" + _mm.GetMoney().ToString("000");
             moneygiven = true;
         }

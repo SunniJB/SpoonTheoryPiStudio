@@ -218,7 +218,18 @@ public class SimonSaysManager : MonoBehaviour
         }
 
         strikeText.text = "You got " + currentStrikes +" orders wrong!";
-        PerformanceText.text = "Performance Review: " + minigameManager.GetWorkPerform().ToString("00") + "/50";
+         if (minigameManager.workPerform < 12.5)
+        {
+            PerformanceText.text = "You didn't do great. There is always tomorrow.";
+        }
+        if (minigameManager.workPerform > 12.5f && minigameManager.workPerform < 37.5f)
+        {
+            PerformanceText.text = "You did some good work today.";
+        }
+        if (minigameManager.workPerform > 37.5f)
+        {
+            PerformanceText.text = "Wow, you did great!";
+        }
         moneyText.text = "You earned: £" + minigameManager.GetMoney().ToString("00");
         winPanel.gameObject.SetActive(true);
     }

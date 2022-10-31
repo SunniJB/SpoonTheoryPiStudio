@@ -67,7 +67,6 @@ public class MenuManager : MonoBehaviour
 
     public void RunCutscene()
     {
-        cutsceneBackground.SetActive(true);
         canvas.GetComponent<Animator>().SetTrigger("cutscene");
     }
 }

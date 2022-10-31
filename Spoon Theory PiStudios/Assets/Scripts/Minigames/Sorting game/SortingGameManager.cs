@@ -56,7 +56,19 @@ public class SortingGameManager : MonoBehaviour
             minigameManager.Complete(3, minutes * 60 + seconds);
             gotPaid = true;
         }
-        workPerfTxt.text = "Performance Review: " + minigameManager.GetWorkPerform().ToString("00") + "/50";
+
+        if (minigameManager.workPerform < 12.5)
+        {
+            workPerfTxt.text = "You didn't do great. There is always tomorrow.";
+        }
+        if (minigameManager.workPerform > 12.5f && minigameManager.workPerform < 37.5f)
+        {
+            workPerfTxt.text = "You did some good work today.";
+        }
+        if (minigameManager.workPerform > 37.5f)
+        {
+            workPerfTxt.text = "Wow, you did great!";
+        }
         moneyTxt.text = "You Earned: £" + minigameManager.GetMoney().ToString("00");
     }
 
