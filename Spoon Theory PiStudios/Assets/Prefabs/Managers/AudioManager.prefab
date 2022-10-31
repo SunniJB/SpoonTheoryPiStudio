@@ -72,7 +72,7 @@ MonoBehaviour:
   - name: Sorting Music
     clip: {fileID: 8300000, guid: c54b4c6605564a743980d392a07a8cd5, type: 3}
     volume: 0.5
-    maxVolume: 1
+    maxVolume: 0.5
     pitch: 0
     music: 0
     loopable: 1
@@ -280,7 +280,7 @@ MonoBehaviour:
   - name: female heavy breathing
     clip: {fileID: 8300000, guid: 67e23f13c6a39984f9d0e0264227b797, type: 3}
     volume: 0.5
-    maxVolume: 1
+    maxVolume: 0.5
     pitch: 0
     music: 0
     loopable: 1
@@ -295,6 +295,22 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Drop cutlery
     clip: {fileID: 8300000, guid: bfa8b84da3fcfe042a5dba432dcb6855, type: 3}
+    volume: 0.5
+    maxVolume: 1
+    pitch: 0
+    music: 0
+    loopable: 0
+    source: {fileID: 0}
+  - name: washing machine
+    clip: {fileID: 8300000, guid: 19e3f825fede908499463b2ec2eca5f0, type: 3}
+    volume: 0.5
+    maxVolume: 1
+    pitch: 0
+    music: 0
+    loopable: 0
+    source: {fileID: 0}
+  - name: clothes rustling
+    clip: {fileID: 8300000, guid: 487d737d41203a74080c6f03f207bb6f, type: 3}
     volume: 0.5
     maxVolume: 1
     pitch: 0

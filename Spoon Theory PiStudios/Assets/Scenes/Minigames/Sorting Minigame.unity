@@ -1898,7 +1898,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioName: hover over button
-  gameManager: {fileID: 0}
 --- !u!1 &344007593
 GameObject:
   m_ObjectHideFlags: 0
@@ -2030,7 +2029,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioName: hover over button
-  gameManager: {fileID: 0}
 --- !u!114 &345955865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3596,7 +3594,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioName: hover over button
-  gameManager: {fileID: 0}
 --- !u!1 &657783683
 GameObject:
   m_ObjectHideFlags: 0
@@ -4896,7 +4893,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioName: hover over button
-  gameManager: {fileID: 0}
 --- !u!114 &814229217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5024,7 +5020,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -39.8, y: -10.000083}
+  m_AnchoredPosition: {x: -58.6, y: -10.000083}
   m_SizeDelta: {x: 559, y: 535}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &945868319
@@ -7816,7 +7812,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioName: hover over button
-  gameManager: {fileID: 0}
 --- !u!1 &1766598132
 GameObject:
   m_ObjectHideFlags: 0
@@ -9262,7 +9257,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -46.9, y: -10}
+  m_AnchoredPosition: {x: -56.8, y: -10}
   m_SizeDelta: {x: 559, y: 535}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2002269395
@@ -9461,7 +9456,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -48.1, y: -10.000007}
+  m_AnchoredPosition: {x: -60.3, y: -10.000007}
   m_SizeDelta: {x: 559, y: 535}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2055887885
@@ -10178,7 +10173,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioName: hover over button
-  gameManager: {fileID: 0}
 --- !u!114 &2142150604
 MonoBehaviour:
   m_ObjectHideFlags: 0
