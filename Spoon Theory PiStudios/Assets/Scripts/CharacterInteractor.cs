@@ -58,6 +58,14 @@ public class CharacterInteractor : MonoBehaviour
     [Header("PLAYER SOUNDS")]
     [SerializeField] string femaleBreathingSound;
     [SerializeField] AnimationCurve breathingVolume;
+
+    [Header("3D VIEWER")]
+    [SerializeField] GameObject viewerPanel;
+    [SerializeField] Transform spawnPoint;
+    [SerializeField] DragRotation dragRotation;
+    GameObject spawnedObject;
+
+    bool inspecting;
     private void Awake()
     {
         characterMovement = GetComponent<CharacterMovement1stPerson>();
@@ -69,30 +77,13 @@ public class CharacterInteractor : MonoBehaviour
         spoonSlider.value = numberOfSpoons;
         hasSleptToday = true;
         taskCanvas.gameObject.SetActive(false);
+        viewerPanel.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if T pressed toggle task canvas and character movement
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            if (TutorialManager.GetInstance() != null && TutorialManager.GetInstance().tutorialStates == TutorialManager.TutorialStates.Start) return;
-
-            if (TutorialManager.GetInstance() == null && (levelManager.pause || levelManager.shopPanelEnabled)) return;
-
-            if (GameManager.GetInstance().ActualScene() != "Apartment Scene" && GameManager.GetInstance().ActualScene() != "TutorialScene") return;
-
-            taskCanvasEnabled = !taskCanvasEnabled;
-            taskCanvas.gameObject.SetActive(taskCanvasEnabled);
-            taskManager.pinnedTasksPanel.gameObject.SetActive(!taskCanvasEnabled);
-            characterMovement.canMove = !taskCanvasEnabled;
-            characterMovement.moving = !taskCanvasEnabled;
-            UIPanel.SetActive(!taskCanvasEnabled);
-
-            if(taskCanvasEnabled) Cursor.lockState = CursorLockMode.None;
-            else Cursor.lockState = CursorLockMode.Locked;
-        }
+        ToggleTaskMenu();
 
         FInteraction();
 
@@ -119,6 +110,29 @@ public class CharacterInteractor : MonoBehaviour
         else avatar.sprite = fullSpoonsAvatar;
 
         if (AudioManager.GetInstance().CheckPlaying(femaleBreathingSound)) AudioManager.GetInstance().SoundVolume(femaleBreathingSound, breathingVolume.Evaluate(spoonSlider.value / spoonSlider.maxValue));
+    }
+
+    void ToggleTaskMenu()
+    {
+        //if T pressed toggle task canvas and character movement
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            if (TutorialManager.GetInstance() != null && TutorialManager.GetInstance().tutorialStates == TutorialManager.TutorialStates.Start) return;
+
+            if (TutorialManager.GetInstance() == null && (levelManager.pause || levelManager.shopPanelEnabled)) return;
+
+            if (GameManager.GetInstance().ActualScene() != "Apartment Scene" && GameManager.GetInstance().ActualScene() != "TutorialScene") return;
+
+            taskCanvasEnabled = !taskCanvasEnabled;
+            taskCanvas.gameObject.SetActive(taskCanvasEnabled);
+            taskManager.pinnedTasksPanel.gameObject.SetActive(!taskCanvasEnabled);
+            characterMovement.canMove = !taskCanvasEnabled;
+            characterMovement.moving = !taskCanvasEnabled;
+            UIPanel.SetActive(!taskCanvasEnabled);
+
+            if (taskCanvasEnabled) Cursor.lockState = CursorLockMode.None;
+            else Cursor.lockState = CursorLockMode.Locked;
+        }
     }
 
     private void FInteraction()
@@ -186,6 +200,20 @@ public class CharacterInteractor : MonoBehaviour
         {
             minigameEnvironment.GoToScene();
         } 
+
+        InspectableObject inspectableObject = interactionHit[0].GetComponent<InspectableObject>();
+
+        if (inspectableObject != null && Input.GetKeyDown(KeyCode.F))
+        {
+            Debug.Log("pressed f within inspectable object range");
+            if (!viewerPanel.activeInHierarchy) viewerPanel.SetActive(true);
+
+            spawnedObject = Instantiate(inspectableObject.gameObject, spawnPoint);
+            dragRotation.objectToRotate = spawnedObject.transform;
+
+            characterMovement.canMove = false;
+            characterMovement.moving = false;
+        }
     }
     
     private void OnDrawGizmos()
