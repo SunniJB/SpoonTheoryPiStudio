@@ -76,7 +76,7 @@ public class CharacterInteractor : MonoBehaviour
 
             if (TutorialManager.GetInstance() == null && (levelManager.pause || levelManager.shopPanelEnabled)) return;
 
-            if (GameManager.GetInstance().ActualScene() != "ApartmentScene") return;
+            if (GameManager.GetInstance().ActualScene() != "ApartmentScene" && GameManager.GetInstance().ActualScene() != "TutorialScene") return;
 
             taskCanvasEnabled = !taskCanvasEnabled;
             taskCanvas.gameObject.SetActive(taskCanvasEnabled);
