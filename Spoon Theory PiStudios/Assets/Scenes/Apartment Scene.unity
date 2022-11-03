@@ -9254,6 +9254,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1012467565}
     - target: {fileID: 6606836980417476329, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
+      propertyPath: avatar
+      value: 
+      objectReference: {fileID: 2117273058}
+    - target: {fileID: 6606836980417476329, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
       propertyPath: UIPanel
       value: 
       objectReference: {fileID: 1972671929}
@@ -9294,53 +9298,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 216712500}
     - target: {fileID: 6606836980417476329, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
-      propertyPath: breathingVolume.m_Curve.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6606836980417476329, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
-      propertyPath: breathingVolume.m_Curve.Array.data[1].time
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 6606836980417476329, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
-      propertyPath: breathingVolume.m_Curve.Array.data[0].value
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6606836980417476329, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
-      propertyPath: breathingVolume.m_Curve.Array.data[1].value
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6606836980417476329, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
-      propertyPath: breathingVolume.m_Curve.Array.data[0].inSlope
-      value: 0.1949212
-      objectReference: {fileID: 0}
-    - target: {fileID: 6606836980417476329, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
-      propertyPath: breathingVolume.m_Curve.Array.data[1].inSlope
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6606836980417476329, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
-      propertyPath: breathingVolume.m_Curve.Array.data[0].outSlope
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6606836980417476329, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
-      propertyPath: breathingVolume.m_Curve.Array.data[1].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 6606836980417476329, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
-      propertyPath: breathingVolume.m_Curve.Array.data[0].outWeight
-      value: 0.26025286
-      objectReference: {fileID: 0}
-    - target: {fileID: 6606836980417476329, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
-      propertyPath: breathingVolume.m_Curve.Array.data[1].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 6606836980417476329, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
-      propertyPath: breathingVolume.m_Curve.Array.data[0].tangentMode
-      value: 65
-      objectReference: {fileID: 0}
-    - target: {fileID: 6606836980417476329, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
-      propertyPath: breathingVolume.m_Curve.Array.data[1].tangentMode
-      value: 5
-      objectReference: {fileID: 0}
+      propertyPath: highSpoonsAvatar
+      value: 
+      objectReference: {fileID: 21300000, guid: 0483c95bc8f141e4ea67171b56a7124f, type: 3}
     - target: {fileID: 6606836980417476330, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
       propertyPath: textPanel
       value: 
@@ -9396,10 +9356,6 @@ PrefabInstance:
     - target: {fileID: 6606836980417476342, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
       propertyPath: m_Name
       value: 1st person character
-      objectReference: {fileID: 0}
-    - target: {fileID: 6606836980918129511, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
