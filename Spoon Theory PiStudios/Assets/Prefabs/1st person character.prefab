@@ -251,6 +251,10 @@ MonoBehaviour:
   MoneyText: {fileID: 0}
   day: {fileID: 0}
   timeOfDay: {fileID: 0}
+  fullSpoonsAvatar: {fileID: 21300000, guid: 0bcfde0f85054774f8d42a3263380c83, type: 3}
+  highSpoonsLavatar: {fileID: 21300000, guid: 0483c95bc8f141e4ea67171b56a7124f, type: 3}
+  halfSpoonsAvatar: {fileID: 21300000, guid: f47a7cda99ba70e4a95983be2036ea30, type: 3}
+  lowSpoonsAvatar: {fileID: 21300000, guid: a4827d98d6627ae4f82b8a9e5967a3d6, type: 3}
   interactionPoint: {fileID: 6606836979836233030}
   clickInteractionDistance: 5
   FInteractionDistance: 1.25
@@ -380,7 +384,25 @@ MonoBehaviour:
   femaleBreathingSound: female heavy breathing
   breathingVolume:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.6
+      inSlope: 0.1949212
+      outSlope: -2
+      tangentMode: 65
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.26025286
+    - serializedVersion: 3
+      time: 0.25
+      value: 0.1
+      inSlope: -2
+      outSlope: 0
+      tangentMode: 5
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4

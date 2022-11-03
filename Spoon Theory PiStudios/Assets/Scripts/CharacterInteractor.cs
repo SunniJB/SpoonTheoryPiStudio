@@ -18,6 +18,11 @@ public class CharacterInteractor : MonoBehaviour
     [SerializeField] TMP_Text MoneyText;
     [SerializeField] TMP_Text day;
     [SerializeField] TMP_Text timeOfDay;
+    [SerializeField] Image avatar;
+    [SerializeField] Sprite fullSpoonsAvatar;
+    [SerializeField] Sprite highSpoonsAvatar;
+    [SerializeField] Sprite halfSpoonsAvatar;
+    [SerializeField] Sprite lowSpoonsAvatar;
 
     [SerializeField] Transform interactionPoint;
     public float clickInteractionDistance = 5, FInteractionDistance = 3;
@@ -97,6 +102,7 @@ public class CharacterInteractor : MonoBehaviour
 
         UpdateStatsModifiers();
 
+
         if(!halfSpoons && spoonSlider.value / spoonSlider.maxValue <= 0.5f)
         {
             HalfSpoons();
@@ -107,7 +113,12 @@ public class CharacterInteractor : MonoBehaviour
             LowSpoons();
         }
 
-        /*if (AudioManager.GetInstance().CheckPlaying(femaleBreathingSound)) */AudioManager.GetInstance().SoundVolume(femaleBreathingSound, breathingVolume.Evaluate(spoonSlider.value / spoonSlider.maxValue));
+        if (spoonSlider.value / spoonSlider.maxValue <= 0.25f) avatar.sprite = lowSpoonsAvatar;
+        else if (spoonSlider.value / spoonSlider.maxValue <= 0.5f) avatar.sprite = halfSpoonsAvatar;
+        else if (spoonSlider.value / spoonSlider.maxValue <= 0.75f) avatar.sprite = highSpoonsAvatar;
+        else avatar.sprite = fullSpoonsAvatar;
+
+        if (AudioManager.GetInstance().CheckPlaying(femaleBreathingSound)) AudioManager.GetInstance().SoundVolume(femaleBreathingSound, breathingVolume.Evaluate(spoonSlider.value / spoonSlider.maxValue));
     }
 
     private void FInteraction()
