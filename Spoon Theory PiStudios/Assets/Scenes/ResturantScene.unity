@@ -9446,6 +9446,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1942109489}
     - target: {fileID: 6606836980417476329, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
+      propertyPath: avatar
+      value: 
+      objectReference: {fileID: 853311736}
+    - target: {fileID: 6606836980417476329, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
       propertyPath: UIPanel
       value: 
       objectReference: {fileID: 653408899}
@@ -9485,6 +9489,10 @@ PrefabInstance:
       propertyPath: happinessSlider
       value: 
       objectReference: {fileID: 904209911}
+    - target: {fileID: 6606836980417476329, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
+      propertyPath: highSpoonsAvatar
+      value: 
+      objectReference: {fileID: 21300000, guid: 0483c95bc8f141e4ea67171b56a7124f, type: 3}
     - target: {fileID: 6606836980417476330, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
       propertyPath: textPanel
       value: 
