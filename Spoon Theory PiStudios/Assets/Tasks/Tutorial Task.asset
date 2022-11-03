@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 689f24bddc4b4da44b46d092a39f3e9d, type: 3}
   m_Name: Tutorial Task
   m_EditorClassIdentifier: 
-  taskName: Task
+  taskName: Tutorial Task
   description: Task description
   spoonCost: 4
   hygieneCost: 2
