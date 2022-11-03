@@ -12,14 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 689f24bddc4b4da44b46d092a39f3e9d, type: 3}
   m_Name: Tutorial Task
   m_EditorClassIdentifier: 
-  taskName: Tutorial Task
+  taskName: Task
   description: Task description
   spoonCost: 4
   hygieneCost: 2
   moneyCost: 3
   hungerCost: 3
-  happinesCost: 1
+  happinessCost: 0
   workPerformanceCost: 2
+  followingTask: {fileID: 0}
   outlineObject: {fileID: 0}
   objectTask: {fileID: 0}
+  parent: {fileID: 0}
   inProgress: 0
