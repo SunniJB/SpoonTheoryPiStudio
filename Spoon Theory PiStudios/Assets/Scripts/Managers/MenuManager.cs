@@ -7,7 +7,7 @@ public class MenuManager : MonoBehaviour
 {
     public GameObject canvas, cutsceneBackground;
 
-    [SerializeField] GameObject optionsPanel;
+    [SerializeField] GameObject optionsPanel, cutScene;
     [SerializeField] GameObject buttons;
 
     [SerializeField] Slider sfx, music;
@@ -16,6 +16,7 @@ public class MenuManager : MonoBehaviour
     {
         buttons.SetActive(true);
         optionsPanel.SetActive(false);
+        cutScene.SetActive(false);
 
         sfx.value = AudioManager.GetInstance().startVolume;
         music.value = AudioManager.GetInstance().startVolume;
@@ -67,6 +68,7 @@ public class MenuManager : MonoBehaviour
 
     public void RunCutscene()
     {
+        cutScene.SetActive(true);
         canvas.GetComponent<Animator>().SetTrigger("cutscene");
     }
 }

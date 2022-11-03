@@ -45,6 +45,29 @@ public class GameManager : MonoBehaviour
         SetTimeMorning();
         //if(SceneManager.GetActiveScene().name != "Menu") Cursor.lockState = CursorLockMode.Locked;
     }
+    public void LoadScene(int sceneNumber = -1)
+    {
+        AudioManager.GetInstance().StopAllSounds();
+        if (sceneNumber != -1) SceneManager.LoadScene(sceneNumber);
+        else SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void LoadScene(string sceneName)
+    {
+        AudioManager.GetInstance().StopAllSounds();
+        SceneManager.LoadScene(sceneName);
+    }
+
+    public void ResetScene()
+    {
+        AudioManager.GetInstance().StopAllSounds();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    public string ActualScene()
+    {
+        return SceneManager.GetActiveScene().name;
+    }
+
 
     public void MenuScene()
     {
@@ -63,25 +86,6 @@ public class GameManager : MonoBehaviour
             LoadScene(2); // Go to apartment
             Cursor.lockState = CursorLockMode.Locked;
         }
-    }
-
-    public void LoadScene(int sceneNumber = -1)
-    {
-        AudioManager.GetInstance().StopAllSounds();
-        if (sceneNumber != -1) SceneManager.LoadScene(sceneNumber);
-        else SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
-
-    public void LoadScene(string sceneName)
-    {
-        AudioManager.GetInstance().StopAllSounds();
-        SceneManager.LoadScene(sceneName);
-    }
-
-    public void ResetScene()
-    {
-        AudioManager.GetInstance().StopAllSounds();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void WorkScene()
     {
@@ -110,7 +114,6 @@ public class GameManager : MonoBehaviour
         happiness = _happines;
         workPerformance = _workPerformance;
     }
-
     public void SetTimeMorning()
     {
         dayTime = DayTime.Morning;

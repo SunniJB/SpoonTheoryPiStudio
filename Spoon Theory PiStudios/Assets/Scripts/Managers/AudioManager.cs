@@ -42,8 +42,8 @@ public class AudioManager : MonoBehaviour
 
     public void ChangeBackgroundMusic(string sceneName) // Cambia la muscia de fondo segun la escena, llamado desde 
     {
-        switch (sceneName)
-        {
+        //switch (sceneName)
+        //{
             //case "MainMenu_Scene":
             //    Stop("GameMusic");
             //    Play("MainMenu_Music", 1);
@@ -52,7 +52,7 @@ public class AudioManager : MonoBehaviour
             //    Stop("MainMenu_Music");
             //    Play("GameMusic", 1);
             //    break;
-        }
+        //}
     }
 
     public void Play(string name, float pitch = 1f)

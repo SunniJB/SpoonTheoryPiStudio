@@ -151,6 +151,7 @@ public class ObjectTask : MonoBehaviour
         interactor.hunger -= task.hungerCost;
         interactor.happiness -= task.happinessCost;
         interactor.workPerformance -= task.workPerformanceCost;
+        interactor.money -= task.moneyCost;
 
         Destroy(progressSlider.gameObject);
 
