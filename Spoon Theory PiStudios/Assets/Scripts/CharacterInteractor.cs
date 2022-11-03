@@ -118,8 +118,7 @@ public class CharacterInteractor : MonoBehaviour
         else if (spoonSlider.value / spoonSlider.maxValue <= 0.75f) avatar.sprite = highSpoonsAvatar;
         else avatar.sprite = fullSpoonsAvatar;
 
-        /*if (AudioManager.GetInstance().CheckPlaying(femaleBreathingSound)) */
-        AudioManager.GetInstance().SoundVolume(femaleBreathingSound, breathingVolume.Evaluate(spoonSlider.value / spoonSlider.maxValue));
+        if (AudioManager.GetInstance().CheckPlaying(femaleBreathingSound)) AudioManager.GetInstance().SoundVolume(femaleBreathingSound, breathingVolume.Evaluate(spoonSlider.value / spoonSlider.maxValue));
     }
 
     private void FInteraction()

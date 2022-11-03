@@ -2674,6 +2674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd04f750dbea53b41b8cf6937054b43c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationsPlayed: 0
   characterUIAnimator: {fileID: 1972671933}
   nextButton: {fileID: 1323576486}
 --- !u!1001 &813417046
@@ -3506,11 +3507,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1037737748}
   m_CullTransparentMesh: 1
---- !u!82 &1039473276 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 1039473276, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
-  m_PrefabInstance: {fileID: 156365269}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1059215572
 GameObject:
   m_ObjectHideFlags: 0
@@ -4426,54 +4422,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[3].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 209483c1f05d7554c9b4375b9eb961b2, type: 3}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[3].name
-      value: pet cat
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[4].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 6b95f4841eff7924da6927a583a45596, type: 3}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[4].name
-      value: Door
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[0].pitch
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[0].source
-      value: 
-      objectReference: {fileID: 1039473276}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[1].source
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[2].source
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[3].source
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[3].volume
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3642641869693562033, guid: ea07da735420f13419d78a271882b852, type: 3}
-      propertyPath: sounds.Array.data[3].maxVolume
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5561417923616072048, guid: ea07da735420f13419d78a271882b852, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -5406,6 +5354,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1370474912}
     - target: {fileID: 6606836980417476329, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
+      propertyPath: avatar
+      value: 
+      objectReference: {fileID: 2117273058}
+    - target: {fileID: 6606836980417476329, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
       propertyPath: UIPanel
       value: 
       objectReference: {fileID: 1972671929}
@@ -5445,6 +5397,10 @@ PrefabInstance:
       propertyPath: happinessSlider
       value: 
       objectReference: {fileID: 216712500}
+    - target: {fileID: 6606836980417476329, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
+      propertyPath: highSpoonsAvatar
+      value: 
+      objectReference: {fileID: 21300000, guid: 0483c95bc8f141e4ea67171b56a7124f, type: 3}
     - target: {fileID: 6606836980417476330, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
       propertyPath: textPanel
       value: 
