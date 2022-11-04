@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class opencloseDoor : MonoBehaviour
 {
 
-	public Animator openandclose;
+	public Animator animator;
 	public bool open;
 	public LevelManager lvlManager;
 
@@ -22,21 +23,29 @@ public class opencloseDoor : MonoBehaviour
 
 	IEnumerator opening()
 	{
-		openandclose.Play("Opening");
+		animator.Play("Opening");
 		AudioManager.GetInstance().Play("Door", 1);
 		open = true;
 		yield return new WaitForSeconds(.5f);
-		if (GameManager.GetInstance().tutorialFinished) GoToWork();
-		else
-		{
-			if (TutorialManager.GetInstance() != null) TutorialManager.GetInstance().finishFinished = true;
-		}
-	}
+        if (GameManager.GetInstance().tutorialFinished) GoToWork();
+        else
+        {
+            if (TutorialManager.GetInstance() != null) TutorialManager.GetInstance().finishFinished = true;
+        }
+        //if (SceneManager.GetActiveScene().name != "Restaurant Scene")
+        //{
+
+        //      } else
+        //{
+        //	GameManager.GetInstance().ApartmentScene();
+        //      }
+
+    }
 
 	IEnumerator closing()
 	{
 		print("you are closing the door");
-		openandclose.Play("Closing");
+		animator.Play("Closing");
 		open = false;
 		yield return new WaitForSeconds(.5f);
 	}
