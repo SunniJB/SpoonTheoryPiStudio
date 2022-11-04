@@ -10,6 +10,9 @@ public class opencloseDoor : MonoBehaviour
 	public bool open;
 	public LevelManager lvlManager;
 
+	public enum SceneToGo { TutorialScene, ApartmentScene, RestaurantScene}
+	public SceneToGo sceneToGo;
+
 	void Start()
 	{
 		open = false;
@@ -27,6 +30,7 @@ public class opencloseDoor : MonoBehaviour
 		AudioManager.GetInstance().Play("Door", 1);
 		open = true;
 		yield return new WaitForSeconds(.5f);
+<<<<<<< Updated upstream
         if (GameManager.GetInstance().tutorialFinished) GoToWork();
         else
         {
@@ -41,6 +45,15 @@ public class opencloseDoor : MonoBehaviour
         //      }
 
     }
+=======
+		//if (GameManager.GetInstance().tutorialFinished) GoToWork();
+		//else
+		//{
+		//	if (TutorialManager.GetInstance() != null) TutorialManager.GetInstance().finishFinished = true;
+		//}
+		GameManager.GetInstance().LoadScene(sceneToGo.ToString());
+	}
+>>>>>>> Stashed changes
 
 	IEnumerator closing()
 	{

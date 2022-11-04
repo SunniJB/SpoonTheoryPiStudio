@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.EventSystems;
 
 public class DragRotation : MonoBehaviour, IDragHandler
@@ -8,6 +9,7 @@ public class DragRotation : MonoBehaviour, IDragHandler
     [SerializeField] Camera camRendering;
     public Transform objectToRotate;
     [SerializeField] float minFov = 30f, maxFov = 90f, sensitivity = 10f;
+    public TMP_Text prompt;
 
     [HideInInspector] public float yaw, pitch;
 

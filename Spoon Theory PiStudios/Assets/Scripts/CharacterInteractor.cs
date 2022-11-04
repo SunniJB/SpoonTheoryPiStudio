@@ -195,6 +195,7 @@ public class CharacterInteractor : MonoBehaviour
                     spawnedObject.transform.rotation = Quaternion.identity;
                     spawnedObject.transform.localScale = new Vector3(inspectableObject.viewerScale, inspectableObject.viewerScale, inspectableObject.viewerScale);
                     dragRotation.objectToRotate = spawnedObject.transform;
+                    dragRotation.prompt.text = inspectableObject.promptText;
 
                     characterMovement.canMove = false;
                     characterMovement.moving = false;
