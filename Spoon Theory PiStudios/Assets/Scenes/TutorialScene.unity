@@ -628,6 +628,10 @@ PrefabInstance:
       value: ApartmentLayout
       objectReference: {fileID: 0}
     - target: {fileID: 6210442333212720655, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: sceneToGo
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6210442333212720655, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
       propertyPath: lvlManager
       value: 
       objectReference: {fileID: 1136278446}
