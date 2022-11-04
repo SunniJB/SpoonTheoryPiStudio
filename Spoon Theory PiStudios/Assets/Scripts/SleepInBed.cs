@@ -31,7 +31,7 @@ public class SleepInBed : MonoBehaviour
 
         AudioManager.GetInstance().Play(audioName, 1f);
         GameManager.GetInstance().SetTimeMorning();
-        GameManager.GetInstance().spoons = Random.Range(10, 31);
+        GameManager.GetInstance().spoons = Random.Range(10, 25);
         GameManager.GetInstance().hunger -= 7;
         GameManager.GetInstance().hygiene -= 5;
         GameManager.GetInstance().dayCount++;
@@ -39,9 +39,9 @@ public class SleepInBed : MonoBehaviour
         characterInteractor.hasSleptToday = true;
 
         if (GameManager.GetInstance().spoons < 17)
-            dayMood.text = "Today is a bad day, you have less max spoons";
+            dayMood.text = "Today is a bad day, you have less spoons";
         else
-            dayMood.text = "Today is a good day, you have more max spoons";
+            dayMood.text = "Today is a good day, you have more spoons";
 
         UpdateSleepPanel();
     }
@@ -50,7 +50,7 @@ public class SleepInBed : MonoBehaviour
     {
         moneyEarned.text = "Current money: " + GameManager.GetInstance().money.ToString("0");
         moneyToGoal.text = "Money to goal: " + ((GameManager.GetInstance().moneyGoal - GameManager.GetInstance().money).ToString("0"));
-        newDay.text = "It is now day " + GameManager.GetInstance().dayCount + ". Hunger and hygiene have decreased.";
+        newDay.text = "It is now day " + GameManager.GetInstance().dayCount + 1 + ". Hunger and hygiene have decreased.";
 
         sleepPanel.GetComponent<Animator>().SetTrigger("goingToSleep");
 
