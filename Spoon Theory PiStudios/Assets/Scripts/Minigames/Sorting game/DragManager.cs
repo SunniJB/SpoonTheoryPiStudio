@@ -11,7 +11,7 @@ public class DragManager : MonoBehaviour, IBeginDragHandler, IEndDragHandler
     private Canvas canvas;
 
     Collider2D myCollider;
-    Vector3 lastClickedPos;
+    [HideInInspector]public Vector3 lastClickedPos;
 
     private void Start()
     {
