@@ -97,7 +97,6 @@ public class CharacterInteractor : MonoBehaviour
 
         UpdateStatsModifiers();
 
-
         if(!halfSpoons && spoonSlider.value / spoonSlider.maxValue <= 0.5f)
         {
             HalfSpoons();
