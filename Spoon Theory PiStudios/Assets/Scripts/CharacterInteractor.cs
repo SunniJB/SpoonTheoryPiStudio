@@ -144,6 +144,8 @@ public class CharacterInteractor : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
+            if (inspecting) return;
+
             Collider[] interactionHit = Physics.OverlapSphere(interactionPoint.position, FInteractionDistance, interactableLayer, QueryTriggerInteraction.Collide);
 
             if (interactionHit.Length <= 0) return;
@@ -275,6 +277,8 @@ public class CharacterInteractor : MonoBehaviour
         inspecting = false;
         viewerPanel.SetActive(false);
         characterMovement.canMove = true;
+        dragRotation.yaw = 0;
+        dragRotation.pitch = 0;
         Destroy(dragRotation.objectToRotate.gameObject);
         Cursor.lockState = CursorLockMode.Locked;
     }
