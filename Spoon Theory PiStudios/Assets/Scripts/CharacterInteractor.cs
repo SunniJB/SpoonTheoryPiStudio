@@ -70,11 +70,12 @@ public class CharacterInteractor : MonoBehaviour
     private void Awake()
     {
         characterMovement = GetComponent<CharacterMovement1stPerson>();
-        RefreshStatsFromManager();
+
     }
     // Start is called before the first frame update
     void Start()
     {
+        RefreshStatsFromManager();
         spoonSlider.maxValue =  maxNumberOfSpoons;
         spoonSlider.value = numberOfSpoons;
         hasSleptToday = true;
