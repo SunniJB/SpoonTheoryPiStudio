@@ -38,6 +38,7 @@ public class CharacterInteractor : MonoBehaviour
 
     [Header("PLAYER STATS")]
     public int numberOfSpoons;
+    public int maxNumberOfSpoons = 31;
     public float hygiene;
     public float happiness;
     public float hunger;
@@ -69,11 +70,12 @@ public class CharacterInteractor : MonoBehaviour
     private void Awake()
     {
         characterMovement = GetComponent<CharacterMovement1stPerson>();
+        RefreshStatsFromManager();
     }
     // Start is called before the first frame update
     void Start()
     {
-        spoonSlider.maxValue =  numberOfSpoons;
+        spoonSlider.maxValue =  maxNumberOfSpoons;
         spoonSlider.value = numberOfSpoons;
         hasSleptToday = true;
         taskCanvas.gameObject.SetActive(false);
