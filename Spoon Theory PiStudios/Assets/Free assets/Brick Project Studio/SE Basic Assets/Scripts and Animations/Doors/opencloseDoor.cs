@@ -10,6 +10,9 @@ public class opencloseDoor : MonoBehaviour
 	public bool open;
 	public LevelManager lvlManager;
 
+	public enum SceneToGo { TutorialScene, ApartmentScene, RestaurantScene}
+	public SceneToGo sceneToGo;
+
 	void Start()
 	{
 		open = false;
@@ -17,11 +20,11 @@ public class opencloseDoor : MonoBehaviour
 
 	public void OpenCloseDoor()
     {
-		if (open == false) StartCoroutine(opening());
-		else StartCoroutine(closing());
+		if (open == false) StartCoroutine(Opening());
+		else StartCoroutine(Closing());
 	}
 
-	IEnumerator opening()
+	IEnumerator Opening()
 	{
 		animator.Play("Opening");
 		AudioManager.GetInstance().Play("Door", 1);
@@ -40,9 +43,17 @@ public class opencloseDoor : MonoBehaviour
         //	GameManager.GetInstance().ApartmentScene();
         //      }
 
-    }
+    
 
-	IEnumerator closing()
+		//if (GameManager.GetInstance().tutorialFinished) GoToWork();
+		//else
+		//{
+		//	if (TutorialManager.GetInstance() != null) TutorialManager.GetInstance().finishFinished = true;
+		//}
+		GameManager.GetInstance().LoadScene(sceneToGo.ToString());
+	}
+
+	IEnumerator Closing()
 	{
 		print("you are closing the door");
 		animator.Play("Closing");
