@@ -12,10 +12,10 @@ EditorBuildSettings:
     path: Assets/Scenes/TutorialScene.unity
     guid: 43c8444e6d3b6a6419ba8731305d1440
   - enabled: 1
-    path: Assets/Scenes/Apartment Scene.unity
+    path: Assets/Scenes/ApartmentScene.unity
     guid: b11f6cd331f27bf489c42ccc954bedd7
   - enabled: 1
-    path: Assets/Scenes/Restaurant Scene.unity
+    path: Assets/Scenes/RestaurantScene.unity
     guid: 45604311d2069af478d4a5087f294b0c
   - enabled: 1
     path: Assets/Scenes/Minigames/Sorting Minigame.unity

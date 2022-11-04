@@ -891,6 +891,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6210442332000135568, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
     - target: {fileID: 6210442333212720655, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: sceneToGo
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6210442333212720655, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
       propertyPath: lvlManager
       value: 
       objectReference: {fileID: 1136278446}
