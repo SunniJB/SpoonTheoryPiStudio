@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public float moneyGoal;
     public int totalDaysBeforeLoss = 60;
 
+    public bool isIsaac;
+
     [Header("Player stats")]
     public float money;
     public float hunger;
