@@ -3370,6 +3370,67 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &873609356
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 873609357}
+  - component: {fileID: 873609359}
+  - component: {fileID: 873609358}
+  m_Layer: 3
+  m_Name: MedicineFather
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &873609357
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873609356}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.793, y: 1.2339935, z: 4.29}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 543450651585273551}
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &873609358
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873609356}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.19
+  m_Height: 0.4
+  m_Direction: 1
+  m_Center: {x: 0.0000000018626451, y: 0.08915713, z: 0}
+--- !u!114 &873609359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873609356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68123752d0c8e3c4d9695215e7490622, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewerScale: 45
 --- !u!1 &912712011
 GameObject:
   m_ObjectHideFlags: 0
@@ -6924,7 +6985,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7cf8e542eee4a345b0051199b1edbec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camRendering: {fileID: 1944876142}
   objectToRotate: {fileID: 543450651585273551}
+  minFov: 30
+  maxFov: 90
+  sensitivity: 10
 --- !u!1 &1727824888
 GameObject:
   m_ObjectHideFlags: 0
@@ -9276,12 +9341,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132147913163893}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.793, y: 1.162, z: 4.29}
+  m_LocalPosition: {x: 0, y: -0.067, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 873609357}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &656089135791343183
 PrefabInstance:
@@ -9400,8 +9465,6 @@ GameObject:
   - component: {fileID: 543450651585273551}
   - component: {fileID: 3469287837717680490}
   - component: {fileID: 1711813854996866464}
-  - component: {fileID: 3469287837717680492}
-  - component: {fileID: 3469287837717680493}
   m_Layer: 3
   m_Name: Medicine
   m_TagString: Untagged
@@ -9572,33 +9635,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132147913163893}
   m_Mesh: {fileID: 2405994313749639098, guid: b32d4461125e2dd4fb1ec3e8d8472f14, type: 3}
---- !u!114 &3469287837717680492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132147913163893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68123752d0c8e3c4d9695215e7490622, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  viewerScale: 45
---- !u!136 &3469287837717680493
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132147913163893}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.19
-  m_Height: 0.4
-  m_Direction: 1
-  m_Center: {x: 0.0000000018626451, y: 0.08915713, z: 0}
 --- !u!224 &6148599587558311322 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6651485869722092501, guid: 66e9cfcf9c21e614fba2e5c4425206a1, type: 3}

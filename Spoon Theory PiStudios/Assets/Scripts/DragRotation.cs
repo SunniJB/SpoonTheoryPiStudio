@@ -5,15 +5,16 @@ using UnityEngine.EventSystems;
 
 public class DragRotation : MonoBehaviour, IDragHandler
 {
+    [SerializeField] Camera camRendering;
     public Transform objectToRotate;
-    void Start()
+    [SerializeField] float minFov = 30f, maxFov = 90f, sensitivity = 10f;
+
+    void  Update()
     {
-
-    }
-
-    void Update()
-    {
-
+        float fov = camRendering.fieldOfView;
+        fov += Input.GetAxis("Mouse ScrollWheel") * sensitivity;
+        fov = Mathf.Clamp(fov, minFov, maxFov);
+        camRendering.fieldOfView = fov;
     }
 
     public void OnDrag(PointerEventData eventData)

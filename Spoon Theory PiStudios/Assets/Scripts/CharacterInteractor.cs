@@ -275,6 +275,7 @@ public class CharacterInteractor : MonoBehaviour
         inspecting = false;
         viewerPanel.SetActive(false);
         characterMovement.canMove = true;
+        Destroy(dragRotation.objectToRotate.gameObject);
         Cursor.lockState = CursorLockMode.Locked;
     }
 
