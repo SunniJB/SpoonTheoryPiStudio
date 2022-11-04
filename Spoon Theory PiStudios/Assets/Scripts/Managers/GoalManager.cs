@@ -9,6 +9,14 @@ public class GoalManager : MonoBehaviour
 
     private void Start()
     {
+        if (GameManager.GetInstance().isIsaac)
+        {
+            goalMoneyAmount = 1850;
+        }
+        else
+        {
+            goalMoneyAmount = 1364;
+        }
         GameManager.GetInstance().moneyGoal = goalMoneyAmount;
     }
 
