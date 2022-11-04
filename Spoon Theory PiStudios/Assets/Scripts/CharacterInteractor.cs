@@ -65,8 +65,8 @@ public class CharacterInteractor : MonoBehaviour
     [SerializeField] Transform spawnPoint;
     [SerializeField] DragRotation dragRotation;
     GameObject spawnedObject;
+    public bool inspecting;
 
-    bool inspecting;
     private void Awake()
     {
         characterMovement = GetComponent<CharacterMovement1stPerson>();
@@ -80,6 +80,7 @@ public class CharacterInteractor : MonoBehaviour
         hasSleptToday = true;
         taskCanvas.gameObject.SetActive(false);
         viewerPanel.SetActive(false);
+        inspecting = false;
     }
 
     // Update is called once per frame
@@ -125,6 +126,8 @@ public class CharacterInteractor : MonoBehaviour
 
             if (GameManager.GetInstance().ActualScene() != "Apartment Scene" && GameManager.GetInstance().ActualScene() != "TutorialScene") return;
 
+            if (inspecting) return;
+
             taskCanvasEnabled = !taskCanvasEnabled;
             taskCanvas.gameObject.SetActive(taskCanvasEnabled);
             taskManager.pinnedTasksPanel.gameObject.SetActive(!taskCanvasEnabled);
@@ -139,82 +142,98 @@ public class CharacterInteractor : MonoBehaviour
 
     private void FInteraction()
     {
-        Collider[] interactionHit = Physics.OverlapSphere(interactionPoint.position, FInteractionDistance, interactableLayer, QueryTriggerInteraction.Collide);
-
-        if (interactionHit.Length <= 0) return;
-
-        ObjectTask[] interactableObject = new ObjectTask[interactionHit.Length];
-
-        //bed.GetComponent<SleepInBed>().tasks = interactableObject; Trying very hard here
-
-        for (int i = 0; i < interactionHit.Length; i++)
+        if (Input.GetKeyDown(KeyCode.F))
         {
-            interactableObject[i] = interactionHit[i].GetComponent<ObjectTask>();
+            Collider[] interactionHit = Physics.OverlapSphere(interactionPoint.position, FInteractionDistance, interactableLayer, QueryTriggerInteraction.Collide);
 
-            if (interactableObject[i] != null && Input.GetKeyDown(KeyCode.F) && interactableObject[i].outline.enabled && !interactableObject[i].task.inProgress && !interactableObject[i].finished)
+            if (interactionHit.Length <= 0) return;
+
+            ObjectTask[] interactableObject = new ObjectTask[interactionHit.Length];
+            int j = 0;
+
+            for (int i = 0; i < interactionHit.Length; i++)
             {
-                if (halfSpoons) promptUI.SetUpText(interactableObject[i].interactionPromptLowSpoons);
-                else promptUI.SetUpText(interactableObject[i].interactionPromptHighSpoons);
+                interactableObject[j] = interactionHit[i].GetComponent<ObjectTask>();
 
-                interactableObject[i].Interact(this);
+                if (interactableObject[j] != null && interactableObject[j].outline.enabled && !interactableObject[j].task.inProgress && !interactableObject[j].finished)
+                {
+                    if (halfSpoons) promptUI.SetUpText(interactableObject[j].interactionPromptLowSpoons);
+                    else promptUI.SetUpText(interactableObject[j].interactionPromptHighSpoons);
 
-                break;
+                    interactableObject[j].Interact(this);
+
+                    j++;
+                    continue;
+                }
+
+                opencloseDoor opencloseDoor = interactionHit[i].GetComponent<opencloseDoor>();
+
+                if (opencloseDoor != null && GameManager.GetInstance().dayTime == GameManager.DayTime.Morning)
+                {
+                    if (TutorialManager.GetInstance() != null && TutorialManager.GetInstance().tutorialStates != TutorialManager.TutorialStates.Finish) continue;
+
+                    if (TutorialManager.GetInstance() == null && numberOfSpoons < 5) continue;
+
+                    opencloseDoor.OpenCloseDoor();
+                    continue;
+                    //GameManager.Instance.WorkScene();
+                }
+
+                InspectableObject inspectableObject = interactionHit[i].GetComponent<InspectableObject>();
+
+                if (inspectableObject != null)
+                {
+                    viewerPanel.SetActive(true);
+                    inspecting = true;
+
+                    Cursor.lockState = CursorLockMode.None;
+
+                    spawnedObject = Instantiate(inspectableObject.gameObject, spawnPoint);
+                    spawnedObject.transform.position = spawnPoint.transform.position;
+                    spawnedObject.transform.rotation = Quaternion.identity;
+                    spawnedObject.transform.localScale = new Vector3(inspectableObject.viewerScale, inspectableObject.viewerScale, inspectableObject.viewerScale);
+                    dragRotation.objectToRotate = spawnedObject.transform;
+
+                    characterMovement.canMove = false;
+                    characterMovement.moving = false;
+                    continue;
+                }
+
+                SleepInBed sleepInBed = interactionHit[i].GetComponent<SleepInBed>();
+
+                if (sleepInBed != null)
+                {
+                    if (!hasSleptToday)
+                    {
+                        if (TutorialManager.GetInstance() != null && TutorialManager.GetInstance().tutorialStates != TutorialManager.TutorialStates.Finish) continue;
+
+                        sleepInBed.GoToSleep();
+                        //GameManager.Instance.WorkScene();
+                    }
+                    else promptUI.SetUpText("I can't go to sleep yet.");
+                    continue;
+                }
+
+                CheckCalendar checkCalendar = interactionHit[i].GetComponent<CheckCalendar>();
+
+                if (checkCalendar != null)
+                {
+                    if (TutorialManager.GetInstance() != null && TutorialManager.GetInstance().tutorialStates != TutorialManager.TutorialStates.Finish) continue;
+
+                    checkCalendar.CheckGoal();
+                    continue;
+                }
+
+                MinigameEnvironment minigameEnvironment = interactionHit[i].GetComponent<MinigameEnvironment>();
+
+                if (minigameEnvironment != null)
+                {
+                    minigameEnvironment.GoToScene();
+                    continue;
+                }
             }
-        }
 
-        opencloseDoor opencloseDoor = interactionHit[0].GetComponent<opencloseDoor>();
-
-        if (opencloseDoor != null && Input.GetKeyDown(KeyCode.F) && GameManager.GetInstance().dayTime == GameManager.DayTime.Morning)
-        {
-            if (TutorialManager.GetInstance() != null && TutorialManager.GetInstance().tutorialStates != TutorialManager.TutorialStates.Finish) return;
-
-            if (TutorialManager.GetInstance() == null && numberOfSpoons < 5) return;
-            
-            opencloseDoor.OpenCloseDoor();
-            //GameManager.Instance.WorkScene();
-        }
-
-        
-        SleepInBed sleepInBed = interactionHit[0].GetComponent<SleepInBed>();
-
-        if (sleepInBed != null && Input.GetKeyDown(KeyCode.F) && !hasSleptToday)
-        {
-            if (TutorialManager.GetInstance() != null && TutorialManager.GetInstance().tutorialStates != TutorialManager.TutorialStates.Finish) return;
-            sleepInBed.GoToSleep();
-            //GameManager.Instance.WorkScene();
-        } else if (sleepInBed != null && Input.GetKeyDown(KeyCode.F) && hasSleptToday)
-        {
-            promptUI.SetUpText("I can't go to sleep yet.");
-        }
-
-        CheckCalendar checkCalendar = interactionHit[0].GetComponent<CheckCalendar>();
-
-        if (checkCalendar != null && Input.GetKeyDown(KeyCode.F))
-        {
-            if (TutorialManager.GetInstance() != null && TutorialManager.GetInstance().tutorialStates != TutorialManager.TutorialStates.Finish) return;
-
-            checkCalendar.CheckGoal();
-        }
-
-        MinigameEnvironment minigameEnvironment = interactionHit[0].GetComponent<MinigameEnvironment>();
-
-        if (minigameEnvironment != null && Input.GetKeyDown(KeyCode.F))
-        {
-            minigameEnvironment.GoToScene();
-        } 
-
-        InspectableObject inspectableObject = interactionHit[0].GetComponent<InspectableObject>();
-
-        if (inspectableObject != null && Input.GetKeyDown(KeyCode.F))
-        {
-            Debug.Log("pressed f within inspectable object range");
-            if (!viewerPanel.activeInHierarchy) viewerPanel.SetActive(true);
-
-            spawnedObject = Instantiate(inspectableObject.gameObject, spawnPoint);
-            dragRotation.objectToRotate = spawnedObject.transform;
-
-            characterMovement.canMove = false;
-            characterMovement.moving = false;
+            //bed.GetComponent<SleepInBed>().tasks = interactableObject; Trying very hard here     
         }
     }
     
@@ -249,6 +268,14 @@ public class CharacterInteractor : MonoBehaviour
     public void ZeroSpoons()
     {
         Debug.Log("You ran out of spoons");
+    }
+
+    public void FinishInspecting()
+    {
+        inspecting = false;
+        viewerPanel.SetActive(false);
+        characterMovement.canMove = true;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void UpdateStatSliders()

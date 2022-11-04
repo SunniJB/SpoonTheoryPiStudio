@@ -64,6 +64,11 @@ public class LevelManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {           
+            if(characterInteractor.inspecting)
+            {
+                characterInteractor.FinishInspecting(); return;
+            }
+
             pause = !pause;
             AudioManager.GetInstance().Play(audioName, 1f);
             pausePanel.gameObject.SetActive(pause);
