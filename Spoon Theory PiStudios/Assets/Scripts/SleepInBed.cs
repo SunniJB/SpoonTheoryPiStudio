@@ -31,7 +31,7 @@ public class SleepInBed : MonoBehaviour
 
         AudioManager.GetInstance().Play(audioName, 1f);
         GameManager.GetInstance().SetTimeMorning();
-        GameManager.GetInstance().spoons = Random.Range(10, 31);
+        GameManager.GetInstance().spoons = Random.Range(10, 25);
         GameManager.GetInstance().hunger -= 7;
         GameManager.GetInstance().hygiene -= 5;
         GameManager.GetInstance().dayCount++;

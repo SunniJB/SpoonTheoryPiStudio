@@ -38,7 +38,7 @@ public class CharacterInteractor : MonoBehaviour
 
     [Header("PLAYER STATS")]
     public int numberOfSpoons;
-    public int maxNumberOfSpoons = 31;
+    public int maxNumberOfSpoons = 25;
     public float hygiene;
     public float happiness;
     public float hunger;
