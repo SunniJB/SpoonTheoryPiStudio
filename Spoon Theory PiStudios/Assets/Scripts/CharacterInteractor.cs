@@ -45,7 +45,7 @@ public class CharacterInteractor : MonoBehaviour
     public float money;
     public float workPerformance;
     public int dayCount;
-    public bool hasSleptToday; //Is set to false by the level manager when you go to work, is set to false when you're low on spoons, is set to true by SleepInBed when you go to sleep.
+    public bool hasSleptToday, hasWorkedToday; //Is set to false by the level manager when you go to work, is set to false when you're low on spoons, is set to true by SleepInBed when you go to sleep.
     [HideInInspector] public bool halfSpoons, lowSpoons;
 
     [Header("STATS MODIFIERS")]
@@ -170,7 +170,7 @@ public class CharacterInteractor : MonoBehaviour
 
                 opencloseDoor opencloseDoor = interactionHit[i].GetComponent<opencloseDoor>();
 
-                if (opencloseDoor != null && GameManager.GetInstance().dayTime == GameManager.DayTime.Morning)
+                if (opencloseDoor != null/* && GameManager.GetInstance().dayTime == GameManager.DayTime.Morning*/)
                 {
                     if (TutorialManager.GetInstance() != null && TutorialManager.GetInstance().tutorialStates != TutorialManager.TutorialStates.Finish) continue;
 
@@ -231,6 +231,8 @@ public class CharacterInteractor : MonoBehaviour
 
                 if (minigameEnvironment != null)
                 {
+                    GameManager.GetInstance().SetTimeAfternoon();
+                    Debug.Log("It has become afternoon");
                     minigameEnvironment.GoToScene();
                     continue;
                 }

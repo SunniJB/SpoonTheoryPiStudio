@@ -127,4 +127,9 @@ public class GameManager : MonoBehaviour
         dayTime = DayTime.Evening;
         //dayLight.color = new Color(0.511f, 0.1527415f, 0.135947f);
     }
+
+    public void SetTutorialFinished()
+    {
+        tutorialFinished = !tutorialFinished;
+    }
 }
