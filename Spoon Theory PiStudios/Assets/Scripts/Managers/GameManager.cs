@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        tutorialFinished = false;
+        //tutorialFinished = false;
         SetTimeMorning();
         //if(SceneManager.GetActiveScene().name != "Menu") Cursor.lockState = CursorLockMode.Locked;
     }
