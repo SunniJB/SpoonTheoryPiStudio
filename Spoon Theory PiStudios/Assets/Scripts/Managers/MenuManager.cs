@@ -7,7 +7,7 @@ public class MenuManager : MonoBehaviour
 {
     public GameObject canvas, cutsceneBackground;
 
-    [SerializeField] GameObject optionsPanel, cutScene;
+    [SerializeField] GameObject optionsPanel, cutScene, levelPanel;
     [SerializeField] GameObject buttons;
 
     [SerializeField] Slider sfx, music;
@@ -17,6 +17,7 @@ public class MenuManager : MonoBehaviour
         buttons.SetActive(true);
         optionsPanel.SetActive(false);
         cutScene.SetActive(false);
+        levelPanel.SetActive(false);
 
         sfx.value = AudioManager.GetInstance().startVolume;
         music.value = AudioManager.GetInstance().startVolume;
@@ -31,6 +32,21 @@ public class MenuManager : MonoBehaviour
     }
 
     public void Levels()
+    {
+        levelPanel.SetActive(true);
+    }
+
+    public void LevelsOut()
+    {
+        levelPanel.SetActive(false);
+    }
+
+    public void ChloeLevel()
+    {
+
+    }
+
+    public void IsaacLevel()
     {
 
     }
