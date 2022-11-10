@@ -20,15 +20,6 @@ public class SleepInBed : MonoBehaviour
 
     public void GoToSleep()
     {
-        //foreach (Task task in taskManager.pinnedTasks)
-        //{
-        //    if (task.inProgress)
-        //    {
-        //        task.objectTask.Finish();
-        //        return;
-        //    }
-        //}
-
         AudioManager.GetInstance().Play(audioName, 1f);
         GameManager.GetInstance().SetTimeMorning();
         GameManager.GetInstance().spoons = Random.Range(10, 25);
@@ -50,7 +41,7 @@ public class SleepInBed : MonoBehaviour
     {
         moneyEarned.text = "Current money: " + GameManager.GetInstance().money.ToString("0");
         moneyToGoal.text = "Money to goal: " + ((GameManager.GetInstance().moneyGoal - GameManager.GetInstance().money).ToString("0"));
-        newDay.text = "It is now day " + GameManager.GetInstance().dayCount + 1 + ". Hunger and hygiene have decreased.";
+        newDay.text = "It is now day " + (GameManager.GetInstance().dayCount + 1) + ". Hunger and hygiene have decreased.";
 
         sleepPanel.GetComponent<Animator>().SetTrigger("goingToSleep");
 
