@@ -317,4 +317,12 @@ MonoBehaviour:
     music: 0
     loopable: 0
     source: {fileID: 0}
+  - name: paper rustling
+    clip: {fileID: 8300000, guid: a2801fa26166cb148a8f9abeab1fe134, type: 3}
+    volume: 0.5
+    maxVolume: 1
+    pitch: 0
+    music: 0
+    loopable: 0
+    source: {fileID: 0}
   startVolume: 5
