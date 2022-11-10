@@ -229,8 +229,8 @@ public class CharacterInteractor : MonoBehaviour
 
                 if (minigameEnvironment != null)
                 {
-                    GameManager.GetInstance().SetTimeAfternoon();
-                    Debug.Log("It has become afternoon");
+                    //GameManager.GetInstance().SetTimeAfternoon();
+                    //Debug.Log("It has become afternoon");
                     minigameEnvironment.GoToScene();
                     continue;
                 }
