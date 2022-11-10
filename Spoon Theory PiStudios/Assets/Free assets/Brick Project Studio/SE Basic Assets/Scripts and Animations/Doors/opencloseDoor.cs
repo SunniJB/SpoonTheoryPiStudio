@@ -18,13 +18,13 @@ public class opencloseDoor : MonoBehaviour
 		open = false;
 	}
 
-	public void OpenCloseDoor()
+	public void OpenCloseDoor(CharacterInteractor interactor)
     {
-		if (open == false) StartCoroutine(Opening());
+		if (open == false) StartCoroutine(Opening(interactor));
 		else StartCoroutine(Closing());
 	}
 
-	IEnumerator Opening()
+	IEnumerator Opening(CharacterInteractor interactor)
 	{
 		animator.Play("Opening");
 		AudioManager.GetInstance().Play("Door", 1);
@@ -35,8 +35,13 @@ public class opencloseDoor : MonoBehaviour
 			if (GameManager.GetInstance().ActualScene() == "RestaurantScene")
 			{
 				GameManager.GetInstance().SetTimeAfternoon();
+				interactor.RefreshStatsFromManager();
 			}
-
+			else
+            {
+				interactor.UpdateGameManagerStats();
+            }
+			
 			GameManager.GetInstance().LoadScene(sceneToGo.ToString());
 		}
 		else

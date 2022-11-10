@@ -174,7 +174,7 @@ public class CharacterInteractor : MonoBehaviour
                 {
                     if (TutorialManager.GetInstance() != null && TutorialManager.GetInstance().tutorialStates != TutorialManager.TutorialStates.Finish) continue;
 
-                    opencloseDoor.OpenCloseDoor();
+                    opencloseDoor.OpenCloseDoor(this);
                     continue;
                     //GameManager.Instance.WorkScene();
                 }
