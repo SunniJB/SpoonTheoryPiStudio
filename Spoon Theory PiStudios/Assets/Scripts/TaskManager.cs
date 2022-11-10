@@ -9,7 +9,7 @@ public class TaskManager : MonoBehaviour
     //list of tasks available for the player
     [SerializeField] Task[] morningTasks, eveningTasks, tutorialTask;
 
-    List<Task> displayedTasks;
+    public List<Task> displayedTasks;
     List<CheckBox> checkboxes = new List<CheckBox>();
     [SerializeField] Transform[] columns;
 

@@ -30,27 +30,11 @@ public class opencloseDoor : MonoBehaviour
 		AudioManager.GetInstance().Play("Door", 1);
 		open = true;
 		yield return new WaitForSeconds(.5f);
-        if (GameManager.GetInstance().tutorialFinished) GoToWork();
-        else
+        if (GameManager.GetInstance().tutorialFinished) GameManager.GetInstance().LoadScene(sceneToGo.ToString()); 
+		else
         {
             if (TutorialManager.GetInstance() != null) TutorialManager.GetInstance().finishFinished = true;
         }
-        //if (SceneManager.GetActiveScene().name != "Restaurant Scene")
-        //{
-
-        //      } else
-        //{
-        //	GameManager.GetInstance().ApartmentScene();
-        //      }
-
-    
-
-		//if (GameManager.GetInstance().tutorialFinished) GoToWork();
-		//else
-		//{
-		//	if (TutorialManager.GetInstance() != null) TutorialManager.GetInstance().finishFinished = true;
-		//}
-		GameManager.GetInstance().LoadScene(sceneToGo.ToString());
 	}
 
 	IEnumerator Closing()

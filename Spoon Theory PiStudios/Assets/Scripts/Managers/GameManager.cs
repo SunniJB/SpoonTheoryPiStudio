@@ -38,12 +38,11 @@ public class GameManager : MonoBehaviour
             return;
         }
         DontDestroyOnLoad(gameObject);
-
-        tutorialFinished = false;
     }
 
     private void Start()
     {
+        tutorialFinished = false;
         SetTimeMorning();
         //if(SceneManager.GetActiveScene().name != "Menu") Cursor.lockState = CursorLockMode.Locked;
     }
