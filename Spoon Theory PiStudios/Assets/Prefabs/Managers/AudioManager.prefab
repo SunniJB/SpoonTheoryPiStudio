@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Menu Music
-    clip: {fileID: 8300000, guid: 71983a042469ef24895f8333e7d8f849, type: 3}
+    clip: {fileID: 8300000, guid: 7375c27d5c2da7d47b1d9eded55d354c, type: 3}
     volume: 1
     maxVolume: 1
     pitch: 0
