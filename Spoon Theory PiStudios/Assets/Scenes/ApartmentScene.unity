@@ -3937,6 +3937,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6b7f707c5e29af145882a9a13ad1d6d7, type: 2}
   - {fileID: 11400000, guid: 72b743cef0367bb47aa8876870e1f085, type: 2}
   tutorialTask: []
+  displayedTasks: []
   columns:
   - {fileID: 1004751403}
   - {fileID: 207782458}
@@ -3953,6 +3954,7 @@ MonoBehaviour:
   positive: {r: 0, g: 0.92232394, b: 1, a: 1}
   mediumDif: 3
   hardDif: 5
+  interactor: {fileID: 595028370}
 --- !u!114 &1013130853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5259,7 +5261,7 @@ Transform:
   m_Children:
   - {fileID: 190015090}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: -43.514, z: 0}
 --- !u!1 &1295741837
 GameObject:
