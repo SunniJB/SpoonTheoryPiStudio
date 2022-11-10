@@ -158,7 +158,7 @@ MonoBehaviour:
     loopable: 0
     source: {fileID: 0}
   - name: pet cat
-    clip: {fileID: 8300000, guid: 209483c1f05d7554c9b4375b9eb961b2, type: 3}
+    clip: {fileID: 8300000, guid: dedde1b64c2a26a419adf4052600f4e7, type: 3}
     volume: 1
     maxVolume: 1
     pitch: 0
