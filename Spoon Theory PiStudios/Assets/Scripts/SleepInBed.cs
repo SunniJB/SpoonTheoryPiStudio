@@ -48,14 +48,6 @@ public class SleepInBed : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 1;
-
-        //foreach (ObjectTask task in tasks) Trying very hard here
-        //{
-        //    if (task.task.inProgress)
-        //    {
-        //        task.Finish();
-        //    }
-        //}
     }
 
     public void WakeUp()
