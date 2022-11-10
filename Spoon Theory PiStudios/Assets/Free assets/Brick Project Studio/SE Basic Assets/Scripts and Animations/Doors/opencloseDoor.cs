@@ -32,6 +32,8 @@ public class opencloseDoor : MonoBehaviour
 		yield return new WaitForSeconds(.5f);
 		if (GameManager.GetInstance().tutorialFinished)
 		{
+			if (GameManager.GetInstance().ActualScene() == "RestaurantScene") GameManager.GetInstance().SetTimeAfternoon();
+
 			GameManager.GetInstance().LoadScene(sceneToGo.ToString());
 		}
 		else

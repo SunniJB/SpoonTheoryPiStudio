@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public int totalDaysBeforeLoss = 60;
 
     public bool isIsaac;
+    public bool workedAlready;
 
     [Header("Player stats")]
     public float money;
@@ -38,6 +39,8 @@ public class GameManager : MonoBehaviour
             return;
         }
         DontDestroyOnLoad(gameObject);
+
+        workedAlready = false;
     }
 
     private void Start()

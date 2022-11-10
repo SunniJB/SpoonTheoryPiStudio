@@ -20,13 +20,16 @@ public class SleepInBed : MonoBehaviour
 
     public void GoToSleep()
     {
+        GameManager gm = GameManager.GetInstance();
+
+        gm.workedAlready = false;
         characterInteractor.UpdateGameManagerStats();
         AudioManager.GetInstance().Play(audioName, 1f);
-        GameManager.GetInstance().SetTimeMorning();
-        GameManager.GetInstance().spoons = Random.Range(10, 25);
-        GameManager.GetInstance().hunger -= 7;
-        GameManager.GetInstance().hygiene -= 5;
-        GameManager.GetInstance().dayCount++;
+        gm.SetTimeMorning();
+        gm.spoons = Random.Range(10, 25);
+        gm.hunger -= 7;
+        gm.hygiene -= 5;
+        gm.dayCount++;
         characterInteractor.RefreshStatsFromManager();
         characterInteractor.hasSleptToday = true;
 
