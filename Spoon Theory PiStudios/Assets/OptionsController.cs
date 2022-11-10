@@ -9,8 +9,8 @@ public class OptionsController : MonoBehaviour
 
     private void Start()
     {
-        sfx.value = AudioManager.GetInstance().startVolume;
-        music.value = AudioManager.GetInstance().startVolume;
+        sfx.value = PlayerPrefs.GetFloat("SoundVolume", AudioManager.GetInstance().startVolume);
+        music.value = PlayerPrefs.GetFloat("MusicVolume", AudioManager.GetInstance().startVolume);
     }
     public void SFXSlider(float value)
     {

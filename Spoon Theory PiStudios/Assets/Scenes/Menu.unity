@@ -465,8 +465,6 @@ MonoBehaviour:
   cutScene: {fileID: 1075986725}
   levelPanel: {fileID: 1283321997}
   buttons: {fileID: 57644394}
-  sfx: {fileID: 1725238387}
-  music: {fileID: 2089256309}
 --- !u!114 &148812645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3849,17 +3847,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb87e22c9ee1154c8da379a232198c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1725238387 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3743262705252290347, guid: a555805ad6b05db46aa1b56f86c2e716, type: 3}
-  m_PrefabInstance: {fileID: 3743262706758763352}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1726388345
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4621,17 +4608,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2081046623}
   m_CullTransparentMesh: 1
---- !u!114 &2089256309 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3743262705626465837, guid: a555805ad6b05db46aa1b56f86c2e716, type: 3}
-  m_PrefabInstance: {fileID: 3743262706758763352}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &3743262706758763352
 PrefabInstance:
   m_ObjectHideFlags: 0
