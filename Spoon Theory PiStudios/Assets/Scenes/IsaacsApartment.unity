@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44390523, g: 0.4932801, b: 0.5727693, a: 1}
+  m_IndirectSpecularColor: {r: 0.44390488, g: 0.49327958, b: 0.57276833, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1035,25 +1035,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6547ea276f358f34cab983ff1cedc1ae, type: 2}
   - {fileID: 11400000, guid: 514287c853dbf534da40769852274f43, type: 2}
   - {fileID: 11400000, guid: e157bbd169a22df40aef1ca9844e15ce, type: 2}
-  - {fileID: 11400000, guid: 26ce8abc24613854381a598615a751a6, type: 2}
-  - {fileID: 11400000, guid: db3235ee413ca7f40a9e4aac2a3b98ca, type: 2}
-  - {fileID: 11400000, guid: ad85de13deb300d4b8fb0befb6b81cd2, type: 2}
   - {fileID: 11400000, guid: 39435783b2c3b424b9de8200499da858, type: 2}
   - {fileID: 11400000, guid: 6b7f707c5e29af145882a9a13ad1d6d7, type: 2}
-  - {fileID: 11400000, guid: 72b743cef0367bb47aa8876870e1f085, type: 2}
-  - {fileID: 11400000, guid: a803f6b43bf05e04d803a2087bf50795, type: 2}
   eveningTasks:
-  - {fileID: 11400000, guid: e466a848baa9ee64885c593f11c656c4, type: 2}
-  - {fileID: 11400000, guid: 9b42e2f6858ea0f41944d069caf7c008, type: 2}
-  - {fileID: 11400000, guid: ef66920c4532ce9499f5aa29bd8f6ed5, type: 2}
   - {fileID: 11400000, guid: 20537cb323c330145bc263b108a732ec, type: 2}
   - {fileID: 11400000, guid: 2ba3b9f2b7ce1a441b9036e1adc86249, type: 2}
-  - {fileID: 11400000, guid: db3235ee413ca7f40a9e4aac2a3b98ca, type: 2}
   - {fileID: 11400000, guid: 5b6738cd991c0de46b7136c1257eea27, type: 2}
-  - {fileID: 11400000, guid: 09cc80aff54130f41876ba428efcc10e, type: 2}
   - {fileID: 11400000, guid: 463c80b97dfb9c647833592ed0b855d1, type: 2}
   - {fileID: 11400000, guid: 6b7f707c5e29af145882a9a13ad1d6d7, type: 2}
-  - {fileID: 11400000, guid: 72b743cef0367bb47aa8876870e1f085, type: 2}
   tutorialTask: []
   displayedTasks: []
   columns:
@@ -1072,7 +1061,7 @@ MonoBehaviour:
   positive: {r: 0, g: 0.92232394, b: 1, a: 1}
   mediumDif: 3
   hardDif: 5
-  interactor: {fileID: 0}
+  interactor: {fileID: 1823162702}
 --- !u!114 &238586492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1167,6 +1156,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6475800430078241032, guid: 4f1787c81b9e7bc47a27e1d5407abe41, type: 3}
+      propertyPath: dayTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6475800430078241032, guid: 4f1787c81b9e7bc47a27e1d5407abe41, type: 3}
+      propertyPath: isIsaac
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6475800430078241032, guid: 4f1787c81b9e7bc47a27e1d5407abe41, type: 3}
       propertyPath: dayLight
       value: 
@@ -2145,6 +2142,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &516054320 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8312893551971135598, guid: 610209977180299449105b1f99608fc8, type: 3}
+  m_PrefabInstance: {fileID: 8312893551984940433}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &536319149
 GameObject:
   m_ObjectHideFlags: 0
@@ -7359,9 +7361,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 337251917}
     - target: {fileID: 6606836980417476329, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
+      propertyPath: lowSpoonsAvatar
+      value: 
+      objectReference: {fileID: 21300000, guid: 19228e144d064dc45b0af28608c821ed, type: 3}
+    - target: {fileID: 6606836980417476329, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
+      propertyPath: fullSpoonsAvatar
+      value: 
+      objectReference: {fileID: 21300000, guid: 7ed1c16283a07534a85d886faff85b86, type: 3}
+    - target: {fileID: 6606836980417476329, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
+      propertyPath: halfSpoonsAvatar
+      value: 
+      objectReference: {fileID: 21300000, guid: de779cddd4a854b4e945976a071cec1e, type: 3}
+    - target: {fileID: 6606836980417476329, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
       propertyPath: highSpoonsAvatar
       value: 
-      objectReference: {fileID: 21300000, guid: 0483c95bc8f141e4ea67171b56a7124f, type: 3}
+      objectReference: {fileID: 21300000, guid: 5e14d93ea4ff732429aff5b058a5a362, type: 3}
     - target: {fileID: 6606836980417476330, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
       propertyPath: textPanel
       value: 
@@ -8551,6 +8565,78 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1240215569, guid: 610209977180299449105b1f99608fc8, type: 3}
+      propertyPath: interactionPromptLowSpoons
+      value: '"It better not be raining today."'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240215569, guid: 610209977180299449105b1f99608fc8, type: 3}
+      propertyPath: interactionPromptHighSpoons
+      value: '"Is the color orange named after the fruit or is it vice versa."'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132175952, guid: 610209977180299449105b1f99608fc8, type: 3}
+      propertyPath: interactionPromptLowSpoons
+      value: (Scat)Wah;Tah;Pah;Wah,Tee;Bah;Dee;Boo;Woo,Woo;Pee;Pee;Boo;Dee,Tee;Tah
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132175952, guid: 610209977180299449105b1f99608fc8, type: 3}
+      propertyPath: interactionPromptHighSpoons
+      value: (Scat) Pah;Doo;Bee;Wah,Tah;Poo;Dee;Bah;Woo,Too;Pee;Dah;Boo;Wee,Tee
+      objectReference: {fileID: 0}
+    - target: {fileID: 8312893551001147323, guid: 610209977180299449105b1f99608fc8, type: 3}
+      propertyPath: interactionPromptLowSpoons
+      value: '"i really can''t affored to oversleep today"'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8312893551001147323, guid: 610209977180299449105b1f99608fc8, type: 3}
+      propertyPath: interactionPromptHighSpoons
+      value: '"A quick nap, refreshes the day!"'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8312893551172775745, guid: 610209977180299449105b1f99608fc8, type: 3}
+      propertyPath: interactionPromptLowSpoons
+      value: '"Why do the pants need to be so thight." '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8312893551172775745, guid: 610209977180299449105b1f99608fc8, type: 3}
+      propertyPath: interactionPromptHighSpoons
+      value: '"Looking Sharp!"'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8312893551405236455, guid: 610209977180299449105b1f99608fc8, type: 3}
+      propertyPath: interactionPromptLowSpoons
+      value: '"Is there anything good today. I need to Catch a show."'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8312893551479621616, guid: 610209977180299449105b1f99608fc8, type: 3}
+      propertyPath: interactionPromptLowSpoons
+      value: '"I have eaten worse."'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8312893551479621616, guid: 610209977180299449105b1f99608fc8, type: 3}
+      propertyPath: interactionPromptHighSpoons
+      value: '"This is what perfection looks like..."'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8312893551858512050, guid: 610209977180299449105b1f99608fc8, type: 3}
+      propertyPath: interactionPromptLowSpoons
+      value: '"I want to actually enjoy something today."'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8312893551858512050, guid: 610209977180299449105b1f99608fc8, type: 3}
+      propertyPath: interactionPromptHighSpoons
+      value: '"Ordred food taste soo much better, when i haven''t touchd it."'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8312893551885402490, guid: 610209977180299449105b1f99608fc8, type: 3}
+      propertyPath: interactionPromptLowSpoons
+      value: '"I can''t be bothered to make my own lunch today."'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8312893551885402490, guid: 610209977180299449105b1f99608fc8, type: 3}
+      propertyPath: interactionPromptHighSpoons
+      value: '"Everyone are allowed to have lazy days."'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8312893551971135599, guid: 610209977180299449105b1f99608fc8, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 516054320}
+    - target: {fileID: 8312893551971135599, guid: 610209977180299449105b1f99608fc8, type: 3}
+      propertyPath: sceneToGo
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8312893551971135599, guid: 610209977180299449105b1f99608fc8, type: 3}
+      propertyPath: lvlManager
+      value: 
+      objectReference: {fileID: 97117197}
     - target: {fileID: 8312893552045877960, guid: 610209977180299449105b1f99608fc8, type: 3}
       propertyPath: m_Name
       value: ApartmentLayout2
@@ -8627,6 +8713,14 @@ PrefabInstance:
       propertyPath: characterInteractor
       value: 
       objectReference: {fileID: 1823162702}
+    - target: {fileID: 8312893552594129458, guid: 610209977180299449105b1f99608fc8, type: 3}
+      propertyPath: interactionPromptLowSpoons
+      value: '"I just need to get some alone time for a secound."'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8312893552594129458, guid: 610209977180299449105b1f99608fc8, type: 3}
+      propertyPath: interactionPromptHighSpoons
+      value: '"Time to get the adrenalin pumping"'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 610209977180299449105b1f99608fc8, type: 3}
 --- !u!1 &8312893551984940434 stripped

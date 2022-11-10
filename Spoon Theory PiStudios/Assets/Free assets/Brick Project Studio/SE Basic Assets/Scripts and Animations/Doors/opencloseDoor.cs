@@ -30,11 +30,16 @@ public class opencloseDoor : MonoBehaviour
 		AudioManager.GetInstance().Play("Door", 1);
 		open = true;
 		yield return new WaitForSeconds(.5f);
-        if (GameManager.GetInstance().tutorialFinished) GameManager.GetInstance().LoadScene(sceneToGo.ToString()); 
+		if (GameManager.GetInstance().tutorialFinished)
+		{
+			if (GameManager.GetInstance().ActualScene() == "RestaurantScene") GameManager.GetInstance().SetTimeAfternoon();
+
+			GameManager.GetInstance().LoadScene(sceneToGo.ToString());
+		}
 		else
-        {
-            if (TutorialManager.GetInstance() != null) TutorialManager.GetInstance().finishFinished = true;
-        }
+		{
+			if (TutorialManager.GetInstance() != null) TutorialManager.GetInstance().finishFinished = true;
+		}
 	}
 
 	IEnumerator Closing()
@@ -44,10 +49,4 @@ public class opencloseDoor : MonoBehaviour
 		open = false;
 		yield return new WaitForSeconds(.5f);
 	}
-
-	void GoToWork()
-    {
-		lvlManager.GoToWork();
-    }
-
 }

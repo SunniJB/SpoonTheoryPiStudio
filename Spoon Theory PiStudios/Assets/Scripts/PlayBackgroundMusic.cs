@@ -6,7 +6,7 @@ public class PlayBackgroundMusic : MonoBehaviour
 {
     public string[] audioName;
 
-    void Start()
+    protected virtual void Start()
     {
         for (int i = 0; i < audioName.Length; i++)
         {

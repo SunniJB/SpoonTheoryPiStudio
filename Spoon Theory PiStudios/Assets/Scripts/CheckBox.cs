@@ -29,20 +29,20 @@ public class CheckBox : MonoBehaviour
     {
         if (task.inProgress || task.objectTask.finished) return;
 
+        if (task.moneyCost > taskManager.interactor.money)
+        {
+            taskName = task.taskName;
+            text.text = "You don't have enough money";
+            Invoke("ReturnTextToTaskName", 1f);
+            return;
+        }
+
         PlayCheckSound();
 
         if (value)
         {
             if (TutorialManager.GetInstance() != null)
                 if(task.taskName == "Tutorial Task") TutorialManager.GetInstance().taskmenuFinished = true;
-
-            if (task.moneyCost > taskManager.interactor.money)
-            {
-                taskName = task.taskName;
-                text.text = "You don't have enough money";
-                Invoke("ReturnTextToTaskName", 1f);
-                return;
-            }
 
             taskManager.PinTask(task);
             pinImg.enabled = true;

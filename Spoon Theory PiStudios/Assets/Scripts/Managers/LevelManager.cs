@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
-    [SerializeField] Image avatarImg, pausePanel, characterUIPanel, controlsPanel, shopPanel;
+    [SerializeField] Image avatarImg, pausePanel, characterUIPanel, controlsPanel, shopPanel, optionsPanel;
 
     public bool pause, shouldLockCursor;
 
@@ -22,6 +22,7 @@ public class LevelManager : MonoBehaviour
         pausePanel.gameObject.SetActive(false);
         controlsPanel.gameObject.SetActive(false);
         shopPanel.gameObject.SetActive(false);
+        optionsPanel.gameObject.SetActive(false);
         shopPanelEnabled = false;
 
         pause = false;
@@ -120,10 +121,17 @@ public class LevelManager : MonoBehaviour
         pausePanel.gameObject.SetActive(false);
     }
 
+    public void ShowOptions()
+    {
+        optionsPanel.gameObject.SetActive(true);
+        pausePanel.gameObject.SetActive(false);
+    }
+
     public void BackToPauseMenu()
     {
         pausePanel.gameObject.SetActive(true);
         controlsPanel.gameObject.SetActive(false);
+        optionsPanel.gameObject.SetActive(false);
     }
 
     public void GoToMenu()

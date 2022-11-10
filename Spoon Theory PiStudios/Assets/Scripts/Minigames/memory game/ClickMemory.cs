@@ -10,6 +10,10 @@ public class ClickMemory : MonoBehaviour
     private int arrayPos = 1;
     private static bool canClick = true;
 
+    private void Start()
+    {
+        canClick = true;
+    }
     public void OnClick()
     {
         if (canClick)

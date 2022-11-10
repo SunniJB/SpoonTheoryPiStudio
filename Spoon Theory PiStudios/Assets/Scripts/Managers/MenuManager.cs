@@ -10,17 +10,12 @@ public class MenuManager : MonoBehaviour
     [SerializeField] GameObject optionsPanel, cutScene, levelPanel;
     [SerializeField] GameObject buttons;
 
-    [SerializeField] Slider sfx, music;
-
     private void Start()
     {
         buttons.SetActive(true);
         optionsPanel.SetActive(false);
         cutScene.SetActive(false);
         levelPanel.SetActive(false);
-
-        sfx.value = AudioManager.GetInstance().startVolume;
-        music.value = AudioManager.GetInstance().startVolume;
     }
 
     public void Begin()
@@ -60,15 +55,6 @@ public class MenuManager : MonoBehaviour
     {
         buttons.SetActive(false);
         optionsPanel.SetActive(true);
-    }
-
-    public void SFXSlider(float value)
-    {
-        AudioManager.GetInstance().AudioVolume(value, false);
-    }
-    public void MusicSlider(float value)
-    {
-        AudioManager.GetInstance().AudioVolume(value, true);
     }
 
     public void OptionsBack()

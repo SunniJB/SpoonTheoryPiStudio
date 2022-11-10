@@ -158,7 +158,7 @@ MonoBehaviour:
     loopable: 0
     source: {fileID: 0}
   - name: pet cat
-    clip: {fileID: 8300000, guid: 209483c1f05d7554c9b4375b9eb961b2, type: 3}
+    clip: {fileID: 8300000, guid: dedde1b64c2a26a419adf4052600f4e7, type: 3}
     volume: 1
     maxVolume: 1
     pitch: 0
@@ -238,7 +238,7 @@ MonoBehaviour:
     loopable: 0
     source: {fileID: 0}
   - name: cutting vegetables
-    clip: {fileID: 8300000, guid: c25418270dcc7b24a9c61cc074b3a644, type: 3}
+    clip: {fileID: 8300000, guid: e0889ddd903088b4286fe46c702fdcc6, type: 3}
     volume: 1
     maxVolume: 1
     pitch: 0
@@ -278,7 +278,7 @@ MonoBehaviour:
     loopable: 0
     source: {fileID: 0}
   - name: female heavy breathing
-    clip: {fileID: 8300000, guid: 67e23f13c6a39984f9d0e0264227b797, type: 3}
+    clip: {fileID: 8300000, guid: e70788a914482324697661d72a7429a0, type: 3}
     volume: 0.5
     maxVolume: 0.15
     pitch: 0

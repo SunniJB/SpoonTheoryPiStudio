@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public int totalDaysBeforeLoss = 60;
 
     public bool isIsaac;
+    public bool workedAlready;
 
     [Header("Player stats")]
     public float money;
@@ -38,6 +39,8 @@ public class GameManager : MonoBehaviour
             return;
         }
         DontDestroyOnLoad(gameObject);
+
+        workedAlready = false;
     }
 
     private void Start()
@@ -46,16 +49,17 @@ public class GameManager : MonoBehaviour
         SetTimeMorning();
         //if(SceneManager.GetActiveScene().name != "Menu") Cursor.lockState = CursorLockMode.Locked;
     }
-    public void LoadScene(int sceneNumber = -1)
+    public void LoadScene(int sceneNumber = -1, bool stopMusic = true)
     {
-        AudioManager.GetInstance().StopAllSounds();
+        if (stopMusic) AudioManager.GetInstance().StopAllSounds();
+
         if (sceneNumber != -1) SceneManager.LoadScene(sceneNumber);
         else SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    public void LoadScene(string sceneName)
+    public void LoadScene(string sceneName, bool stopMusic = true)
     {
-        AudioManager.GetInstance().StopAllSounds();
+        if(stopMusic) AudioManager.GetInstance().StopAllSounds();
         SceneManager.LoadScene(sceneName);
     }
 
@@ -88,9 +92,9 @@ public class GameManager : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
         }
     }
-    public void WorkScene()
+    public void WorkScene(bool stopMusic = true)
     {
-        LoadScene(3);
+        LoadScene("RestaurantScene", stopMusic);
         Cursor.lockState = CursorLockMode.None;
     }
 
