@@ -170,7 +170,7 @@ public class CharacterInteractor : MonoBehaviour
 
                 opencloseDoor opencloseDoor = interactionHit[i].GetComponent<opencloseDoor>();
 
-                if (opencloseDoor != null && (GameManager.GetInstance().dayTime == GameManager.DayTime.Morning && numberOfSpoons < 5|| GameManager.GetInstance().ActualScene() == "RestaurantScene"))
+                if (opencloseDoor != null && (GameManager.GetInstance().dayTime == GameManager.DayTime.Morning && numberOfSpoons >= 5|| GameManager.GetInstance().ActualScene() == "RestaurantScene"))
                 {
                     if (TutorialManager.GetInstance() != null && TutorialManager.GetInstance().tutorialStates != TutorialManager.TutorialStates.Finish) continue;
 
