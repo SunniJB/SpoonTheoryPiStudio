@@ -34,6 +34,8 @@ public class CheckBox : MonoBehaviour
             if (TutorialManager.GetInstance() != null)
                 if(task.taskName == "Tutorial Task") TutorialManager.GetInstance().taskmenuFinished = true;
 
+            if (task.moneyCost > taskManager.interactor.money) return;
+
             taskManager.PinTask(task);
             pinImg.enabled = true;
             checkImg.enabled = false;

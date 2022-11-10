@@ -16,7 +16,7 @@ MonoBehaviour:
   description: Task description
   spoonCost: 4
   hygieneCost: 2
-  moneyCost: 3
+  moneyCost: 0
   hungerCost: 3
   happinessCost: 0
   workPerformanceCost: 2

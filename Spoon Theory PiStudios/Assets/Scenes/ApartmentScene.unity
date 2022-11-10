@@ -4006,6 +4006,7 @@ MonoBehaviour:
   positive: {r: 0, g: 0.92232394, b: 1, a: 1}
   mediumDif: 3
   hardDif: 5
+  interactor: {fileID: 595028370}
 --- !u!114 &1013130853
 MonoBehaviour:
   m_ObjectHideFlags: 0
