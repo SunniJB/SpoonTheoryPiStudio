@@ -8,5 +8,6 @@ public class MinigameEnvironment : MonoBehaviour
     public void GoToScene()
     {
         SceneManager.LoadScene(minigame);
+        Cursor.lockState = CursorLockMode.None;
     }
 }
