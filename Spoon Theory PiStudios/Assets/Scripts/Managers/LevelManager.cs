@@ -56,6 +56,8 @@ public class LevelManager : MonoBehaviour
     void PauseMenu()
     {
         if (controlsPanel.gameObject.activeInHierarchy) return;
+        
+        if (optionsPanel.gameObject.activeInHierarchy) return;
 
         if (characterInteractor.taskCanvasEnabled) return;
 
