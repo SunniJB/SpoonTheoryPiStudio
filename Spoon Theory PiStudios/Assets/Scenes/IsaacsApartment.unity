@@ -1055,6 +1055,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6b7f707c5e29af145882a9a13ad1d6d7, type: 2}
   - {fileID: 11400000, guid: 72b743cef0367bb47aa8876870e1f085, type: 2}
   tutorialTask: []
+  displayedTasks: []
   columns:
   - {fileID: 1783497072}
   - {fileID: 1411087999}
@@ -1071,6 +1072,7 @@ MonoBehaviour:
   positive: {r: 0, g: 0.92232394, b: 1, a: 1}
   mediumDif: 3
   hardDif: 5
+  interactor: {fileID: 0}
 --- !u!114 &238586492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8504,7 +8506,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0bcfde0f85054774f8d42a3263380c83, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7ed1c16283a07534a85d886faff85b86, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
