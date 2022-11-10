@@ -33,6 +33,6 @@ public class MinigameManager : MonoBehaviour
 
     public void ReturnToRestaurant()
     {
-        GameManager.GetInstance().WorkScene();
+        GameManager.GetInstance().WorkScene(false);
     }
 }

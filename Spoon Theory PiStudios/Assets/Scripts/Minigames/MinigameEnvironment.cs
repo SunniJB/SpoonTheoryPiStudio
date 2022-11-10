@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class MinigameEnvironment : MonoBehaviour
 {
@@ -7,7 +6,7 @@ public class MinigameEnvironment : MonoBehaviour
 
     public void GoToScene()
     {
-        SceneManager.LoadScene(minigame);
+        GameManager.GetInstance().LoadScene(minigame, false);
         Cursor.lockState = CursorLockMode.None;
     }
 }
