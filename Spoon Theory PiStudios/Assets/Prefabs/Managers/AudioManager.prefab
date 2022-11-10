@@ -238,7 +238,7 @@ MonoBehaviour:
     loopable: 0
     source: {fileID: 0}
   - name: cutting vegetables
-    clip: {fileID: 8300000, guid: c25418270dcc7b24a9c61cc074b3a644, type: 3}
+    clip: {fileID: 8300000, guid: e0889ddd903088b4286fe46c702fdcc6, type: 3}
     volume: 1
     maxVolume: 1
     pitch: 0
