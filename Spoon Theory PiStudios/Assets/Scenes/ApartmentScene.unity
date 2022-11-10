@@ -642,6 +642,58 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 201101504, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.07412084
+      objectReference: {fileID: 0}
+    - target: {fileID: 201101504, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.058717694
+      objectReference: {fileID: 0}
+    - target: {fileID: 201101504, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.92929
+      objectReference: {fileID: 0}
+    - target: {fileID: 201101504, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0039
+      objectReference: {fileID: 0}
+    - target: {fileID: 201101504, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0152
+      objectReference: {fileID: 0}
+    - target: {fileID: 755985215, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.076164655
+      objectReference: {fileID: 0}
+    - target: {fileID: 755985215, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.058514472
+      objectReference: {fileID: 0}
+    - target: {fileID: 755985215, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0036
+      objectReference: {fileID: 0}
+    - target: {fileID: 755985215, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0028
+      objectReference: {fileID: 0}
+    - target: {fileID: 1774979193, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: audioName
+      value: paper rustling
+      objectReference: {fileID: 0}
+    - target: {fileID: 1774979194, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: outlineWidth
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1991285703, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: audioName
+      value: paper rustling
+      objectReference: {fileID: 0}
+    - target: {fileID: 1991285704, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
+      propertyPath: outlineWidth
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2001283711, guid: 6ee4bec24f0c15a4a900bd323c71918b, type: 3}
       propertyPath: daysLeft
       value: 
