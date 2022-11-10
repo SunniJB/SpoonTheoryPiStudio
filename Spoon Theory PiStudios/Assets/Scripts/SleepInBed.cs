@@ -20,6 +20,7 @@ public class SleepInBed : MonoBehaviour
 
     public void GoToSleep()
     {
+        characterInteractor.UpdateGameManagerStats();
         AudioManager.GetInstance().Play(audioName, 1f);
         GameManager.GetInstance().SetTimeMorning();
         GameManager.GetInstance().spoons = Random.Range(10, 25);

@@ -326,6 +326,11 @@ public class CharacterInteractor : MonoBehaviour
             hunger = 0;
     }
 
+    public void UpdateGameManagerStats()
+    {
+        GameManager.GetInstance().UpdateGameManagerStats(money, hunger, numberOfSpoons, hygiene, happiness, workPerformance);
+    }
+
     void HalfSpoons()
     {
         halfSpoons = true;
