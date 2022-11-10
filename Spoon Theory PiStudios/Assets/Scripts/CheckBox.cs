@@ -16,6 +16,8 @@ public class CheckBox : MonoBehaviour
     public Image pinImg, checkImg;
     public string audioName;
 
+    string taskName;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +36,13 @@ public class CheckBox : MonoBehaviour
             if (TutorialManager.GetInstance() != null)
                 if(task.taskName == "Tutorial Task") TutorialManager.GetInstance().taskmenuFinished = true;
 
-            if (task.moneyCost > taskManager.interactor.money) return;
+            if (task.moneyCost > taskManager.interactor.money)
+            {
+                taskName = task.taskName;
+                text.text = "You don't have enough money";
+                Invoke("ReturnTextToTaskName", 1f);
+                return;
+            }
 
             taskManager.PinTask(task);
             pinImg.enabled = true;
@@ -48,6 +56,11 @@ public class CheckBox : MonoBehaviour
         }
 
         if(task.outlineObject != null) task.outlineObject.enabled = value;
+    }
+
+    void ReturnTextToTaskName()
+    {
+        text.text = taskName;
     }
 
     void PlayCheckSound()
