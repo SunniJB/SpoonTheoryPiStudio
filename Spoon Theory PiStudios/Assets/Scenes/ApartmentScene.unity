@@ -4632,6 +4632,18 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 463c80b97dfb9c647833592ed0b855d1, type: 2}
   - {fileID: 11400000, guid: 6b7f707c5e29af145882a9a13ad1d6d7, type: 2}
   - {fileID: 11400000, guid: 72b743cef0367bb47aa8876870e1f085, type: 2}
+  hardEveningTasks:
+  - {fileID: 11400000, guid: e466a848baa9ee64885c593f11c656c4, type: 2}
+  - {fileID: 11400000, guid: 9b42e2f6858ea0f41944d069caf7c008, type: 2}
+  - {fileID: 11400000, guid: ef66920c4532ce9499f5aa29bd8f6ed5, type: 2}
+  - {fileID: 11400000, guid: 20537cb323c330145bc263b108a732ec, type: 2}
+  - {fileID: 11400000, guid: 2ba3b9f2b7ce1a441b9036e1adc86249, type: 2}
+  - {fileID: 11400000, guid: db3235ee413ca7f40a9e4aac2a3b98ca, type: 2}
+  - {fileID: 11400000, guid: 5b6738cd991c0de46b7136c1257eea27, type: 2}
+  - {fileID: 11400000, guid: 09cc80aff54130f41876ba428efcc10e, type: 2}
+  - {fileID: 11400000, guid: a803f6b43bf05e04d803a2087bf50795, type: 2}
+  - {fileID: 11400000, guid: 6b7f707c5e29af145882a9a13ad1d6d7, type: 2}
+  - {fileID: 11400000, guid: 72b743cef0367bb47aa8876870e1f085, type: 2}
   tutorialTask: []
   displayedTasks: []
   columns:
