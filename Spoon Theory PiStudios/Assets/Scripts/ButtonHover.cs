@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ButtonHover : MonoBehaviour
 {
@@ -24,5 +25,14 @@ public class ButtonHover : MonoBehaviour
     public void ClickingSound()
     {
         AudioManager.GetInstance().Play("left click", 1f);
+    }
+
+    public void HoverOnImage()
+    {
+        gameObject.GetComponent<Image>().color = new Color(0.754717f, 0.754717f, 0.754717f);
+    }
+    public void ExitHoverOnImage()
+    {
+        gameObject.GetComponent<Image>().color = new Color(1, 1, 1);
     }
 }
