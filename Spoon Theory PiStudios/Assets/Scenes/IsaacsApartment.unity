@@ -1622,7 +1622,7 @@ GameObject:
   - component: {fileID: 297952874}
   - component: {fileID: 297952873}
   m_Layer: 0
-  m_Name: IsaacBecommer
+  m_Name: IsaacBecomer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
