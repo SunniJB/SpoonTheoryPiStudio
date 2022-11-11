@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -250,9 +250,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 46546549}
-          m_TargetAssemblyTypeName: ButtonHover, Assembly-CSharp
-          m_MethodName: ClickingSound
+        - m_Target: {fileID: 1041660131}
+          m_TargetAssemblyTypeName: MenuLibrary, Assembly-CSharp
+          m_MethodName: GoTolupusMainpage
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -262,9 +262,9 @@ MonoBehaviour:
             m_StringArgument: Menu Music
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1041660131}
-          m_TargetAssemblyTypeName: WhatACoolScriptSunniva, Assembly-CSharp
-          m_MethodName: GoToLupusMain
+        - m_Target: {fileID: 46546549}
+          m_TargetAssemblyTypeName: ButtonHover, Assembly-CSharp
+          m_MethodName: ClickingSound
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -453,6 +453,8 @@ GameObject:
   - component: {fileID: 112655891}
   - component: {fileID: 112655893}
   - component: {fileID: 112655892}
+  - component: {fileID: 112655894}
+  - component: {fileID: 112655895}
   m_Layer: 5
   m_Name: Goback Button
   m_TagString: Untagged
@@ -469,7 +471,7 @@ RectTransform:
   m_GameObject: {fileID: 112655890}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.37322947, y: 0.37322947, z: 0.37322947}
+  m_LocalScale: {x: 0.3732295, y: 0.3732295, z: 0.3732295}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1041660128}
@@ -477,8 +479,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.2692, y: 0.701}
   m_AnchorMax: {x: 0.296, y: 0.7522}
-  m_AnchoredPosition: {x: -0.23913574, y: -0.17236328}
-  m_SizeDelta: {x: 118.01318, y: 123.28894}
+  m_AnchoredPosition: {x: 4.638916, y: 3.91333}
+  m_SizeDelta: {x: 117.40808, y: 124.03616}
   m_Pivot: {x: 0.55, y: 0.5}
 --- !u!114 &112655892
 MonoBehaviour:
@@ -518,6 +520,80 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 112655890}
   m_CullTransparentMesh: 1
+--- !u!114 &112655894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112655890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 112655895}
+          m_TargetAssemblyTypeName: ButtonHover, Assembly-CSharp
+          m_MethodName: HoverOnImage
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 112655895}
+          m_TargetAssemblyTypeName: ButtonHover, Assembly-CSharp
+          m_MethodName: ExitHoverOnImage
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1041660131}
+          m_TargetAssemblyTypeName: MenuLibrary, Assembly-CSharp
+          m_MethodName: GoBack
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &112655895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112655890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af99ab8b3e93a3c4ca4a3a4402656685, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioName: hover over button
 --- !u!1 &119673072
 GameObject:
   m_ObjectHideFlags: 0
@@ -3825,18 +3901,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1041660127}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de71a27035c3a54b861836535de8188, type: 3}
+  m_Script: {fileID: 11500000, guid: 2cbb9ded211d4ee40a9a3bde99a3a235, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainMenu: {fileID: 148812638}
   mainPage: {fileID: 1624905623}
   lupusMainpage: {fileID: 1867853056}
-  msMainpage: {fileID: 0}
+  msMainpage: {fileID: 2056925336}
   lupusWhatIsIt: {fileID: 535822750}
-  msWhatIsIt: {fileID: 0}
-  lupusSymptoms: {fileID: 0}
-  msSymptoms: {fileID: 0}
-  lupusLife: {fileID: 0}
-  msLife: {fileID: 0}
+  msWhatIsIt: {fileID: 1578660662}
+  lupusSymptoms: {fileID: 105925616}
+  msSymptoms: {fileID: 1958142153}
+  lupusLife: {fileID: 936624700}
+  msLife: {fileID: 1239071632}
 --- !u!1 &1044566179
 GameObject:
   m_ObjectHideFlags: 0
@@ -4088,6 +4165,8 @@ GameObject:
   - component: {fileID: 1082227683}
   - component: {fileID: 1082227685}
   - component: {fileID: 1082227684}
+  - component: {fileID: 1082227687}
+  - component: {fileID: 1082227686}
   m_Layer: 5
   m_Name: MS Thumbnail
   m_TagString: Untagged
@@ -4153,6 +4232,80 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1082227682}
   m_CullTransparentMesh: 1
+--- !u!114 &1082227686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082227682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af99ab8b3e93a3c4ca4a3a4402656685, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioName: hover over button
+--- !u!114 &1082227687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082227682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1082227686}
+          m_TargetAssemblyTypeName: ButtonHover, Assembly-CSharp
+          m_MethodName: HoverOnImage
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1082227686}
+          m_TargetAssemblyTypeName: ButtonHover, Assembly-CSharp
+          m_MethodName: ExitHoverOnImage
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1041660131}
+          m_TargetAssemblyTypeName: MenuLibrary, Assembly-CSharp
+          m_MethodName: GoToMsMainpage
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1122329244
 GameObject:
   m_ObjectHideFlags: 0
@@ -5931,6 +6084,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1867853057}
+  - component: {fileID: 1867853058}
   m_Layer: 5
   m_Name: Lupus Mainpage
   m_TagString: Untagged
@@ -5962,6 +6116,28 @@ RectTransform:
   m_AnchoredPosition: {x: -4.5, y: 0}
   m_SizeDelta: {x: -9, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1867853058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867853056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cbb9ded211d4ee40a9a3bde99a3a235, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenu: {fileID: 0}
+  mainPage: {fileID: 0}
+  lupusMainpage: {fileID: 0}
+  msMainpage: {fileID: 0}
+  lupusWhatIsIt: {fileID: 0}
+  msWhatIsIt: {fileID: 0}
+  lupusSymptoms: {fileID: 0}
+  msSymptoms: {fileID: 0}
+  lupusLife: {fileID: 0}
+  msLife: {fileID: 0}
 --- !u!1 &1873353365
 GameObject:
   m_ObjectHideFlags: 0
