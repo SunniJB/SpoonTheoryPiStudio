@@ -27,10 +27,38 @@ public class MenuLibrary : MonoBehaviour
         lupusMainpage.SetActive(true);
         mainPage.SetActive(false);
     }
+    public void GoTolupusWhatIsIt()
+    {
+        lupusMainpage.SetActive(false);
+        lupusSymptoms.SetActive(false);
+        lupusLife.SetActive(false);
+        lupusWhatIsIt.SetActive(true);
+    }
+    public void GoTolupusSymptoms()
+    {
+        lupusMainpage.SetActive(false);
+        lupusSymptoms.SetActive(true);
+        lupusLife.SetActive(false);
+        lupusWhatIsIt.SetActive(false);
+    }
+    public void GoTolupusLife()
+    {
+        lupusMainpage.SetActive(false);
+        lupusSymptoms.SetActive(false);
+        lupusLife.SetActive(true);
+        lupusWhatIsIt.SetActive(false);
+    }
     public void GoToMsMainpage()
     {
         msMainpage.SetActive(true);
         mainPage.SetActive(false);
     }
-
+    public void GoToMsWhatIsIt()
+    {
+        msMainpage.SetActive(false);
+        msSymptoms.SetActive(false);
+        msLife.SetActive(false);
+        msWhatIsIt.SetActive(true);
+    }
+    
 }
