@@ -60,5 +60,18 @@ public class MenuLibrary : MonoBehaviour
         msLife.SetActive(false);
         msWhatIsIt.SetActive(true);
     }
-    
+    public void GoToMsSymptoms()
+    {
+        msMainpage.SetActive(false);
+        msSymptoms.SetActive(true);
+        msLife.SetActive(false);
+        msWhatIsIt.SetActive(false);
+    }
+    public void GoToMsLife()
+    {
+        msMainpage.SetActive(false);
+        msSymptoms.SetActive(false);
+        msLife.SetActive(true);
+        msWhatIsIt.SetActive(false);
+    }
 }
