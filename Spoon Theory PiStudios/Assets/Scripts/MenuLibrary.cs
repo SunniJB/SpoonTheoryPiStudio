@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class MenuLibrary : MonoBehaviour
 {
-    [SerializeField] GameObject mainPage, lupusMainpage, msMainpage, lupusWhatIsIt, msWhatIsIt, lupusSymptoms, msSymptoms, lupusLife, msLife;
+    [SerializeField] GameObject mainMenu, mainPage, lupusMainpage, msMainpage, lupusWhatIsIt, msWhatIsIt, lupusSymptoms, msSymptoms, lupusLife, msLife;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +16,11 @@ public class MenuLibrary : MonoBehaviour
         lupusMainpage.SetActive(false);
         msMainpage.SetActive(false);
         mainPage.SetActive(true);
+    }
+    public void GoBackTomainMenu()
+    {
+        mainPage.SetActive(false);
+        mainMenu.SetActive(true);
     }
     public void GoTolupusMainpage()
     {
