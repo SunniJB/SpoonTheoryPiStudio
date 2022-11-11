@@ -10,6 +10,7 @@ public class ObjectTask : MonoBehaviour
     public string interactionPromptLowSpoons, interactionPromptHighSpoons, audioName;
 
     public Task task;
+    public GameObject finishedState;
 
     [HideInInspector]
     public Outline outline;
@@ -45,6 +46,11 @@ public class ObjectTask : MonoBehaviour
         if (gameObject.TryGetComponent<Animator>(out Animator animator))
         {
             objectAnimator = animator;
+        }
+        if (gameObject.transform.Find("finishedState"))
+        {
+            finishedState = gameObject.transform.Find("finishedState").gameObject;
+            finishedState.SetActive(false);
         }
 
         if (objectAnimator != null)
@@ -160,6 +166,7 @@ public class ObjectTask : MonoBehaviour
         finished = true;
         outline.enabled = false;
 
+        finishedState.SetActive(true);
         AudioManager.GetInstance().Stop(audioName);
         AudioManager.GetInstance().Play("success");
     }
