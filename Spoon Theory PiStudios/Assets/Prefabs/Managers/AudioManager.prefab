@@ -325,4 +325,12 @@ MonoBehaviour:
     music: 0
     loopable: 0
     source: {fileID: 0}
+  - name: success
+    clip: {fileID: 8300000, guid: c3b4a322b6d4df243a2f8a1b6bea3256, type: 3}
+    volume: 0.5
+    maxVolume: 1
+    pitch: 0
+    music: 0
+    loopable: 0
+    source: {fileID: 0}
   startVolume: 5

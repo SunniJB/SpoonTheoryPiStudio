@@ -161,5 +161,6 @@ public class ObjectTask : MonoBehaviour
         outline.enabled = false;
 
         AudioManager.GetInstance().Stop(audioName);
+        AudioManager.GetInstance().Play("success");
     }
 }
