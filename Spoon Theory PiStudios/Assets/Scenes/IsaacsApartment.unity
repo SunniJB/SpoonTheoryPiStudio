@@ -621,6 +621,7 @@ MonoBehaviour:
   characterUIPanel: {fileID: 661635593}
   controlsPanel: {fileID: 440663021}
   shopPanel: {fileID: 283976785}
+  optionsPanel: {fileID: 0}
   pause: 0
   shouldLockCursor: 0
   shopPanelEnabled: 0
@@ -1628,6 +1629,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58d6603b8b8eb4140a7816a5a2c031b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  avatar: {fileID: 2077618889}
+  fullSpoonsAvatar: {fileID: 21300000, guid: 7ed1c16283a07534a85d886faff85b86, type: 3}
+  highSpoonsAvatar: {fileID: 21300000, guid: 5e14d93ea4ff732429aff5b058a5a362, type: 3}
+  halfSpoonsAvatar: {fileID: 21300000, guid: de779cddd4a854b4e945976a071cec1e, type: 3}
+  lowSpoonsAvatar: {fileID: 21300000, guid: 19228e144d064dc45b0af28608c821ed, type: 3}
+  characterInteractor: {fileID: 1823162702}
 --- !u!4 &297952874
 Transform:
   m_ObjectHideFlags: 0

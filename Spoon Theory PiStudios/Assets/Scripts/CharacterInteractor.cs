@@ -19,10 +19,10 @@ public class CharacterInteractor : MonoBehaviour
     [SerializeField] TMP_Text day;
     [SerializeField] TMP_Text timeOfDay;
     [SerializeField] Image avatar;
-    [SerializeField] Sprite fullSpoonsAvatar;
-    [SerializeField] Sprite highSpoonsAvatar;
-    [SerializeField] Sprite halfSpoonsAvatar;
-    [SerializeField] Sprite lowSpoonsAvatar;
+    public Sprite fullSpoonsAvatar;
+    public Sprite highSpoonsAvatar;
+    public Sprite halfSpoonsAvatar;
+    public Sprite lowSpoonsAvatar;
 
     [SerializeField] Transform interactionPoint;
     public float clickInteractionDistance = 5, FInteractionDistance = 3;
@@ -229,8 +229,6 @@ public class CharacterInteractor : MonoBehaviour
 
                 if (minigameEnvironment != null)
                 {
-                    //GameManager.GetInstance().SetTimeAfternoon();
-                    //Debug.Log("It has become afternoon");
                     minigameEnvironment.GoToScene();
                     continue;
                 }
