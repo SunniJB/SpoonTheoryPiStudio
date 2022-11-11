@@ -93,6 +93,7 @@ public class GameManager : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
         }
     }
+
     public void WorkScene(bool stopMusic = true)
     {
         LoadScene("RestaurantScene", stopMusic);

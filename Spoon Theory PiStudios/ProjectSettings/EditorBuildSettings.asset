@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Minigames/SimonSays.unity
     guid: 5be828797e6f4834ca6558fa6d8b625f
+  - enabled: 1
+    path: Assets/Scenes/IsaacsApartment.unity
+    guid: ad74f0bb28629774a8bb912edb1608cf
   m_configObjects: {}

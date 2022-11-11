@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
@@ -43,7 +44,11 @@ public class MenuManager : MonoBehaviour
 
     public void IsaacLevel()
     {
-
+        GameManager.GetInstance().dayCount = 0;
+        GameManager.GetInstance().UpdateGameManagerStats(0, 5, Random.Range(10, 25), 5, 10, 0);
+        GameManager.GetInstance().SetTimeMorning();
+        GameManager.GetInstance().LoadScene(7); // Go to apartment
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void Library()
