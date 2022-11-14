@@ -162,12 +162,13 @@ public class ObjectTask : MonoBehaviour
         Destroy(progressSlider.gameObject);
 
         interactor.FinishTask(task, gameObject);
+        if (gameObject.transform.Find("finishedState"))
+        { finishedState.SetActive(true); }
+        
+        AudioManager.GetInstance().Stop(audioName);
+        AudioManager.GetInstance().Play("success");
 
         finished = true;
         outline.enabled = false;
-
-        finishedState.SetActive(true);
-        AudioManager.GetInstance().Stop(audioName);
-        AudioManager.GetInstance().Play("success");
     }
 }
