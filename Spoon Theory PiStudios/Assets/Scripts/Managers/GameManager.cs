@@ -42,13 +42,19 @@ public class GameManager : MonoBehaviour
 
         PlayerPrefs.DeleteAll();
         workedAlready = false;
+
+        SetTimeMorning();
     }
 
     private void Start()
     {
-        //tutorialFinished = false;
+        Debug.Log("Start function of game manager happened");
         SetTimeMorning();
-        //if(SceneManager.GetActiveScene().name != "Menu") Cursor.lockState = CursorLockMode.Locked;
+
+        if (GameObject.Find("Directional light"))
+        {
+            dayLight = GameObject.Find("Directional light").GetComponent<Light>();
+        }
     }
     public void LoadScene(int sceneNumber = -1, bool stopMusic = true)
     {

@@ -47,7 +47,8 @@ public class MenuManager : MonoBehaviour
         GameManager.GetInstance().dayCount = 0;
         GameManager.GetInstance().UpdateGameManagerStats(0, 5, Random.Range(10, 25), 5, 10, 0);
         GameManager.GetInstance().SetTimeMorning();
-        GameManager.GetInstance().LoadScene(7); // Go to apartment
+        GameManager.GetInstance().tutorialFinished = true;
+        GameManager.GetInstance().LoadScene(7); // Go to Isaac's apartment
         Cursor.lockState = CursorLockMode.Locked;
     }
 
