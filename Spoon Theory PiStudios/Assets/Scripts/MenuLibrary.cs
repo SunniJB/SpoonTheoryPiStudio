@@ -6,16 +6,61 @@ using UnityEngine.UI;
 public class MenuLibrary : MonoBehaviour
 {
     [SerializeField] GameObject mainMenu, mainPage, lupusMainpage, msMainpage, lupusWhatIsIt, msWhatIsIt, lupusSymptoms, msSymptoms, lupusLife, msLife;
+    public bool currentlyOnLupus, currentlyOnMS, currentlyOnNothing;
     // Start is called before the first frame update
-    void Start()
+    private void Update()
     {
-        
+        if (lupusWhatIsIt.activeInHierarchy || lupusSymptoms.activeInHierarchy || lupusLife.activeInHierarchy)
+        {
+            currentlyOnLupus = true;
+            currentlyOnNothing = false;
+        } else {currentlyOnLupus = false;}
+
+        if (msWhatIsIt.activeInHierarchy || msSymptoms.activeInHierarchy || msLife.activeInHierarchy)
+        {
+            currentlyOnMS = true;
+            currentlyOnNothing = false;
+        } else { currentlyOnMS = false; }
     }
     public void GoBack()
     {
-        lupusMainpage.SetActive(false);
-        msMainpage.SetActive(false);
-        mainPage.SetActive(true);
+        if (currentlyOnLupus)
+        {
+            lupusWhatIsIt.SetActive(false);
+            lupusSymptoms.SetActive(false);
+            lupusLife.SetActive(false);
+            lupusMainpage.SetActive(true);
+        }
+
+        if (currentlyOnMS)
+        {
+            msWhatIsIt.SetActive(false);
+            msSymptoms.SetActive(false);
+            msLife.SetActive(false);
+            msMainpage.SetActive(true);
+        }
+
+        if (!currentlyOnLupus && !currentlyOnMS)
+        {
+            msMainpage.SetActive(false);
+            lupusMainpage.SetActive(false);
+            mainPage.SetActive(true);
+
+            StartCoroutine(ExecuteAfterTime(0.5f)); //Makes you wait a second before returning to main menu
+            Debug.Log("Started waiting");
+        }
+
+        if (currentlyOnNothing)
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
+    IEnumerator ExecuteAfterTime(float time) //Makes you wait a second before returning to main menu
+    {
+        yield return new WaitForSeconds(time);
+        Debug.Log("Finished waiting");
+        currentlyOnNothing = true;
     }
     public void GoBackTomainMenu()
     {
@@ -26,6 +71,7 @@ public class MenuLibrary : MonoBehaviour
     {
         lupusMainpage.SetActive(true);
         mainPage.SetActive(false);
+        currentlyOnNothing = false;
     }
     public void GoTolupusWhatIsIt()
     {
@@ -52,6 +98,7 @@ public class MenuLibrary : MonoBehaviour
     {
         msMainpage.SetActive(true);
         mainPage.SetActive(false);
+        currentlyOnNothing = false;
     }
     public void GoToMsWhatIsIt()
     {

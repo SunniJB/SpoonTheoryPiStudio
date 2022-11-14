@@ -8,7 +8,7 @@ public class MenuManager : MonoBehaviour
 {
     public GameObject canvas, cutsceneBackground;
 
-    [SerializeField] GameObject optionsPanel, cutScene, levelPanel;
+    [SerializeField] GameObject optionsPanel, cutScene, levelPanel, library;
     [SerializeField] GameObject buttons;
 
     private void Start()
@@ -53,7 +53,7 @@ public class MenuManager : MonoBehaviour
 
     public void Library()
     {
-
+        library.SetActive(true);
     }
 
     public void Options()
