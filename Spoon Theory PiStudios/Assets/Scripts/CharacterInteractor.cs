@@ -165,7 +165,7 @@ public class CharacterInteractor : MonoBehaviour
                     interactableObject[j].Interact(this);
 
                     j++;
-                    continue;
+                    return;
                 }
 
                 opencloseDoor opencloseDoor = interactionHit[i].GetComponent<opencloseDoor>();
@@ -175,7 +175,7 @@ public class CharacterInteractor : MonoBehaviour
                     if (TutorialManager.GetInstance() != null && TutorialManager.GetInstance().tutorialStates != TutorialManager.TutorialStates.Finish) continue;
 
                     opencloseDoor.OpenCloseDoor(this);
-                    continue;
+                    return;
                     //GameManager.Instance.WorkScene();
                 }
 
@@ -197,7 +197,7 @@ public class CharacterInteractor : MonoBehaviour
 
                     characterMovement.canMove = false;
                     characterMovement.moving = false;
-                    continue;
+                    return;
                 }
 
                 SleepInBed sleepInBed = interactionHit[i].GetComponent<SleepInBed>();
@@ -212,7 +212,7 @@ public class CharacterInteractor : MonoBehaviour
                         //GameManager.Instance.WorkScene();
                     }
                     else promptUI.SetUpText("I can't go to sleep yet.");
-                    continue;
+                    return;
                 }
 
                 CheckCalendar checkCalendar = interactionHit[i].GetComponent<CheckCalendar>();
@@ -222,7 +222,7 @@ public class CharacterInteractor : MonoBehaviour
                     if (TutorialManager.GetInstance() != null && TutorialManager.GetInstance().tutorialStates != TutorialManager.TutorialStates.Finish) continue;
 
                     checkCalendar.CheckGoal();
-                    continue;
+                    return;
                 }
 
                 MinigameEnvironment minigameEnvironment = interactionHit[i].GetComponent<MinigameEnvironment>();
@@ -230,7 +230,7 @@ public class CharacterInteractor : MonoBehaviour
                 if (minigameEnvironment != null)
                 {
                     minigameEnvironment.GoToScene();
-                    continue;
+                    return;
                 }
             }
 

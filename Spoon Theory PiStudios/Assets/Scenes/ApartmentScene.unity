@@ -10944,6 +10944,10 @@ PrefabInstance:
       propertyPath: highSpoonsAvatar
       value: 
       objectReference: {fileID: 21300000, guid: f47a7cda99ba70e4a95983be2036ea30, type: 3}
+    - target: {fileID: 6606836980417476329, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
+      propertyPath: speedMultiplierCurve.m_Curve.Array.data[0].value
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 6606836980417476330, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
       propertyPath: textPanel
       value: 

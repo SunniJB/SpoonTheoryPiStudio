@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class ThisIsIsaac : MonoBehaviour
 {
-
     [SerializeField] Image avatar;
     [SerializeField] Sprite fullSpoonsAvatar;
     [SerializeField] Sprite highSpoonsAvatar;

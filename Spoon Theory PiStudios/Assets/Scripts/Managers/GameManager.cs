@@ -102,16 +102,10 @@ public class GameManager : MonoBehaviour
 
     public void WorkScene(bool stopMusic = true)
     {
-        if (!isIsaac)
-        {
-            LoadScene("RestaurantScene", stopMusic);
-            Cursor.lockState = CursorLockMode.None;
-        }
-        else if (isIsaac)
-        {
-            LoadScene("IsaacWorkScene", stopMusic);
-            Cursor.lockState = CursorLockMode.None;
-        }
+        if (!isIsaac) LoadScene("RestaurantScene", stopMusic);
+        else LoadScene("IsaacWorkScene", stopMusic);
+
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void MemoryGameScene()
