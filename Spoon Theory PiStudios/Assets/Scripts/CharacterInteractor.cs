@@ -46,6 +46,7 @@ public class CharacterInteractor : MonoBehaviour
     public float workPerformance;
     public int dayCount;
     public bool hasSleptToday, hasWorkedToday; //Is set to false by the level manager when you go to work, is set to false when you're low on spoons, is set to true by SleepInBed when you go to sleep.
+    public bool doingTask;
     [HideInInspector] public bool halfSpoons, lowSpoons;
 
     [Header("STATS MODIFIERS")]
@@ -82,6 +83,7 @@ public class CharacterInteractor : MonoBehaviour
         taskCanvas.gameObject.SetActive(false);
         viewerPanel.SetActive(false);
         inspecting = false;
+        doingTask = false;
     }
 
     // Update is called once per frame
@@ -151,6 +153,7 @@ public class CharacterInteractor : MonoBehaviour
             if (interactionHit.Length <= 0) return;
 
             ObjectTask[] interactableObject = new ObjectTask[interactionHit.Length];
+
             int j = 0;
 
             for (int i = 0; i < interactionHit.Length; i++)
@@ -165,7 +168,7 @@ public class CharacterInteractor : MonoBehaviour
                     interactableObject[j].Interact(this);
 
                     j++;
-                    return;
+                    continue;
                 }
 
                 opencloseDoor opencloseDoor = interactionHit[i].GetComponent<opencloseDoor>();
@@ -175,7 +178,7 @@ public class CharacterInteractor : MonoBehaviour
                     if (TutorialManager.GetInstance() != null && TutorialManager.GetInstance().tutorialStates != TutorialManager.TutorialStates.Finish) continue;
 
                     opencloseDoor.OpenCloseDoor(this);
-                    return;
+                    continue;
                     //GameManager.Instance.WorkScene();
                 }
 
@@ -197,7 +200,7 @@ public class CharacterInteractor : MonoBehaviour
 
                     characterMovement.canMove = false;
                     characterMovement.moving = false;
-                    return;
+                    continue;
                 }
 
                 SleepInBed sleepInBed = interactionHit[i].GetComponent<SleepInBed>();
@@ -212,7 +215,7 @@ public class CharacterInteractor : MonoBehaviour
                         //GameManager.Instance.WorkScene();
                     }
                     else promptUI.SetUpText("I can't go to sleep yet.");
-                    return;
+                    continue;
                 }
 
                 CheckCalendar checkCalendar = interactionHit[i].GetComponent<CheckCalendar>();
@@ -222,7 +225,7 @@ public class CharacterInteractor : MonoBehaviour
                     if (TutorialManager.GetInstance() != null && TutorialManager.GetInstance().tutorialStates != TutorialManager.TutorialStates.Finish) continue;
 
                     checkCalendar.CheckGoal();
-                    return;
+                    continue;
                 }
 
                 MinigameEnvironment minigameEnvironment = interactionHit[i].GetComponent<MinigameEnvironment>();
@@ -230,7 +233,7 @@ public class CharacterInteractor : MonoBehaviour
                 if (minigameEnvironment != null)
                 {
                     minigameEnvironment.GoToScene();
-                    return;
+                    continue;
                 }
             }
 
@@ -260,6 +263,8 @@ public class CharacterInteractor : MonoBehaviour
         promptUI.Close();
 
         taskManager.TaskCompleted(task);
+
+        doingTask = false;
 
         interactableObject.layer = defaultLayer;
 

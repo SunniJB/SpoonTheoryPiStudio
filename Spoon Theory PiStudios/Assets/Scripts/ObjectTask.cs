@@ -88,14 +88,17 @@ public class ObjectTask : MonoBehaviour
 
     public void Interact(CharacterInteractor _interactor)
     {
-        task.inProgress = true;
         interactor = _interactor;
+
+        if (interactor.doingTask) return;
+
+        interactor.doingTask = true;
+        task.inProgress = true;
         _spoonCostPositive = Mathf.Abs(task.spoonCost);
         GameObject clon = Instantiate(progressSliderPrefab, sliderPos);
         progressSlider = clon.GetComponent<Slider>();
         progressSlider.maxValue = _spoonCostPositive;
         progressSlider.value = 0;
-
 
         if (objectAnimator != null) objectAnimator.SetTrigger("play");
 
