@@ -39,16 +39,27 @@ public class MenuManager : MonoBehaviour
 
     public void ChloeLevel()
     {
+        GameManager gm = GameManager.GetInstance();
 
+        gm.dayCount = 0;
+        gm.isIsaac = false;
+        gm.tutorialFinished = true;
+        gm.SetTimeMorning();
+        gm.ApartmentScene();
+
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void IsaacLevel()
     {
-        GameManager.GetInstance().dayCount = 0;
-        GameManager.GetInstance().UpdateGameManagerStats(0, 5, Random.Range(10, 25), 5, 10, 0);
-        GameManager.GetInstance().SetTimeMorning();
-        GameManager.GetInstance().tutorialFinished = true;
-        GameManager.GetInstance().LoadScene(7); // Go to Isaac's apartment
+        GameManager gm = GameManager.GetInstance();
+
+        gm.dayCount = 0;
+        gm.isIsaac = true;
+        gm.UpdateGameManagerStats(0, 5, Random.Range(10, 25), 5, 10, 0);
+        gm.SetTimeMorning();
+        gm.tutorialFinished = true;
+        gm.ApartmentScene();
         Cursor.lockState = CursorLockMode.Locked;
     }
 

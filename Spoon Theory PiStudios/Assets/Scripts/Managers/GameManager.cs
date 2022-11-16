@@ -80,10 +80,9 @@ public class GameManager : MonoBehaviour
         return SceneManager.GetActiveScene().name;
     }
 
-
     public void MenuScene()
     {
-        LoadScene(0);
+        LoadScene("Menu");
         Cursor.lockState = CursorLockMode.None;
     }
 
@@ -95,7 +94,10 @@ public class GameManager : MonoBehaviour
         }
         else 
         {
-            LoadScene(2); // Go to apartment
+            //Go to its correspondant apartment if your isaac or chloe
+            if (!isIsaac) LoadScene("ChloesApartment");
+            else LoadScene("IsaacsApartment");
+
             Cursor.lockState = CursorLockMode.Locked;
         }
     }
