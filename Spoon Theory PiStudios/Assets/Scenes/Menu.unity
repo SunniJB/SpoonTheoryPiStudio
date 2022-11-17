@@ -783,7 +783,7 @@ GameObject:
   - component: {fileID: 145886419}
   - component: {fileID: 145886418}
   m_Layer: 5
-  m_Name: Lupus MS
+  m_Name: MS Tab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1934,7 +1934,7 @@ GameObject:
   - component: {fileID: 384876225}
   - component: {fileID: 384876224}
   m_Layer: 5
-  m_Name: Lupus MS
+  m_Name: MS Tab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5451,7 +5451,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1239071633
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5509,8 +5509,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 24.4, y: 60.8}
-  m_SizeDelta: {x: 2810, y: 990.63477}
+  m_AnchoredPosition: {x: 24.4, y: -31}
+  m_SizeDelta: {x: 2812, y: 1385.4043}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1250009606
 MonoBehaviour:
@@ -6427,7 +6427,7 @@ GameObject:
   - component: {fileID: 1590216062}
   - component: {fileID: 1590216061}
   m_Layer: 5
-  m_Name: Lupus MS
+  m_Name: MS Tab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7383,7 +7383,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1958142154
 RectTransform:
   m_ObjectHideFlags: 0
