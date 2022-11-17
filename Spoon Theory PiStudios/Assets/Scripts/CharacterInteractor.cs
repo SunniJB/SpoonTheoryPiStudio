@@ -77,8 +77,18 @@ public class CharacterInteractor : MonoBehaviour
     void Start()
     {
         RefreshStatsFromManager();
+
         spoonSlider.maxValue =  maxNumberOfSpoons;
+        hygieneSlider.maxValue = 10;
+        hungerSlider.maxValue = 10;
+        happinessSlider.maxValue = 20;
+
         spoonSlider.value = numberOfSpoons;
+        hygieneSlider.value = hygiene;
+        hungerSlider.value = hunger;
+        happinessSlider.value = happiness;
+
+
         hasSleptToday = true;
         taskCanvas.gameObject.SetActive(false);
         viewerPanel.SetActive(false);
@@ -92,8 +102,6 @@ public class CharacterInteractor : MonoBehaviour
         ToggleTaskMenu();
 
         FInteraction();
-
-        UpdateSpoonSlider();
 
         UpdateStatSliders();
 
@@ -247,19 +255,10 @@ public class CharacterInteractor : MonoBehaviour
         Gizmos.DrawWireSphere(interactionPoint.position, FInteractionDistance);
     }
 
-    private void UpdateSpoonSlider()
-    {
-        if (numberOfSpoons < 0)
-        {
-            numberOfSpoons = 0;
-            ZeroSpoons();
-        }
-        
-        spoonSlider.value = numberOfSpoons;
-    }
-
     public void FinishTask(Task task, GameObject interactableObject)
     {
+        if(hunger <= 3f || hygiene <= 3f) happiness--;
+
         promptUI.Close();
 
         taskManager.TaskCompleted(task);
@@ -289,9 +288,20 @@ public class CharacterInteractor : MonoBehaviour
 
     private void UpdateStatSliders()
     {
-        hygieneSlider.value = (float)hygiene / 10;
-        hungerSlider.value = (float)hunger / 10;
-        happinessSlider.value = (((float)hygiene + (float)hunger) / 2 + (float)happiness) / 20;
+        if (numberOfSpoons < 0)
+        {
+            numberOfSpoons = 0;
+            ZeroSpoons();
+        }
+
+        hygiene = Mathf.Clamp(hygiene, 0, 10);
+        hunger = Mathf.Clamp(hunger, 0, 10);
+        happiness = Mathf.Clamp(happiness, 0, 20);
+
+        spoonSlider.value = numberOfSpoons;
+        hygieneSlider.value = hygiene;
+        hungerSlider.value = hunger;
+        happinessSlider.value = happiness + (hygiene + hunger) / 2;
 
         MoneyText.text = "£" + money.ToString("000");
         if (day != null)
@@ -313,18 +323,15 @@ public class CharacterInteractor : MonoBehaviour
 
     public void RefreshStatsFromManager()
     {
-        money = GameManager.GetInstance().money;
-        numberOfSpoons = GameManager.GetInstance().spoons;
-        hygiene = GameManager.GetInstance().hygiene;
-        workPerformance = GameManager.GetInstance().workPerformance;
-        hunger = GameManager.GetInstance().hunger;
-        happiness = GameManager.GetInstance().happiness;
-        dayCount = GameManager.GetInstance().dayCount;
+        GameManager gm = GameManager.GetInstance();
 
-        if (hygiene < 0) 
-            hygiene = 0;
-        if (hunger < 0)
-            hunger = 0;
+        money = gm.money;
+        numberOfSpoons = gm.spoons;
+        hygiene = gm.hygiene;
+        workPerformance = gm.workPerformance;
+        hunger = gm.hunger;
+        happiness = gm.happiness;
+        dayCount = gm.dayCount;
     }
 
     public void UpdateGameManagerStats()
@@ -334,8 +341,9 @@ public class CharacterInteractor : MonoBehaviour
 
     void HalfSpoons()
     {
+        happiness--;
+
         halfSpoons = true;
-        Debug.Log("half spoons");
     }
     public void CheckIfStillHalfSpoons()
     {
@@ -343,7 +351,7 @@ public class CharacterInteractor : MonoBehaviour
     }
     void LowSpoons()
     {
-        Debug.Log("low spoons");
+        happiness -= 2;
 
         lowSpoons = true;
 
