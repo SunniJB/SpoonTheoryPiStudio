@@ -1902,7 +1902,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1493354743}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -5789,9 +5789,9 @@ RectTransform:
   - {fileID: 1847782228}
   - {fileID: 2102002790}
   - {fileID: 192336213}
+  - {fileID: 483873119}
   - {fileID: 199537621}
   - {fileID: 1335775986}
-  - {fileID: 483873119}
   - {fileID: 1920475993}
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -6272,7 +6272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f499e9b131796a4295fe35e47722738, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minigame: memory test
+  minigame: memory test isac
 --- !u!1 &1690521331
 GameObject:
   m_ObjectHideFlags: 0
@@ -9040,7 +9040,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f499e9b131796a4295fe35e47722738, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minigame: SimonSays
+  minigame: SimonSays isac
 --- !u!114 &7162229699189912679
 MonoBehaviour:
   m_ObjectHideFlags: 0
