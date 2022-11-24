@@ -134,7 +134,7 @@ public class CharacterInteractor : MonoBehaviour
 
             if (TutorialManager.GetInstance() == null && (levelManager.pause || levelManager.shopPanelEnabled)) return;
 
-            if (GameManager.GetInstance().ActualScene() != "ApartmentScene" && GameManager.GetInstance().ActualScene() != "TutorialScene" && GameManager.GetInstance().ActualScene() != "IsaacsApartment") return;
+            if (GameManager.GetInstance().ActualScene() != "ChloesApartment" && GameManager.GetInstance().ActualScene() != "TutorialScene" && GameManager.GetInstance().ActualScene() != "IsaacsApartment") return;
 
             if (inspecting) return;
 
