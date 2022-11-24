@@ -10,7 +10,7 @@ public class opencloseDoor : MonoBehaviour
 	public bool open;
 	public LevelManager lvlManager;
 
-	public enum SceneToGo { TutorialScene, ApartmentScene, RestaurantScene, IsaacsApartment, IsaacWorkScene}
+	public enum SceneToGo { TutorialScene, ChloesApartment, RestaurantScene, IsaacsApartment, IsaacWorkScene}
 	public SceneToGo sceneToGo;
 
 	void Start()
