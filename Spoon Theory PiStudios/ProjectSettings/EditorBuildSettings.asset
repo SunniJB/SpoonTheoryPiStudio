@@ -32,4 +32,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Isaac/IsaacWorkScene.unity
     guid: 22d2d25a09b13b042aa1b124eb5bd096
+  - enabled: 1
+    path: Assets/Scenes/Minigames/memory test Isac.unity
+    guid: 9717fa85a2d18774d99c32477c8c6bf5
+  - enabled: 1
+    path: Assets/Scenes/Minigames/SimonSays.unity
+    guid: 1ac784b23753aaf429a72df2f802b4b6
   m_configObjects: {}
