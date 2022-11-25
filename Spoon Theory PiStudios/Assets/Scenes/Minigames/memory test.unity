@@ -689,7 +689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   circuit: {fileID: 82014307}
-  speed: 2
+  speed: 5
   maxRotation: 5
 --- !u!1 &481962964
 GameObject:
@@ -3713,7 +3713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe598711e9771ec42a3a8cc3ff5248a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spoonCost: 0
+  spoonCost: 4
   _mm: {fileID: 1867514819}
   flippedLibrary:
   - {fileID: 21300000, guid: 4f081d1d254d86949a104438f169979f, type: 3}
