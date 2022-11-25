@@ -121,4 +121,40 @@ public class MenuLibrary : MonoBehaviour
         msLife.SetActive(true);
         msWhatIsIt.SetActive(false);
     }
+    public void SwitchToWhatIsLupus()
+    {
+        lupusWhatIsIt.SetActive(true);
+        lupusSymptoms.SetActive(false);
+        lupusLife.SetActive(false);
+    }
+    public void SwitchToLupusSymptoms()
+    {
+        lupusWhatIsIt.SetActive(false);
+        lupusSymptoms.SetActive(true);
+        lupusLife.SetActive(false);
+    }
+    public void SwitchToLupusLife()
+    {
+        lupusWhatIsIt.SetActive(false);
+        lupusSymptoms.SetActive(false);
+        lupusLife.SetActive(true);
+    }
+    public void SwitchToWhatIsMS()
+    {
+        msWhatIsIt.SetActive(true);
+        msSymptoms.SetActive(false);
+        msLife.SetActive(false);
+    }
+    public void SwitchToMSSymptoms()
+    {
+        msWhatIsIt.SetActive(false);
+        msSymptoms.SetActive(true);
+        msLife.SetActive(false);
+    }
+    public void SwitchToMSLife()
+    {
+        msWhatIsIt.SetActive(false);
+        msSymptoms.SetActive(false);
+        msLife.SetActive(true);
+    }
 }
