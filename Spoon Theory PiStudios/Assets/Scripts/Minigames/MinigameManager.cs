@@ -5,6 +5,7 @@ using UnityEngine;
 public class MinigameManager : MonoBehaviour
 {
     [HideInInspector] public float workPerform;
+    [SerializeField] FinishMinigame finishMinigame;
     float money;
 
     public void Complete(int _spoonCost, float _totalTime, float _dividend = 100)
@@ -14,6 +15,13 @@ public class MinigameManager : MonoBehaviour
         money = 10.9f * (workPerform / 10);
         GameManager.GetInstance().money += money;
         GameManager.GetInstance().spoons -= _spoonCost;
+
+        finishMinigame.StartAnimationVoid(_spoonCost, money, this);
+    }
+
+    public void Finish()
+    {
+        if (GameManager.GetInstance().ActualScene() == "SortingMinigame") FindObjectOfType<SortingGameManager>().Win();
     }
 
     public void Skip()

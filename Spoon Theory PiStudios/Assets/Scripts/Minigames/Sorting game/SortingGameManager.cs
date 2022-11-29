@@ -13,7 +13,7 @@ public class SortingGameManager : MonoBehaviour
 
     public MinigameManager minigameManager;
 
-    private bool gotPaid;
+    private bool gotPaid, completed;
 
     private void Start()
     {
@@ -31,6 +31,8 @@ public class SortingGameManager : MonoBehaviour
 
     private void Update()
     {
+        if (completed) return;
+
         seconds += Time.deltaTime;
         if (seconds > 60)
         {
@@ -41,21 +43,26 @@ public class SortingGameManager : MonoBehaviour
         timer.GetComponent<TMPro.TextMeshProUGUI>().text = "Time: " + minutes.ToString() + ":" + seconds.ToString("f1");
         if (spoonGoal.full && knifeGoal.full && forkGoal.full)
         {
-            Win();
+            Complete();
         }
     }
 
-    void Win()
+    void Complete()
     {
-        winPanel.SetActive(true);
-        GameObject.Find("Final time").GetComponent<TMPro.TextMeshProUGUI>().text = "Your final time was: " + minutes.ToString() + ":" + seconds.ToString("f1");
-        Time.timeScale = 0f;
+        Time.timeScale = 1f;
+        completed = true;
 
         if (gotPaid == false)
         {
             minigameManager.Complete(3, minutes * 60 + seconds);
             gotPaid = true;
         }
+    }
+
+    public void Win()
+    {
+        winPanel.SetActive(true);
+        GameObject.Find("Final time").GetComponent<TMPro.TextMeshProUGUI>().text = "Your final time was: " + minutes.ToString() + ":" + seconds.ToString("f1");
 
         if (minigameManager.workPerform < 12.5)
         {
@@ -116,7 +123,7 @@ public class SortingGameManager : MonoBehaviour
 
     public void Skip()
     {
-        gotPaid = true;
-        Win();
+        //gotPaid = true;
+        Complete();
     }
 }

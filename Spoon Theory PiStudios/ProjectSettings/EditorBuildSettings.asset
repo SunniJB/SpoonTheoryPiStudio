@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Chloe/RestaurantScene.unity
     guid: 45604311d2069af478d4a5087f294b0c
   - enabled: 1
-    path: Assets/Scenes/Minigames/Sorting Minigame.unity
+    path: Assets/Scenes/Minigames/SortingMinigame.unity
     guid: c92e99be8ddc82942aa0e94274cdfd7f
   - enabled: 1
     path: Assets/Scenes/Minigames/memory test.unity
