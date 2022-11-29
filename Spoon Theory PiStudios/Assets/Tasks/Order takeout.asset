@@ -12,13 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 689f24bddc4b4da44b46d092a39f3e9d, type: 3}
   m_Name: Order takeout
   m_EditorClassIdentifier: 
-  taskName: Oder takeout
+  taskName: Order takeout
   description: Task description
   spoonCost: 1
   hygieneCost: 0
   moneyCost: 5
   hungerCost: -2
-  happinesCost: 0
+  happinessCost: 0
   workPerformanceCost: 0
+  followingTask: {fileID: 0}
   outlineObject: {fileID: 0}
+  objectTask: {fileID: 0}
+  parent: {fileID: 0}
   inProgress: 0

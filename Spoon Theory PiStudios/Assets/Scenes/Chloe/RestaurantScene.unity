@@ -6093,7 +6093,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   avatarImg: {fileID: 0}
   pausePanel: {fileID: 1695867531}
-  characterUIPanel: {fileID: 0}
+  characterUIPanel: {fileID: 359471790}
   controlsPanel: {fileID: 728356996}
   shopPanel: {fileID: 1285597197}
   optionsPanel: {fileID: 1090727481}
