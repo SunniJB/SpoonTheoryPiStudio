@@ -53,6 +53,7 @@ public class FinishMinigame : MonoBehaviour
         spoonsAnim.SetTrigger("Corner");
         moneyAnim.SetTrigger("Corner");
 
+        GetComponent<Image>().enabled = false;
         minigameManager.Finish();
     }
 }
