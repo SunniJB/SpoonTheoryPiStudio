@@ -1565,7 +1565,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 425375331}
         m_TargetAssemblyTypeName: SimonSaysManager, Assembly-CSharp
-        m_MethodName: Win
+        m_MethodName: Complete
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
