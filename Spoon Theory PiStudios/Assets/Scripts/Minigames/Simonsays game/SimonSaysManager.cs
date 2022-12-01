@@ -6,13 +6,14 @@ using TMPro;
 
 public class SimonSaysManager : MonoBehaviour
 {
-    int value, count, currentLength, maxStrikes, currentStrikes, timesSequencePlayed;
+    int value, count, currentLength, maxStrikes, currentStrikes;
+    [SerializeField] int timesSequencePlayed = 0;
 
-    [SerializeField] List<int> currentSequence = new List<int>();
+    [SerializeField] List<int> currentSequence = new();
 
     [SerializeField] int initialLength, repeatTimes;
 
-    [SerializeField] float initialTimeBetweenColors, resetColorTime, beginSequenceDelay;
+    [SerializeField] float initialTimeBetweenColors, minTimeBetweenColors, resetColorTime, beginSequenceDelay;
     float currentTimeBetweenColors;
 
     [SerializeField] Image red, green, blue, yellow, winPanel, losePanel;
@@ -24,13 +25,15 @@ public class SimonSaysManager : MonoBehaviour
     public TMP_Text strikeText, PerformanceText, moneyText;
     public MinigameManager minigameManager;
     bool gotpaid;
+
+    bool canClick;
     
     public void OnStartClick()
     {
         Time.timeScale = 1;
         count = 0;
         currentStrikes = 0;
-        timesSequencePlayed = 0;
+        timesSequencePlayed = 1;
         maxStrikes = 3;
         currentLength = initialLength;
         currentTimeBetweenColors = initialTimeBetweenColors;
@@ -56,7 +59,7 @@ public class SimonSaysManager : MonoBehaviour
         {
             if (timesSequencePlayed < repeatTimes)
                 NextSequence();
-            else Win();
+            else Complete();
         }
     }
 
@@ -64,6 +67,8 @@ public class SimonSaysManager : MonoBehaviour
 
     void DeactivateClick()
     {
+        canClick = false;
+
         red.raycastTarget = false;
         yellow.raycastTarget = false;
         blue.raycastTarget = false;
@@ -72,6 +77,8 @@ public class SimonSaysManager : MonoBehaviour
 
     void ActivateClick()
     {
+        canClick = true;
+
         red.raycastTarget = true;
         yellow.raycastTarget = true;
         blue.raycastTarget = true;
@@ -134,7 +141,7 @@ public class SimonSaysManager : MonoBehaviour
 
     IEnumerator QuitPopUp(int num)
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(currentTimeBetweenColors - 0.3f);
         popUps[num].gameObject.SetActive(false);
     }
 
@@ -166,7 +173,7 @@ public class SimonSaysManager : MonoBehaviour
             ShowPopUp(currentSequence[i]);
             StartCoroutine(QuitPopUp(currentSequence[i]));
             i++;
-            if (i == currentSequence.Count) ActivateClick();
+            if (i == currentSequence.Count - 1) ActivateClick();
             yield return new WaitForSeconds(currentTimeBetweenColors);
         }
     }
@@ -175,7 +182,8 @@ public class SimonSaysManager : MonoBehaviour
     {
         DeactivateClick();
 
-        currentTimeBetweenColors -= 0.1f;
+        currentTimeBetweenColors -= 0.05f;
+        if (currentTimeBetweenColors < minTimeBetweenColors) currentTimeBetweenColors += .1f;
 
         ResetSequence();
         CreateSequence();
@@ -183,14 +191,24 @@ public class SimonSaysManager : MonoBehaviour
 
     void CheckIfCorrect(int value)
     {
+        if (!canClick) return;
+
         if (value != currentSequence[count])
         {
+            DeactivateClick();
+            StopAllCoroutines();
             currentStrikes++;
             strikes[currentStrikes - 1].gameObject.SetActive(true);
-            NextSequence();
+            ResetSequence();
+
+            currentTimeBetweenColors -= 0.1f;
+            if (currentTimeBetweenColors < minTimeBetweenColors) currentTimeBetweenColors += .1f;
+
+
+            Invoke(nameof(CreateSequence), 1);
         }
 
-        if (currentStrikes >= maxStrikes) Lose();
+        if (currentStrikes >= maxStrikes) Complete();
     }
 
     void Lose()
@@ -204,9 +222,9 @@ public class SimonSaysManager : MonoBehaviour
         moneyText.text = "You earned: £" + minigameManager.GetMoney().ToString("00");
         losePanel.gameObject.SetActive(true); */
     }
-
-    public void Win()
+    void Complete()
     {
+        canClick = false;
         if (!gotpaid)
         {
             if (currentStrikes == 0)
@@ -216,7 +234,10 @@ public class SimonSaysManager : MonoBehaviour
 
             gotpaid = true;
         }
+    }
 
+    public void Win()
+    {
         strikeText.text = "You got " + currentStrikes +" orders wrong!";
          if (minigameManager.workPerform < 12.5)
         {

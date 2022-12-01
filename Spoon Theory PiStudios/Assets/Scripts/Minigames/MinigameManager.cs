@@ -21,7 +21,17 @@ public class MinigameManager : MonoBehaviour
 
     public void Finish()
     {
-        if (GameManager.GetInstance().ActualScene() == "SortingMinigame") FindObjectOfType<SortingGameManager>().Win();
+        switch(GameManager.GetInstance().ActualScene())
+        {
+            case "SortingMinigame":
+                FindObjectOfType<SortingGameManager>().Win();
+                break;
+            case "SimonSays":
+                FindObjectOfType<SimonSaysManager>().Win();
+                break;
+            case "MemoryTest":
+                break;
+        }
     }
 
     public void Skip()
