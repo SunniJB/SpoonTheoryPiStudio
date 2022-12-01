@@ -30,6 +30,7 @@ public class MinigameManager : MonoBehaviour
                 FindObjectOfType<SimonSaysManager>().Win();
                 break;
             case "MemoryTest":
+                FindObjectOfType<MemoryManager>().FinishMinigame();
                 break;
         }
     }
