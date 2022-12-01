@@ -222,7 +222,7 @@ public class SimonSaysManager : MonoBehaviour
         moneyText.text = "You earned: £" + minigameManager.GetMoney().ToString("00");
         losePanel.gameObject.SetActive(true); */
     }
-    void Complete()
+    public void Complete()
     {
         canClick = false;
         if (!gotpaid)
