@@ -225,6 +225,9 @@ public class SimonSaysManager : MonoBehaviour
     public void Complete()
     {
         canClick = false;
+        StopAllCoroutines();
+        ResetSequence();
+
         if (!gotpaid)
         {
             if (currentStrikes == 0)
