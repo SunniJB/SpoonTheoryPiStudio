@@ -110,12 +110,12 @@ public class CharacterInteractor : MonoBehaviour
 
         UpdateStatsModifiers();
 
-        if(!halfSpoons && spoonSlider.value / spoonSlider.maxValue <= 0.5f)
+        if (!halfSpoons && spoonSlider.value / spoonSlider.maxValue <= 0.5f)
         {
             HalfSpoons();
         }
 
-        if(!lowSpoons && spoonSlider.value / spoonSlider.maxValue <= 0.25f)
+        if (!lowSpoons && spoonSlider.value / spoonSlider.maxValue <= 0.25f)
         {
             LowSpoons();
         }
@@ -125,7 +125,10 @@ public class CharacterInteractor : MonoBehaviour
         else if (spoonSlider.value / spoonSlider.maxValue <= 0.75f) avatar.sprite = highSpoonsAvatar;
         else avatar.sprite = fullSpoonsAvatar;
 
-        if (AudioManager.GetInstance().CheckPlaying(femaleBreathingSound)) AudioManager.GetInstance().SoundVolume(femaleBreathingSound, breathingVolume.Evaluate(spoonSlider.value / spoonSlider.maxValue));
+        if (AudioManager.GetInstance().CheckPlaying(femaleBreathingSound))
+        {
+            AudioManager.GetInstance().SoundVolume(femaleBreathingSound, breathingVolume.Evaluate(spoonSlider.value / spoonSlider.maxValue));
+        }
     }
 
     void ToggleTaskMenu()
@@ -359,9 +362,16 @@ public class CharacterInteractor : MonoBehaviour
         lowSpoons = true;
 
         AudioManager.GetInstance().Play(femaleBreathingSound);
+        
 
-        hasSleptToday = false;
-        promptUI.SetUpText("I'm getting tired. I guess I could sleep.");
+        if (hasSleptToday == false)
+        {
+            promptUI.SetUpText("I'm getting tired. I guess I could sleep.");
+        } else
+        {
+            promptUI.SetUpText("I'm so tired. I'm sarting to feel dizzy.");
+        }
+
     }
     public void CheckIfStillLowSpoons()
     {
