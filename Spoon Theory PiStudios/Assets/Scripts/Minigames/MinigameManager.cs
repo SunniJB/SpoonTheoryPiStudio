@@ -12,7 +12,7 @@ public class MinigameManager : MonoBehaviour
     {
         workPerform = (_dividend / (_totalTime / 10)) - 5 + GameManager.GetInstance().happiness;
         if (workPerform > 50) workPerform = 50;
-        money = 10.9f * (workPerform / 10);
+        money = (int)(10.9f * (workPerform / 10));
         GameManager.GetInstance().money += money;
         GameManager.GetInstance().spoons -= _spoonCost;
 
