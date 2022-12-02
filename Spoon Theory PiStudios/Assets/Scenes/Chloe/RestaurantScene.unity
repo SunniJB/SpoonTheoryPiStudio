@@ -10331,7 +10331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f499e9b131796a4295fe35e47722738, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minigame: memory test
+  minigame: MemoryTest
 --- !u!114 &1669301612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13139,7 +13139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f499e9b131796a4295fe35e47722738, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minigame: Sorting Minigame
+  minigame: SortingMinigame
 --- !u!114 &1017001400108401988
 MonoBehaviour:
   m_ObjectHideFlags: 0
