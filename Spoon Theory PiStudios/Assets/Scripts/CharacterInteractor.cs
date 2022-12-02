@@ -72,13 +72,9 @@ public class CharacterInteractor : MonoBehaviour
     {
         characterMovement = GetComponent<CharacterMovement1stPerson>();
 
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
         RefreshStatsFromManager();
 
-        spoonSlider.maxValue =  maxNumberOfSpoons;
+        spoonSlider.maxValue = maxNumberOfSpoons;
         hygieneSlider.maxValue = 10;
         hungerSlider.maxValue = 10;
         happinessSlider.maxValue = 20;
@@ -88,7 +84,14 @@ public class CharacterInteractor : MonoBehaviour
         hungerSlider.value = hunger;
         happinessSlider.value = happiness;
 
-
+        if (spoonSlider.value / spoonSlider.maxValue <= 0.25f) avatar.sprite = lowSpoonsAvatar;
+        else if (spoonSlider.value / spoonSlider.maxValue <= 0.5f) avatar.sprite = halfSpoonsAvatar;
+        else if (spoonSlider.value / spoonSlider.maxValue <= 0.75f) avatar.sprite = highSpoonsAvatar;
+        else avatar.sprite = fullSpoonsAvatar;
+    }
+    // Start is called before the first frame update
+    void Start()
+    {
         hasSleptToday = true;
         taskCanvas.gameObject.SetActive(false);
         viewerPanel.SetActive(false);
