@@ -245,15 +245,15 @@ public class SimonSaysManager : MonoBehaviour
     public void Win()
     {
         strikeText.text = "You got " + currentStrikes +" orders wrong!";
-         if (minigameManager.workPerform < 12.5)
+         if (currentStrikes == 3)
         {
             PerformanceText.text = "You didn't do great. There is always tomorrow.";
         }
-        if (minigameManager.workPerform > 12.5f && minigameManager.workPerform < 37.5f)
+        if (currentStrikes == 2)
         {
             PerformanceText.text = "You did some good work today.";
         }
-        if (minigameManager.workPerform > 37.5f)
+        if (currentStrikes <= 1)
         {
             PerformanceText.text = "Wow, you did great!";
         }
