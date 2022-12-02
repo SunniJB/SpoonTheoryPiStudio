@@ -26,7 +26,7 @@ public class SimonSaysManager : MonoBehaviour
     public MinigameManager minigameManager;
     bool gotpaid;
 
-    bool canClick;
+    bool canClick, failed;
     
     public void OnStartClick()
     {
@@ -54,6 +54,8 @@ public class SimonSaysManager : MonoBehaviour
     void Update()
     {
         if (currentStrikes >= maxStrikes) { DeactivateClick(); return; }
+
+        if (failed) return;
 
         if (count > 0 && count >= currentSequence.Count)
         {
@@ -88,36 +90,28 @@ public class SimonSaysManager : MonoBehaviour
     public void RedClick()
     {
         value = 1;
-        Debug.Log(value);
         ChangeColor(red, redCol);
         CheckIfCorrect(value);
-        count++;
     }
 
     public void YellowClick()
     {
         value = 2;
-        Debug.Log(value);
         ChangeColor(yellow, yellowCol);
         CheckIfCorrect(value);
-        count++;
     }
 
     public void BlueClick()
     {
         value = 0;
-        Debug.Log(value);
         ChangeColor(blue, blueCol);
         CheckIfCorrect(value);
-        count++;
     }
     public void GreenClick()
     {
         value = 3;
-        Debug.Log(value);
         ChangeColor(green, greenCol);
         CheckIfCorrect(value);
-        count++;
     }
 
     void ChangeColor(Image img, Color color)
@@ -147,6 +141,8 @@ public class SimonSaysManager : MonoBehaviour
 
     void CreateSequence()
     {
+        failed = false;
+
         for (int i = 0; i < currentLength; i++)
         {
             value = Random.Range(0, 4);
@@ -167,13 +163,14 @@ public class SimonSaysManager : MonoBehaviour
     IEnumerator ShowSequence()
     {
         yield return new WaitForSeconds(beginSequenceDelay);
-        int i = 0;
-        while (i < currentSequence.Count)
+
+        for (int i = 0; i < currentSequence.Count; i++)
         {
             ShowPopUp(currentSequence[i]);
             StartCoroutine(QuitPopUp(currentSequence[i]));
-            i++;
+
             if (i == currentSequence.Count - 1) ActivateClick();
+
             yield return new WaitForSeconds(currentTimeBetweenColors);
         }
     }
@@ -193,22 +190,28 @@ public class SimonSaysManager : MonoBehaviour
     {
         if (!canClick) return;
 
-        if (value != currentSequence[count])
+        Debug.Log("clicked value: " + value + "\tsequence value: " + currentSequence[count]);
+        bool check = value != currentSequence[count];
+        count++;
+
+        if (check)
         {
+            failed = true;
+
             DeactivateClick();
-            StopAllCoroutines();
+
+            StopCoroutine(ShowSequence());
+            ResetSequence();
             currentStrikes++;
             strikes[currentStrikes - 1].gameObject.SetActive(true);
-            ResetSequence();
+            AudioManager.GetInstance().Play("wrongSimon");
 
             currentTimeBetweenColors -= 0.1f;
             if (currentTimeBetweenColors < minTimeBetweenColors) currentTimeBetweenColors += .1f;
 
-
-            Invoke(nameof(CreateSequence), 1);
+            if (currentStrikes >= maxStrikes) Complete();
+            else Invoke(nameof(CreateSequence), 1);
         }
-
-        if (currentStrikes >= maxStrikes) Complete();
     }
 
     void Lose()

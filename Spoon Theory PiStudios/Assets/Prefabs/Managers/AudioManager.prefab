@@ -333,4 +333,12 @@ MonoBehaviour:
     music: 0
     loopable: 0
     source: {fileID: 0}
+  - name: wrongSimon
+    clip: {fileID: 8300000, guid: bfa45c398a6cda043be808138a65b304, type: 3}
+    volume: 0.5
+    maxVolume: 1
+    pitch: 0
+    music: 0
+    loopable: 0
+    source: {fileID: 0}
   startVolume: 5
