@@ -106,7 +106,8 @@ public class MemoryManager : MonoBehaviour
         winPanel.SetActive(true);
 
         if (!moneygiven)
-        {            
+        {
+            Complete();
             finalTimeTxt.text = "Your final time was : " + timerMin.ToString("0") + ":" + timerSec.ToString("f1");
             workTxt.text = "Performance Review: " + _mm.GetWorkPerform().ToString("00") + "/50";
             if (_mm.workPerform < 12.5)
