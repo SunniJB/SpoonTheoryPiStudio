@@ -253,7 +253,7 @@ public class SimonSaysManager : MonoBehaviour
         {
             PerformanceText.text = "You did some good work today.";
         }
-        if (currentStrikes >= 1)
+        if (currentStrikes <= 1)
         {
             PerformanceText.text = "Wow, you did great!";
         }
