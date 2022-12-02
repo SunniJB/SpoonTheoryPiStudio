@@ -93,18 +93,20 @@ public class MemoryManager : MonoBehaviour
         GameManager.GetInstance().ApartmentScene();
     }
 
-    public void FinishMinigame()
+    public void Complete()
     {
         timeIsOn = false;
-        winPanel.SetActive(true);
         totalTime = timerMin * 60 + timerSec;
 
+        _mm.Complete(spoonCost, totalTime, 60);
+    }
+
+    public void FinishMinigame()
+    {      
+        winPanel.SetActive(true);
+
         if (!moneygiven)
-        {
-            if(clickedStart)
-            _mm.Complete(spoonCost, totalTime, 60);
-
-
+        {            
             finalTimeTxt.text = "Your final time was : " + timerMin.ToString("0") + ":" + timerSec.ToString("f1");
             workTxt.text = "Performance Review: " + _mm.GetWorkPerform().ToString("00") + "/50";
             if (_mm.workPerform < 12.5)
