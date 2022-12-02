@@ -220,7 +220,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1997511
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1323,7 +1323,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &178192556
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1563,7 +1563,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &250185957
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6298,7 +6298,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1382426319
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7978,7 +7978,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: These are your spoons. Most tasks cost spoons, some tasks give you spoons.
     When you get low, everything gets harder; you get slower, it's harder to see,
-    it's harder to work.
+    it's harder to work, and you start breathing heavily.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bcaba47312a3c47449bada5c2bd28ce6, type: 2}
   m_sharedMaterial: {fileID: 2898256470276210267, guid: bcaba47312a3c47449bada5c2bd28ce6, type: 2}
