@@ -110,15 +110,25 @@ public class GameManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
     }
 
+    public void SortingGameScene()
+    {
+        LoadScene("SortingMinigame");
+        Cursor.lockState = CursorLockMode.None;
+    }
+
     public void MemoryGameScene()
     {
-        LoadScene(4);
+        if (isIsaac) LoadScene("MemoryTestIsaac");
+        else LoadScene("MemoryTest");
+
         Cursor.lockState = CursorLockMode.None;
     }
 
     public void SimonGameScene()
     {
-        LoadScene(5);
+        if (isIsaac) LoadScene("SimonSaysIsaac");
+        else LoadScene("SimonSays");
+
         Cursor.lockState = CursorLockMode.None;
     }
 
