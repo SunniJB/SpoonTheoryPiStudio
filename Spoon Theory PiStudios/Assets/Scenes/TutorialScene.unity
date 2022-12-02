@@ -3143,7 +3143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationsPlayed: 0
-  characterUIAnimator: {fileID: 0}
+  characterUIAnimator: {fileID: 427711703}
   nextButton: {fileID: 1323576486}
 --- !u!1 &798604510
 GameObject:
@@ -6814,9 +6814,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1667975239}
     - target: {fileID: 6606836980417476329, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
-      propertyPath: highSpoonsAvatar
+      propertyPath: halfSpoonsAvatar
       value: 
       objectReference: {fileID: 21300000, guid: 0483c95bc8f141e4ea67171b56a7124f, type: 3}
+    - target: {fileID: 6606836980417476329, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
+      propertyPath: highSpoonsAvatar
+      value: 
+      objectReference: {fileID: 21300000, guid: f47a7cda99ba70e4a95983be2036ea30, type: 3}
     - target: {fileID: 6606836980417476330, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
       propertyPath: textPanel
       value: 
