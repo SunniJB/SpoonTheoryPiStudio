@@ -127,7 +127,7 @@ public class CharacterInteractor : MonoBehaviour
 
         if (AudioManager.GetInstance().CheckPlaying(femaleBreathingSound))
         {
-            AudioManager.GetInstance().SoundVolume(femaleBreathingSound, breathingVolume.Evaluate(spoonSlider.value / spoonSlider.maxValue));
+            AudioManager.GetInstance().SoundVolume(femaleBreathingSound, breathingVolume.Evaluate(spoonSlider.value / spoonSlider.maxValue) * PlayerPrefs.GetFloat("SoundVolume"));
         }
     }
 
