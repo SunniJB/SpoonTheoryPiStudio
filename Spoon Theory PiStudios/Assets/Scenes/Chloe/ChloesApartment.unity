@@ -5131,6 +5131,14 @@ MonoBehaviour:
   controlsPanel: {fileID: 178192557}
   shopPanel: {fileID: 1711644648}
   optionsPanel: {fileID: 227455058}
+  pauseTips:
+  - Look at your bed and press F to go to sleep.
+  - Blue tasks give you some spoons.
+  - You can adjust the sound volume in the settings.
+  - If you run out of spoons, you can't go to work.
+  - Blue objects can be examined closer.
+  - A yellow outline means an object can be interacted with.
+  pauseTipText: {fileID: 1799267797}
   pause: 0
   shouldLockCursor: 0
   shopPanelEnabled: 0
@@ -8508,7 +8516,7 @@ GameObject:
   - component: {fileID: 1799267800}
   - component: {fileID: 1799267799}
   m_Layer: 5
-  m_Name: Reminder
+  m_Name: PauseTips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8531,7 +8539,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 141, y: 96}
+  m_AnchoredPosition: {x: 152, y: 85}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1799267799
