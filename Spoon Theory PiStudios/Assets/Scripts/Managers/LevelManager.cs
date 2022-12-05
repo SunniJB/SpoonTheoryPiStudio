@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
-    [SerializeField] Image avatarImg, pausePanel, characterUIPanel, controlsPanel, shopPanel, optionsPanel;
+    [SerializeField] Image avatarImg, pausePanel, characterUIPanel, controlsPanel, shopPanel, optionsPanel, pinnedTaskPanel;
     [SerializeField] string[] pauseTips = {"Look at your bed and press F to go to sleep.", "Blue tasks give you some spoons.", "You can adjust the sound volume in the settings.", "If you run out of spoons, you can't go to work.", "Blue objects can be examined closer.", "A yellow outline means an object can be interacted with." };
     [SerializeField] GameObject pauseTipText;
     public bool pause, shouldLockCursor;
@@ -25,6 +25,7 @@ public class LevelManager : MonoBehaviour
         controlsPanel.gameObject.SetActive(false);
         shopPanel.gameObject.SetActive(false);
         optionsPanel.gameObject.SetActive(false);
+        pinnedTaskPanel.gameObject.SetActive(true);
         shopPanelEnabled = false;
 
         pause = false;
@@ -84,11 +85,13 @@ public class LevelManager : MonoBehaviour
 
             if (pause)
             {
+                pinnedTaskPanel.gameObject.SetActive(false);
                 Cursor.lockState = CursorLockMode.None;
                 Time.timeScale = 0;
             }
             else
             {
+                pinnedTaskPanel.gameObject.SetActive(true);
                 Time.timeScale = 1;
                 if (shouldLockCursor)
                 {
