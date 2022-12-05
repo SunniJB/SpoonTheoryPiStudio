@@ -15,7 +15,7 @@ public class GoalManager : MonoBehaviour
         }
         else
         {
-            goalMoneyAmount = 814; // 1364, goal halved for this prototype;
+            goalMoneyAmount = 812; // 1364, goal halved for this prototype;
         }
         GameManager.GetInstance().moneyGoal = goalMoneyAmount;
     }
