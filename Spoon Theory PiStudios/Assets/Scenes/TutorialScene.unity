@@ -5182,7 +5182,7 @@ MonoBehaviour:
   - If you run out of spoons, you can't go to work.
   - Blue objects can be examined closer.
   - A yellow outline means an object can be interacted with.
-  pauseTipText: {fileID: 0}
+  pauseTipText: {fileID: 1548862693}
   pause: 0
   shouldLockCursor: 0
   shopPanelEnabled: 0
