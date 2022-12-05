@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
     [SerializeField] Image avatarImg, pausePanel, characterUIPanel, controlsPanel, shopPanel, optionsPanel;
-
+    [SerializeField] string[] pauseTips = {"Look at your bed and press F to go to sleep.", "Blue tasks give you some spoons.", "You can adjust the sound volume in the settings.", "If you run out of spoons, you can't go to work.", "Blue objects can be examined closer.", "A yellow outline means an object can be interacted with." };
+    [SerializeField] GameObject pauseTipText;
     public bool pause, shouldLockCursor;
 
     public bool shopPanelEnabled;
@@ -55,6 +57,7 @@ public class LevelManager : MonoBehaviour
 
     void PauseMenu()
     {
+        
         if (controlsPanel.gameObject.activeInHierarchy) return;
         
         if (optionsPanel.gameObject.activeInHierarchy) return;
@@ -66,8 +69,10 @@ public class LevelManager : MonoBehaviour
         if (shopPanelEnabled) return;
 
         if (Input.GetKeyDown(KeyCode.Escape))
-        {           
-            if(characterInteractor.inspecting)
+        {
+            pauseTipText.GetComponent<TMP_Text>().text = pauseTips[Random.Range(0, pauseTips.Length)];
+
+            if (characterInteractor.inspecting)
             {
                 characterInteractor.FinishInspecting(); return;
             }
