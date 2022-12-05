@@ -2748,6 +2748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minigame: SimonSays
+  promptUI: {fileID: 1829030606}
 --- !u!114 &484193990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10332,6 +10333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minigame: MemoryTest
+  promptUI: {fileID: 1829030606}
 --- !u!114 &1669301612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11465,6 +11467,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
+--- !u!114 &1829030606 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6606836980417476330, guid: e13996a3656ac5747ad8a0dc4b6e60ce, type: 3}
+  m_PrefabInstance: {fileID: 1829030605}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d381512885008f34a9f9fc1bf8acfaf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1856596223
 GameObject:
   m_ObjectHideFlags: 0
@@ -13144,6 +13157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minigame: SortingMinigame
+  promptUI: {fileID: 1829030606}
 --- !u!114 &1017001400108401988
 MonoBehaviour:
   m_ObjectHideFlags: 0

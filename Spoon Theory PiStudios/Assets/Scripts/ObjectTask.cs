@@ -107,7 +107,11 @@ public class ObjectTask : MonoBehaviour
 
     void Progress()
     {
-        if (interactor.numberOfSpoons <= 0 && task.spoonCost > 0) return;
+        if (interactor.numberOfSpoons <= 0 && task.spoonCost > 0)
+        {
+            interactor.NoSpoonsForTask();
+            return;
+        }
 
         if (spoonsTaken >= _spoonCostPositive)
         {

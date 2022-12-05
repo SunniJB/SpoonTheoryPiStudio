@@ -102,6 +102,11 @@ public class CharacterInteractor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (numberOfSpoons < 5)
+        {
+            hasSleptToday = false;
+        }
+
         ToggleTaskMenu();
 
         FInteraction();
@@ -377,5 +382,10 @@ public class CharacterInteractor : MonoBehaviour
     {
         if (spoonSlider.value / spoonSlider.maxValue > 0.25f) lowSpoons = false;
         AudioManager.GetInstance().Stop(femaleBreathingSound);
+    }
+
+    public void NoSpoonsForTask()
+    {
+        promptUI.SetUpText("I am too tired to finish this now.");
     }
 }
