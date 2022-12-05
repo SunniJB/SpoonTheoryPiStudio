@@ -15,10 +15,13 @@ MonoBehaviour:
   taskName: Dry clothes
   description: Task description
   spoonCost: 3
-  hygieneCost: 0
+  hygieneCost: -2
   moneyCost: 0
   hungerCost: 0
-  happinesCost: 0
+  happinessCost: 0
   workPerformanceCost: 0
+  followingTask: {fileID: 0}
   outlineObject: {fileID: 0}
+  objectTask: {fileID: 0}
+  parent: {fileID: 0}
   inProgress: 0

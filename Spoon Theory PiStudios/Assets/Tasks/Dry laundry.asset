@@ -15,7 +15,7 @@ MonoBehaviour:
   taskName: dry laundry
   description: drying laundry
   spoonCost: 3
-  hygieneCost: 0
+  hygieneCost: -2
   moneyCost: 0
   hungerCost: 0
   happinessCost: 0
@@ -24,4 +24,4 @@ MonoBehaviour:
   outlineObject: {fileID: 0}
   objectTask: {fileID: 0}
   parent: {fileID: 11400000, guid: a803f6b43bf05e04d803a2087bf50795, type: 2}
-  inProgress: 0
+  inProgress: 1
