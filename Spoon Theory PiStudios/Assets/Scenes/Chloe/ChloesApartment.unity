@@ -5131,6 +5131,7 @@ MonoBehaviour:
   controlsPanel: {fileID: 178192557}
   shopPanel: {fileID: 1711644648}
   optionsPanel: {fileID: 227455058}
+  pinnedTaskPanel: {fileID: 912712014}
   pauseTips:
   - Look at your bed and press F to go to sleep.
   - Blue tasks give you some spoons.

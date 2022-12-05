@@ -5967,6 +5967,7 @@ MonoBehaviour:
   controlsPanel: {fileID: 728356996}
   shopPanel: {fileID: 1285597197}
   optionsPanel: {fileID: 1090727481}
+  pinnedTaskPanel: {fileID: 1489752109}
   pauseTips:
   - Look at your bed and press F to go to sleep.
   - Blue tasks give you some spoons.
@@ -5974,7 +5975,7 @@ MonoBehaviour:
   - If you run out of spoons, you can't go to work.
   - Blue objects can be examined closer.
   - A yellow outline means an object can be interacted with.
-  pauseTipText: {fileID: 1918038578}
+  pauseTipText: {fileID: 0}
   pause: 0
   shouldLockCursor: 0
   shopPanelEnabled: 0
