@@ -93,7 +93,7 @@ public class GameManager : MonoBehaviour
     {
         if (!tutorialFinished)
         {
-            LoadScene(1); //Go to tutorial
+            LoadScene("TutorialScene"); //Go to tutorial
         }
         else 
         {
