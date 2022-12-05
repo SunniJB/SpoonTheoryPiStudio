@@ -24,9 +24,12 @@ public class MemoryManager : MonoBehaviour
     private float timerSec, timerMin;
     private GameObject tempFp;
     private int[] numbers = new int[10];
+
+    bool completed;
     private void Awake()
     {
         instance = this;
+        completed = false;
     }
 
     private void Update()
@@ -43,10 +46,10 @@ public class MemoryManager : MonoBehaviour
         //secTxt.text = timerSec.ToString();
         minTxt.text = timerMin.ToString("0") + ":" + timerSec.ToString("f1");
 
-        if (wins == 5)
+        if (wins == 5 && !completed)
         {
             //What happens when you win goes here!!
-            FinishMinigame();
+            Complete();
         }
     }
 
@@ -95,6 +98,7 @@ public class MemoryManager : MonoBehaviour
 
     public void Complete()
     {
+        completed = true;
         timeIsOn = false;
         totalTime = timerMin * 60 + timerSec;
 
@@ -107,7 +111,6 @@ public class MemoryManager : MonoBehaviour
 
         if (!moneygiven)
         {
-            Complete();
             finalTimeTxt.text = "Your final time was : " + timerMin.ToString("0") + ":" + timerSec.ToString("f1");
             workTxt.text = "Performance Review: " + _mm.GetWorkPerform().ToString("00") + "/50";
             if (_mm.workPerform < 12.5)
