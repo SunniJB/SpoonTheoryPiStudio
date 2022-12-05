@@ -3211,6 +3211,14 @@ MonoBehaviour:
   controlsPanel: {fileID: 2102002792}
   shopPanel: {fileID: 483873121}
   optionsPanel: {fileID: 1335775987}
+  pauseTips:
+  - Look at your bed and press F to go to sleep.
+  - Blue tasks give you some spoons.
+  - You can adjust the sound volume in the settings.
+  - If you run out of spoons, you can't go to work.
+  - Blue objects can be examined closer.
+  - A yellow outline means an object can be interacted with.
+  pauseTipText: {fileID: 0}
   pause: 0
   shouldLockCursor: 0
   shopPanelEnabled: 0
@@ -4067,7 +4075,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 15.374786, y: 0, z: -2.0420837, w: 0}
+  m_margin: {x: 15.374786, y: 14.830009, z: 11.273773, w: 12.077934}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -5789,9 +5797,9 @@ RectTransform:
   - {fileID: 2102002790}
   - {fileID: 192336213}
   - {fileID: 483873119}
+  - {fileID: 1920475993}
   - {fileID: 199537621}
   - {fileID: 1335775986}
-  - {fileID: 1920475993}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6137,6 +6145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minigame: memory test isac
+  promptUI: {fileID: 0}
 --- !u!114 &1615602515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7779,7 +7788,7 @@ RectTransform:
   - {fileID: 157436039}
   - {fileID: 544029346}
   m_Father: {fileID: 1493354743}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8923,6 +8932,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minigame: SimonSays isac
+  promptUI: {fileID: 0}
 --- !u!114 &7162229699189912679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8936,6 +8946,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minigame: Sorting Minigame
+  promptUI: {fileID: 0}
 --- !u!65 &7162229699189912680
 BoxCollider:
   m_ObjectHideFlags: 0

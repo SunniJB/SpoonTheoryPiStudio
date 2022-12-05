@@ -5175,6 +5175,14 @@ MonoBehaviour:
   controlsPanel: {fileID: 178192557}
   shopPanel: {fileID: 250185958}
   optionsPanel: {fileID: 485513873}
+  pauseTips:
+  - Look at your bed and press F to go to sleep.
+  - Blue tasks give you some spoons.
+  - You can adjust the sound volume in the settings.
+  - If you run out of spoons, you can't go to work.
+  - Blue objects can be examined closer.
+  - A yellow outline means an object can be interacted with.
+  pauseTipText: {fileID: 0}
   pause: 0
   shouldLockCursor: 0
   shopPanelEnabled: 0
@@ -6556,7 +6564,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -156.37892, y: 0, z: -155.94827, w: 0}
+  m_margin: {x: -130.25438, y: -3.3467522, z: -125.45709, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
