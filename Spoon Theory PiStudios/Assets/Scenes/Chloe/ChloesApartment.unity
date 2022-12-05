@@ -2229,6 +2229,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: GoToMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 7109204040984759262, guid: f0bda89ab582e254785e30b9f47f42c5, type: 3}
+      propertyPath: m_text
+      value: "Congratulations! You have achieved you monetary goal of saving up \xA3812!"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0bda89ab582e254785e30b9f47f42c5, type: 3}
 --- !u!1 &312059322
