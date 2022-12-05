@@ -18,8 +18,10 @@ MonoBehaviour:
   hygieneCost: 0
   moneyCost: 0
   hungerCost: 0
-  happinesCost: -1
+  happinessCost: -1
   workPerformanceCost: 0
+  followingTask: {fileID: 0}
   outlineObject: {fileID: 0}
   objectTask: {fileID: 0}
+  parent: {fileID: 0}
   inProgress: 1
