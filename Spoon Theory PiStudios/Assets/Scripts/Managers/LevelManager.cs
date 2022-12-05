@@ -9,6 +9,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] Image avatarImg, pausePanel, characterUIPanel, controlsPanel, shopPanel, optionsPanel, pinnedTaskPanel;
     [SerializeField] string[] pauseTips = {"Look at your bed and press F to go to sleep.", "Blue tasks give you some spoons.", "You can adjust the sound volume in the settings.", "If you run out of spoons, you can't go to work.", "Blue objects can be examined closer.", "A yellow outline means an object can be interacted with." };
     [SerializeField] GameObject pauseTipText;
+    public GameObject startScreen;
     public bool pause, shouldLockCursor;
 
     public bool shopPanelEnabled;
@@ -32,6 +33,12 @@ public class LevelManager : MonoBehaviour
         Time.timeScale = 1;
 
         characterInteractor.RefreshStatsFromManager();
+
+        if (GameManager.GetInstance().hasSeenStartScreen == false)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            startScreen.SetActive(true);
+        }
     }
 
     // Update is called once per frame
@@ -156,5 +163,11 @@ public class LevelManager : MonoBehaviour
         GameManager.GetInstance().UpdateGameManagerStats(characterInteractor.money, characterInteractor.hunger, characterInteractor.numberOfSpoons, characterInteractor.hygiene, characterInteractor.happiness, characterInteractor.workPerformance);
         characterInteractor.hasSleptToday = false;
         GameManager.GetInstance().WorkScene();
+    }
+
+    public void CloseStartPanel()
+    {
+        startScreen.SetActive(false);
+        GameManager.GetInstance().hasSeenStartScreen = true;
     }
 }

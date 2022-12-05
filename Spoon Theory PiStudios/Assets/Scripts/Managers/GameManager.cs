@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public static GameManager GetInstance() { return instance; }
 
     public bool tutorialFinished;
+    public bool hasSeenStartScreen;
 
     public Light dayLight;
 
@@ -16,7 +17,7 @@ public class GameManager : MonoBehaviour
     public DayTime dayTime;
     public int dayCount;
     public float moneyGoal;
-    public int totalDaysBeforeLoss = 60;
+    public int totalDaysBeforeLoss = 14;
 
     public bool isIsaac;
     public bool workedAlready;
@@ -42,6 +43,8 @@ public class GameManager : MonoBehaviour
 
         PlayerPrefs.DeleteAll();
         workedAlready = false;
+
+        hasSeenStartScreen = false;
 
         SetTimeMorning();
     }
